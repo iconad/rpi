@@ -1,0 +1,10 @@
+query {
+  finishings {
+    id
+    title
+    body
+    video_link
+    delivery_time
+    status
+  }
+}

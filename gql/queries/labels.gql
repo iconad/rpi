@@ -1,0 +1,9 @@
+query {
+  labels(orderBy: [{ field: "id", order: DESC }]) {
+    id
+    title
+    color
+    status
+    created_at
+  }
+}

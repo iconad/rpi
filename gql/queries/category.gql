@@ -1,0 +1,15 @@
+query getEvent($id: ID!) {
+  category(id: $id) {
+    id
+    title
+    slug
+    status
+    featured
+    created_at
+    label {
+      id
+      title
+      color
+    }
+  }
+}

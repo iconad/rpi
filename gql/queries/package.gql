@@ -1,0 +1,6 @@
+query getEvent($id: ID!) {
+  package(id: $id) {
+  	id
+    quantity
+  }
+}

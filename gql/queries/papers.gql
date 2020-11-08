@@ -1,0 +1,8 @@
+query {
+  papers{
+    id
+    title
+    side
+    status
+  }
+}

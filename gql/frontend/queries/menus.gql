@@ -1,0 +1,56 @@
+query  {
+  menus(orderBy:
+      [
+        { field: "id", order: ASC }
+      ],
+    	status:1
+  	) {
+    id
+    title
+    categories {
+      id
+      title
+      products {
+        id
+        title
+        slug
+        title_two
+        body_title
+        body_subtitle
+        packages {
+          id
+          quantity
+          prices {
+            id
+            price
+            size {
+              id
+              region
+              unit
+              portrait
+              landscape
+            }
+          }
+        }
+        points {
+          id
+          title
+          body
+          media{
+            id
+            file_name
+          }
+        }
+        media{
+          id
+          file_name
+          collection_name
+        }
+      }
+    }
+    label {
+      id
+      title
+    }
+  }
+}

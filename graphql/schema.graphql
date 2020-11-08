@@ -1,0 +1,204 @@
+"A date string with format `Y-m-d`, e.g. `2011-05-23`."
+scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
+
+"A datetime string with format `Y-m-d H:i:s`, e.g. `2018-05-23 13:43:32`."
+scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
+
+type Query {
+    users: [User!]! @paginate(defaultCount: 10)
+    user(id: ID @eq): User @find
+    menus(orderBy: [OrderByClause!] @orderBy, status: Int @where(status: "like")): [Menu!]!  @all
+    # menus: [Menu!]!
+
+    sizes(orderBy: [OrderByClause!] @orderBy): [Size!]!  @all
+    finishings(orderBy: [OrderByClause!] @orderBy): [Finishing!]!  @all
+    papers(orderBy: [OrderByClause!] @orderBy): [Paper!]!  @all
+    paper(id: ID @eq): Paper @find
+    packages(orderBy: [OrderByClause!] @orderBy): [Package!]!  @all
+    package(id: ID @eq): Package @find
+
+    # prices(page: Int!, status: String @where(status: "like") ): [Project]  @paginate
+
+    prices(orderBy: [OrderByClause!] @orderBy, package_id: Int! @where(package_id: "like")): [PackagePrice]!  @all
+    categories(orderBy: [OrderByClause!] @orderBy): [Category!]!  @all
+    category(id: ID @eq): Category @find
+
+    TopProducts(menu: Int): [Category!]!
+    TopBanners: [Category!]!
+
+    # categorysizes(menu_id: Int! @where(menu_id: "like")): [Menu]!  @all
+
+    labels(orderBy: [OrderByClause!] @orderBy): [Label!]!  @all
+    products(orderBy: [OrderByClause!] @orderBy): [Product!]!  @all
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Menu {
+    id: ID!
+    title: String!
+    slug: String!
+    status: Int!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Category {
+    id: ID!
+    title: String!
+    slug: String!
+    excerpt: String
+    body: String
+    status: Int!
+    featured: Int!
+    label: Label @hasOne
+    menu: Menu @hasOne
+    products: [Product] @hasMany
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Menu {
+    id: ID!
+    title: String!
+    slug: String!
+    status: Int!
+    label: Label @hasOne
+    categories: [Category] @hasMany
+    sizes: [Size] @hasMany
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Size {
+    id: ID!
+    region: String!
+    type: String!
+    content_types: String
+    landscape: String!
+    unit: String!
+    portrait: String!
+    status: Int!
+    order: Int!
+    menus: [Menu] @hasMany
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Paper {
+    id: ID!
+    title: String!
+    side: String!
+    landscape: String!
+    packages: [Package] @hasMany
+    status: Int!
+    order: Int!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Finishing {
+    id: ID!
+    title: String!
+    body: String!
+    video_link: String
+    delivery_time: String!
+    status: Int!
+    order: Int!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Label {
+    id: ID!
+    title: String!
+    color: String!
+    status: Int!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Point {
+    id: ID!
+    title: String!
+    body: String!
+    media: [Media] @hasMany
+    status: Int!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+
+type Product {
+    id: ID!
+    title: String!
+    title_two: String
+    slug: String!
+    body_title: String!
+    body_subtitle: String
+    delivery_time: Int!
+    quantity: String!
+    status: Int!
+    label: Label @hasOne
+    packages: [Package] @hasMany
+    points: [Point] @hasMany
+    media: [Media] @hasMany
+    packages: [Package] @hasMany
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Gallery {
+    id: ID
+    uuid: String!
+    collection_name: String!
+    name: String
+    file_name: String!
+    mime_type: String!
+}
+
+type Package {
+    id: ID
+    quantity: Int!
+    prices: [PackagePrice] @hasMany
+    paper: Paper @hasOne
+    product: Product @hasOne
+    status: Int!
+    order: Int!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type PackagePrice {
+    id: ID
+    price: Int!
+    package: Package @hasOne
+    size: Size @hasOne
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Media {
+    id: ID
+    uuid: String!
+    collection_name: String!
+    name: String
+    file_name: String!
+    mime_type: String!
+}
+
+input OrderByClause {
+    field: String!
+    order: SortOrder!
+}
+
+enum SortOrder {
+    ASC
+    DESC
+}

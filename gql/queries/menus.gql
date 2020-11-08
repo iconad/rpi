@@ -1,0 +1,27 @@
+query  {
+  menus(orderBy:
+      [
+        { field: "id", order: ASC }
+      ]) {
+    id
+    title
+    slug
+    status
+    categories {
+      id
+      title
+      products {
+        id
+        title
+        media{
+          id
+          file_name
+        }
+      }
+    }
+    label {
+      id
+      title
+    }
+  }
+}

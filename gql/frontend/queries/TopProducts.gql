@@ -1,0 +1,50 @@
+query ($menu: Int!) {
+  TopProducts(menu: $menu) {
+    id
+    title
+    products {
+        id
+        title
+        slug
+        title_two
+        body_title
+        body_subtitle
+        status
+        media{
+          id
+          file_name
+          collection_name
+        }
+        packages {
+          id
+          quantity
+          paper {
+            id
+            title
+            side
+          }
+          prices {
+            id
+            price
+            size {
+              id
+              region
+              unit
+              portrait
+              landscape
+            }
+          }
+        }
+        points {
+          id
+          title
+          body
+          media{
+            id
+            file_name
+          }
+        }
+
+      }
+  }
+}

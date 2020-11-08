@@ -1,0 +1,16 @@
+query {
+  sizes{
+    id
+    region
+    type
+    content_types
+    unit
+    portrait
+    landscape
+    status
+    menus {
+      id
+      title
+    }
+  }
+}

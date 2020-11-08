@@ -1,0 +1,19 @@
+query {
+  categories(orderBy: [{ field: "id", order: DESC }]) {
+    id
+    title
+    slug
+    status
+    featured
+    created_at
+    menu {
+      id
+      title
+    }
+    label {
+      id
+      title
+      color
+    }
+  }
+}

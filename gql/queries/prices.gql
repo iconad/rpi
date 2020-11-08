@@ -1,0 +1,23 @@
+query getEvent($package_id: Int!) {
+  prices(package_id: $package_id) {
+    id
+    price
+    package{
+      id
+      quantity
+      paper{
+        id
+        title
+      }
+    }
+    size {
+      id
+      region
+      type
+      landscape
+      portrait
+      unit
+      status
+    }
+  }
+}

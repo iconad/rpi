@@ -1,0 +1,49 @@
+import { isObject } from 'lodash';
+import Vue from 'vue';
+import axios from 'axios';
+import Vuex from 'vuex';
+import _ from 'lodash'
+
+Vue.use(Vuex);
+
+export const store = new Vuex.Store({
+    state: {
+        publicUrl: "http://127.0.0.1:8001/storage/",
+        productGallery: [],
+        isSidebar: false,
+        sidebarType: null,
+        editingTable: null
+
+
+    },
+    mutations: {
+      mutateProductGallery (state, payload) {
+        state.productGallery = payload;
+      },
+      isSidebar (state, payload) {
+        state.isSidebar = payload;
+      },
+      sidebarType (state, payload) {
+        state.sidebarType = payload;
+      },
+      editingTable (state, payload) {
+        state.editingTable = payload;
+      }
+    },
+
+    actions: {
+      getProductGallery ({ commit }, payload) {
+        axios.get(`/api/products/${payload}/gallery`).then(response => {
+            commit("mutateProductGallery", response.data.data)
+        });
+
+      }
+    },
+  })
+
+
+
+
+
+
+

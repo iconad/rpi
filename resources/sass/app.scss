@@ -1,0 +1,82 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+.content p {
+    @apply my-5;
+}
+.content ul {
+    @apply my-5 ml-5 list-disc
+}
+.content li {
+    @apply my-2 list-disc
+}
+.content a:hover {
+    @apply border-gray-300 text-sec-900;
+}
+.theme-link {
+    @apply border-b border-transparent inline-block pb-px transition ease-linear duration-200;
+}
+.theme-link:hover {
+    @apply border-gray-300 text-sec-500;
+}
+.theme-button {
+    @apply px-5 py-2 bg-primary-900 text-white font-medium border border-primary-900 transition ease-linear duration-200;
+}
+.theme-button:hover {
+    @apply bg-transparent text-primary-900;
+}
+.theme-button:focus {
+    @apply outline-none;
+}
+.red-button {
+    @apply inline-block mt-4 px-8 py-3 bg-theme-red text-white;
+}
+.red-button:hover {
+    @apply bg-theme-red-light;
+}
+.red-button:focus {
+    @apply bg-theme-red-light outline-none;
+}
+.red-button:active {
+    @apply bg-theme-red-light;
+}
+.arrow-top {
+    @apply w-6 h-6 border border-gray-500 absolute top-0 left-0 ml-24 -mt-3 border-b-0 bg-white border-r-0;
+}
+
+.form-input {
+    @apply w-full p-2 border rounded w-full mt-1 text-base;
+}
+.form-input:focus {
+    @apply outline-none border-gray-400 ;
+}
+
+.invalid-feedback {
+    @apply text-sm mt-1 text-red-600 ml-1 font-medium;
+}
+
+.everything-white-on-hover {
+    &:hover {
+        p,span,div,h1,h2,h3,h4,h5 {
+            @apply text-white;
+        }
+    }
+}
+
+@import "tailwindcss/utilities";
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+// thirdparth
+@import '~swiper/dist/css/swiper.css';
+@import '~viewerjs/dist/viewer.css';
+@import '~pretty-checkbox/src/pretty-checkbox.scss';
+@import '~@splidejs/splide/dist/css/themes/splide-default.min.css';
+@import '~vue-js-modal/dist/styles.css';
+@import "~vue-upload-component/dist/vue-upload-component.part.css";
+// Variables
+@import "variables";
+@import "queries";
+@import "main";

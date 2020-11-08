@@ -1,0 +1,125 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+.content p {
+    @apply my-5;
+}
+.content ul {
+    @apply my-5 ml-5 list-disc
+}
+.content li {
+    @apply my-2 list-disc
+}
+.content a:hover {
+    @apply border-gray-300 text-sec-900;
+}
+.theme-link {
+    @apply border-b border-transparent inline-block pb-px transition ease-linear duration-200;
+}
+.theme-link:hover {
+    @apply border-gray-300 text-sec-500;
+}
+.theme-link:focus {
+    @apply border-gray-300 text-sec-500 outline-none;
+}
+.theme-link:active {
+    @apply border-gray-300 text-sec-500 outline-none;
+}
+
+.theme-button {
+    @apply px-5 py-1 bg-primary-500 rounded cursor-pointer text-white font-medium border border-primary-900 transition ease-linear duration-200;
+}
+.theme-button:hover {
+    @apply bg-transparent text-primary-700;
+}
+.theme-button:focus {
+    @apply outline-none;
+}
+.theme-button-red {
+    @apply px-5 py-1 bg-red-700 rounded cursor-pointer text-white font-medium border border-red-700 transition ease-linear duration-200;
+}
+.theme-button-red:hover {
+    @apply bg-transparent text-red-700;
+}
+.theme-button-red:focus {
+    @apply outline-none;
+}
+
+.arrow-top {
+    @apply w-6 h-6 border border-gray-500 absolute top-0 left-0 ml-24 -mt-3 border-b-0 bg-white border-r-0;
+}
+
+.form-input {
+    @apply w-full px-2 py-1 border rounded w-full mt-1;
+}
+.form-input:focus {
+    @apply outline-none border-primary-400 ;
+}
+
+.form-element {
+    @apply block mb-6 ;
+}
+
+.invalid-feedback {
+    @apply text-sm mt-1 text-red-600 ml-1 font-medium;
+}
+
+.action-button-warning {
+    @apply cursor-pointer border-transparent border-2 px-2 py-1 font-semibold leading-tight text-orange-700 bg-orange-100 rounded-full transition ease-linear duration-100;
+}
+.action-button-danger {
+    @apply cursor-pointer border-transparent border-2 px-2 py-1 font-semibold leading-tight text-red-700 bg-red-100 rounded-full transition ease-linear duration-100;
+}
+.action-button-info {
+    @apply cursor-pointer border-transparent border-2 px-2 py-1 font-semibold leading-tight text-blue-700 bg-blue-100 rounded-full transition ease-linear duration-100;
+}
+.action-button-success {
+    @apply cursor-pointer border-transparent border-2 px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full transition ease-linear duration-100;
+}
+.action-button-info:hover {
+    @apply border-blue-200 bg-transparent;
+}
+.action-button-warning:hover {
+    @apply border-orange-200 bg-transparent;
+}
+.action-button-danger:hover {
+    @apply border-red-200 bg-transparent;
+}
+.action-button-success:hover {
+    @apply border-green-200 bg-transparent;
+}
+.action-button-warning:focus {
+    @apply border-orange-200 bg-transparent outline-none;
+}
+.action-button-danger:focus {
+    @apply border-red-200 bg-transparent outline-none;
+}
+.action-button-info:focus {
+    @apply border-blue-200 bg-transparent outline-none;
+}
+.action-button-success:focus {
+    @apply border-green-200 bg-transparent outline-none;
+}
+
+.everything-white-on-hover {
+    &:hover {
+        p,span,div,h1,h2,h3,h4,h5 {
+            @apply text-white;
+        }
+    }
+}
+
+@import "tailwindcss/utilities";
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+// thirdparth
+@import '~pretty-checkbox/src/pretty-checkbox.scss';
+@import '~vue-js-modal/dist/styles.css';
+@import "~vue-upload-component/dist/vue-upload-component.part.css";
+@import '~sweetalert2/dist/sweetalert2.min.css';
+// Variables
+@import "variables";
+@import "main";
