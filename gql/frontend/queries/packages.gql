@@ -1,0 +1,26 @@
+query {
+  products {
+    id
+    title
+    title_two
+    slug
+    body_title
+    body_subtitle
+    delivery_time
+    quantity
+    status
+    created_at
+    category {
+        id
+        title
+        menu {
+            id
+            title
+        }
+    }
+    label {
+      title
+      color
+    }
+  }
+}

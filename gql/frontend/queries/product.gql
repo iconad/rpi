@@ -1,0 +1,53 @@
+query getEvent($id: ID!) {
+  product(id: $id) {
+    id
+    title
+    title_two
+    slug
+    body_title
+    body_subtitle
+    delivery_time
+    quantity
+    status
+    created_at
+    packages {
+        id
+        paper {
+            id
+            title
+            side
+        }
+        prices {
+            id
+            price
+            quantity
+            sizes {
+                id
+                price
+                size {
+                    id
+                    region
+                    type
+                    portrait
+                    landscape
+                    unit
+                    content_types
+                    status
+                }
+            }
+        }
+    }
+    category {
+        id
+        title
+        menu {
+            id
+            title
+        }
+    }
+    label {
+      title
+      color
+    }
+  }
+}

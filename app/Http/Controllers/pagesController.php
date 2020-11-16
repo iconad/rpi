@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Image;
@@ -32,6 +33,32 @@ class pagesController extends Controller
     {
         return view('product.single');
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function showProduct($slug)
+    {
+        $printProducts = array(10,12);
+
+        $menu = Product::where('slug', $slug)->first()->category->menu->id;
+
+        if (in_array($menu, $printProducts)) {
+            return $this->printProducts($slug);
+        }
+    }
+
+    function printProducts ($slug) {
+
+        $product = Product::where('slug', $slug)->first();
+
+        return view('product.single', compact('product'));
+    }
+
+
     public function uploadPost(Request $request)
     {
         $file =  $request->file;

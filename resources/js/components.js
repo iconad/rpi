@@ -34,11 +34,6 @@ Vue.component(
 );
 
 Vue.component(
-    "product-paper-price-table",
-    require("./components/product/PaperPriceTable.vue").default
-);
-
-Vue.component(
     "product-quality-chart",
     require("./components/product/QuantityChart.vue").default
 );

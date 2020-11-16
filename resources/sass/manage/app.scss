@@ -65,6 +65,22 @@
     @apply text-sm mt-1 text-red-600 ml-1 font-medium;
 }
 
+.action-button-default {
+    @apply cursor-pointer border px-2 py-1 font-medium leading-tight text-gray-600 bg-transparent rounded-full transition ease-linear duration-100;
+}
+
+.action-button-default:hover {
+    @apply border-gray-400 bg-gray-100;
+}
+
+.action-button-default:focus {
+    @apply border-gray-400 bg-gray-100;
+}
+
+.action-button-default:active {
+    @apply border-gray-400 bg-gray-100;
+}
+
 .action-button-warning {
     @apply cursor-pointer border-transparent border-2 px-2 py-1 font-semibold leading-tight text-orange-700 bg-orange-100 rounded-full transition ease-linear duration-100;
 }

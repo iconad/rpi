@@ -15,6 +15,7 @@ class CreatePackagePricesTable extends Migration
     {
         Schema::create('package_prices', function (Blueprint $table) {
             $table->id();
+            $table->integer('quantity');
             $table->bigInteger('package_id')->unsigned();
             $table->integer('size_id')->unsigned();
             $table->integer('price');

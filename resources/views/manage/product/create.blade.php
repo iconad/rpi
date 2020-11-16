@@ -153,7 +153,7 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
                 <div class="relative">
                     <select class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-2 px-3 pr-8 rounded leading-tight focus:outline-none" name="category_id">
                         @foreach ($categories as $catg)
-                        <option value="{{$catg->id}}">{{$catg->title}}</option>
+                        <option value="{{$catg->id}}">{{$catg->title}} ({{ $catg->menu->title }}) </option>
                         @endforeach
                     </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">

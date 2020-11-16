@@ -41,12 +41,10 @@ class PackageController extends Controller
     {
         $this->validate(request(), [
             'paper' => 'required',
-            'quantity' => 'required'
         ]);
 
         $package = Package::create([
             'paper_id' => $request->paper,
-            'quantity' => $request->quantity,
             'product_id' => $product->id,
             'user_id' => auth()->id(),
         ]);
@@ -67,6 +65,7 @@ class PackageController extends Controller
     public function show(Product $product, Package $package)
     {
         $papers = Paper::where('status', '1')->get();
+
         return view('manage.product.package.show', compact('product','package', 'papers'));
     }
 
@@ -91,7 +90,6 @@ class PackageController extends Controller
     public function update(Request $request, Product $product,  Package $package)
     {
         $package->paper_id = $request->paper;
-        $package->quantity = $request->quantity;
         if ($package->save()) {
             $request->session()->flash('green', 'Package was successful updated!');
             return redirect("/manage/products/".$product->id."/packages/".$package->id);

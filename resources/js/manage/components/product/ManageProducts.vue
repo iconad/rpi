@@ -11,6 +11,8 @@
                     class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
                     >
                     <th class="px-4 py-3">Name</th>
+                    <th class="px-4 py-3">Category</th>
+                    <th class="px-4 py-3">Menu</th>
                     <th class="px-4 py-3">Featured</th>
                     <th class="px-4 py-3">Status</th>
                     </tr>
@@ -32,6 +34,14 @@
                             </span>
                             </div>
                         </div>
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                            <span v-if="product.category">{{product.category.title}}</span>
+                            <span v-else>---</span>
+                        </td>
+                        <td class="px-4 py-3 text-sm">
+                            <span v-if="product.category.menu">{{product.category.menu.title}}</span>
+                            <span v-else>---</span>
                         </td>
                         <td class="px-4 py-3 text-sm">
                             <span>Yes</span>

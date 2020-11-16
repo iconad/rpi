@@ -1,6 +1,12 @@
 <template>
     <div>
+
         <div class="p-6 relative w-full">
+            <div v-if="error != null" class="absolute right-0 top-100 w-full p-5 error">
+                <div class="border p-3 font-medium rounded-lg text-red-500 bg-red-100 border-red-500">
+                    {{error}}
+                </div>
+            </div>
             <div class="text-xl mb-3 capitalize font-semibold">Add Price / Size</div>
             <!-- <hr class="my-2"> -->
             <ValidationObserver v-slot="{ invalid,passes }">
@@ -10,27 +16,28 @@
                 </div>
                 <div class="form-element" v-else>
                     <label class="w-full block relative">
-                        <span class="text-sm font-medium mb-1">Quantity</span>
-                        <div type="text" disabled class="form-input text-lg font-medium select-none bg-gray-100"> {{package.quantity}} </div>
+                        <span class="text-sm font-medium mb-1">Paper</span>
+                        <div type="text" disabled class="form-input text-lg font-medium select-none bg-gray-100"> {{package.paper.title}} </div>
                     </label>
                 </div>
-                <div class="form-element">
-                    <label class="w-full block relative">
-                        <span class="text-sm font-medium mb-1">Type</span>
-                        <ValidationProvider name="form.size" rules="required">
-                            <div class="relative">
-                                <select class="form-input text-lg capitalize" v-model="form.size">
-                                    <option class="capitalize" v-for="size in sizes" :key="size.id" :value="size.id">
-                                        {{ size.region }} / {{size.type}}
-                                    </option>
-                                </select>
-                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                </div>
+
+                <div>
+                    <label class="w-full block mb-3">
+                        <span class="text-sm font-medium mb-1">Quantity</span>
+                        <ValidationProvider name="form.quantity" rules="required|number">
+                            <div slot-scope="{ errors }">
+                                <input type="number" class="form-input text-lg" v-model="form.quantity">
+                                <p class="text-theme-red-light mt-1 px-1 text-sm font-medium">{{ errors[0] }}</p>
                             </div>
                         </ValidationProvider>
                     </label>
                 </div>
-                <div>
+
+                <template v-if="!$apollo.queries.package.loading">
+                    <sizes-by-category :selectedsizes="[]" :menu="package.product.category.menu" @update="onSelectSize"></sizes-by-category>
+                </template>
+
+                <div class="-mt-2">
                     <label class="w-full block">
                         <span class="text-sm font-medium mb-1">Price</span>
                         <ValidationProvider name="form.price" rules="required|number">
@@ -41,7 +48,8 @@
                         </ValidationProvider>
                     </label>
                 </div>
-                <div class="mt-8">
+
+                <div class="mt-8" v-if="form.size != null">
                     <div class="w-32">
                         <button
                         type="submit"
@@ -60,9 +68,11 @@
 
 <script>
 
+    import SizesByCategory from './Sizes'
+
     import gql from 'graphql-tag'
-    import sizes from "../../../../../../gql/queries/sizes.gql";
     import packageQuery from "../../../../../../gql/queries/package.gql";
+    import prices from "../../../../../../gql/queries/packageprice.gql";
 
     import { extend,ValidationProvider,ValidationObserver } from 'vee-validate';
     import { required, number } from 'vee-validate/dist/rules';
@@ -81,48 +91,64 @@
     export default {
         props: ['pkgid', 'pid'],
         components: {
+            SizesByCategory,
             ValidationProvider,
             ValidationObserver,
         },
         data() {
             return {
+                error: null,
                 form: {
+                    quantity: null,
                     price: null,
                     size: null,
                 },
             }
         },
         methods: {
+            onSelectSize (data) {
+                this.form.size = data
+                console.log(this.form.size)
+            },
             submitForm () {
                 axios.post(`/manage/products/${this.pid}/packages/${this.pkgid}/prices`, {
+                    quantity: this.form.quantity,
                     price: this.form.price,
                     size: this.form.size,
                 })
                 .then(response => {
-                    this.$swal({
-                        toast: true,
-                        position: 'center',
-                        showConfirmButton: false,
-                        timer: 3000,
-                        title: 'Price',
-                        text: 'Added!',
-                    });
-                    this.$emit('updated')
+                    if (!response.data.status) {
+                        this.error = response.data.message
+                    }else{
+                        this.error = null
+                        this.$swal({
+                            toast: true,
+                            position: 'center',
+                            showConfirmButton: false,
+                            timer: 3000,
+                            title: 'Price',
+                            text: 'Added!',
+                        });
+                        this.$emit('updated')
+                    }
                 })
             },
         },
         apollo: {
-            sizes() {
-                return {
-                    query: sizes,
-                    update(data) {
-                        return data.sizes;
-                    },
-                };
-            },
             package() {
                 return {
                     query: packageQuery,
+                    variables: {
+                    id: this.pkgid
+                    },
+                    update(data) {
+                        return data.package;
+                    },
+                };
+            },
+            prices() {
+                return {
+                    query: prices,
                     variables: {
                     id: this.pkgid
                     },

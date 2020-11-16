@@ -12,7 +12,7 @@ class PackagePrice extends Model
     public $fillable = [
         'package_id',
         'size_id',
-        'price',
+        'quantity'
     ];
 
     public function size() {
@@ -21,6 +21,10 @@ class PackagePrice extends Model
 
     public function package() {
         return $this->belongsTo(Package::class)->where('status', 1);
+    }
+
+    public function sizes() {
+        return $this->hasMany(PackagePriceSize::class);
     }
 
 }

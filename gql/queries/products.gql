@@ -10,6 +10,14 @@ query {
     quantity
     status
     created_at
+    category {
+        id
+        title
+        menu {
+            id
+            title
+        }
+    }
     label {
       title
       color

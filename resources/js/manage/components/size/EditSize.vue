@@ -10,11 +10,9 @@
                         <span class="text-sm font-medium mb-1">Title / Name</span>
                         <ValidationProvider name="editingTable.data.region" rules="required">
                             <div slot-scope="{ errors }">
-                                <select class="form-input text-lg capitalize" v-model="editingTable.data.region">
-                                    <option class="capitalize" v-for="region in regions" :key="region">
-                                        {{ region }}
-                                    </option>
-                                </select>
+                                <input type="text" v-model="editingTable.data.region"
+                                :class="errors[0] ? 'border-red-400': ''"
+                                class="form-input text-base font-normal" placeholder="UAE, Japan, EU">
                                 <p class="text-theme-red-light mt-1 px-1 text-sm font-medium">{{ errors[0] }}</p>
                             </div>
                         </ValidationProvider>
@@ -24,14 +22,11 @@
                     <label class="w-full block relative">
                         <span class="text-sm font-medium mb-1">Type</span>
                         <ValidationProvider name="editingTable.data.type" rules="required">
-                            <div class="relative">
-                                <select class="form-input text-lg capitalize" v-model="editingTable.data.type">
-                                    <option class="capitalize" v-for="type in types" :key="type">
-                                        {{ type }}
-                                    </option>
-                                </select>
-                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                </div>
+                            <div slot-scope="{ errors }">
+                                <input type="text" v-model="editingTable.data.type"
+                                :class="errors[0] ? 'border-red-400': ''"
+                                class="form-input text-base font-normal" placeholder="UAE, Japan, EU">
+                                <p class="text-theme-red-light mt-1 px-1 text-sm font-medium">{{ errors[0] }}</p>
                             </div>
                         </ValidationProvider>
                     </label>
@@ -65,23 +60,18 @@
                     </div>
                 </div>
                 <div class="mt-5">
-
-                    <div class="mb-5">
-                        <ul>
-                            <li class="p-1 px-3 mb-1 flex items-center justify-between rounded border" v-for="(ctype, i) in contentTypes" :key="i">
-                                <span class="capitalize"> {{ctype}} </span>
-                                <span class="action-button-danger text-xs" @click="removeFromContentType(i)">Remove</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                     <ValidationProvider name="form.content_types" rules="required">
+                     <ValidationProvider name="editingTable.data.content_types" rules="required">
                         <div slot-scope="{ errors }">
                                 <span class="text-sm font-medium mb-2 block">Product Type</span>
-                                    <!-- <edit-content-types-check @update="onUpdate($event)" :types="JSON.parse(editingTable.data.content_types)"></edit-content-types-check> -->
-                                    <label v-for="(ctype,i) in content_types" :key="i">
-                                        <p-check v-if="!contentTypes.includes(ctype)" @change="addToContentType(ctype)" color="danger" name="ctype" class="p-default text-sm" v-model="contentTypes" :value="ctype">
-                                            <span class="text-base capitalize font-medium">{{ctype}}</span>
+                                    <label v-for="(type,i) in menus" :key="i">
+                                        <p-check
+                                            color="danger"
+                                            name="ctype"
+                                            class="p-default text-sm"
+                                            v-model="selectedMenus"
+                                            :value="type.id"
+                                            >
+                                            <span class="text-base capitalize font-medium">{{type.title}}</span>
                                         </p-check>
                                     </label>
                             <p class="text-theme-red-light mt-1 px-1 text-sm font-medium">{{ errors[0] }}</p>
@@ -120,6 +110,9 @@
     import PrettyRadio from 'pretty-checkbox-vue/radio';
     import PrettyCheck from 'pretty-checkbox-vue/check';
 
+    import gql from 'graphql-tag'
+    import menus from "../../../../../gql/queries/menus.gql";
+
     import { extend,ValidationProvider,ValidationObserver } from 'vee-validate';
     import { required, oneOf } from 'vee-validate/dist/rules';
 
@@ -144,17 +137,35 @@
                 types: ["standard", "gold"],
                 regions: ["UAE", "EU", "Japan", "KSA"],
                 units: ["mm", "cm", 'px'],
-                content_types: ["print", "gift", "banner", "tshirt"],
+                selectedMenus: [],
+                menus: [
+                    {
+                        id: "10",
+                        title: "Print Product",
+                    },
+                    {
+                        id: "11",
+                        title: "Packaging",
+                    },
+                    {
+                        id: "12",
+                        title: "Banners & Displays",
+                    },
+                    {
+                        id: "13",
+                        title: "Personalized Gifts",
+                    },
+                ]
+            }
+        },
+        watch: {
+            contentTypes(newVale, value) {
+                console.log(newVale)
             }
         },
         computed: {
-            contentTypes: {
-                get: function () {
-                    return JSON.parse(this.editingTable.data.content_types)
-                },
-                set: function (value) {
-                    return value
-                }
+            contentTypes() {
+                    this.selectedMenus = this.editingTable.data.menus.map(e => e.id)
             },
             editingTable: {
                 get: function () {
@@ -185,7 +196,7 @@
                 axios.put(`/manage/sizes/${this.editingTable.data.id}`, {
                     region: this.editingTable.data.region,
                     type: this.editingTable.data.type,
-                    content_types: this.editingTable.data.content_types,
+                    content_types: this.selectedMenus,
                     portrait: this.editingTable.data.portrait,
                     landscape: this.editingTable.data.landscape,
                     unit: this.editingTable.data.unit,
@@ -203,6 +214,16 @@
                 })
             },
         },
+        // apollo: {
+        //     menus() {
+        //         return {
+        //             query: menus,
+        //             update(data) {
+        //                 return data.menus;
+        //             },
+        //         };
+        //     },
+        // }
 
     }
 </script>

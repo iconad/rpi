@@ -44,7 +44,7 @@ Breadcrumbs::for('product.point', function ($trail, $product, $point) {
 // Home > Products > [product] > packages
 Breadcrumbs::for('product.packages', function ($trail, $product) {
     $trail->parent('manage.product', $product);
-    $trail->push("Packages", route('packages.index', $product->id));
+    $trail->push("Papers", route('packages.index', $product->id));
 });
 
 // Home > Products > [product] > packages > create

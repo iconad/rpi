@@ -4,12 +4,12 @@
 
 {{ Breadcrumbs::render('product.packages.create', $product) }}
 
-{{-- {{$product->points)}} --}}
-
+             <!-- Old Name "Packages" -->
+            <!-- change to "Paper" -->
 
 <div id="dashboard">
     <div class="w-full rounded-lg border border-gray-200 bg-white p-4">
-        <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">Add Package to {{ $product->title }}</h2>
+        <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">Add Paper to {{ $product->title }}</h2>
         <form action="{{route('packages.store', $product->id)}}" method="post" class="">
             @csrf
 
@@ -25,12 +25,12 @@
             </div>
             <!-- form-ele -->
 
-            <div class="form-element">
+            {{-- <div class="form-element">
                 <label>
                     <span class="text-gray-800 block">Quantity</span>
                     <input type="number" class="form-input" name="quantity" value="{{ old('quantity') }}">
                 </label>
-            </div>
+            </div> --}}
             <!-- form-ele -->
 
             <div class="form-element mt-8 mb-0">

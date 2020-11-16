@@ -7,7 +7,7 @@
                 >
                 <th class="px-4 py-3">#</th>
                 <th class="px-4 py-3">Paper</th>
-                <th class="px-4 py-3">Quantity</th>
+                <th class="px-4 py-3">Packages</th>
                 <th class="px-4 py-3">Status</th>
                 <th class="px-4 py-3">Actions</th>
                 </tr>
@@ -26,7 +26,7 @@
                         </p>
                     </td>
                     <td class="px-4 py-3">
-                        <p>{{$package->quantity}}</p>
+                        <p>{{$package->prices->count()}}</p>
                     </td>
                     <td class="px-4 py-3 text-xs">
                         <change-status :status="{{$package->status}}" id="{{$package->id}}" model="packages"></change-status>

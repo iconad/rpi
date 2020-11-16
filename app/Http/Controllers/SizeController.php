@@ -106,6 +106,9 @@ class SizeController extends Controller
         $size->landscape = $request->landscape;
         $size->unit = $request->unit;
         $done = $size->save();
+
+        $size->menus()->sync($request->content_types);
+
         if($done) {
             return response()->json(['message' => 'Size successfully updated!']);
         }

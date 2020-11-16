@@ -187,9 +187,9 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
                         <select class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-2 px-3 pr-8 rounded leading-tight focus:outline-none" name="category_id">
                             @foreach ($categories as $catg)
                                 @if ($catg->id == $product->category->id)
-                                <option selected value="{{$catg->id}}">{{$catg->title}}</option>
+                                <option selected value="{{$catg->id}}">{{$catg->title}}  ({{ $catg->menu->title }})</option>
                                 @else
-                                <option value="{{$catg->id}}">{{$catg->title}}</option>
+                                <option value="{{$catg->id}}">{{$catg->title}}  ({{ $catg->menu->title }})</option>
                                 @endif
                             @endforeach
                         </select>

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/', [pagesController, 'home'])->name('homepage');
 Route::get('/', 'pagesController@home')->name('home');
-Route::get('/page', 'pagesController@page');
+Route::get('/products/{product}', 'pagesController@showProduct');
 // Route::get('/category', 'CategoryController@show');
 // Route::get('/page', 'CategoryController@show');
 
@@ -53,6 +53,8 @@ Route::group(['prefix' => 'manage'], function() {
         Route::resource('/products/{product}/packages', 'PackageController');
         Route::put('/prices/{price}/change-status', 'PackagePriceController@changeStatus');
         Route::resource('/products/{product}/packages/{package}/prices', 'PackagePriceController');
+        Route::delete('/packagepricesizes/{packagepricesize}', 'PackagePriceSizeController@destroy');
+
     });
 
 });

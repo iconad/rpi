@@ -48,6 +48,9 @@ class Product extends Model implements HasMedia
         $this->addMediaConversion('thumb')
               ->width(100)
               ->sharpen(10);
+        $this->addMediaConversion('medium')
+              ->width(400)
+              ->sharpen(10);
     }
 
     public function label() {

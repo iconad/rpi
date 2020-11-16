@@ -10,11 +10,9 @@
                         <span class="text-sm font-medium mb-1">Title / Name</span>
                         <ValidationProvider name="form.region" rules="required">
                             <div slot-scope="{ errors }">
-                                <select class="form-input text-lg capitalize" v-model="form.region">
-                                    <option class="capitalize" v-for="region in regions" :key="region">
-                                        {{ region }}
-                                    </option>
-                                </select>
+                                <input type="text" v-model="form.region"
+                                :class="errors[0] ? 'border-red-400': ''"
+                                class="form-input text-base font-normal" placeholder="UAE, Japan, EU">
                                 <p class="text-theme-red-light mt-1 px-1 text-sm font-medium">{{ errors[0] }}</p>
                             </div>
                         </ValidationProvider>
@@ -62,7 +60,7 @@
                     </div>
                 </div>
                 <div class="mt-5">
-                    {{form.content_types}}
+
                      <ValidationProvider name="form.content_types" rules="required">
                         <div slot-scope="{ errors }">
                                 <span class="text-sm font-medium mb-2 block">Product Type</span>
@@ -128,16 +126,33 @@
         data() {
             return {
                 form: {
-                    region: "UAE",
+                    region: null,
                     type: null,
                     landscape: null,
                     portrait: null,
                     content_types: [],
                     unit: 'mm'
                 },
-                regions: ["UAE", "EU", "Japan", "KSA"],
                 units: ["mm", "cm", 'px'],
                 content_types: ["print", "banner", 'tshirt', 'gift'],
+                menus: [
+                    {
+                        id: "10",
+                        title: "Print Product",
+                    },
+                    {
+                        id: "11",
+                        title: "Packaging",
+                    },
+                    {
+                        id: "12",
+                        title: "Banners & Displays",
+                    },
+                    {
+                        id: "13",
+                        title: "Personalized Gifts",
+                    },
+                ]
             }
         },
         methods: {
@@ -164,16 +179,16 @@
                 })
             },
         },
-        apollo: {
-            menus() {
-                return {
-                    query: menus,
-                    update(data) {
-                        return data.menus;
-                    },
-                };
-            },
-        }
+        // apollo: {
+        //     menus() {
+        //         return {
+        //             query: menus,
+        //             update(data) {
+        //                 return data.menus;
+        //             },
+        //         };
+        //     },
+        // }
 
     }
 </script>

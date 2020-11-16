@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PackagePrice;
+use App\Models\PackagePriceSize;
 use App\Models\Product;
 use App\Models\Package;
 use App\Models\Size;
@@ -42,19 +43,51 @@ class PackagePriceController extends Controller
     {
         $this->validate(request(), [
             'price' => 'required',
-            'size' => 'required'
+            'size' => 'required',
+            'quantity' => 'required',
         ]);
 
-        $done = PackagePrice::create([
-            'price' => $request->price,
-            'size_id' => $request->size,
-            'package_id' => $package->id,
-        ]);
+        $checkQuantity = PackagePrice::whereHas('size', function ($query) use ($request) {
+            $query->where('id', '=', $request->size);
+        })
+        ->where('quantity', $request->quantity)->get()->count();
 
+        if ($checkQuantity != 0) {
 
-        if($done) {
-            return response()->json(['message' => 'Price successfully added!']);
+            return response()->json(
+                [
+                    'status' => false,
+                    'message' => "package for price $request->price with this size already existed!"
+                ]
+            );
+
+        }else{
+
+            $packageprice = PackagePrice::create([
+                'quantity' => $request->quantity,
+                'package_id' => $package->id,
+                'size_id' => $request->size
+            ]);
+
+            $packagepricesize = PackagePriceSize::create([
+                'package_price_id' => $packageprice->id,
+                'size_id' => $request->size,
+                'price' => $request->price,
+            ]);
+
+            if($packagepricesize) {
+                return response()->json(
+                    [
+                        'status' => true,
+                        'message' => 'Price successfully added!'
+                    ]
+                );
+            }
+
         }
+
+
+
     }
 
     /**
@@ -89,18 +122,31 @@ class PackagePriceController extends Controller
     public function update(Request $request, Product $product, Package $package, $packagePrice)
     {
         $this->validate(request(), [
-            'price' => 'required',
-            'size' => 'required',
+            'quantity' => 'required',
         ]);
 
         $price = PackagePrice::where('id', $packagePrice)->first();
 
-        $price->price = $request->price;
-        $price->size_id = $request->size;
-        $done = $price->save();
-        if($done) {
-            return response()->json(['message' => 'Price successfully updated!']);
+        $price->quantity = $request->quantity;
+        $price = $price->save();
+
+        if($price AND $request->addsize) {
+
+            $this->validate(request(), [
+                'price' => 'required',
+                'packageprice' => 'required',
+                'size' => 'required',
+            ]);
+
+            $packagepricesize = PackagePriceSize::create([
+                'package_price_id' => $request->packageprice,
+                'size_id' => $request->size,
+                'price' => $request->price,
+            ]);
         }
+
+        return response()->json(['message' => 'Package successfully updated!']);
+
     }
 
     /**

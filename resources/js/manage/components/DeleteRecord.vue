@@ -1,12 +1,12 @@
 <template>
     <div>
-        <button @click="confirmDelete" class="action-button-danger">Delete</button>
+        <span @click="confirmDelete" :class="`action-button-danger ${classess}`">Delete</span>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['model', 'model2', 'model3', 'id', 'id2', 'id3'],
+        props: ['classess','model', 'model2', 'model3', 'id', 'id2', 'id3'],
         data() {
             return {
                 loading: false

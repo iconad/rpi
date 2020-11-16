@@ -40,7 +40,7 @@
                             <td class="px-4 py-3">
                                 <p v-if="size.menus.length != 0">
                                     <!-- {{size.menus.length}} product types -->
-                                    <span v-for="(menu, i) in size.menus" :key="i">{{menu.title}}</span>
+                                    <span v-for="(menu, i) in size.menus" class="action-button-default m-1 text-xs" :key="i">{{menu.title}}</span>
                                 </p>
                                 <p v-else >---</p>
                             </td>

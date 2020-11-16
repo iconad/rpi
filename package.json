@@ -47,6 +47,7 @@
         "vue-match-heights": "^0.1.1",
         "vue-multiselect": "^2.1.6",
         "vue-sweetalert2": "^3.0.8",
+        "vue-tables-2": "^2.1.46",
         "vue-upload-component": "^2.8.20",
         "vuex": "^3.5.1"
     }

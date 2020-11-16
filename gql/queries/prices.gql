@@ -1,6 +1,7 @@
 query getEvent($package_id: Int!) {
   prices(package_id: $package_id) {
     id
+    quantity
     price
     package{
       id
@@ -10,14 +11,19 @@ query getEvent($package_id: Int!) {
         title
       }
     }
-    size {
-      id
-      region
-      type
-      landscape
-      portrait
-      unit
-      status
+    sizes {
+        id
+        price
+            size {
+                id
+                region
+                type
+                landscape
+                portrait
+                unit
+                status
+            }
+
     }
   }
 }

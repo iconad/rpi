@@ -1,9 +1,13 @@
 <template>
     <div>
 
+            <!-- Old Name "Add New price / Size" -->
+            <!-- change to "Package" -->
+
+
         <div class="mb-3 text-lg font-semibold text-gray-800 mb-2 flex items-center justify-between">
-            <span>Prices & Sizes</span>
-            <button @click="sideBar('create-price')" class="text-sm font-semibold block theme-link">Add New price / Size</button>
+            <span>Packages</span>
+            <button @click="sideBar('create-price')" class="text-sm font-semibold block theme-link">Add New Package Price</button>
         </div>
             <!-- New Table -->
             <div v-if="$apollo.queries.prices.loading" class="flex items-enter justify-center mx-12">
@@ -17,9 +21,10 @@
                         class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
                         >
                         <th class="px-4 py-3">#</th>
-                        <th class="px-4 py-3">Region</th>
-                        <th class="px-4 py-3">type</th>
+                        <th class="px-4 py-3">Quantity</th>
                         <th class="px-4 py-3">Price</th>
+                        <th class="px-4 py-3">Region</th>
+                        <th class="px-4 py-3">Type</th>
                         <th class="px-4 py-3">Actions</th>
                         </tr>
                     </thead>
@@ -29,13 +34,23 @@
                                 <p>{{i+1}}</p>
                             </td>
                             <td class="px-4 py-3">
-                                <p class="font-semibold hover:border-transparent">{{price.size.region}}</p>
+                                <p v-if="price.quantity">{{price.quantity}}</p>
+                                <p v-else>---</p>
                             </td>
-                            <td class="px-4 py-3">
-                                <p>{{price.size.type}}</p>
+                            <td class="px-4 py-3 font-medium">
+                                <ul class="text-sm text-gray-800">
+                                    <li v-for="(size, i) in price.sizes" :key="i">{{size.price}}</li>
+                                </ul>
                             </td>
-                            <td class="px-4 py-3">
-                                <p>{{price.price}}</p>
+                            <td class="px-4 py-3 font-medium">
+                                <ul class="text-sm text-gray-800">
+                                    <li v-for="(size, i) in price.sizes" :key="i">{{size.size.region}}</li>
+                                </ul>
+                            </td>
+                            <td class="px-4 py-3 font-medium">
+                                <ul class="text-sm text-gray-800">
+                                    <li v-for="(size, i) in price.sizes" :key="i">{{size.size.type}}</li>
+                                </ul>
                             </td>
                             <td class="px-4 py-3 text-xs">
                                 <span class="flex items-center">

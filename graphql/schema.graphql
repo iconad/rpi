@@ -11,13 +11,13 @@ type Query {
     # menus: [Menu!]!
 
     sizes(orderBy: [OrderByClause!] @orderBy): [Size!]!  @all
+    sizesbycategory(catg_id: Int): [Size!]!
+
     finishings(orderBy: [OrderByClause!] @orderBy): [Finishing!]!  @all
     papers(orderBy: [OrderByClause!] @orderBy): [Paper!]!  @all
     paper(id: ID @eq): Paper @find
     packages(orderBy: [OrderByClause!] @orderBy): [Package!]!  @all
     package(id: ID @eq): Package @find
-
-    # prices(page: Int!, status: String @where(status: "like") ): [Project]  @paginate
 
     prices(orderBy: [OrderByClause!] @orderBy, package_id: Int! @where(package_id: "like")): [PackagePrice]!  @all
     categories(orderBy: [OrderByClause!] @orderBy): [Category!]!  @all
@@ -26,10 +26,12 @@ type Query {
     TopProducts(menu: Int): [Category!]!
     TopBanners: [Category!]!
 
-    # categorysizes(menu_id: Int! @where(menu_id: "like")): [Menu]!  @all
-
     labels(orderBy: [OrderByClause!] @orderBy): [Label!]!  @all
+
     products(orderBy: [OrderByClause!] @orderBy): [Product!]!  @all
+    product(id: ID @eq): Product @find
+
+    packageprice(id: ID @eq): [PackagePrice!]!  @all
 }
 
 type User {
@@ -145,6 +147,7 @@ type Product {
     delivery_time: Int!
     quantity: String!
     status: Int!
+    category: Category @hasOne
     label: Label @hasOne
     packages: [Package] @hasMany
     points: [Point] @hasMany
@@ -177,8 +180,19 @@ type Package {
 
 type PackagePrice {
     id: ID
-    price: Int!
+    quantity: Int!
+    price: Int
     package: Package @hasOne
+    size: Size @hasOne
+    sizes: [PackagePriceSize] @hasMany
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type PackagePriceSize {
+    id: ID
+    price: Int
+    pacakge_price: PackagePrice @hasOne
     size: Size @hasOne
     created_at: DateTime!
     updated_at: DateTime!

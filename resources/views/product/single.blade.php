@@ -5,9 +5,15 @@
     <section id="pageCover">
        <div class="page-cover" style="background: url(https://assets.printarabia.ae/product-banner-uploads/images/20db61e32701e0ed8cd50cbec3b23e3a5eec3bd571110.webp) no-repeat center;">
         <div class="inner p-8 w-full md:w-1/2">
-            <div class="text-xl font-medium ">2 Business Days Delivery*</div>
-            <h1 class="text-6xl my-2 leading-none text-white font-semibold">Standard Business Cards</h1>
-            <div class="text-sec font-medium text-xl">UAE Standard • 250 Copies > 90AED <span class="text-gray-800">(Incl. VAT)</span></div>
+            <div class="text-xl font-medium ">{{$product->delivery_time}} Business Days Delivery*</div>
+            <h1 class="text-6xl my-2 leading-none text-white font-semibold">{{$product->title}}</h1>
+            <div class="text-sec font-medium text-xl capitalize">
+                <span>{{$product->packages[0]->prices[0]->size->region}}</span>
+                <span>{{$product->packages[0]->prices[0]->size->type}}</span>
+                <span>• {{$product->packages[0]->quantity}} Copies</span>
+                <span>>  {{$product->packages[0]->prices[0]->price}} AED</span>
+
+                <span class="text-gray-800">(Incl. VAT)</span></div>
             <a href="" class="red-button">Order Now</a>
         </div>
        </div>
@@ -41,33 +47,20 @@
 
     <section class="product-tree mt-12" id="overview">
         <div class="text-center  hidden lg:block ">
-            <h2 class="mt-5 text-4xl font-semibold text-gray-900">Set a Standard with Brilliant Quality</h2>
-            <div class="text-xl text-gray-800">Reasons to choose 400gsm stiff, both sides matt laminated Standard Business Cards</div>
+            <h2 class="mt-5 text-4xl font-semibold text-gray-900">{{$product->body_title}}</h2>
+            <div class="text-xl text-gray-800">{{$product->body_subtitle}}</div>
             <div class="product-points-grid points-grid grid grid-cols-4 mx-6 mt-16 border border-gray-900 border-b-0 border-l-0 border-r-0">
+                @foreach ($product->points as $point)
                 <div class="point p-5">
                     <img src="https://www.printarabia.ae/img/misc/image-icon/default-icon-1.png" alt="icon" class="mx-auto">
-                    <div class="text-lg font-semibold mt-4">Feel the Difference</div>
+                    <div class="text-lg font-semibold mt-4">{{$point->title}}</div>
                     <div class="text-sm text-gray-700">Let's keep fighting Corona virus together!</div>
                 </div>
-                <div class="point p-5">
-                    <img src="https://www.printarabia.ae/img/misc/image-icon/default-icon-2.png" alt="icon" class="mx-auto">
-                    <div class="text-lg font-semibold mt-4">Short Print Run</div>
-                    <div class="text-sm text-gray-700">It may not be for you, but it is for everyone!</div>
-                </div>
-                <div class="point p-5">
-                    <img src="https://www.printarabia.ae/img/misc/image-icon/default-icon-2.png" alt="icon" class="mx-auto">
-                    <div class="text-lg font-semibold mt-4">Optional Finishings</div>
-                    <div class="text-sm text-gray-700">It may not be for you, but it is for everyone!</div>
-                </div>
-                <div class="point p-5">
-                    <img src="https://www.printarabia.ae/img/misc/image-icon/default-icon-3.png" alt="icon" class="mx-auto">
-                    <div class="text-lg font-semibold mt-4">Free + Next Day Delivery*</div>
-                    <div class="text-sm text-gray-700">To help prevent the spread of coronavirus!</div>
-                </div>
+                @endforeach
             </div>
             <!-- points grid -->
             <div class="images-grid mt-5">
-                <product-overview-images></product-overview-images>
+                <product-overview-images :images="{{ json_encode($product->getMedia('product-gallery')) }}"></product-overview-images>
             </div>
             <!-- images grid -->
         </div>
@@ -80,7 +73,7 @@
             <div class="text-3xl font-semibold text-gray-900">Paper & Prices <small class="text-base text-gray-700">(Incl.VAT)</small></div>
         </div>
         <div class="prices-drop-down mt-5">
-            <product-paper-price></product-paper-price>
+            <product-paper-price :pid="{{ json_encode($product->id) }}"></product-paper-price>
         </div>
         {{-- prices dropdonw --}}
     </section>
@@ -101,7 +94,7 @@
             {{-- header --}}
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
                 <div class="box border border-primary">
-                    <div class="p-4 bg-primary text-white text-xl font-semibold">UAE (90x50) Standard (90x50mm)</div>
+                    <div class="px-4 py-2 bg-primary-500 text-white text-lg font-semibold">UAE (90x50) Standard (90x50mm)</div>
                     <div class="flex items-center justify-around p-5 bg-white h-64">
                         <div class="w-full">
                             <img class="mx-auto" src="https://www.printarabia.ae/img/products/details/specs/size/business_cards/horizontal-90x50mm.png?s=webp" alt="image">
@@ -113,7 +106,7 @@
                 </div>
                 {{-- box --}}
                 <div class="box border border-primary">
-                    <div class="p-4 bg-primary text-white text-xl font-semibold">UAE (90x50) Standard (90x50mm)</div>
+                    <div class="px-4 py-2 bg-primary-500 text-white text-lg font-semibold">UAE (90x50) Standard (90x50mm)</div>
                     <div class="flex items-center justify-around p-5 bg-white h-64">
                         <div class="w-full">
                             <img class="mx-auto" src="https://www.printarabia.ae/img/products/details/specs/size/business_cards/horizontal-90x50mm.png?s=webp" alt="image">
@@ -125,7 +118,7 @@
                 </div>
                 {{-- box --}}
                 <div class="box border border-primary">
-                    <div class="p-4 bg-primary text-white text-xl font-semibold">UAE (90x50) Standard (90x50mm)</div>
+                    <div class="px-4 py-2 bg-primary-500 text-white text-lg font-semibold">UAE (90x50) Standard (90x50mm)</div>
                     <div class="flex items-center justify-around p-5 bg-white h-64">
                         <div class="w-full">
                             <img class="mx-auto" src="https://www.printarabia.ae/img/products/details/specs/size/business_cards/horizontal-90x50mm.png?s=webp" alt="image">
@@ -276,7 +269,7 @@
         </div>
 
         <div class="mt-6 bg-theme-gray">
-            <div class="text-2xl bg-primary font-semibold text-white text-center p-3">2 Business Days Turnaround Schedule</div>
+            <div class="text-2xxl py-2 bg-primary-500 font-semibold text-lg text-center p-3">2 Business Days Turnaround Schedule</div>
             <div class="flex flex-wrap lg:flex-no-wrap items-center justify-center py-10">
                 <div class="w-full lg:w-20rem py-4 md:mr-10 text-center lg:text-left">
                     <div class="text-2xl text-blue-500 font-semibold text-center">Today</div>
@@ -465,4 +458,4 @@
     {{-- useful links ended --}}
 
 
-@endsection;
+@endsection
