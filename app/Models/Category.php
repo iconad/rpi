@@ -56,6 +56,14 @@ class Category extends Model implements HasMedia
         return $this->hasMany(Product::class)->where('status', 1);
     }
 
+    public function subcategories() {
+        return $this->hasMany(SubCategory::class)->where('status', 1);
+    }
+
+    public function subCategoriesAll() {
+        return $this->hasMany(SubCategory::class);
+    }
+
     public function top_print_prodicts() {
         return $this->where('menu_id', 10)->get();
     }

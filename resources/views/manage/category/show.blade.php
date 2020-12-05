@@ -2,6 +2,8 @@
 
 @section('content')
 
+{{ Breadcrumbs::render('manage.category', $category) }}
+
 <div id="dashboard">
 
     <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
@@ -61,7 +63,7 @@
             <!-- form-ele -->
 
             <div class="form-element mt-8">
-                <change-status status="{{$category->status}}" id="{{$category->id}}" model="categories"></change-status>
+                <change-status :status="{{$category->status}}" id="{{$category->id}}" model="categories"></change-status>
             </div>
             <!-- form-ele -->
 

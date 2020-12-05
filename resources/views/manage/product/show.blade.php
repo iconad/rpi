@@ -96,9 +96,9 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
                 </div>
                 <div class="w-32">
                     <span class="text-gray-800 mb-2 block">Current Image</span>
-                    {{-- <img src="{{$image}}" alt="{{$product->title}}"> --}}
+                    <img src="{{$image}}" alt="{{$product->title}}">
                     {{-- {{ $product->getFirstMediaUrl('images') }} --}}
-                    {{$image}}
+                    {{-- {{$image}} --}}
                 </div>
             </div>
             <!-- form-ele -->
@@ -129,19 +129,18 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
             <!-- form-ele -->
 
 
-            {{ ($product->finishings=="1") ? "selected" : "" }}
+        {{-- {{ ($product->finishings=="1") ? "selected" : "" }} --}}
         <div class="form-element mt-10">
             <label>
                 <span class="text-gray-800 block">Finishings</span>
                 <div class="relative">
                     <select multiple class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-2 px-3 pr-8 rounded leading-tight focus:outline-none" name="finishings[]" value="{{ old('finishings') }}">
-                        @foreach ($product->finishings as $fin)
-                            @foreach ($finishings as $key => $finish)
-                                @if ($finish->id == $fin->id)
-                                    <option  value="{{$finish->id}}" selected>{{$finish->title}}</option>
-                                @endif
+                            @foreach ($product->finishings as $fin)
+                                    <option  value="{{$fin->id}}" selected >{{$fin->title}}</option>
                             @endforeach
-                        @endforeach
+                            @foreach ($notFinish as $fin)
+                                    <option  value="{{$fin->id}}" >{{$fin->title}}</option>
+                            @endforeach
                         @foreach ($notSelectedFinishings as $nf)
                         <option  value="{{$nf->id}}">{{$nf->title}}</option>
                         @endforeach

@@ -2,7 +2,9 @@
     <div>
         <div class="flex items-center relative text-sm lg:text-base font-medium z-10">
             <div class="logo hidden lg:block">
-                <img class="absolute h-16 left-0 top-0" src="../../../../public/assets/images/logo.png" alt="logo" />
+                <a href="/">
+                    <img class="absolute h-16 left-0 top-0" src="../../../../public/assets/images/logo.png" alt="logo" />
+                </a>
             </div>
             <!-- logo -->
             <div v-if="$apollo.queries.menus.loading" class="w-full flex items-center justify-center">
@@ -15,7 +17,9 @@
                         <span class="text-3xl" v-if="isNavbar">╳</span>
                     </div>
                     <div class="w-full pt-3 text-center">
-                        <img class="mx-auto h-12 left-0 top-0" src="../../../../public/assets/images/logo.png" alt="logo" />
+                        <a href="/">
+                            <img class="mx-auto h-12 left-0 top-0" src="../../../../public/assets/images/logo.png" alt="logo" />
+                        </a>
                     </div>
                     <div class="w-auto p-2">
                         <span class="text-gray-600">
@@ -25,7 +29,7 @@
                 </div>
                 <div class="category-wrapper w-full lg:flex items-center border lg:border-0 mt-3 lg:mt-0" v-if="isNavbar || window.width > 1024">
                     <div class="category p-3 lg:p-5 hover:text-sec"  v-for="(menu, i) in menus" :key="i">
-                        <span class="whitespace-no-wrap">{{menu.title}}</span>
+                        <span class="whitespace-nowrap">{{menu.title}}</span>
                             <div class="sub-category-wrapper lg:absolute left-0 top-100 lg:rounded bg-white w-full">
                                 <div class="relative inline-block border h-full border-t-0 border-l-0 border-b-0 w-full md:w-1/2 lg:w-auto">
                                 <div class="sub-category w-full" v-for="(category, ci) in menu.categories" :key="ci" >
@@ -33,7 +37,7 @@
                                     <div class="pl-4 lg:pl-0 products-wrapper lg:absolute left-100 top-0 products-warpper-height w-auto h-full lg:border lg:border-t-0 lg:border-l-0 lg:border-b-0">
                                         <div ref="navHeight">
                                             <div class="product" v-for="(product, pi) in category.products" :key="pi" >
-                                                <a class="p-3 whitespace-no-wrap block hover:bg-gray-200 hover:text-black transition ease-in-out duration-100 text-gray-800" :href="`/products/${product.slug}`">{{product.title}}</a>
+                                                <a class="p-3 whitespace-nowrap block hover:bg-gray-200 hover:text-black transition ease-in-out duration-100 text-gray-800" :href="`/products/${product.slug}`">{{product.title}}</a>
                                                 <div class="product-info">
                                                     <div class="text-center sm:absolute left-100 hidden lg:block lg:w-650px xl:w-850px top-0">
                                                         <h2 class="mt-5 text-2xl font-semibold text-gray-900">{{product.title_two}}</h2>
@@ -46,7 +50,7 @@
                                                             <span class="text-gray-800 font-light">(Incl. VAT)</span>
                                                         </div>
                                                         <div class="points-grid grid grid-cols-3 mx-6 mt-5 border border-gray-900 border-b-0 border-l-0 border-r-0">
-                                                            <div class="point p-5" v-for="(point, poi) in product.points" :key="poi">
+                                                            <div class="point p-5" v-for="(point, poi) in product.points.slice(0, 3)" :key="poi">
                                                                 <div v-if="point.media.length != 0">
                                                                     <thumb-image classess="mx-auto" :image="point.media[0].file_name" :id="point.media[0].id"></thumb-image>
                                                                 </div>
@@ -63,7 +67,7 @@
 
                                                         <div class="order flex items-center justify-between mt-4 mx-12">
                                                             <a :href="`/products/${product.slug}`" class="theme-link">View Product</a>
-                                                            <a :href="`/products/${product.slug}/order`" class="red-button py-3 rounded">Order</a>
+                                                            <a :href="`/products/${product.slug}/order`" class="red-button py-2 rounded">Order</a>
                                                         </div>
                                                         <!-- images grid -->
 

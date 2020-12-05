@@ -3,28 +3,37 @@
         <h2 class="text-center text-2xl font-semibold text-gray-700 mb-6">
             {{title}}
         </h2>
-
         <swiper class="swiper" :options="swiperOptions">
+            <template v-if="menu == 13">
+                <swiper-slide class="inner" v-for="(pro,i) in subProducts" :key="i">
+                    <products-slider :menu="menu" :products="pro"></products-slider>
+                </swiper-slide>
+            </template>
+            <template v-else>
             <swiper-slide v-for="(category,i) in categories" :key="i">
                 <div class="inner">
-                    <products-slider :products="category.products"></products-slider>
+                    <products-slider :menu="menu" :products="category.products"></products-slider>
                 </div>
             </swiper-slide>
-            <!-- <div class="swiper-button-prev" slot="button-prev"></div>
-            <div class="swiper-button-next" slot="button-next"></div> -->
+            </template>
         </swiper>
+
     </div>
 </template>
 
 <script>
 
+    import ProductsSlider from './ProductsSlider'
+
     import gql from 'graphql-tag'
     import query from "../../../../../gql/frontend/queries/TopProducts.gql";
+    import featuredSubQuery from "../../../../../gql/frontend/queries/FeaturedSubCategories.gql";
 
     export default {
-        name: "top-print-products",
-        title: "Top Print Products",
         props: ['title', 'menu', 'rows'],
+        components: {
+            ProductsSlider
+        },
         data() {
             return {
                 swiperOptions: {
@@ -53,6 +62,13 @@
                 }
             };
         },
+        computed: {
+            subProducts () {
+                if (!this.$apollo.queries.subcategories.loading) {
+                    return this.subcategories.map(s => s.products)
+                }
+            }
+        },
         apollo: {
             categories() {
                 return {
@@ -62,6 +78,17 @@
                     },
                     update(data) {
                         return data.TopProducts;
+                    },
+                };
+            },
+            subcategories() {
+                return {
+                    query: featuredSubQuery,
+                    variables: {
+                        menu: this.menu
+                    },
+                    update(data) {
+                        return data.FeaturedSubCategories;
                     },
                 };
             },

@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div class="w-full" v-if="this.$apollo.queries.product.loading">
+        <div class="w-full" v-if="!this.isProduct">
             <div class="loader"></div>
         </div>
-        <div v-else  class="flex flex-wrap md:flex-no-wrap items-center">
+        <div v-else  class="flex flex-wrap md:flex-nowrap items-center">
             <div class="w-48 text-lg font-medium text-gray-800">
                 Prices shown for:
             </div>
@@ -49,12 +49,15 @@
         data () {
             return {
                 selectedPackage: null,
-                header: [],
-                options: ['list', 'of', 'options']
+                header:[],
             }
+        },
+        mounted() {
+
         },
         watch: {
             selectedPackage (newValue, oldValue) {
+                this.$store.commit('selectedPackage', newValue)
                 this.header = []
                 newValue.prices.map(e => {
                      e.sizes.map(b => {
@@ -82,9 +85,22 @@
                 })
             }
         },
+        mounted() {
+            this.$store.dispatch("getProduct", this.pid)
+        },
         computed: {
+            isProduct () {
+                return this.$store.state.isProduct
+            },
+
+            product () {
+                if(this.isProduct) {
+                    return this.$store.state.product
+                }
+            },
+
             packages () {
-                if(!this.$apollo.queries.product.loading) {
+                if(this.product) {
                     if (this.product.packages.length > 0) {
                         this.selectedPackage = this.product.packages[0]
                     }
@@ -92,19 +108,6 @@
                 }
             }
         },
-        apollo: {
-            product() {
-                return {
-                    query: product,
-                    variables: {
-                        id: this.pid
-                    },
-                    update(data) {
-                        return data.product;
-                    },
-                };
-            },
-        }
     }
 </script>
 

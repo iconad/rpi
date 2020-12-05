@@ -1,0 +1,9 @@
+query {
+  colors(orderBy: [{ field: "id", order: DESC }]) {
+    id
+    title
+    hex
+    hex8
+    rgba
+  }
+}

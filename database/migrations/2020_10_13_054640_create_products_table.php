@@ -25,6 +25,7 @@ class CreateProductsTable extends Migration
             $table->integer('delivery_time')->default(0);
             $table->string('printing_text')->nullable();
             $table->integer('printing')->nullable();
+            $table->integer('stock')->nullable();
             $table->string('quantity')->nullable();
             $table->integer('user_id');
             $table->integer('category_id')->unsigned();

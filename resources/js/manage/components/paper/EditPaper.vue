@@ -70,7 +70,7 @@
         },
         data() {
             return {
-                sides: ["front side", "back side", 'both sides'],
+                sides: ["One Side Colour", "front side", "back side", 'both sides'],
             }
         },
         computed: {

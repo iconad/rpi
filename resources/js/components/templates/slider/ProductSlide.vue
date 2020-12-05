@@ -1,6 +1,7 @@
 <template>
     <div>
-        <div class="p-3 text-xl font-semibold text-primary">{{product.title}}</div>
+        <div v-if="product">
+            <div class="p-3 text-xl font-semibold text-primary">{{product.title}}</div>
         <a :href="`/products/${product.slug}`">
             <thumb-image classess="w-full" :image="firstMedia[0].file_name" :id="firstMedia[0].id"></thumb-image>
         </a>
@@ -19,6 +20,12 @@
         <div class="flex items-center justify-around p-3 pt-0 border-2 border-t-0 border-l-0 border-r-0 border-sec">
             <a href="http://" class="mr-auto">Get Started</a>
             <a href="http://" class="ml-auto">View All</a>
+        </div>
+        </div>
+        <div v-else class="flex items-center justify-center h-64 w-full">
+            <div class="text-xl text-red-500">
+                Product loading...
+            </div>
         </div>
     </div>
 </template>

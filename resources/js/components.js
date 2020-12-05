@@ -14,16 +14,6 @@ Vue.component(
 );
 
 Vue.component(
-    "products-slider",
-    require("./components/templates/slider/ProductsSlider.vue").default
-);
-
-Vue.component(
-    "product-slide",
-    require("./components/templates/slider/ProductSlide.vue").default
-);
-
-Vue.component(
     "product-overview-images",
     require("./components/product/OverviewImages.vue").default
 );
@@ -34,13 +24,13 @@ Vue.component(
 );
 
 Vue.component(
-    "product-quality-chart",
-    require("./components/product/QuantityChart.vue").default
+    "product-sizes",
+    require("./components/product/ProductSizes.vue").default
 );
 
 Vue.component(
-    "product-quality-chart-redline",
-    require("./components/product/QuantityChartRedLine.vue").default
+    "product-quantity-chart",
+    require("./components/product/QuantityChart.vue").default
 );
 
 Vue.component(
@@ -98,3 +88,7 @@ Vue.component(
     require("./components/pages/DesignSketchSamples.vue").default
 );
 
+Vue.component(
+    "thumb-image-blade",
+    require("./components/ThumbImage.vue").default
+);

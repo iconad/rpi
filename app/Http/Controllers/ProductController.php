@@ -38,6 +38,18 @@ class ProductController extends Controller
     }
 
     /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function createGiftProduct()
+    {
+        $categories = Category::where('menu_id', 13)->get();
+        $finishings = Finishing::all();
+        return view('manage.product.gift.create', compact('categories', 'finishings'));
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -46,20 +58,30 @@ class ProductController extends Controller
     public function store(Request $request)
     {
 
-        $request->validate([
-            'title' => 'required',
-            'points_title' => 'required',
-            'min_quantity' => 'required',
-            'max_quantity' => 'required',
-            'delivery_time' => 'required',
-        ]);
+        if($request->type === 'general') {
+            $request->validate([
+                'title' => 'required',
+                'points_title' => 'required',
+                'min_quantity' => 'required',
+                'max_quantity' => 'required',
+                'delivery_time' => 'required',
+            ]);
+        }elseif($request->type === 'gift') {
+            $request->validate([
+                'title' => 'required',
+                'delivery_time' => 'required',
+            ]);
+        }
+
 
         if($request->min_quantity > $request->max_quantity) {
             $request->session()->flash('red', 'Min quanitity mush be less then max quantity.');
             return redirect()->route('products.create');
         }
 
-        $pathToFile = $this->createImage($request->image);
+        if($request->has('image')) {
+            $pathToFile = $this->createImage($request->image);
+        }
 
         $quantity = $request->min_quantity . ' , ' . $request->max_quantity;
 
@@ -72,15 +94,17 @@ class ProductController extends Controller
             'printing' => $request->printing,
             'quantity' => $quantity,
             'category_id' => $request->category_id,
+            'sub_category_id' => $request->sub_category_id,
             'delivery_time' => $request->delivery_time,
             'user_id' => auth()->id(),
         ]);
 
         $product->finishings()->sync($request->finishings);
 
-        $product->addMedia($pathToFile)
-                ->toMediaCollection('images');
-
+        if($request->has('image')) {
+            $product->addMedia($pathToFile)
+                    ->toMediaCollection('images');
+        }
         if ($product) {
             $request->session()->flash('green', 'Product was successful added!');
             return redirect()->route('products.show', $product->id);
@@ -99,22 +123,42 @@ class ProductController extends Controller
 
         $notSelectedFinishings = Finishing::with('products')->whereDoesntHave('products')->get();
 
-        $categories = Category::all();
+        $categories = Category::where('menu_id', $product->category->menu->id)->get();
         $finishings = Finishing::all();
+        $notFinish = Finishing::whereDoesntHave('products', function($query) use ($product) {
+            $query->where('id', $product->id);
+          })->get();
         $points = $product->points;
-        $image = $product->getMedia('images')[0]->getUrl();
+        $image = $product->getMedia('images')->count() != 0 ? $product->getMedia('images')[0]->getUrl() : null;
         $quantity = explode(',', $product->quantity);
         $min_quantity = $quantity[0];
         $max_quantity = $quantity[1];
-        return view('manage.product.show', compact(
-            'product',
-            'min_quantity',
-            'notSelectedFinishings',
-            'finishings',
-            'max_quantity',
-            'image',
-            'points',
-            'categories'));
+
+        if ($product->category->menu->id == 13) {
+            return view('manage.product.gift.show', compact(
+                'product',
+                'min_quantity',
+                'notSelectedFinishings',
+                'finishings',
+                'notFinish',
+                'max_quantity',
+                'image',
+                'points',
+                'categories'
+        ));
+        }else{
+            return view('manage.product.show', compact(
+                'product',
+                'min_quantity',
+                'notSelectedFinishings',
+                'finishings',
+                'notFinish',
+                'max_quantity',
+                'image',
+                'points',
+                'categories'));
+        }
+
     }
 
     /**
@@ -137,9 +181,9 @@ class ProductController extends Controller
     public function update(Request $request, Product $product){
         $request->validate([
             'title' => 'required',
-            'points_title' => 'required',
-            'min_quantity' => 'required',
-            'max_quantity' => 'required',
+            // 'points_title' => 'required',
+            // 'min_quantity' => 'required',
+            // 'max_quantity' => 'required',
             'delivery_time' => 'required',
             'category_id' => 'required',
         ]);
@@ -150,6 +194,7 @@ class ProductController extends Controller
         }
 
         if($request->has('image')) {
+
             $mediaItems = $product->getMedia('images');
             if(count($mediaItems) != 0) {
                 $mediaItems[0]->delete();
@@ -170,6 +215,7 @@ class ProductController extends Controller
             $product->printing_text = $request->printing_text;
             $product->printing = $request->printing;
             $product->category_id = $request->category_id;
+            $product->sub_category_id = $request->sub_category_id;
             $product->delivery_time = $request->delivery_time;
 
             $product->finishings()->sync($request->finishings);
@@ -251,5 +297,10 @@ class ProductController extends Controller
         if($done) {
             return response()->json(['Image successfully deleted!']);
         }
+    }
+
+
+    public function selectProductType() {
+        return view('manage.product.select_product_type');
     }
 }

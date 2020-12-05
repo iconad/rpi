@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="text-center product-points-grid points-grid grid grid-cols-2 lg:grid-cols-4 mx-6 mt-16 lg:border border-gray-900 border-b-0 border-l-0 border-r-0">
+        <div class="text-center product-points-grid points-grid grid grid-cols-2 lg:grid-cols-4 mx-6 mt-16 lg:border-t border-gray-900 border-b-0 border-l-0 border-r-0">
             <div class="point p-5 cursor-pointer" v-on:click="howToOrderMethod(1)">
                 <img src="https://www.printarabia.ae/img/products/misc/how-to-order/step-1.png" alt="icon" class="w-24 mx-auto">
                 <div class="text-lg font-semibold mt-4 text-theme-red-light">Select your desired <br> product from menu</div>

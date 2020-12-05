@@ -1,0 +1,80 @@
+query ($menu: Int!) {
+  FeaturedSubCategories(menu: $menu) {
+    id
+    title
+    menu {
+        id
+        title
+    }
+    products {
+        id
+        title
+        slug
+        title_two
+        body_title
+        body_subtitle
+        status
+        delivery_time
+        media{
+          id
+          file_name
+          collection_name
+        }
+        variants {
+            id,
+            title
+            short_title
+            stock
+            price
+            color {
+                id
+                title
+                hex
+            }
+        }
+        category {
+            id
+            title
+            menu {
+                id
+                title
+            }
+        }
+        subcategory {
+            id
+            title
+            slug
+        }
+        packages {
+          id
+          quantity
+          paper {
+            id
+            title
+            side
+          }
+          prices {
+            id
+            price
+            size {
+              id
+              region
+              unit
+              portrait
+              landscape
+            }
+          }
+        }
+        points {
+          id
+          title
+          body
+          media{
+            id
+            file_name
+          }
+        }
+
+      }
+  }
+}

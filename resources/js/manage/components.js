@@ -4,10 +4,22 @@ Vue.component(
     "create-product",
     require("./components/product/CreateProduct.vue").default
 );
+
+Vue.component(
+    "add-product-to-variant",
+    require("./components/product/color/AddColorToVariant.vue").default
+);
+
 Vue.component(
     "manage-labels",
     require("./components/label/ManageLabels.vue").default
 );
+
+Vue.component(
+    "manage-colors",
+    require("./components/color/ManageColors.vue").default
+);
+
 Vue.component(
     "manage-menu",
     require("./components/menu/ManageMenu.vue").default
@@ -31,6 +43,12 @@ Vue.component(
     "manage-categories",
     require("./components/Category/ManageCategories.vue").default
 );
+
+Vue.component(
+    "manage-sub-categories",
+    require("./components/Category/Sub/ManageCategories.vue").default
+);
+
 Vue.component(
     "change-status",
     require("./components/ChangeStatus.vue").default
@@ -56,6 +74,11 @@ Vue.component(
 Vue.component(
     "category-extra",
     require("./components/Category/CategoryExtra.vue").default
+);
+
+Vue.component(
+    "sub-category-extra",
+    require("./components/Category/Sub/CategoryExtra.vue").default
 );
 
 Vue.component(

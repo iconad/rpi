@@ -74,7 +74,7 @@
                     title: null,
                     side: "front side",
                 },
-                sides: ["front side", "back side", 'both sides'],
+                sides: ["One side colour", "front side", "back side", 'both sides'],
             }
         },
         methods: {

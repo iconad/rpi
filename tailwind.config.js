@@ -22,6 +22,9 @@ module.exports = {
             animation: {
                 'spin-fast': 'spin 0.5s linear infinite',
             },
+            fontSize: {
+                '9px': '9px'
+            },
             minHeight: {
                '0': '0',
                '1/4': '25%',
@@ -229,6 +232,7 @@ module.exports = {
                 "26rem": "26rem",
                 "36rem": "36rem",
                 "50rem": "50rem",
+                "2px": "2px",
                 "100px": "100px",
                 "500px": "500px",
                 "650px": "650px",

@@ -14,6 +14,7 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
     </h2>
     <form action="{{route('products.store')}}" method="post" enctype="multipart/form-data"  class="w-full rounded-lg border border-gray-200 bg-white p-4">
         @csrf
+        <input type="hidden" name="type" value="general">
         <div class="form-element">
             <label>
                 <span class="text-gray-800 block">Title</span>

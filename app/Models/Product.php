@@ -25,6 +25,7 @@ class Product extends Model implements HasMedia
         'body',
         'featured',
         'status',
+        'stock',
         'body_title',
         'body_subtitle',
         'quantity',
@@ -32,6 +33,7 @@ class Product extends Model implements HasMedia
         'order',
         'label_id',
         'category_id',
+        'sub_category_id',
     ];
 
     public function sluggable()
@@ -61,6 +63,10 @@ class Product extends Model implements HasMedia
         return $this->belongsTo(Category::class)->where('status', 1);
     }
 
+    public function subCategory() {
+        return $this->belongsTo(SubCategory::class);
+    }
+
     public function points() {
         return $this->hasMany(Point::class)->where('status', 1);
     }
@@ -73,9 +79,26 @@ class Product extends Model implements HasMedia
         return $this->belongsToMany(Finishing::class)->where('status', 1);
     }
 
+    public function colors () {
+        return $this->belongsToMany(Color::class);
+    }
+
+    public function variants () {
+        return $this->hasMany(Variant::class);
+    }
+
     public function thumbnail () {
         return $this->getMedia('images')[0]->getUrl();
     }
 
+    public function lowestPrice () {
+        return $this->hasMany(Variant::class)->orderBy("price")->first();
+    }
 
+    public function minPrice () {
+        return $this->hasMany(Variant::class)->min("price");
+    }
+    public function maxPrice () {
+        return $this->hasMany(Variant::class)->max("price");
+    }
 }

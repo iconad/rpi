@@ -23,10 +23,17 @@ type Query {
     categories(orderBy: [OrderByClause!] @orderBy): [Category!]!  @all
     category(id: ID @eq): Category @find
 
+    subsbycategory(catg_id: Int): [SubCategory!]!
+    subcategory(id: ID @eq): SubCategory @find
+
     TopProducts(menu: Int): [Category!]!
+    FeaturedSubCategories(menu: Int): [SubCategory!]!
     TopBanners: [Category!]!
 
     labels(orderBy: [OrderByClause!] @orderBy): [Label!]!  @all
+    colors(orderBy: [OrderByClause!] @orderBy): [Color!]!  @all
+
+    variants(orderBy: [OrderByClause!] @orderBy): [Variant!]!  @all
 
     products(orderBy: [OrderByClause!] @orderBy): [Product!]!  @all
     product(id: ID @eq): Product @find
@@ -46,6 +53,7 @@ type Menu {
     id: ID!
     title: String!
     slug: String!
+    categories: [Category] @hasMany
     status: Int!
     created_at: DateTime!
     updated_at: DateTime!
@@ -62,6 +70,23 @@ type Category {
     label: Label @hasOne
     menu: Menu @hasOne
     products: [Product] @hasMany
+    subcategories: [SubCategory] @hasMany
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type SubCategory {
+    id: ID!
+    title: String!
+    slug: String!
+    excerpt: String
+    body: String
+    status: Int!
+    featured: Int!
+    products: [Product] @hasMany
+    label: Label @hasOne
+    menu: Menu @hasOne
+    category: Category @hasOne
     created_at: DateTime!
     updated_at: DateTime!
 }
@@ -117,6 +142,17 @@ type Finishing {
     updated_at: DateTime!
 }
 
+type Color {
+    id: ID!
+    title: String!
+    hex: String!
+    hex8: String!
+    rgba: String!
+    status: Int!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
 type Label {
     id: ID!
     title: String!
@@ -137,19 +173,34 @@ type Point {
 }
 
 
+type Variant {
+    id: ID!
+    title: String
+    short_title: String
+    stock: Int!
+    price: Int!
+    status: Int!
+    color: Color @hasOne
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+
 type Product {
     id: ID!
     title: String!
     title_two: String
     slug: String!
-    body_title: String!
+    body_title: String
     body_subtitle: String
     delivery_time: Int!
     quantity: String!
     status: Int!
     category: Category @hasOne
+    subcategory: SubCategory @hasOne
     label: Label @hasOne
     packages: [Package] @hasMany
+    variants: [Variant] @hasMany
     points: [Point] @hasMany
     media: [Media] @hasMany
     packages: [Package] @hasMany

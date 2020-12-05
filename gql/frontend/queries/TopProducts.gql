@@ -2,6 +2,15 @@ query ($menu: Int!) {
   TopProducts(menu: $menu) {
     id
     title
+    subcategories {
+        id
+        title
+        slug
+    }
+    menu {
+        id
+        title
+    }
     products {
         id
         title
@@ -10,10 +19,31 @@ query ($menu: Int!) {
         body_title
         body_subtitle
         status
+        delivery_time
         media{
           id
           file_name
           collection_name
+        }
+        variants {
+            id,
+            title
+            short_title
+            stock
+            price
+            color {
+                id
+                title
+                hex
+            }
+        }
+        category {
+            id,
+            title
+            menu {
+                id,
+                title
+            }
         }
         packages {
           id

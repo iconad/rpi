@@ -2,7 +2,12 @@
     <div>
         <swiper class="swiper" :options="swiperOptions">
             <swiper-slide v-for="(product, i) in products" :key="i">
-                <product-slide v-if="product.packages.length != 0" :product="product"></product-slide>
+                <template v-if="menu == 13">
+                    <gift-product-slide :product="product"></gift-product-slide>
+                </template>
+                <template v-else>
+                    <product-slide v-if="product.packages.length != 0" :product="product"></product-slide>
+                </template>
             </swiper-slide>
             <div class="product-swiper-pagination" slot="pagination"></div>
         </swiper>
@@ -14,12 +19,14 @@
 
     import ThumbImage from './../../ThumbImage'
     import ProductSlide from './ProductSlide'
+    import GiftProductSlide from './GiftProductSlide'
 
     export default {
-        props: ['products'],
+        props: ['products', "menu"],
         components: {
             ThumbImage,
-            ProductSlide
+            ProductSlide,
+            GiftProductSlide
         },
         data() {
             return {

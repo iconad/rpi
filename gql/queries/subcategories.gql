@@ -1,0 +1,25 @@
+query getEvent($catg_id: Int!) {
+  subsbycategory (catg_id: $catg_id) {
+    id
+    title
+    slug
+    status
+    featured
+    created_at
+    category {
+        id
+        title
+        slug
+        status
+    }
+    menu {
+      id
+      title
+    }
+    label {
+      id
+      title
+      color
+    }
+  }
+}

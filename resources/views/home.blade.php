@@ -12,17 +12,17 @@
 
 <section class="ad-space my-12">
     <div class="w-full md:w-2/3 mx-auto">
-        <x-ads.fullwidth-small />
+        {{-- <x-ads.fullwidth-small /> --}}
     </div>
 </section>
 
 <section class="my-12">
-        <top-products menu="12" rows="1" title="Top Banners & Displays"></top-products>
+        {{-- <top-products menu="12" rows="1" title="Top Banners & Displays"></top-products> --}}
 </section>
 
 <section class="ad-space my-12">
     <div class="w-full md:w-2/3 mx-auto">
-        <x-ads.fullwidth-small />
+        {{-- <x-ads.fullwidth-small /> --}}
     </div>
 </section>
 
@@ -32,16 +32,17 @@
 
 <section class="ad-space my-12">
     <div class="w-full md:w-2/3 mx-auto">
-        <x-ads.fullwidth-small />
+        {{-- <x-ads.fullwidth-small /> --}}
     </div>
 </section>
 
 <section class="my-12">
-    <single-row-slider title="Top T-shirt Printing"></single-row-slider>
+    {{-- <top-products menu="14" rows="1" title="Top T-shirt Printing"></top-products> --}}
+    {{-- <single-row-slider title="Top T-shirt Printing"></single-row-slider> --}}
 </section>
 
 
-<section class="my-24">
+{{-- <section class="my-24">
     <div class="grid grid-cols-3 gap-12 w-full md:w-4/5 mx-auto">
         <div class="text-center">
             <img src="{{ asset('assets/images/free-delivery.png') }}" class="mb-5 w-24   mx-auto" alt="icon">
@@ -60,7 +61,7 @@
         </div>
     </div>
 </section>
-
+ --}}
 
 <section class="my-12" id="whyChoose">
     <div class="text-center">
@@ -114,15 +115,15 @@
 </section>
 
 
-<section class="my-24" id="googleCustomReviews">
+{{-- <section class="my-24" id="googleCustomReviews">
     <div class="w-4/5 mx-auto">
         <x-google-reviews />
     </div>
-</section>
+</section> --}}
 {{-- google customer reviews --}}
 
 
-<section class="my-24" id="ourClients">
+{{-- <section class="my-24" id="ourClients">
     <div class="w-4/5 text-center  mx-auto">
         <div class="text-3xl font-semibold text-gray-900 mb-3">Our Clients</div>
         <p>We are their esteemed printing partner in UAE based on performed services.</p>
@@ -131,7 +132,7 @@
         </div>
     </div>
 </section>
-
+ --}}
 
 <section class="my-12 md:my-24" id="videoGuide">
     <div class="border border-gray-400 rounded p-12">
@@ -202,7 +203,7 @@
 
 
 
-<section class="mb-12 md:my-24" id="WeAreHereHelp">
+{{-- <section class="mb-12 md:my-24" id="WeAreHereHelp">
     <div class="w-4/5 text-center  mx-auto">
         <div class="text-3xl font-semibold text-gray-900 mb-3">We’re here to help!</div>
         <p>We’re a one-stop print shop with a strong appetite for offset, digital, and large format. <br />
@@ -262,7 +263,7 @@
             </div>
         </div>
 
-</section>
+</section> --}}
 {{-- we are here to help --}}
 
 

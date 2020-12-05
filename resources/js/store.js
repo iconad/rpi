@@ -1,5 +1,13 @@
 import { isObject } from 'lodash';
 import Vue from 'vue';
+
+
+import gql from 'graphql-tag'
+import productQuery from "../../gql/frontend/queries/product.gql";
+
+import graphqlClient from './apollo';
+
+
 import axios from 'axios';
 import Vuex from 'vuex';
 import _ from 'lodash'
@@ -17,11 +25,24 @@ export const store = new Vuex.Store({
         selectedShirt: {
             color: "Natural"
         },
-        productGallery: ['hello']
+        // Product
+        productGallery: [],
+        product: null,
+        selectedPackage: null,
+        isProduct: false
 
 
     },
     mutations: {
+        selectedPackage (state, payload) {
+        state.selectedPackage = payload;
+      },
+      isProduct (state, payload) {
+        state.isProduct = payload;
+      },
+      mutateProduct (state, payload) {
+        state.product = payload;
+      },
       mutateSelectedPaperFinishing (state, payload) {
         state.selectedPaperFinishing.push(payload);
       },
@@ -59,9 +80,26 @@ export const store = new Vuex.Store({
             this.gallery = response.data.gallery
         });
 
-      }
+      },
+        async getProduct({ commit }, pid) {
+        commit('isProduct', false)
+        const response = await graphqlClient.query({
+          query: productQuery,
+          variables: { id: pid },
+        });
+        commit('mutateProduct', response.data.product)
+        commit('isProduct', true)
+      },
+
+
     },
+
+
+
+
   })
+
+
 
 
 

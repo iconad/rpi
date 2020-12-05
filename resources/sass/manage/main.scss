@@ -25,6 +25,10 @@ a {
     right: 100%;
 }
 
+.blend-difference {
+    color: rgb(0,255,255);
+    mix-blend-mode: difference;
+}
 
 .custom-checkbox {
     position: absolute; // take it out of document flow

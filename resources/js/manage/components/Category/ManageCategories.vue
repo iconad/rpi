@@ -5,7 +5,7 @@
         </div>
         <div v-else class="w-full overflow-hidden rounded-lg shadow-xs">
             <div class="w-full overflow-x-auto">
-                <table class="w-full whitespace-no-wrap">
+            <table class="w-full whitespace-no-wrap">
                 <thead>
                     <tr
                     class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
@@ -34,7 +34,8 @@
                         </div>
                         </td>
                         <td class="px-4 py-3 text-sm">
-                            {{category.menu.title}}
+                            <span v-if="category.menu">{{category.menu.title}}</span>
+                            <span v-else>---</span>
                         </td>
                         <!-- <td class="px-4 py-3 text-sm">
                             <span v-if="category.featured === 0">NO</span>
@@ -52,8 +53,8 @@
                             </td>
                         </tr>
                 </tbody>
-                </table>
-            </div>
+            </table>
+        </div>
     </div>
     </div>
 </template>

@@ -4,8 +4,8 @@
 
 {{ Breadcrumbs::render('product.packages.create', $product) }}
 
-             <!-- Old Name "Packages" -->
-            <!-- change to "Paper" -->
+    <!-- Old Name "Packages" -->
+    <!-- change to "Paper" -->
 
 <div id="dashboard">
     <div class="w-full rounded-lg border border-gray-200 bg-white p-4">
