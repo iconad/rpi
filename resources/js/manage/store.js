@@ -8,7 +8,7 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
-        publicUrl: "http://127.0.0.1:8000/storage/",
+        publicUrl: "http://128.199.130.122/storage/",
         productGallery: [],
         isSidebar: false,
         sidebarType: null,

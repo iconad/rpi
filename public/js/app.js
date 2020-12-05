@@ -93745,7 +93745,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_7__["default"]);
 var store = new vuex__WEBPACK_IMPORTED_MODULE_7__["default"].Store({
   state: {
-    publicUrl: "http://127.0.0.1:8000/storage/",
+    publicUrl: "http://128.199.130.122/storage/",
     //Order
     selectedPaperFinishing: [],
     notSelectedPaperFinishing: [],

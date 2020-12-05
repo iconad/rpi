@@ -91777,7 +91777,7 @@ __webpack_require__.r(__webpack_exports__);
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_3__["default"]);
 var store = new vuex__WEBPACK_IMPORTED_MODULE_3__["default"].Store({
   state: {
-    publicUrl: "http://127.0.0.1:8000/storage/",
+    publicUrl: "http://128.199.130.122/storage/",
     productGallery: [],
     isSidebar: false,
     sidebarType: null,
