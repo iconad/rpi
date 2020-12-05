@@ -67526,7 +67526,7 @@ var render = function() {
                                                                     "span",
                                                                     {
                                                                       staticClass:
-                                                                        "test text-gray-800 font-light"
+                                                                        "text-gray-800 font-light"
                                                                     },
                                                                     [
                                                                       _vm._v(
