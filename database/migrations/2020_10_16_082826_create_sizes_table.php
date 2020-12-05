@@ -20,7 +20,7 @@ class CreateSizesTable extends Migration
             $table->string('type');
             $table->string('landscape');
             $table->string('portrait');
-            $table->string('unit')();
+            $table->integer('unit');
             $table->integer('user_id');
             $table->integer('status')->default(0);
             $table->integer('order')->default(0);
