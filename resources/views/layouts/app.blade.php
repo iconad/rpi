@@ -14,7 +14,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('headlinks')
 </head>
-{{-- Test comment --}}
+
 <body>
     <div class="px-3 sm:px-6 md:px-12 xl:px-0 md:max-w-screen-xl mx-auto" id="app">
         <div>
