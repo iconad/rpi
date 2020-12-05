@@ -47,7 +47,7 @@
                                                             </span>
                                                             {{product.packages[0].quantity}} Copies >
                                                             {{product.packages[0].prices[0].price}} AED
-                                                            <span class="text-gray-800 font-light">(Incl. VAT)</span>
+                                                            <span class="test text-gray-800 font-light">(Incl. VAT)</span>
                                                         </div>
                                                         <div class="points-grid grid grid-cols-3 mx-6 mt-5 border border-gray-900 border-b-0 border-l-0 border-r-0">
                                                             <div class="point p-5" v-for="(point, poi) in product.points.slice(0, 3)" :key="poi">
