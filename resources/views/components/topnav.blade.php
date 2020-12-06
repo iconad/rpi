@@ -1,14 +1,14 @@
 <div>
-    <ul class="hidden lg:flex p-3 justify-end font-medium text-sm md:text-base">
+    <ul class="hidden lg:flex py-5 px-3 justify-end font-medium text-sm md:text-base">
         <li class="mr-4">
             <a class="text-green-500" href="/">Be a Reseller</a>
         </li>
-        <li class="mr-4 flex items-center justify-center text-primary">
+        <li class="mr-4 flex items-center justify-center text-primary-500">
             <a href="/" class="flex items-center">
                 <span class="block mr-2">
                     <img class="w-4" src="{{ asset('assets/images/call-icon.png') }}" alt="">
                 </span>
-                <span class="block hover:text-sec">04 551 6095</span>
+                <span class="block hover:text-sec tracking-wider">04 551 6095</span>
             </a>
             <a href="/" class="block ml-4">
                 <span class="block text-green-500">
@@ -16,15 +16,18 @@
                 </span>
             </a>
         </li>
-        <li class="flex items-center text-primary hover:text-sec">
-            <a href="/" class="block">
+        <li class="flex items-center text-primary-500 hover:text-sec">
+            @if (Auth::check())
+            <a class="dropdown-item mr-2" href="/manage/dashboard">Dashboard</a>
+            <a class="dropdown-item" href="/logout">Logout</a>
+            @else
+            <a href="/login" class="block">
                 Account /
             </a>
             <a href="/" class="block">
                 &nbsp;Sign In
             </a>
-
-            <a class="dropdown-item" href="/logout">Logout</a>
+            @endif
 
         </li>
     </ul>
