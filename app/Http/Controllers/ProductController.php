@@ -8,6 +8,7 @@ use App\Models\Finishing;
 use Illuminate\Http\Request;
 use Image;
 use File;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Spatie\Image\Image as SpatieImage;
 use Spatie\Image\Manipulations;
@@ -255,20 +256,24 @@ class ProductController extends Controller
         }
     }
 
-    public function createImage($file) {
-        $file =  $file;
+    public function createImage($image) {
+        $file =  $image;
         $monthYear = date('FY');
         $imgName = Str::random();
 
-        $folder_by_month = public_path().'/storage/images/';
-        !file_exists($folder_by_month) && mkdir($folder_by_month , 0777, true);
-        $fileName = $imgName . '.' . $file->getClientOriginalExtension();
-        $pathToFile = public_path().'/storage/images/' . $fileName;
-        Image::make($file)->save($pathToFile);
 
-        // SpatieImage::load($pathToFile)
-        // ->format(Manipulations::FORMAT_WEBP)
-        // ->save();
+        // $folder_by_month = public_path().'/storage/images/';
+        // file_exists($folder_by_month) && mkdir($folder_by_month , 0777, true);
+        // $fileName = $imgName . '.' . $file->getClientOriginalExtension();
+        // $pathToFile = public_path().'/storage/images/' . $fileName;
+        // Image::make($file)->save($pathToFile);
+
+        $filename  = time() . '.' . $image->getClientOriginalExtension();
+        $path = public_path('/storage/images/' . $filename);
+        Image::make($image->getRealPath())->save($path);
+        $pathToFile = public_path().'/storage/images/' . $filename;
+        // $product->image = '/storage/images/'.$filename;
+        // $product->save();
 
         return $pathToFile;
     }
