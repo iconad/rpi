@@ -5,8 +5,8 @@
             <ValidationObserver v-slot="{ invalid,passes }">
             <form @submit.prevent="passes(submitForm)">
                 <div class="filter">
-                    <div v-if="orderType === 'paper' " class="flex items-center mb-5 input-wrapper">
-                        <div class="w-64 flex items-center">
+                    <div v-if="orderType === 'paper' " class="lg:flex items-center mb-5 input-wrapper">
+                        <div class="w-full lg:w-64 mb-2 flex items-center">
                             <span class="text-gray-600">
                                 <svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M3 16l-3-3v7h7l-3-3 5-4-2-2-4 5zM17 4l3 3V0h-7l3 3-5 4 2 2 4-5zm-1 13l-3 3h7v-7l-3 3-4-5-2 2 5 4zM4 3l3-3H0v7l3-3 4 5 2-2-5-4z"/></svg>
                             </span>
@@ -41,8 +41,8 @@
                     </div>
 
                     <!-- input wrapper -->
-                    <div v-if="orderType === 'paper' "  class="flex items-center mb-5 input-wrapper">
-                        <div class="w-64 flex items-center">
+                    <div v-if="orderType === 'paper' "  class="lg:flex items-center mb-5 input-wrapper">
+                        <div class="w-full lg:w-64 mb-2 flex items-center">
                             <span class="text-gray-600">
                                 <svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M4 18h12V6h-4V2H4v16zm-2 1V0h12l4 4v16H2v-1z"/></svg>
                             </span>
@@ -58,8 +58,8 @@
                         </div>
                     </div>
                     <!-- input wrapper -->
-                    <div v-if="orderType === 'shirt'" class="flex items-center mb-5 input-wrapper">
-                        <div class="w-64 flex items-center">
+                    <div v-if="orderType === 'shirt'" class="lg:flex items-center mb-5 input-wrapper">
+                        <div class="w-full lg:w-64 mb-2 flex items-center">
                             <span class="text-gray-600">
                                 <svg class="fill-current w-6 h-6" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.06 31.06"><path d="M20.87 19.87a6 6 0 008.44 0 6 6 0 000-8.44 6 6 0 00-8.44 0 6 6 0 000 8.44z" fill="#00a1e9"/><path d="M11.43 29.31a6 6 0 008.44 0 6 6 0 000-8.44 6 6 0 00-8.44 0 6 6 0 000 8.44z" fill="#e4007f"/><path d="M11.19 10.19a6 6 0 008.44 0 6 6 0 000-8.44 6 6 0 00-8.44 0 6 6 0 000 8.44z" fill="#ffe200"/><path d="M1.75 19.64a6 6 0 008.44 0 6 6 0 000-8.44 6 6 0 00-8.44 0 6 6 0 000 8.44z" fill="#9fa0a0"/></svg>
                             </span>
@@ -76,8 +76,8 @@
                         </div>
                     </div>
                     <!-- input wrapper -->
-                    <div v-if="orderType === 'paper'" class="flex items-center mb-5 input-wrapper">
-                        <div class="w-64 flex items-center">
+                    <div v-if="orderType === 'paper'" class="lg:flex items-center mb-5 input-wrapper">
+                        <div class="w-full lg:w-64 mb-2 flex items-center">
                             <span class="text-gray-600">
                                 <svg class="fill-current w-6 h-6" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.06 31.06"><path d="M20.87 19.87a6 6 0 008.44 0 6 6 0 000-8.44 6 6 0 00-8.44 0 6 6 0 000 8.44z" fill="#00a1e9"/><path d="M11.43 29.31a6 6 0 008.44 0 6 6 0 000-8.44 6 6 0 00-8.44 0 6 6 0 000 8.44z" fill="#e4007f"/><path d="M11.19 10.19a6 6 0 008.44 0 6 6 0 000-8.44 6 6 0 00-8.44 0 6 6 0 000 8.44z" fill="#ffe200"/><path d="M1.75 19.64a6 6 0 008.44 0 6 6 0 000-8.44 6 6 0 00-8.44 0 6 6 0 000 8.44z" fill="#9fa0a0"/></svg>
                             </span>
@@ -94,8 +94,8 @@
                         </div>
                     </div>
                     <!-- input wrapper -->
-                    <div v-if="orderType === 'shirt' " class="flex items-center mb-5 input-wrapper">
-                        <div class="w-64 flex items-center">
+                    <div v-if="orderType === 'shirt' " class="lg:flex items-center mb-5 input-wrapper">
+                        <div class="w-full lg:w-64 mb-2 flex items-center">
                             <span class="text-gray-600">
                                 <svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M3 16l-3-3v7h7l-3-3 5-4-2-2-4 5zM17 4l3 3V0h-7l3 3-5 4 2 2 4-5zm-1 13l-3 3h7v-7l-3 3-4-5-2 2 5 4zM4 3l3-3H0v7l3-3 4 5 2-2-5-4z"/></svg>
                             </span>
@@ -140,14 +140,14 @@
 
                     <!-- input wrapper -->
 
-                    <div v-if="orderType === 'shirt' "  class="flex items-center mb-5 input-wrapper">
-                        <div class="w-64 flex items-center">
+                    <div v-if="orderType === 'shirt' "  class="lg:flex items-center mb-5 input-wrapper">
+                        <div class="w-full lg:w-64 mb-2 flex items-center">
                             <span class="text-gray-600">
                                 <svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2 2l2-2h12a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V2zm3 1v2h10V3H5zm0 4v2h2V7H5zm4 0v2h2V7H9zm4 0v2h2V7h-2zm-8 4v2h2v-2H5zm4 0v2h2v-2H9zm4 0v6h2v-6h-2zm-8 4v2h2v-2H5zm4 0v2h2v-2H9z"/></svg>
                             </span>
                             <span class="text-lg font-medium text-gray-900 inline-block ml-4">Buy Type</span>
                         </div>
-                        <div class="w-full flex items-center">
+                        <div class="w-full flex items-center my-5 lg:my-0">
                         <ValidationProvider rules="oneOf:printed,blank" class="w-full flex" name="shirt.value.buyType" v-slot="{ errors }">
                             <label class="flex items-center cursor-pointer">
                                 <pretty-radio p-bigger color="warning" value="printed" v-model="shirt.value.buyType"></pretty-radio>
@@ -162,8 +162,8 @@
                         </div>
                     </div>
                     <!-- input wrapper -->
-                    <div v-if="orderType === 'paper' "  class="flex items-center mb-5 input-wrapper">
-                        <div class="w-64 flex items-center">
+                    <div v-if="orderType === 'paper' "  class="lg:flex items-center mb-5 input-wrapper">
+                        <div class="w-full lg:w-64 mb-2 flex items-center">
                             <span class="text-gray-600">
                                 <svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2 2l2-2h12a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V2zm3 1v2h10V3H5zm0 4v2h2V7H5zm4 0v2h2V7H9zm4 0v2h2V7h-2zm-8 4v2h2v-2H5zm4 0v2h2v-2H9zm4 0v6h2v-6h-2zm-8 4v2h2v-2H5zm4 0v2h2v-2H9z"/></svg>
                             </span>
@@ -180,8 +180,8 @@
                         </div>
                     </div>
                     <!-- input wrapper -->
-                    <div v-if="orderType === 'paper'" class="flex items-center mb-5 input-wrapper">
-                        <div class="w-64 flex items-center">
+                    <div v-if="orderType === 'paper'" class="lg:flex items-center mb-5 input-wrapper">
+                        <div class="w-full lg:w-64 mb-2 flex items-center">
                             <span class="text-gray-600">
                                 <svg class="fill-current w-6 h-6" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.8 26.3"><path class="cls-1" d="M383 26a9 9 0 01-7-4c-5-6 5-18 6-21l2-1 1 1a54 54 0 015 8c3 6 3 11 1 13a9 9 0 01-8 4zm0-22c-3 5-8 13-5 17a7 7 0 0011 0c3-4-2-13-6-17z" transform="translate(-366)"/><path class="cls-1" d="M375 0c-1 1-12 16-7 22a9 9 0 0015 0c5-6-7-21-8-22z" transform="translate(-366)"/></svg>
                             </span>
@@ -201,16 +201,16 @@
                     </div>
                     <!-- input wrapper -->
                     <!-- input wrapper -->
-                    <div v-if="orderType === 'paper'" class="flex items-center mb-5 -mt-3 input-wrapper">
-                        <div class="w-64 flex items-center">
+                    <div v-if="orderType === 'paper'" class="lg:flex items-center mb-5 -mt-3 input-wrapper">
+                        <div class="w-full lg:w-64 mb-2 flex items-center">
                         </div>
                         <div class="w-full">
                             <order-paper-selected-finishing></order-paper-selected-finishing>
                         </div>
                     </div>
                     <!-- input wrapper -->
-                    <div v-if="orderType === 'shirt' && shirt.value.buyType === 'printed'" class="flex items-center mb-5 input-wrapper">
-                        <div class="w-64 flex items-center">
+                    <div v-if="orderType === 'shirt' && shirt.value.buyType === 'printed'" class="lg:flex items-center mb-5 input-wrapper">
+                        <div class="w-full lg:w-64 mb-2 flex items-center">
                             <span class="text-gray-600">
                                 <svg class="fill-current w-6 h-6" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.8 26.3"><path class="cls-1" d="M383 26a9 9 0 01-7-4c-5-6 5-18 6-21l2-1 1 1a54 54 0 015 8c3 6 3 11 1 13a9 9 0 01-8 4zm0-22c-3 5-8 13-5 17a7 7 0 0011 0c3-4-2-13-6-17z" transform="translate(-366)"/><path class="cls-1" d="M375 0c-1 1-12 16-7 22a9 9 0 0015 0c5-6-7-21-8-22z" transform="translate(-366)"/></svg>
                             </span>
@@ -225,7 +225,7 @@
                     </div>
                     <!-- input wrapper -->
                     <div class="flex items-center mb-5 input-wrapper">
-                        <div class="w-64 flex items-center">
+                        <div class="w-full lg:w-64 mb-2 flex items-center">
                             <span class="text-gray-600">
                                 <svg class="fill-current w-6 h-6"  viewBox="0 0 512 512"><path d="M414 304a59 59 0 100 118 59 59 0 000-118zm0 84a26 26 0 110-51 26 26 0 010 51zM329 91H17C7 91 0 98 0 107v254c0 10 7 17 17 17h51v-33H33V124h280v237h33V107c0-9-8-16-17-16z"/><path d="M149 345h223v33H149z"/><path d="M108 304a59 59 0 101 118 59 59 0 00-1-118zm0 84a26 26 0 111-51 26 26 0 01-1 51zM495 228H329v33h150v84h-24v33h40c10 0 17-7 17-17V244c0-9-7-16-17-16z"/><path d="M446 159c-3-5-9-8-15-8H329v33h92l38 68 29-16-42-77z"/></svg>
                             </span>
@@ -262,7 +262,7 @@
                           <button
                             type="submit"
                             :disabled="invalid"
-                            :class="invalid ? 'bg-theme-gray-dark text-gray-800 cursor-not-allowed' : 'bg-primary text-white' "
+                            :class="invalid ? 'bg-theme-gray-dark text-gray-800 cursor-not-allowed' : 'bg-primary-500 text-white' "
                             class="border p-5 w-3/4 mx-auto rounded font-medium text-2xl flex items-center justify-center">
                             <span
                             :class="invalid ? 'text-gray-700' : 'text-gray-100' "
@@ -289,19 +289,28 @@
             </div>
         </div>
 
-        <modal @before-close="clearPaperFinishing" width="900" height="auto" name="paper-finishing-modal" class="relative">
+        <modal adaptive @before-close="clearPaperFinishing" width="900" height="auto" name="paper-finishing-modal" class="relative">
+            <div @click="$modal.hide('paper-finishing-modal')" class="close absolute right-0 top-0 p-1 cursor-pointer text-red-500 flex items-center justify-center z-10">
+                <svg class="fill-current w-6 h-6"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 9L3 2 2 3l7 7-7 7 1 1 7-7 7 7 1-1-7-7 7-7-1-1-7 7z"/></svg>
+            </div>
             <div class="p-6">
                 <order-paper-finishings @added="hideModal" :type="paper.value.finishing"></order-paper-finishings>
             </div>
         </modal>
 
-        <modal width="900" height="auto" scrollable name="select-shirt-modal" class="relative">
+        <modal width="900" adaptive height="auto" scrollable name="select-shirt-modal" class="relative">
+            <div @click="$modal.hide('select-shirt-modal')" class="close absolute right-0 top-0 p-1 cursor-pointer text-red-500 flex items-center justify-center z-10">
+                <svg class="fill-current w-6 h-6"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 9L3 2 2 3l7 7-7 7 1 1 7-7 7 7 1-1-7-7 7-7-1-1-7 7z"/></svg>
+            </div>
             <div class="p-6">
                 <order-select-shirt-modal @added="hideModal" :type="paper.value.finishing"></order-select-shirt-modal>
             </div>
         </modal>
 
-        <modal width="600" height="auto" scrollable name="shirt-printing" class="relative">
+        <modal adaptive width="600" height="auto" scrollable name="shirt-printing" class="relative">
+            <div @click="$modal.hide('shirt-printing')" class="close absolute right-0 top-0 p-1 cursor-pointer text-red-500 flex items-center justify-center z-10">
+                <svg class="fill-current w-6 h-6"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 9L3 2 2 3l7 7-7 7 1 1 7-7 7 7 1-1-7-7 7-7-1-1-7 7z"/></svg>
+            </div>
             <div class="p-6">
                 <order-shirt-printing :type="shirt.value.printing" @added="hideModal"></order-shirt-printing>
             </div>
@@ -415,7 +424,7 @@
                 price: 120,
                 isShirtSizesError: false,
                 radio: null,
-                orderType: "shirt",
+                orderType: "paper",
                 value: null,
                 options: ['one', 'two', 'three']
             }

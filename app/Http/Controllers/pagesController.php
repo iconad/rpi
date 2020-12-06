@@ -34,6 +34,18 @@ class pagesController extends Controller
     {
         return view('cart');
     }
+    public function artnetwork()
+    {
+        return view('pages.artworking-service');
+    }
+    public function onetoone()
+    {
+        return view('pages.page');
+    }
+    public function prodesign()
+    {
+        return view('pages.pro-design-service');
+    }
     public function page()
     {
         return view('product.single');

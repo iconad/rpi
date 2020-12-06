@@ -5,7 +5,7 @@
                 <span class="bg-black text-white absolute right-0 bottom-0 p-2 z-10">
                     <svg class="fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M492 236H276V20c0-11.046-8.954-20-20-20s-20 8.954-20 20v216H20c-11.046 0-20 8.954-20 20s8.954 20 20 20h216v216c0 11.046 8.954 20 20 20s20-8.954 20-20V276h216c11.046 0 20-8.954 20-20s-8.954-20-20-20z"/></svg>
                 </span>
-                <thumb-image classess="w-full" :image="image.file_name" :id="image.id"></thumb-image>
+                <thumb-image classess="w-full h-full object-cover" :image="image.file_name" :id="image.id"></thumb-image>
             </div>
         </div>
     </div>

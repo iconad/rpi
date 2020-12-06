@@ -2,9 +2,9 @@
 
 @section('content')
 
-<section id="pageBreadcrumbs">
+{{-- <section id="pageBreadcrumbs">
     <x-breadcrumbs />
-</section>
+</section> --}}
 {{-- breadcrumbs --}}
 
 <section class="order-filter-section my-12">
@@ -253,7 +253,7 @@
         </div>
         <div>
             <a href="http://" class="bg-gray-300 hover:bg-transparent cursor-pointer px-5 py-2 text-gray-800 font-medium border mr-1">Go Back</a>
-            <a href="/" class="bg-primary hover:bg-transparent cursor-pointer px-5 py-2 text-gray-100 hover:text-primary font-medium border border-primary">Checkout</a>
+            <a href="/" class="bg-primary-500 hover:bg-transparent cursor-pointer px-5 py-2 text-gray-100 hover:text-primary-500 font-medium border border-primary-500">Checkout</a>
         </div>
     </div>
 

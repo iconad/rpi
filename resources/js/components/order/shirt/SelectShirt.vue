@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3 md:gap-6">
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 md:gap-6">
             <div
                 v-for="(shirt, i) in shirts"
                 :key="i"

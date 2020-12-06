@@ -56,7 +56,7 @@
                         <div class="w-16 turnaround-lines gray-lines border-b h-px border-dashed border-gray-500 relative my-2 transform rotate-90"></div>
                     </div>
                 </div>
-                <div class="p-4 bg-primary w-full md:col-span-4 text-center divide-x-0 divide-y-0">
+                <div class="p-4 bg-primary-500 w-full md:col-span-4 text-center divide-x-0 divide-y-0">
                     <div class="text-lg font-semibold uppercase text-gray-100">APPLICABLE FEES</div>
                 </div>
 
@@ -361,7 +361,7 @@
         </div>
     </div>
     <div class="mt-5 text-right">
-        <a href="#" class="theme-link text-primary font-medium">Refer Actual Design Fees</a>
+        <a href="#" class="theme-link text-primary-500 font-medium">Refer Actual Design Fees</a>
     </div>
 
 </section>

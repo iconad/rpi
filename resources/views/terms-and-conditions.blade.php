@@ -2,9 +2,9 @@
 
 @section('content')
 
-<section id="pageBreadcrumbs">
+{{-- <section id="pageBreadcrumbs">
     <x-breadcrumbs />
-</section>
+</section> --}}
 {{-- breadcrumbs --}}
 
 <section class="my-12">
@@ -12,11 +12,11 @@
         <h1 class="text-3xl font-semibold text-gray-900">Terms of Use</h1>
         <h2 class="text-xl font-medium text-gray-700">For using the services of rpi.ae</h2>
     </div>
-    <div class="terms bg-orange-100 border border-orange-100 rounded-lg p-10 mt-10">
+    <div class="terms bg-gray-100 border border-gray-100 rounded-lg p-10 mt-10">
 
-        <div class="flex flex-wrap md:flex-no-wrap items heading box">
+        <div class="flex flex-wrap md:flex-nowrap items heading box">
             <div class="w-full md:w-auto mb-5 md:mb-0">
-                <span class="h-10 w-10 text-2xl rounded-full bg-primary text-white font-semibold flex items-center justify-center">1</span>
+                <span class="h-10 w-10 text-2xl rounded-full bg-primary-500 text-white font-semibold flex items-center justify-center">1</span>
             </div>
             <div class="md:ml-6 sec w-full">
                 <div class="text-2xl text-sec font-semibold heading">
@@ -38,9 +38,9 @@
         </div>
         {{-- box --}}
 
-        <div class="flex flex-wrap md:flex-no-wrap items heading box mt-5">
+        <div class="flex flex-wrap md:flex-nowrap items heading box mt-5">
             <div class="w-full md:w-auto mb-5 md:mb-0">
-                <span class="h-10 w-10 text-2xl rounded-full bg-primary text-white font-semibold flex items-center justify-center">2</span>
+                <span class="h-10 w-10 text-2xl rounded-full bg-primary-500 text-white font-semibold flex items-center justify-center">2</span>
             </div>
             <div class="md:ml-6 sec w-full">
                 <div class="text-2xl text-sec font-semibold heading">
@@ -59,9 +59,9 @@
         </div>
         {{-- box --}}
 
-        <div class="flex flex-wrap md:flex-no-wrap items heading box mt-5">
+        <div class="flex flex-wrap md:flex-nowrap items heading box mt-5">
             <div class="w-full md:w-auto mb-5 md:mb-0">
-                <span class="h-10 w-10 text-2xl rounded-full bg-primary text-white font-semibold flex items-center justify-center">3</span>
+                <span class="h-10 w-10 text-2xl rounded-full bg-primary-500 text-white font-semibold flex items-center justify-center">3</span>
             </div>
             <div class="md:ml-6 sec w-full">
                 <div class="text-2xl text-sec font-semibold heading">
@@ -80,9 +80,9 @@
         </div>
         {{-- box --}}
 
-        <div class="flex flex-wrap md:flex-no-wrap items heading box mt-5">
+        <div class="flex flex-wrap md:flex-nowrap items heading box mt-5">
             <div class="w-full md:w-auto mb-5 md:mb-0">
-                <span class="h-10 w-10 text-2xl rounded-full bg-primary text-white font-semibold flex items-center justify-center">4</span>
+                <span class="h-10 w-10 text-2xl rounded-full bg-primary-500 text-white font-semibold flex items-center justify-center">4</span>
             </div>
             <div class="md:ml-6 sec w-full">
                 <div class="text-2xl text-sec font-semibold heading">
@@ -104,9 +104,9 @@
         </div>
         {{-- box --}}
 
-        <div class="flex flex-wrap md:flex-no-wrap items heading box mt-5">
+        <div class="flex flex-wrap md:flex-nowrap items heading box mt-5">
             <div class="w-full md:w-auto mb-5 md:mb-0">
-                <span class="h-10 w-10 text-2xl rounded-full bg-primary text-white font-semibold flex items-center justify-center">5</span>
+                <span class="h-10 w-10 text-2xl rounded-full bg-primary-500 text-white font-semibold flex items-center justify-center">5</span>
             </div>
             <div class="md:ml-6 sec w-full">
                 <div class="text-2xl text-sec font-semibold heading">
@@ -123,9 +123,9 @@
         </div>
         {{-- box --}}
 
-        <div class="flex flex-wrap md:flex-no-wrap items heading box mt-5">
+        <div class="flex flex-wrap md:flex-nowrap items heading box mt-5">
             <div class="w-full md:w-auto mb-5 md:mb-0">
-                <span class="h-10 w-10 text-2xl rounded-full bg-primary text-white font-semibold flex items-center justify-center">6</span>
+                <span class="h-10 w-10 text-2xl rounded-full bg-primary-500 text-white font-semibold flex items-center justify-center">6</span>
             </div>
             <div class="md:ml-6 sec w-full">
                 <div class="text-2xl text-sec font-semibold heading">
@@ -152,9 +152,9 @@
         </div>
         {{-- box --}}
 
-        <div class="flex flex-wrap md:flex-no-wrap items heading box mt-5">
+        <div class="flex flex-wrap md:flex-nowrap items heading box mt-5">
             <div class="w-full md:w-auto mb-5 md:mb-0">
-                <span class="h-10 w-10 text-2xl rounded-full bg-primary text-white font-semibold flex items-center justify-center">7</span>
+                <span class="h-10 w-10 text-2xl rounded-full bg-primary-500 text-white font-semibold flex items-center justify-center">7</span>
             </div>
             <div class="md:ml-6 sec w-full">
                 <div class="text-2xl text-sec font-semibold heading">
@@ -179,9 +179,9 @@
         </div>
         {{-- box --}}
 
-        <div class="flex flex-wrap md:flex-no-wrap items heading box mt-5">
+        <div class="flex flex-wrap md:flex-nowrap items heading box mt-5">
             <div class="w-full md:w-auto mb-5 md:mb-0">
-                <span class="h-10 w-10 text-2xl rounded-full bg-primary text-white font-semibold flex items-center justify-center">8</span>
+                <span class="h-10 w-10 text-2xl rounded-full bg-primary-500 text-white font-semibold flex items-center justify-center">8</span>
             </div>
             <div class="md:ml-6 sec w-full">
                 <div class="text-2xl text-sec font-semibold heading">
@@ -199,9 +199,9 @@
         </div>
         {{-- box --}}
 
-        <div class="flex flex-wrap md:flex-no-wrap items heading box mt-5">
+        <div class="flex flex-wrap md:flex-nowrap items heading box mt-5">
             <div class="w-full md:w-auto mb-5 md:mb-0">
-                <span class="h-10 w-10 text-2xl rounded-full bg-primary text-white font-semibold flex items-center justify-center">9</span>
+                <span class="h-10 w-10 text-2xl rounded-full bg-primary-500 text-white font-semibold flex items-center justify-center">9</span>
             </div>
             <div class="md:ml-6 sec w-full">
                 <div class="text-2xl text-sec font-semibold heading">
@@ -228,9 +228,9 @@
         </div>
         {{-- box --}}
 
-        <div class="flex flex-wrap md:flex-no-wrap items heading box mt-5">
+        <div class="flex flex-wrap md:flex-nowrap items heading box mt-5">
             <div class="w-full md:w-auto mb-5 md:mb-0">
-                <span class="h-10 w-10 text-2xl rounded-full bg-primary text-white font-semibold flex items-center justify-center">10</span>
+                <span class="h-10 w-10 text-2xl rounded-full bg-primary-500 text-white font-semibold flex items-center justify-center">10</span>
             </div>
             <div class="md:ml-6 sec w-full">
                 <div class="text-2xl text-sec font-semibold heading">
@@ -248,9 +248,9 @@
         </div>
         {{-- box --}}
 
-        <div class="flex flex-wrap md:flex-no-wrap items heading box mt-5">
+        <div class="flex flex-wrap md:flex-nowrap items heading box mt-5">
             <div class="w-full md:w-auto mb-5 md:mb-0">
-                <span class="h-10 w-10 text-2xl rounded-full bg-primary text-white font-semibold flex items-center justify-center">11</span>
+                <span class="h-10 w-10 text-2xl rounded-full bg-primary-500 text-white font-semibold flex items-center justify-center">11</span>
             </div>
             <div class="md:ml-6 sec w-full">
                 <div class="text-2xl text-sec font-semibold heading">
@@ -268,9 +268,9 @@
         </div>
         {{-- box --}}
 
-        <div class="flex flex-wrap md:flex-no-wrap items heading box mt-5">
+        <div class="flex flex-wrap md:flex-nowrap items heading box mt-5">
             <div class="w-full md:w-auto mb-5 md:mb-0">
-                <span class="h-10 w-10 text-2xl rounded-full bg-primary text-white font-semibold flex items-center justify-center">12</span>
+                <span class="h-10 w-10 text-2xl rounded-full bg-primary-500 text-white font-semibold flex items-center justify-center">12</span>
             </div>
             <div class="md:ml-6 sec w-full">
                 <div class="text-2xl text-sec font-semibold heading">

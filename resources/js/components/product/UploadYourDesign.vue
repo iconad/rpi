@@ -4,14 +4,14 @@
             <div class="capitalize text-gray-900 text-lg font-semibold">select file form</div>
 
             <div class="flex mt-3 mb-10">
-                <label class="flex items-center flex-col justify-center text-center w-64 h-32 cursor-pointer hover:bg-theme-gray-light bg-theme-gray-dark border border-gray-400 hover:bg-primary hover:text-white transition ease-linear duration-200 text-xl mr-3" :class="fileFrom === 'computer' ? 'bg-primary text-white' : ''">
+                <label class="flex items-center flex-col justify-center text-center w-64 h-32 cursor-pointer hover:bg-theme-gray-light bg-theme-gray-dark border border-gray-400 hover:bg-primary hover:text-red-400 transition ease-linear duration-200 text-xl mr-3" :class="fileFrom === 'computer' ? 'bg-primary text-red-500' : ''">
                     <input type="radio" class="hidden" v-model="fileFrom" name="fileFrom" value="computer">
                     <span class="block my-2">
                         <svg class="fill-current w-10 h-10 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7 17H2a2 2 0 01-2-2V2l2-2h16a2 2 0 012 2v13a2 2 0 01-2 2h-5l4 2v1H3v-1l4-2zM2 2v11h16V2H2z"/></svg>
                     </span>
                     <span class="block">Computer</span>
                 </label>
-                <label class="flex items-center flex-col justify-center text-center w-64 h-32 cursor-pointer hover:bg-theme-gray-light bg-theme-gray-dark border border-gray-400 hover:bg-primary hover:text-white transition ease-linear duration-200 text-xl mr-3" :class="fileFrom === 'cloud' ? 'bg-primary text-white' : ''">
+                <label class="flex items-center flex-col justify-center text-center w-64 h-32 cursor-pointer hover:bg-theme-gray-light bg-theme-gray-dark border border-gray-400 hover:bg-primary hover:text-red-400 transition ease-linear duration-200 text-xl mr-3" :class="fileFrom === 'cloud' ? 'bg-primary text-red-500' : ''">
                     <input type="radio" class="hidden" v-model="fileFrom" name="fileFrom" value="cloud">
                     <span class="block my-2">
                         <svg class="fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M17 9a4 4 0 01-1 8H5A5 5 0 014 7a3 3 0 015-3 5 5 0 018 4v1z"/></svg>
@@ -77,19 +77,19 @@
         <modal height="auto" name="are-you-sure" class="relative">
             <div class="p-10 text-center">
                 <div class="text-3xl text-sec font-semibold mb-3">IMPORTANT NOTICE!</div>
-                <p class="text-xl text-800 mt-5">After we have checked your data carefully, we will display a digital screen proof in your account that you must approve and pay.</p>
-                <p class="text-lg text-800 text-theme-red mb-5 mt-2 font-medium">
+                <p class="text-lg text-800 mt-5">After we have checked your data carefully, we will display a digital screen proof in your account that you must approve and pay.</p>
+                <p class="text-base text-800 text-theme-red mb-5 mt-2 font-medium">
                     <span class="block">Till you have approved and paid,</span>
                     <span class="block"> your order will be on hold.</span>
                 </p>
-                <div>
+                <div class="flex items-center justify-center">
                     <p-check class="p-svg p-bigger" color="success" v-model="check">
                         <svg slot="extra" class="svg svg-icon" viewBox="0 0 20 20">
                             <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z"
                                 style="stroke: white;fill:white"></path>
                         </svg>
-                        <span class="text-lg font-medium text-gray-900">Yes, I understand.</span>
                     </p-check>
+                    <span class="text-base font-medium text-gray-900">Yes, I understand.</span>
                 </div>
                 <span v-if="!check"  @click="confirm" class="bg-gray-500 cursor-not-allowed px-5 py-2 select-none text-white font-medium border border-gray-500 mt-5 inline-block ">Proceed</span>
                 <a href="/" v-else  @click="confirm" class="theme-button mt-5 inline-block ">Proceed</a>
@@ -123,7 +123,7 @@
             }
         },
         mounted() {
-            this.$modal.show('are-you-sure');
+            // this.$modal.show('are-you-sure');
         },
         methods: {
             checkCloud () {
@@ -140,7 +140,7 @@
                     this.fileError = true
                 }else{
                     this.$nextTick(() => {
-                        this.$modal.show('are-you-sure');
+                        // this.$modal.show('are-you-sure');
                     })
                 }
             },

@@ -15,7 +15,7 @@
 
                 <div class="my-8 w-18rem h-18rem mx-auto relative">
                     <div class="absolute bottom-100 right-0 w-full text-center">
-                        <span class="text-lg font-semibold text-primary">0mm</span>
+                        <span class="text-lg font-semibold text-primary-500">0mm</span>
                     </div>
                     <div class="absolute text-xs font-semibold bottom-0 p-8 right-0 w-full text-center">
                         <span class="text-theme-red">+</span>
@@ -23,7 +23,7 @@
                         <span class="text-theme-red font-normal">(+ 2 Biz Days)</span>
                     </div>
                     <div class="absolute left-0 top-0 h-full w-full flex items-center justify-end ml-12">
-                        <span class="text-lg font-semibold text-primary">0mm</span>
+                        <span class="text-lg font-semibold text-primary-500">0mm</span>
                     </div>
                     <div class="absolute bottom-100 right-100">
                         <pretty-checkbox p-bigger color="primary" v-model="corners.tl"></pretty-checkbox>
@@ -38,7 +38,7 @@
                         <pretty-checkbox p-bigger color="primary" v-model="corners.br"></pretty-checkbox>
                     </div>
                     <div
-                    class="inside-box w-64 h-64 ml-4 mt-4 mx-auto border-4 border-primary absolute"
+                    class="inside-box w-64 h-64 ml-4 mt-4 mx-auto border-4 border-primary-500 absolute"
                     :class="[
                         corners.tl ? 'rounded-tl-xl' : '',
                         corners.tr ? 'rounded-tr-xl' : '',
@@ -53,7 +53,7 @@
 
         </div>
         <div class="text-center">
-            <button @click="add" class="px-4 py-2 bg-primary text-white rounded">Confirm</button>
+            <button @click="add" class="px-4 py-2 bg-primary-500 text-white rounded">Confirm</button>
         </div>
     </div>
 </template>

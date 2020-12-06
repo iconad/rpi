@@ -17,7 +17,7 @@
         </div>
         <div class=" my-5 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
             <div
-            class="border rounded p-3 hover:bg-primary text-gray-800 hover:text-white everything-white-on-hover cursor-pointer"
+            class="border rounded p-3 hover:bg-primary-500 text-gray-800 hover:text-white everything-white-on-hover cursor-pointer"
             v-for="(slide, i) in slides"
             :key="i"
             @click="add(slide.name)">

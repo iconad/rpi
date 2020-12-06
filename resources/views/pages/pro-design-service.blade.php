@@ -19,8 +19,8 @@
     <div>
         <div class="flex">
             <div class="w-full pr-0 md:pr-16 border-r border-gray-500">
-                <div class="text-primary">
-                    <span class="flex items-center justify-center w-24 h-24 rounded-full border border-primary">
+                <div class="text-primary-500">
+                    <span class="flex items-center justify-center w-24 h-24 rounded-full border border-primary-500">
                         <svg class="fill-current w-16 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9 16l-6-6-1 2 8 8 1-1 7-7-1-2-6 6V0H9z"/></svg>
                     </span>
                 </div>
@@ -53,8 +53,8 @@
             </div>
             <div class="w-full pl-0 md:pl-16">
 
-                <div class="text-primary">
-                    <span class="flex items-center justify-center w-24 h-24 rounded-full border border-primary">
+                <div class="text-primary-500">
+                    <span class="flex items-center justify-center w-24 h-24 rounded-full border border-primary-500">
                         <svg class="fill-current w-16 h--16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9 4l-6 6-1-2 8-8 1 1 7 7-1 2-6-6v16H9V4z"/></svg>
                     </span>
                 </div>
@@ -71,14 +71,14 @@
                     </li>
 
                     <li class="mb-5">
-                        <p class="text-primary font-medium"> <span class="font-semibold">NOTE: </span> As standard, we do not release our working design
+                        <p class="text-primary-500 font-medium"> <span class="font-semibold">NOTE: </span> As standard, we do not release our working design
                             files. Should you need them, we will release the artwork for
                             an additional fee. The release fee is 100% of the original
                             design fee.</p>
                     </li>
                 </ul>
 
-                <a href="#" class="text-primary text-lg theme-link font-medium">Refer to ‘Data Submission Guidelines’</a>
+                <a href="#" class="text-primary-500 text-lg theme-link font-medium">Refer to ‘Data Submission Guidelines’</a>
 
             </div>
         </div>
@@ -91,7 +91,7 @@
     <div class="text-sec font-semibold text-2xl my-5">Design Fee</div>
 
     <table class="table-responsive w-full text-left text-lg">
-        <thead class="bg-primary text-white">
+        <thead class="bg-primary-500 text-white">
           <tr>
             <th class="px-8 py-4">Product</th>
             <th class="px-8 py-4">Size/Area</th>
@@ -295,7 +295,7 @@
 {{-- deisgn fee --}}
 
 <section class="my-12">
-    <div class="flex flex-wrap md:flex-no-wrap">
+    <div class="flex flex-wrap md:flex-nowrap">
         <div class="w-full md:w-1/4">
             <div class="text-sec text-xl font-semibold mt-5">Artworking Service</div>
         </div>
@@ -310,11 +310,11 @@
                         <li>Troubleshooting data (text close to edges, replacing low-res images with better
                             quality ones).</li>
                     </ul>
-                    <a href="http://" class="theme-link text-primary font-medium">Click to find out more</a>
+                    <a href="http://" class="theme-link text-primary-500 font-medium">Click to find out more</a>
             </div>
         </div>
     </div>
-    <div class="flex flex-wrap md:flex-no-wrap mt-8">
+    <div class="flex flex-wrap md:flex-nowrap mt-8">
         <div class="w-full md:w-1/4">
             <div class="text-sec text-xl font-semibold mt-5">Recreation Service</div>
         </div>
@@ -325,7 +325,7 @@
                     is not a creative service.</u> We will recreate the artwork as close to the original document as possible,
                     however fonts and colours may have to be changed. (Colour matching to the original scan/picture/
                     printed sample will be close to, not exact — unless you know CMYK colour values).</p>
-                    <a href="http://" class="theme-link text-primary font-medium">Click to find out more</a>
+                    <a href="http://" class="theme-link text-primary-500 font-medium">Click to find out more</a>
             </div>
         </div>
     </div>

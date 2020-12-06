@@ -1,16 +1,16 @@
 <template>
     <div>
-        <div class="flex items-center">
+        <div class="lg:flex items-center">
             <div>
                 <div class="text-2xl font-semibold text-gray-900 capitalize">{{type}}
                     <span class="inline-block mx-1 font-light">|</span>
                     <small class="text-gray-800 font-medium">Select Print Area</small>
                 </div>
             </div>
-            <div class="ml-auto">
-                <button class="px-4 py-2 hover:bg-primary text-gray-100 rounded border-2 border-primary bg-transparent transition ease-linear duration-200 text-primary hover:text-white font-semibold focus:outline-none" @click="cancel">Cancel</button>
+            <div class="ml-auto lg:mt-0 mt-5 flex items-center lg:flex-none space-x-3">
+                <button class="px-4 py-2 hover:bg-primary-500 text-gray-100 rounded border-2 border-primary-500 bg-transparent transition ease-linear duration-200 text-primary-500 hover:text-white font-semibold focus:outline-none" @click="cancel">Cancel</button>
 
-                <button class="px-4 py-2 bg-primary text-gray-100 rounded border-2 border-primary hover:bg-transparent transition ease-linear duration-200 hover:text-primary font-semibold focus:outline-none" @click="added">Apply</button>
+                <button class="px-4 py-2 bg-primary-500 text-gray-100 rounded border-2 border-primary-500 hover:bg-transparent transition ease-linear duration-200 hover:text-primary-500 font-semibold focus:outline-none" @click="added">Apply</button>
             </div>
         </div>
 
@@ -18,7 +18,7 @@
 
         <div class="my-5" v-for="(print, i) in printing" :key="i">
             <div class="text-xl font-semibold text-gray-800 capitalize">{{print.name}}</div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-5 mt-2">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 mt-2">
                 <label v-for="(option, a) in print.options" :key="a">
                     <input v-model="selection.sleaves" :value="option" class="hidden" v-if="print.multiple" type="checkbox" :name="a">
                     <input v-model="selection.options[print.name]" :value="option" class="hidden" v-else type="radio" :name="i">

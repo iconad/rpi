@@ -20,6 +20,16 @@ Route::get('/products/{product}', 'pagesController@showProduct');
 Route::get('/products/personalized-gifts', 'pagesController@personalizedGiftsByCategory')->name('personalized-gifts');
 Route::get('/products/personalized-gifts/{subcategory}', 'pagesController@personalizedGiftsByCategory')->name('personalized-gifts.index');
 
+// Static Routes
+Route::get('/order/product', 'pagesController@order');
+Route::get('/uploadSelection', 'pagesController@uploadSelection');
+Route::get('/terms-and-conditions', 'pagesController@TermsAndConditions');
+Route::get('/cart', 'pagesController@cart');
+Route::get('/page/artworking-service', 'pagesController@artnetwork');
+Route::get('/page/one-to-one-design', 'pagesController@onetoone');
+Route::get('/page/pro-design', 'pagesController@prodesign');
+
+
 // Route::get('/category', 'CategoryController@show');
 // Route::get('/page', 'CategoryController@show');
 

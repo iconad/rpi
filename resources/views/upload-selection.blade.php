@@ -2,9 +2,9 @@
 
 @section('content')
 
-<section id="pageBreadcrumbs">
+{{-- <section id="pageBreadcrumbs">
     <x-breadcrumbs />
-</section>
+</section> --}}
 {{-- breadcrumbs --}}
 
 <section class="order-filter-section my-12">
