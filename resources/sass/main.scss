@@ -11,6 +11,11 @@ div,
 a {
     font-family: "Montserrat", sans-serif;
 }
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 
 .top-100 {
     top: 100%;
@@ -87,10 +92,16 @@ a {
         width: 1px;
         height: 30px;
         background: #1a202c;
+        @include lg-max {
+            display: none;
+        }
     }
     &.product-points-grid {
         &:before {
             height: 15px;
+            @include lg-max {
+                display: none;
+            }
         }
     }
     .point {
@@ -104,6 +115,9 @@ a {
                 width: 1px;
                 height: 15px;
                 background: #1a202c;
+                @include lg-max {
+                    display: none;
+                }
             }
         }
         &:last-child {
@@ -116,6 +130,9 @@ a {
                 height: 15px;
                 background: #1a202c;
                 z-index: 2;
+                @include lg-max {
+                    display: none;
+                }
             }
         }
         &:first-child {
@@ -127,6 +144,9 @@ a {
                 width: 50%;
                 height: 3px;
                 background: white;
+                @include lg-max {
+                    display: none;
+                }
             }
         }
         &:last-child {
@@ -138,6 +158,9 @@ a {
                 width: 50%;
                 height: 3px;
                 background: white;
+                @include lg-max {
+                    display: none;
+                }
             }
         }
         &.four {
@@ -150,6 +173,9 @@ a {
                 height: 15px;
                 background: #cbd5e0;
                 z-index: 2;
+                @include lg-max {
+                    display: none;
+                }
             }
             &:after {
                 content: "";
@@ -159,6 +185,12 @@ a {
                 width: 50%;
                 height: 3px;
                 background: white;
+                @include lg-max {
+                    display: none;
+                }
+            }
+            @include lg-max {
+                display: none;
             }
         }
     }
@@ -173,6 +205,9 @@ a {
                     width: 1px;
                     height: 15px;
                     background: #1a202c;
+                    @include lg-max {
+                        display: none;
+                    }
                 }
             }
             &:nth-child(3) {
@@ -184,6 +219,9 @@ a {
                     width: 1px;
                     height: 15px;
                     background: #1a202c;
+                    @include lg-max {
+                        display: none;
+                    }
                 }
             }
         }

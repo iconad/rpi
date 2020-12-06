@@ -1,7 +1,7 @@
 <template>
     <div>
         {{product}}
-        <div class="text-lg font-medium ml-16 mb-3">Offered print-run: {{minq}}~{{maxq}} copies</div>
+        <div class="text-base lg:text-lg font-medium ml-4 lg:ml-16 mb-3">Offered print-run: {{minq}}~{{maxq}} copies</div>
         <ul class="product-quantity-chart text-sm flex items-center w-full border-t border-black">
             <li v-for="(q,i ) in quantity" :key="i" class="w-full h-16 text-center">
                 <quantity-chart-red-line :q="q" :minq="minq" :maxq="maxq"></quantity-chart-red-line>

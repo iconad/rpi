@@ -5,9 +5,9 @@
         'selectedColors' => $selectedColors,
         'colors' => $colors
     ])
-    <div class="flex">
+    <div class="lg:flex">
         <div id="productSidebar" class=" {{ $isSidebar ? 'w-1/3' : 'hidden' }} ">
-            <div class="m-5 ml-0 h-full rounded overflow-hidden">
+            <div class="mt-5 lg:m-5 ml-0 h-full rounded overflow-hidden">
                 <div class="p-3 product-filter bg-gray-100">
                     <div class="flex items-center justify-between">
                         <div class="font-semibold">Colors</div>
@@ -56,7 +56,7 @@
                 </div>
             </div>
             @else
-            <div class="grid grid-cols-3 gap-5">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
                 @foreach ($products as $product)
                 <div>
                     <div >

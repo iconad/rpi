@@ -6,8 +6,8 @@
        <div class="page-cover" style="background: url({{$cover}}) no-repeat center; background-size: cover;">
         <div class="inner p-8 w-full md:w-1/2">
             <div class="text-xl font-medium ">{{$product->delivery_time}} Business Days Delivery*</div>
-            <h1 class="text-6xl my-2 leading-none text-white font-semibold">{{$product->title}}</h1>
-            <div class="text-sec font-medium text-xl capitalize">
+            <h1 class="text-4xl lg:text-6xl my-2 leading-none text-white font-semibold">{{$product->title}}</h1>
+            <div class="text-sec font-medium text-lg lg:text-xl capitalize">
                 <span>{{$product->packages[0]->prices[0]->size->region}}</span>
                 <span>{{$product->packages[0]->prices[0]->size->type}}</span>
                 <span>• {{$product->packages[0]->quantity}} Copies</span>
@@ -46,10 +46,10 @@
 
 
     <section class="product-tree mt-12" id="overview">
-        <div class="text-center  hidden lg:block ">
-            <h2 class="mt-5 text-4xl font-semibold text-gray-900">{{$product->body_title}}</h2>
-            <div class="text-xl text-gray-800">{{$product->body_subtitle}}</div>
-            <div class=" {{$product->points->count() < 4  ? 'hidden' : 'grid'}} product-points-grid points-grid grid-cols-4 mx-6 mt-16 border border-gray-900 border-b-0 border-l-0 border-r-0">
+        <div class="text-center block ">
+            <h2 class="mt-5 text-2xl lg:text-4xl font-semibold text-gray-900">{{$product->body_title}}</h2>
+            <div class="text-lg lg:text-xl text-gray-800">{{$product->body_subtitle}}</div>
+            <div class=" {{$product->points->count() < 4  ? 'hidden' : 'grid'}} product-points-grid points-grid grid-cols-2 lg:grid-cols-4 mx-6 mt-16 lg:border lg:border-gray-900 lg:border-b-0 lg:border-l-0 lg:border-r-0">
                 @foreach ($product->points as $point)
                 <div class="point p-5">
                     <img src="https://www.printarabia.ae/img/misc/image-icon/default-icon-1.png" alt="icon" class="mx-auto">
@@ -204,7 +204,7 @@
         </div>
 
         <div class="mt-6 bg-theme-gray">
-            <div class="text-2xxl py-2 bg-primary-500 font-semibold text-lg text-center p-3">2 Business Days Turnaround Schedule</div>
+            <div class="text-2xxl py-2 text-gray-100 bg-primary-500 font-semibold text-lg text-center p-3">2 Business Days Turnaround Schedule</div>
             <div class="flex flex-wrap lg:flex-nowrap items-center justify-center py-10">
                 <div class="w-full lg:w-20rem py-4 md:mr-10 text-center lg:text-left">
                     <div class="text-2xl text-blue-500 font-semibold text-center">Today</div>
@@ -227,67 +227,67 @@
             <div class="text-xl text-gray-800 text-primary text-center font-semibold">Overview of Weekly Turnaround Schedule</div>
             <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 p-3 md:p-12">
                 <div class="box">
-                    <div class="p-3 bg-blue-600 text-white font-medium text-center text-xl"> <span class="font-semibold">Sun</span> 01pm</div>
-                    <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 flex items-end justify-center">
+                    <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Sun</span> 01pm</div>
+                    <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
 
-                    <span class="turnaround-lines-vertical absolute left-0 top-0 block w-full">
+                    <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
                         <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
                     </span>
 
                         <span class="font-semibold">Sun</span>
-                         (3pm-8pm)
+                         <span class="block">(3pm-8pm)</span>
                     </div>
                 </div>
                 {{-- box --}}
                 <div class="box">
-                    <div class="p-3 bg-blue-600 text-white font-medium text-center text-xl"> <span class="font-semibold">Mon</span> 01pm</div>
-                    <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 flex items-end justify-center">
+                    <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Mon</span> 01pm</div>
+                    <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
 
-                    <span class="turnaround-lines-vertical absolute left-0 top-0 block w-full">
+                    <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
                         <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
                     </span>
 
                         <span class="font-semibold">Mon</span>
-                         (3pm-8pm)
+                        <span class="block">(3pm-8pm)</span>
                     </div>
                 </div>
                 {{-- box --}}
                 <div class="box">
-                    <div class="p-3 bg-blue-600 text-white font-medium text-center text-xl"> <span class="font-semibold">Tue</span> 01pm</div>
-                    <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 flex items-end justify-center">
+                    <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Tue</span> 01pm</div>
+                    <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
 
-                    <span class="turnaround-lines-vertical absolute left-0 top-0 block w-full">
+                    <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
                         <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
                     </span>
 
                         <span class="font-semibold">Tue</span>
-                         (3pm-8pm)
+                        <span class="block">(3pm-8pm)</span>
                     </div>
                 </div>
                 {{-- box --}}
                 <div class="box">
-                    <div class="p-3 bg-blue-600 text-white font-medium text-center text-xl"> <span class="font-semibold">Wed</span> 01pm</div>
-                    <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 flex items-end justify-center">
+                    <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Wed</span> 01pm</div>
+                    <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
 
-                    <span class="turnaround-lines-vertical absolute left-0 top-0 block w-full">
+                    <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
                         <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
                     </span>
 
                         <span class="font-semibold">Wed</span>
-                         (3pm-8pm)
+                        <span class="block">(3pm-8pm)</span>
                     </div>
                 </div>
                 {{-- box --}}
                 <div class="box col-span-2 xl:col-span-1">
-                    <div class="p-3 bg-blue-600 text-white font-medium text-center text-xl"> <span class="font-semibold">Thu</span> 01pm</div>
-                    <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 flex items-end justify-center">
+                    <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Thu</span> 01pm</div>
+                    <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
 
-                    <span class="turnaround-lines-vertical absolute left-0 top-0 block w-full">
+                    <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
                         <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
                     </span>
 
                         <span class="font-semibold">Thu</span>
-                         (3pm-8pm)
+                        <span class="block">(3pm-8pm)</span>
                     </div>
                 </div>
                 {{-- box --}}

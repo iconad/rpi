@@ -1,11 +1,11 @@
 <div>
-    <div class="p-5 h-full bg-gray-100 rounded flex items-center justify-between">
+    <div class="p-5 h-full bg-gray-100 rounded lg:flex items-center justify-between">
         <div class="sort w-full md:pr-12">
             <div class="text-xl font-semibold pb-2"> {{$subcategory->title}} </div>
             <hr class="w-full border-gray-500">
             <div class="font-semibold">
-                <ul class="flex items-center">
-                    <li class="w-48 pt-2 border-r border-gray-500 flex items-center justify-between">
+                <ul class="lg:flex items-center">
+                    <li class="w-full lg:w-48 pt-2 lg:border-r lg:border-gray-500 flex items-center justify-between">
                         <div class="flex items-center space-x-1">
                             <span>
                                 <svg class="fill-current w-5 h-5" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M47 12a2 2 0 00-2-2H24a2 2 0 000 4h21a2 2 0 002-2zM3 14h5a6 6 0 100-4H3a2 2 0 000 4zm11-4a2 2 0 11-2 2 2 2 0 012-2zM45 22h-7a6 6 0 100 4h7a2 2 0 000-4zm-13 4a2 2 0 112-2 2 2 0 01-2 2zM22 22H3a2 2 0 000 4h19a2 2 0 000-4zM45 34H28a2 2 0 000 4h17a2 2 0 000-4zM18 30a6 6 0 00-6 4H3a2 2 0 000 4h9a6 6 0 106-8zm0 8a2 2 0 112-2 2 2 0 01-2 2z"/></svg>
@@ -14,7 +14,7 @@
                                 Filter
                             </span>
                         </div>
-                        <div class="pr-3">
+                        <div class="lg:pr-3">
                             <label>
                             <span id="isSidebarCheckboxBox" class="cursor-pointer flex items-center border-2 border-gray-500 w-16 h-5 rounded overflow-hidden">
                                 <span id="isSidebarCheckboxTick" class="flex items-center justify-center w-1/2 h-full bg-gray-500 text-white">
@@ -28,8 +28,8 @@
                             </label>
                         </div>
                     </li>
-                    <li class="w-auto pt-2 flex items-center justify-between">
-                        <div class="pl-3 flex items-center space-x-1">
+                    <li class="w-auto mt-6 lg:mt-0 lg:pt-2 flex items-center justify-between">
+                        <div class="lg:pl-3 flex items-center space-x-1">
                             <span>
                                 <svg class="fill-current w-5 h-4" xmlns="http://www.w3.org/2000/svg"><path d="M0 12h6v-2H0v2zM0 0v2h18V0H0zm0 7h12V5H0v2z" fill="#000" fill-rule="evenodd"/></svg>
                             </span>
@@ -69,7 +69,7 @@
             </div>
 
         </div>
-        <div class="search w-20rem flex items-center pb-5">
+        <div class="search w-20rem flex items-center mt-5 lg:mt-0 lg:pb-5">
             <div class="mr-2">
                 <svg class="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 14a8 8 0 111-1l6 5-2 2-5-6zm-5 0A6 6 0 108 2a6 6 0 000 12z"/></svg>
             </div>

@@ -1,21 +1,6 @@
 <template>
-    <div>
-
-        <!-- <div>
-            <div v-if="(head, i) in header" :key="i" class="bg-green-400 p-4">
-                {{head.id}} {{head.region}}
-                <div v-if="price.size.id === head.id" class="bg-yellow-400 p-4" v-for="(price, b) in package.prices" :key="b">
-                    {{price.price}}
-                </div>
-            </div>
-        </div> -->
-
-        <!-- <pre>
-            {{test}}
-        </pre> -->
-
-
-        <table v-if="package" class="min-w-full divide-y divide-gray-200">
+    <div class="overflow-auto">
+        <table v-if="package" class="table-auto w-full divide-y divide-gray-200">
             <thead>
             <tr>
                 <th class="border p-4 bg-theme-gray-dark">Quantity</th>

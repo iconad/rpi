@@ -35,7 +35,8 @@
 
         if(isSidebar) {
             el.classList.remove('hidden');
-            el.classList.add('w-1/3');
+            el.classList.add('lg:w-1/3');
+            el.classList.add('w-full');
             checkboxButton.setAttribute('checked', 'checked');
 
             customCheck();
@@ -43,7 +44,8 @@
 
         } else {
             el.classList.add('hidden');
-            el.classList.remove('w-1/3');
+            el.classList.remove('lg:w-1/3');
+            el.classList.remove('w-full');
             checkboxButton.removeAttribute('checked');
 
             customUnCheck();
@@ -83,13 +85,15 @@
 
             if(e.checked) {
                 el.classList.remove('hidden');
-                el.classList.add('w-1/3');
+                el.classList.add('lg:w-1/3');
+                el.classList.add('w-full');
                 sessionStorage.setItem("isSidebar", true);
                 customCheck();
 
             } else {
                 el.classList.add('hidden');
-                el.classList.remove('w-1/3');
+                el.classList.remove('lg:w-1/3');
+                el.classList.remove('w-full');
                 sessionStorage.removeItem("isSidebar");
                 customUnCheck();
 
