@@ -63,7 +63,7 @@
                         <div class="p-3 text-lg font-semibold text-primary">{{$product->title}}</div>
                     <a href="/products/personalized-gifts/${product.subcategory.slug}">
                         @if($product->getMedia('images')->count() != 0)
-                        <thumb-image-blade classess="w-full" image="{{$product->getMedia('images')[0]->file_name}}" id="{{$product->getMedia('images')[0]->id}}"></thumb-image-blade>
+                        <thumb-image-blade classess="w-full h-64 object-cover" image="{{$product->getMedia('images')[0]->file_name}}" id="{{$product->getMedia('images')[0]->id}}"></thumb-image-blade>
                         @endif
                     </a>
                     <div class="p-3">
