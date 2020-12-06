@@ -14,7 +14,7 @@
                     </div>
                     <div class="w-full block relative form-element mt-8">
                         <div class="w-64 bg-gray-100 grid grid-cols-4 gap-1">
-                            <label v-for="(clr, i) in colors" :key="i" :class="`relative bg-${clr.color} h-12 cursor-pointer hover:bg-${clr.hover}`">
+                            <label v-for="(clr, i) in colors" :key="i" :class="`relative ${clr.color} h-12 cursor-pointer hover:${clr.hover}`">
                                 <span
                                     :class="selectedColor === clr.color ? 'block' : 'hidden' "
                                     class="absolute w-full h-full left-0 top-0 flex items-center justify-center">
@@ -47,36 +47,36 @@
                 selectedColor: this.label.color,
                 colors: [
                     {
-                        color: 'red-600',
-                        hover: 'red-700'
+                        color: 'bg-red-600',
+                        hover: 'bg-red-700'
                     },
                     {
-                        color: 'yellow-300',
-                        hover: 'yellow-400'
+                        color: 'bg-yellow-300',
+                        hover: 'bg-yellow-400'
                     },
                     {
-                        color: 'blue-400',
-                        hover: 'blue-500'
+                        color: 'bg-red-400',
+                        hover: 'bg-red-500'
                     },
                     {
-                        color: 'orange-400',
-                        hover: 'orange-500'
+                        color: 'bg-orange-400',
+                        hover: 'bg-orange-500'
                     },
                     {
-                        color: 'green-400',
-                        hover: 'green-500'
+                        color: 'bg-green-400',
+                        hover: 'bg-green-500'
                     },
                     {
-                        color: 'teal-400',
-                        hover: 'teal-500'
+                        color: 'bg-teal-400',
+                        hover: 'bg-teal-500'
                     },
                     {
-                        color: 'purple-400',
-                        hover: 'purple-500'
+                        color: 'bg-purple-400',
+                        hover: 'bg-purple-500'
                     },
                     {
-                        color: 'pink-400',
-                        hover: 'pink-500'
+                        color: 'bg-pink-400',
+                        hover: 'bg-pink-500'
                     }
                 ]
             }

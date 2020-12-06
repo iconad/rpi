@@ -137,7 +137,7 @@
                     d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
                 ></path>
                 </svg>
-                <span class="ml-4">Orders</span>
+                <span class="ml-4">Orders <small class="text-red-600 text-sm">(pending)</small></span>
             </a>
             </li>
             <li class="relative px-6 py-3">
@@ -159,7 +159,7 @@
                     d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
                 ></path>
                 </svg>
-                <span class="ml-4">Estimates</span>
+                <span class="ml-4">Estimates <small class="text-red-600 text-sm">(pending)</small> </span>
             </a>
             </li>
             <li class="relative px-6 py-3">
@@ -179,7 +179,7 @@
                 >
                 <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
                 </svg>
-                <span class="ml-4">Pages</span>
+                <span class="ml-4">Pages <small class="text-red-600 text-sm">(pending)</small></span>
             </a>
             </li>
             <li class="relative px-6 py-3">
@@ -199,7 +199,7 @@
                     >
                     <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
                     </svg>
-                    <span class="ml-4">Users</span>
+                    <span class="ml-4">Users <small class="text-red-600 text-sm">(pending)</small></span>
                 </a>
             </li>
             <li class="relative px-6 py-3">
@@ -223,6 +223,26 @@
                 </a>
             </li>
             <li class="relative px-6 py-3">
+                <a
+                    class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                    href="{{route('colors.index')}}"
+                >
+                    <svg
+                    class="w-5 h-5"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    >
+                    <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+                    </svg>
+                    <span class="ml-4">Colors</span>
+                </a>
+            </li>
+            <li class="hidden relative px-6 py-3">
             <button
                 class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 aria-haspopup="true"
@@ -304,12 +324,10 @@
             </li>
         </ul>
         <div class="px-6 my-6">
-            <button
-            class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-primary-600 border border-transparent rounded-lg active:bg-primary-600 hover:bg-primary-700 focus:outline-none focus:shadow-outline-purple"
-            >
-            Add Product
+            <a href="/manage/select-product-type" class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium cursor-pointer leading-5 text-white transition-colors duration-150 bg-primary-600 border border-transparent rounded-lg active:bg-primary-600 hover:bg-primary-700 focus:outline-none focus:shadow-outline-purple">
+                Add Product
             <span class="ml-2" aria-hidden="true">+</span>
-            </button>
+            </a>
         </div>
         </div>
     </aside>

@@ -32,7 +32,8 @@
                             </div>
                             </td>
                             <td class="px-4 py-3 text-xs">
-                                <span :class="`inline-block w-16 h-5 bg-${label.color} rounded`"></span>
+                                {{label.color}}
+                                <span :class="`inline-block w-16 h-5 ${label.color} rounded`"></span>
                             </td>
                             <td class="px-4 py-3 text-xs">
                                 <span class="flex items-center">

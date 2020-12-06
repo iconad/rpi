@@ -9,7 +9,7 @@
                 <form @submit.prevent="submitForm">
                     <div class="w-full block relative form-element mt-5">
                         <div class="w-full bg-gray-100 grid grid-cols-1 gap-1">
-                            <label v-for="(lbl, i) in labels" :key="i" :class="`relative bg-${lbl.color} h-10 rounded-lg shadow cursor-pointer flex items-center justify-between p-3 font-medium text-gray-100 hover:bg-${lbl.hover}`">
+                            <label v-for="(lbl, i) in labels" :key="i" :class="`relative ${lbl.color} h-10 rounded-lg shadow cursor-pointer flex items-center justify-between p-3 font-medium text-gray-100 hover:${lbl.hover}`">
                                 <span>{{lbl.title}}</span>
                                 <span
                                     :class="selectedLabel === lbl.id ? 'block' : 'hidden' ">
