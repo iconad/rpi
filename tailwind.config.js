@@ -3,13 +3,13 @@ const plugin = require('tailwindcss/plugin')
 const Color = require('color')
 
 module.exports = {
-    // purge: [
-    //     'resources/views/**/*.blade.php',
-    //     'resources/js/**/*.js',
-    //     './app/**/*.php',
-    //     './resources/**/*.php',
-    //     './resources/**/*.vue',
-    // ],
+    purge: [
+        'resources/views/**/*.blade.php',
+        'resources/js/**/*.js',
+        './app/**/*.php',
+        './resources/**/*.php',
+        './resources/**/*.vue',
+    ],
     theme: {
         extend: {
             themeVariants: ['dark'],
