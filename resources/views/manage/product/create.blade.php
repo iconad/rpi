@@ -85,6 +85,14 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
         </div>
         <!-- form-ele -->
 
+        <div class="form-element">
+            <label>
+                <span class="text-gray-800 block mb-2">Cover</span>
+                <input type="file" name="cover">
+            </label>
+        </div>
+        <!-- form-ele -->
+
         <div class="form-element mt-10">
             <label>
                 <span class="text-gray-800 block">Delivery Time</span>

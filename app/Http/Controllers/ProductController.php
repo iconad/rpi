@@ -83,6 +83,10 @@ class ProductController extends Controller
             $pathToFile = $this->createImage($request->image);
         }
 
+        if($request->has('cover')) {
+            $pathToFile = $this->createImage($request->cover);
+        }
+
         $quantity = $request->min_quantity . ' , ' . $request->max_quantity;
 
         $product = Product::create([
@@ -104,6 +108,10 @@ class ProductController extends Controller
         if($request->has('image')) {
             $product->addMedia($pathToFile)
                     ->toMediaCollection('images');
+        }
+        if($request->has('cover')) {
+            $product->addMedia($pathToFile)
+                    ->toMediaCollection('covers');
         }
         if ($product) {
             $request->session()->flash('green', 'Product was successful added!');
@@ -130,6 +138,7 @@ class ProductController extends Controller
           })->get();
         $points = $product->points;
         $image = $product->getMedia('images')->count() != 0 ? $product->getMedia('images')[0]->getUrl() : null;
+        $cover = $product->getMedia('covers')->count() != 0 ? $product->getMedia('covers')[0]->getUrl() : null;
         $quantity = explode(',', $product->quantity);
         $min_quantity = $quantity[0];
         $max_quantity = $quantity[1];
@@ -155,6 +164,7 @@ class ProductController extends Controller
                 'notFinish',
                 'max_quantity',
                 'image',
+                'cover',
                 'points',
                 'categories'));
         }
@@ -202,6 +212,18 @@ class ProductController extends Controller
             $pathToFile = $this->createImage($request->image);
             $product->addMedia($pathToFile)
                     ->toMediaCollection('images');
+        }
+
+        if($request->has('cover')) {
+
+            $mediaItems = $product->getMedia('covers');
+            if(count($mediaItems) != 0) {
+                $mediaItems[0]->delete();
+            }
+
+            $pathToFile = $this->createImage($request->cover);
+            $product->addMedia($pathToFile)
+                    ->toMediaCollection('covers');
         }
 
 

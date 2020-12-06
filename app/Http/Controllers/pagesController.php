@@ -59,8 +59,13 @@ class pagesController extends Controller
     function printProducts ($slug) {
 
         $product = Product::where('slug', $slug)->first();
+        $cover = $product->getMedia('covers')->count() != 0 ? $product->getMedia('covers')[0]->getUrl() : null;
 
-        return view('product.single', compact('product'));
+        if(!$cover) {
+            $cover = "https://jadukori.com/uploads/cover/small/no-image.png";
+        }
+
+        return view('product.single', compact('product','cover'));
     }
 
     // personalized gifts by category

@@ -103,6 +103,26 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
             </div>
             <!-- form-ele -->
 
+            <div class="form-element grid grid-cols-2 gap-5">
+                <div class="w-full">
+                    <label>
+                        <span class="text-gray-800 block">Cover</span>
+                        <input type="file" name="cover">
+                    </label>
+                </div>
+                <div class="w-32">
+                    @if ($cover)
+                    <span class="text-gray-800 mb-2 block">Current Cover</span>
+                    <img src="{{$cover}}" alt="{{$product->title}}">
+                    @else
+                    <span class="text-gray-800 mb-2 block">No cover</span>
+                    @endif
+                    {{-- {{ $product->getFirstMediaUrl('images') }} --}}
+                    {{-- {{$image}} --}}
+                </div>
+            </div>
+            <!-- form-ele -->
+
             <div class="form-element mt-10">
                 <label>
                     <span class="text-gray-800 block">Delivery Time</span>

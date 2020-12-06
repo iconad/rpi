@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
     <section id="pageCover">
-       <div class="page-cover" style="background: url(https://assets.printarabia.ae/product-banner-uploads/images/20db61e32701e0ed8cd50cbec3b23e3a5eec3bd571110.webp) no-repeat center;">
+
+       <div class="page-cover" style="background: url({{$cover}}) no-repeat center; background-size: cover;">
         <div class="inner p-8 w-full md:w-1/2">
             <div class="text-xl font-medium ">{{$product->delivery_time}} Business Days Delivery*</div>
             <h1 class="text-6xl my-2 leading-none text-white font-semibold">{{$product->title}}</h1>
