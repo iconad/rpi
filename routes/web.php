@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,18 +18,46 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', [pagesController, 'home'])->name('homepage');
 Route::get('/', 'pagesController@home')->name('home');
 
+Route::get('/estimate', 'pagesController@estimate');
+Route::post('/estimate', 'pagesController@estimateStore');
+Route::get('/category/{category}/products', 'pagesController@showProductsByCategory');
 Route::get('/products/{product}', 'pagesController@showProduct');
+Route::get('/products/shirt/{product}', 'pagesController@shirtProduct');
 Route::get('/products/personalized-gifts', 'pagesController@personalizedGiftsByCategory')->name('personalized-gifts');
 Route::get('/products/personalized-gifts/{subcategory}', 'pagesController@personalizedGiftsByCategory')->name('personalized-gifts.index');
+Route::get('/products/shirts/{category}', 'pagesController@shirtsByCategory')->name('personalized-gifts.index');
+Route::get('/products/shirts/{category}/{subcategory}', 'pagesController@shirtsBySubCategory')->name('personalized-gifts-subcategory.index');
+
+
+// Order Filter Product /
+Route::get('/product-order/{type}/{product}', 'pagesController@checkOrderType');
+Route::get('/product-order/{type}/{product}', 'pagesController@checkOrderType');
+Route::get('/product-order/{type}/{product}', 'pagesController@checkOrderType');
+
 
 // Static Routes
-Route::get('/order/product', 'pagesController@order');
-Route::get('/uploadSelection', 'pagesController@uploadSelection');
 Route::get('/terms-and-conditions', 'pagesController@TermsAndConditions');
 Route::get('/cart', 'pagesController@cart');
 Route::get('/page/artworking-service', 'pagesController@artnetwork');
 Route::get('/page/one-to-one-design', 'pagesController@onetoone');
 Route::get('/page/pro-design', 'pagesController@prodesign');
+
+Route::group(['prefix' => 'profile'], function() {
+    Route::group(['middleware' => ['auth']], function () {
+        Route::get('/', 'ProfileController@index');
+        Route::post('/update', 'ProfileController@updateProfile');
+        Route::post('/orders/{order}/store-file', 'FileController@storeFile');
+        Route::post('/orders/{order}/add-cloud-file', 'FileController@addCloudFile');
+        Route::get('/orders/{order}/upload-your-design', 'FileController@uploadYourDesign');
+        Route::post('/orders/{order}/upload-your-design', 'FileController@store');
+        Route::delete('/orders/{order}/files/{file}', 'FileController@destroy');
+        Route::put('/orders/{order}/update-order', 'OrderController@updateOrder');
+        Route::resource('/orders', 'OrderController');
+        Route::resource('/address-books', 'AddressBookController');
+        Route::get('/designs', 'ProfileController@designs');
+        Route::resource('/pending-proofs', 'PendingProofController');
+    });
+});
 
 
 // Route::get('/category', 'CategoryController@show');
@@ -61,10 +91,12 @@ Route::group(['prefix' => 'manage'], function() {
 
         Route::get('/select-product-type', 'ProductController@selectProductType')->name('select_product_type');
         Route::post('/products/{product}/gallery', 'ProductController@storeGallery');
+        Route::put('/products/{product}/assign-label', 'ProductController@assignLabel');
         Route::put('/products/{product}/change-status', 'ProductController@changeStatus');
         Route::delete('/products/{product}/gallery-image/{image}', 'ProductController@deleteGalleryImage');
         Route::resource('/products', 'ProductController');
         Route::get('/create/gift-product', 'ProductController@createGiftProduct')->name('products.gift.create');
+        Route::get('/create/shirt', 'ProductController@createShirtProduct')->name('products.shirt.create');
 
         Route::resource('/products/{product}/points', 'PointController');
         Route::put('/sizes/{size}/change-status', 'SizeController@changeStatus');
@@ -73,6 +105,10 @@ Route::group(['prefix' => 'manage'], function() {
         Route::resource('/papers', 'PaperController');
         Route::put('/finishings/{finishing}/change-status', 'FinishingController@changeStatus');
         Route::resource('/finishings', 'FinishingController');
+        Route::resource('/finishings/{finishing}/options', 'FinishingOptionController');
+        Route::put('/printing/{print}/change-status', 'PrintingController@changeStatus');
+        Route::resource('/printing', 'PrintingController');
+        Route::resource('/printing/{print}/options', 'PrintingOptionController');
         Route::put('/packages/{pacakge}/change-status', 'PackageController@changeStatus');
         Route::resource('/products/{product}/packages', 'PackageController');
         Route::resource('/products/{product}/variants', 'VariantController');
@@ -81,7 +117,27 @@ Route::group(['prefix' => 'manage'], function() {
         Route::put('/prices/{price}/change-status', 'PackagePriceController@changeStatus');
         Route::resource('/products/{product}/packages/{package}/prices', 'PackagePriceController');
         Route::delete('/packagepricesizes/{packagepricesize}', 'PackagePriceSizeController@destroy');
-
+        Route::get('/orders', 'ManagePages@orders')->name('orders.index');
+        Route::get('/orders/{order}', 'ManagePages@order')->name('orders.show');
+        Route::get('/pending-proofs', 'ManagePages@pendingProofs')->name('pending-proofs.index');
+        Route::get('/pending-proofs/{pp}', 'ManagePages@pendingProof')->name('pending-proofs.show');
+        Route::get('/estimates', 'EstimateController@index')->name('manage.estimates.index');
+        Route::get('/estimates/{estimate}', 'EstimateController@show')->name('manage.estimates.show');
+        Route::resource('/estimates/{estimate}/responses', 'EstimateReplyController');
+        Route::get('/users', 'ManagePages@ManageUsers')->name('users.index');
+        Route::get('/users/{user}', 'ManagePages@ManageUser')->name('users.show');
+        Route::get('/users/{user}/orders', 'ManagePages@ManageUserOrders')->name('user.orders');
+        Route::put('/template-categories/{category}/change-status', 'TemplateCategoryController@changeStatus');
+        Route::resource('/template-categories', 'TemplateCategoryController');
+        Route::put('/templates/{template}/change-status', 'TemplateController@changeStatus');
+        Route::post('/template-categories/templates/{type}/{template}/store-file', 'TemplateFileController@store');
+        Route::delete('/template-files/{file}', 'TemplateFileController@destroy');
+        Route::resource('/template-categories/{category}/templates', 'TemplateController');
     });
 
 });
+
+
+Route::get('/auth/google/redirect', [App\Http\Controllers\Auth\LoginController::class, 'redirectToGoogle'])->name('login.google');
+Route::get('/auth/google/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleGoogleCallback']);
+

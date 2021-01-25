@@ -9,12 +9,32 @@
 
             <create-size @updated="updateTable" class="w-full" v-if="type === 'create-size'"></create-size>
             <edit-size @updated="updateTable" class="w-full" v-if="type === 'edit-size'"></edit-size>
+
             <create-paper @updated="updateTable" class="w-full" v-if="type === 'create-paper'"></create-paper>
             <edit-paper @updated="updateTable" class="w-full" v-if="type === 'edit-paper'"></edit-paper>
+
             <create-finishing @updated="updateTable" class="w-full" v-if="type === 'create-finishing'"></create-finishing>
             <edit-finishing @updated="updateTable" class="w-full" v-if="type === 'edit-finishing'"></edit-finishing>
+
+            <create-template @updated="updateTable" :cid="templatecategoryid" class="w-full" v-if="type === 'create-template'"></create-template>
+            <edit-template @updated="updateTable" :cid="templatecategoryid" class="w-full" v-if="type === 'edit-template'"></edit-template>
+            <template-files @updated="updateTable" :template="template" class="w-full" v-if="type === 'template-files'"></template-files>
+
+            <create-template-category @updated="updateTable" class="w-full" v-if="type === 'create-template-category'"></create-template-category>
+            <edit-template-category @updated="updateTable" class="w-full" v-if="type === 'edit-template-category'"></edit-template-category>
+
+            <create-printing @updated="updateTable" class="w-full" v-if="type === 'create-printing'"></create-printing>
+            <edit-printing @updated="updateTable" class="w-full" v-if="type === 'edit-printing'"></edit-printing>
+
+            <create-finishing-option @updated="updateTable" :finishid="finishid" class="w-full" v-if="type === 'create-option'"></create-finishing-option>
+            <edit-finishing-option @updated="updateTable" :finishid="finishid" class="w-full" v-if="type === 'edit-option'"></edit-finishing-option>
+
+            <create-printing-option @updated="updateTable" :printid="printid" class="w-full" v-if="type === 'create-print-option'"></create-printing-option>
+            <edit-printing-option @updated="updateTable" :printid="printid" class="w-full" v-if="type === 'edit-print-option'"></edit-printing-option>
+
             <create-price @updated="updateTable" :pkgid="pkgid" :pid="pid" class="w-full" v-if="type === 'create-price'"></create-price>
             <edit-price @updated="updateTable" :pkgid="pkgid" :pid="pid" class="w-full" v-if="type === 'edit-price'"></edit-price>
+
         </div>
         </transition>
          <transition name="fade">
@@ -33,13 +53,24 @@
     import EditPaper from './paper/EditPaper'
     import CreateFinishing from './finishing/CreateFinishing'
     import EditFinishing from './finishing/EditFinishing'
+    import CreatePrinting from './printing/CreatePrinting'
+    import EditPrinting from './printing/EditPrinting'
     import CreatePrice from './product/price/CreatePrice'
     import EditPrice from './product/price/EditPrice'
+    import CreateTemplateCategory from './template/category/CreateTemplateCategories'
+    import EditTemplateCategory from './template/category/EditTemplateCategories'
+    import CreateTemplate from './template/CreateTemplate'
+    import EditTemplate from './template/EditTemplate'
+    import TemplateFiles from './template/TemplateFiles'
+    import CreateFinishingOption from './finishing/option/CreateOption'
+    import EditFinishingOption from './finishing/option/EditOption'
+    import CreatePrintingOption from './printing/option/CreateOption'
+    import EditPrintingOption from './printing/option/EditOption'
 
     import Keypress from 'vue-keypress'
 
     export default {
-        props: ['pkgid', 'pid'],
+        props: ['pkgid', 'pid', 'template', 'templatecategoryid', "finishid", "printid"],
         components: {
             CreateSize,
             EditSize,
@@ -47,13 +78,20 @@
             EditPaper,
             CreateFinishing,
             EditFinishing,
+            CreatePrinting,
+            EditPrinting,
             CreatePrice,
             EditPrice,
-            Keypress
-        },
-        data() {
-            return {
-            }
+            CreateTemplateCategory,
+            EditTemplateCategory,
+            Keypress,
+            CreateFinishingOption,
+            EditFinishingOption,
+            CreatePrintingOption,
+            EditPrintingOption,
+            CreateTemplate,
+            EditTemplate,
+            TemplateFiles,
         },
         computed: {
             isSidebar () {

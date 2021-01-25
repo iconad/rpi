@@ -60,7 +60,13 @@
                     </div>
                 </div>
                 <div class="mt-5">
-
+                    <label class="w-full block relative">
+                        <span class="text-sm font-medium mb-1">Additional Price</span>
+                        <input type="text" v-model="form.price"
+                        class="form-input text-base font-normal" placeholder="AED">
+                    </label>
+                </div>
+                <div class="mt-5">
                      <ValidationProvider name="form.content_types" rules="required">
                         <div slot-scope="{ errors }">
                                 <span class="text-sm font-medium mb-2 block">Product Type</span>
@@ -128,6 +134,7 @@
                 form: {
                     region: null,
                     type: null,
+                    price: null,
                     landscape: null,
                     portrait: null,
                     content_types: [],
@@ -157,10 +164,10 @@
         },
         methods: {
             submitForm () {
-
                 axios.post(`/manage/sizes`, {
                     region: this.form.region,
                     type: this.form.type,
+                    price: this.form.price,
                     content_types: this.form.content_types,
                     portrait: this.form.portrait,
                     landscape: this.form.landscape,

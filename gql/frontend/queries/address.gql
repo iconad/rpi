@@ -1,0 +1,14 @@
+query getEvent($user_id: Int!) {
+  address (user_id: $user_id) {
+    id
+    company_name
+    first_name
+    last_name
+    country_code
+    mobile_number
+    city
+    address
+    landmark
+    created_at
+  }
+}

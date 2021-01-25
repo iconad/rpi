@@ -25,7 +25,19 @@
     </div>
     <!-- form-ele -->
 
-      <div class="form-element hidden">
+      <div class="form-element">
+        <span class="text-gray-800 block">Sub Title</span>
+        <input class="form-input" name="subtitle" value="{{ old('subtitle') }}">
+    </div>
+    <!-- form-ele -->
+
+      <div class="form-element">
+        <span class="text-gray-800 block">One Line Description</span>
+        <input class="form-input" name="body" value="{{ old('body') }}">
+    </div>
+    <!-- form-ele -->
+
+      <div class="form-element">
           <label>
               <span class="text-gray-800 block mb-2">Cover Image</span>
               <input type="file" name="image" class="focus:outline-none focus:bg-gray-200">

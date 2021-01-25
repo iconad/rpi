@@ -6,19 +6,8 @@ query  {
     id
     title
     slug
+    link
     status
-    categories {
-      id
-      title
-      products {
-        id
-        title
-        media{
-          id
-          file_name
-        }
-      }
-    }
     label {
       id
       title

@@ -25,7 +25,7 @@
                             <span
                                 v-if="category.label"
                                 :class="[
-                                    `inline-bock px-3 py-px font-medium rounded-lg shadow text-xs bg-${category.label.color}`,
+                                    `inline-bock px-3 py-px font-medium rounded-lg shadow text-xs ${category.label.color}`,
                                     category.label.color === 'yellow-300' ? 'text-gray-900' : 'text-gray-100'
                                 ]">
                                 {{category.label.title}}

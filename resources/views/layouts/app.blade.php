@@ -34,6 +34,9 @@
     </div>
 
     <!-- Scripts -->
+    <script type="text/javascript">
+        window.csrf_token = "{{ csrf_token() }}"
+    </script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     @yield('scripts')
 </body>

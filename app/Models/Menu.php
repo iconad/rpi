@@ -10,7 +10,7 @@ class Menu extends Model
 {
     use HasFactory, Sluggable;
 
-    public $fillable = ['title', 'slug', 'user_id', 'excerpt', 'status', 'order'];
+    public $fillable = ['title', 'slug', 'link', 'user_id', 'excerpt', 'status', 'order'];
 
     public function sluggable()
     {

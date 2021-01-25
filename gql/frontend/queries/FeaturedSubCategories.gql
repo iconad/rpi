@@ -9,6 +9,12 @@ query ($menu: Int!) {
     products {
         id
         title
+        unique_code
+        gender
+        material
+        neck
+        cloth_type
+        brand
         slug
         title_two
         body_title
@@ -35,6 +41,7 @@ query ($menu: Int!) {
         category {
             id
             title
+            slug
             menu {
                 id
                 title

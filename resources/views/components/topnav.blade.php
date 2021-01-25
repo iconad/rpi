@@ -18,14 +18,10 @@
         </li>
         <li class="flex items-center text-primary-500 hover:text-sec">
             @if (Auth::check())
-            <a class="dropdown-item mr-2" href="/manage/dashboard">Dashboard</a>
-            <a class="dropdown-item" href="/logout">Logout</a>
+                <top-navbar-dropdown :roles="{{Auth::user()->getRoleNames()}}" :user="{{Auth::user()}}"></top-navbar-dropdown>
             @else
             <a href="/login" class="block">
-                Account /
-            </a>
-            <a href="/" class="block">
-                &nbsp;Sign In
+                Account / Sign In
             </a>
             @endif
 

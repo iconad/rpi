@@ -1,0 +1,27 @@
+query ($category_id: Int!) {
+  templatesbycategory(category_id: $category_id) {
+        id
+        title
+        slug
+        size
+        excerpt
+        status
+        files {
+            id
+            title
+            type
+        }
+        media {
+            id
+            name
+            collection_name
+            file_name
+        }
+        category {
+            id
+            title
+            slug
+            status
+        }
+    }
+}

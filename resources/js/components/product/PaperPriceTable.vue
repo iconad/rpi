@@ -45,7 +45,7 @@
             <tfoot>
                 <tr>
                     <td align="right" colspan="4">
-                        <a href="" class="red-button">Order Now</a>
+                        <a :href="`/product-order/${pslug}?package=${package.id}&category=${menu.id}&type=${ptype}`" class="red-button">Order Now</a>
                     </td>
                 </tr>
             </tfoot>
@@ -58,7 +58,7 @@
 
 
     export default {
-        props: ['package', 'header'],
+        props: ['package', 'header', 'ptype', 'pslug', 'menu'],
 
         data() {
             return {

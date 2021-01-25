@@ -20,4 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/upload/post', 'pagesController@uploadPost');
 Route::get('/products/{product}/gallery', 'Api\ProductApiController@productGallery');
 Route::get('/mainmenu', 'Api\MenuController@MainMenu');
+Route::post('/order/paper/price', 'Api\OrderFilterController@paperPrice');
 

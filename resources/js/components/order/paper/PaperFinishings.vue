@@ -1,9 +1,10 @@
 <template>
     <div>
-        <hot-foil v-if="isHotFoil" :type="type" @added="added"></hot-foil>
-        <emboss v-if="isEmboss" :type="type" @added="added"></emboss>
-        <punch-hole v-if="isPunchHole" :type="type" @added="added"></punch-hole>
-        <round-corner v-if="isRoundCorner" :type="type" @added="added"></round-corner>
+        <!-- {{finishing}} -->
+        <hot-foil :finishing="finishing" v-if="isHotFoil" :type="type" @added="added"></hot-foil>
+        <emboss :finishing="finishing" v-if="isEmboss" :type="type" @added="added"></emboss>
+        <punch-hole :finishing="finishing" v-if="isPunchHole" :type="type" @added="added"></punch-hole>
+        <round-corner :finishing="finishing" v-if="isRoundCorner" :type="type" @added="added"></round-corner>
     </div>
 </template>
 
@@ -17,7 +18,7 @@
     import RoundCorner from './RoundCorner'
 
     export default {
-        props: ['type'],
+        props: ['type', 'finishings'],
         components: {HotFoil, Emboss, PunchHole, RoundCorner},
         computed: {
             isHotFoil () {
@@ -31,6 +32,11 @@
             },
             isRoundCorner () {
                 return this.type.toLowerCase() === 'round corner'
+            },
+            finishing () {
+                return this.finishings.find(f => {
+                    return f.title == this.type
+                })
             }
         },
         methods: {

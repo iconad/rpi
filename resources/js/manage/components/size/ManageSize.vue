@@ -19,9 +19,8 @@
                         <th class="px-4 py-3">Region</th>
                         <th class="px-4 py-3">type</th>
                         <th class="px-4 py-3">Product Type</th>
-                        <th class="px-4 py-3">portrate</th>
-                        <th class="px-4 py-3">landscape</th>
-                        <th class="px-4 py-3">unit</th>
+                        <th class="px-4 py-3">Dimensions</th>
+                        <th class="px-4 py-3">price</th>
                         <th class="px-4 py-3">status</th>
                         <th class="px-4 py-3">Actions</th>
                         </tr>
@@ -45,13 +44,11 @@
                                 <p v-else >---</p>
                             </td>
                             <td class="px-4 py-3">
-                                <p>{{size.portrait}}</p>
+                                <p>{{size.portrait}}x{{size.landscape}} {{size.unit}}</p>
                             </td>
                             <td class="px-4 py-3">
-                                <p>{{size.landscape}}</p>
-                            </td>
-                            <td class="px-4 py-3">
-                                <p>{{size.unit}}</p>
+                                <p v-if="size.price">{{size.price}}</p>
+                                <p v-else>--</p>
                             </td>
                             <td class="px-4 py-3 text-xs">
                                 <change-status :status="size.status" :id="size.id" model="sizes"></change-status>

@@ -3,14 +3,14 @@
         <ul>
             <li class="relative text-sm border p-3 w-full mb-1" v-for="(print, i) in selectedShirtPrinting" :key="i">
                 <span>
-                    <span class="font-medium">{{print.name}}</span>
+                    <span class="font-medium">{{print.print.title}}</span>
                     <span class="text-gray-600">→</span>
                     <span v-for="(opt, a) in print.options" :key="a">
-                        <span class="font-medium"> {{a}} </span>
-                    <span v-if="a === 'frontside'"> / </span>
+                        <span class="font-medium"> {{a}}  </span>
+                    <span v-if="a === 'front side' || a === 'back side'"> / </span>
                     </span>
                     <span v-if="print.sleaves.length > 0">
-                        <span v-if="Object.values(print.options).length > 1">/</span>
+                        <!-- <span v-if="Object.values(print.options).length > 1"></span> -->
                         <span class="font-medium"> Sleeves </span>
                     </span>
                 </span>

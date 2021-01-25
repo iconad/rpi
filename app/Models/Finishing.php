@@ -27,5 +27,9 @@ class Finishing extends Model
         return $this->belongsToMany(Product::class)->where('status', 1);
     }
 
+    public function options () {
+        return $this->hasMany(FinishingOption::class)->where('status', 1);
+    }
+
 
 }

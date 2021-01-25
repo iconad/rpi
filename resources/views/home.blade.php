@@ -7,7 +7,7 @@
 </section>
 
 <section id="TopPrintProducts" class="my-12 top-print-products-section">
-    <top-products menu="10" rows="2" title="Top Print Products"></top-products>
+    <top-products menu="10" columns="3" rows="2" title="Top Print Products"></top-products>
 </section>
 
 <section class="ad-space my-12">
@@ -17,7 +17,7 @@
 </section>
 
 <section class="my-12">
-        {{-- <top-products menu="12" rows="1" title="Top Banners & Displays"></top-products> --}}
+        <top-products menu="12" columns="3" rows="1" title="Top Banners & Displays"></top-products>
 </section>
 
 <section class="ad-space my-12">
@@ -27,7 +27,7 @@
 </section>
 
 <section class="my-12">
-    <top-products menu="13" rows="1" title="Top Personalized Gifts"></top-products>
+    <top-products menu="13" columns="3" rows="1" title="Top Personalized Gifts"></top-products>
 </section>
 
 <section class="ad-space my-12">
@@ -37,8 +37,7 @@
 </section>
 
 <section class="my-12">
-    {{-- <top-products menu="14" rows="1" title="Top T-shirt Printing"></top-products> --}}
-    {{-- <single-row-slider title="Top T-shirt Printing"></single-row-slider> --}}
+    <top-products menu="14" columns="4" rows="1" title="Top T-shirt Printing"></top-products>
 </section>
 
 

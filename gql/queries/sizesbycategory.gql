@@ -3,6 +3,7 @@ query getEvent($catg_id: Int!) {
     id
     region
     type
+    price
     portrait
     landscape
     unit

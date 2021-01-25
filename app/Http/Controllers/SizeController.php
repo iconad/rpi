@@ -49,6 +49,7 @@ class SizeController extends Controller
             'portrait' => $request->portrait,
             'landscape' => $request->landscape,
             'unit' => $request->unit,
+            'price' => $request->price,
             'type' => $request->type,
             'user_id' => auth()->id(),
         ]);
@@ -101,6 +102,7 @@ class SizeController extends Controller
         ]);
         $size->region = $request->region;
         $size->type = $request->type;
+        $size->price = $request->price;
         $size->content_types = $request->content_types;
         $size->portrait = $request->portrait;
         $size->landscape = $request->landscape;

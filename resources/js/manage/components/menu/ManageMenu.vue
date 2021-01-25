@@ -15,7 +15,9 @@
                         <tr
                         class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
                         >
+                        <th class="px-4 py-3">ID</th>
                         <th class="px-4 py-3">Name</th>
+                        <th class="px-4 py-3">Link</th>
                         <th class="px-4 py-3">status</th>
                         <th class="px-4 py-3">label</th>
                         <th class="px-4 py-3">Actions</th>
@@ -25,10 +27,17 @@
 
                         <tr class="text-gray-700 dark:text-gray-400" v-for="(menu, i) in menus" :key="i">
                             <td class="px-4 py-3">
+                                <p class="font-medium text-gray-700">{{menu.id}}</p>
+                            </td>
+                            <td class="px-4 py-3">
+                                <p class="font-semibold hover:border-transparent">{{menu.title}}</p>
+                            </td>
+                            <td class="px-4 py-3">
                             <div class="flex items-center text-sm">
                                 <!-- Avatar with inset shadow -->
                                 <div>
-                                <p class="font-semibold hover:border-transparent">{{menu.title}}</p>
+                                    <p v-if="menu.link" class="font-medium">{{menu.link}}</p>
+                                    <p v-else>--</p>
                                 </div>
                             </div>
                             </td>
@@ -41,7 +50,8 @@
                             <td class="px-4 py-3 text-xs">
                                 <span class="flex items-center">
                                     <edit-menu @updated="menuUpdated" :menu="menu"></edit-menu>
-                                    <delete-record @updated="menuUpdated" :id="menu.id" model="menu" class="ml-3"></delete-record>
+                                    <!-- <delete-record @updated="menuUpdated" :id="menu.id" model="menu" class="ml-3"></delete-record> -->
+                                    <span class="action-button-danger ml-3" @click="deleteMenu">Delete</span>
                                 </span>
                             </td>
                         </tr>
@@ -72,6 +82,17 @@
             EditMenu
         },
         methods: {
+            deleteMenu () {
+                this.$swal({
+                    title: `You can't delete menu! `,
+                    text: "Change the status to draft if you want to hide this menu from the website",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#0C4472',
+                    cancelButtonColor: '#f05252',
+                    }).then((result) => {
+                });
+            },
             menuUpdated () {
                 this.$apollo.queries.menus.refetch()
             }

@@ -239,6 +239,7 @@ module.exports = {
                 "36rem": "36rem",
                 "50rem": "50rem",
                 "2px": "2px",
+                "5px": "5px",
                 "100px": "100px",
                 "500px": "500px",
                 "650px": "650px",

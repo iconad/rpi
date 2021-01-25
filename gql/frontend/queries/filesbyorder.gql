@@ -1,0 +1,15 @@
+query getEvent($order_id: Int!) {
+  filesbyorder (order_id: $order_id) {
+    id
+    title
+    order_id
+    cloud
+    status
+    media {
+        id
+        collection_name
+        name
+        file_name
+    }
+  }
+}

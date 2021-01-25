@@ -43,7 +43,7 @@ class SubCategoryController extends Controller
     public function store(Request $request, Category $category)
     {
         $request->validate([
-            'title' => 'required'
+            'title' => 'required',
         ]);
 
         if ($request->has('image')) {
@@ -60,6 +60,8 @@ class SubCategoryController extends Controller
 
         $subcategory = SubCategory::create([
             'title' => $request->title,
+            'subtitle' => $request->subtitle,
+            'body' => $request->body,
             'featured' => $featured,
             'menu_id' => $category->menu->id,
             'category_id' => $category->id,
@@ -103,7 +105,7 @@ class SubCategoryController extends Controller
      */
     public function show(Category $category, SubCategory $subCategory)
     {
-        $image = $category->getFirstMediaUrl('images', 'thumb');
+        $image = $subCategory->getFirstMediaUrl('images', 'thumb');
         return view('manage.category.sub..show', compact('subCategory', 'category','image'));
     }
 
@@ -147,6 +149,8 @@ class SubCategoryController extends Controller
         }
 
         $subCategory->title = $request->title;
+        $subCategory->subtitle = $request->subtitle;
+        $subCategory->body = $request->body;
         $subCategory->category_id = $category->id;
         $subCategory->menu_id = $category->menu->id;
         $subCategory->featured = $featured;

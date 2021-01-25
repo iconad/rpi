@@ -1,14 +1,77 @@
 <?php
 
+use DaveJamesMiller\Breadcrumbs\Facades\Breadcrumbs;
+
+
 // Dashboard
 Breadcrumbs::for('manage.dashboard', function ($trail) {
     $trail->push('Dashboard', route('manage.dashboard'));
+});
+
+// Dasboard > Users
+Breadcrumbs::for('manage.users', function ($trail) {
+    $trail->parent('manage.dashboard');
+    $trail->push('Users', route('users.index'));
 });
 
 // Dasboard > Products
 Breadcrumbs::for('manage.products', function ($trail) {
     $trail->parent('manage.dashboard');
     $trail->push('Products', route('products.index'));
+});
+
+// Home > Estimates > [Estimate]
+Breadcrumbs::for('manage.estimates', function ($trail) {
+    $trail->parent('manage.dashboard');
+    $trail->push("Estimates", route('manage.estimates.index'));
+});
+
+// Home > Estimates > [Estimate]
+Breadcrumbs::for('manage.estimate', function ($trail, $estimate) {
+    $trail->parent('manage.estimates', $estimate);
+    $trail->push($estimate->id, route('manage.estimates.show', $estimate->id));
+});
+
+// Home > Estimates > [Estimate] > Respones
+Breadcrumbs::for('manage.estimates.respones.create', function ($trail, $estimate) {
+    $trail->parent('manage.estimate', $estimate);
+    $trail->push("Add Response", route('responses.create', $estimate->id));
+});
+
+// Home > Users > [user]
+Breadcrumbs::for('manage.user', function ($trail, $user) {
+    $trail->parent('manage.users');
+    $trail->push($user->id, route('users.show', $user->id));
+});
+
+// Home > Users > [user] > orders
+Breadcrumbs::for('manage.user.orders', function ($trail, $user) {
+    $trail->parent('manage.user', $user);
+    $trail->push("Orders", route('points.index', $user->id));
+});
+
+// Dasboard > Orders
+Breadcrumbs::for('manage.orders', function ($trail) {
+    $trail->parent('manage.dashboard');
+    $trail->push('Orders', route('orders.index'));
+});
+
+// Home > Orders > [order]
+Breadcrumbs::for('manage.order', function ($trail, $order) {
+    $trail->parent('manage.orders');
+    $trail->push($order->id, route('orders.show', $order->id));
+});
+
+// Dasboard > Orders
+Breadcrumbs::for('manage.pending-proofs', function ($trail) {
+    $trail->parent('manage.dashboard');
+    $trail->push('Pending Proofs', route('pending-proofs.index'));
+});
+
+// Home > Orders > [order]
+Breadcrumbs::for('manage.pending-proof', function ($trail, $proof) {
+    $trail->parent('manage.pending-proofs');
+    $trail->push($proof->id, route('pending-proofs.show', $proof->id));
 });
 
 // Dasboard > Select product type

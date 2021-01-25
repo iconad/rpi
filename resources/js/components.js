@@ -49,14 +49,30 @@ Vue.component(
 );
 
 Vue.component(
+    "cloak-loader",
+    require("./components/cloakLoader.vue").default
+);
+
+Vue.component(
     "order-filter",
     require("./components/order/OrderFilter.vue").default
+);
+
+Vue.component(
+    "order-filter-gift",
+    require("./components/order/OrderFilterGift.vue").default
+);
+
+Vue.component(
+    "order-filter-shirt",
+    require("./components/order/OrderFilterShirt.vue").default
 );
 
 Vue.component(
     "order-paper-finishings",
     require("./components/order/paper/PaperFinishings.vue").default
 );
+
 
 Vue.component(
     "profile-orders",
@@ -91,4 +107,31 @@ Vue.component(
 Vue.component(
     "thumb-image-blade",
     require("./components/ThumbImage.vue").default
+);
+
+
+// profile
+Vue.component(
+    "profile-form",
+    require("./components/profile/EditProfile.vue").default
+);
+
+Vue.component(
+    "profile-orders",
+    require("./components/profile/Orders.vue").default
+);
+
+Vue.component(
+    "order-selected-shirt-printings",
+    require("./components/profile/OrderSelectedShirtPrintings.vue").default
+);
+
+Vue.component(
+    "top-navbar-dropdown",
+    require("./components/navbar/TopNavbarDropdown.vue").default
+);
+
+Vue.component(
+    "estimate-form",
+    require("./components/form/Estimate.vue").default
 );

@@ -106,6 +106,21 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
     </div>
 
 
+    {{-- Product Label Start From Here --}}
+    <div class="rounded-lg border border-gray-200 bg-white p-4 my-6">
+        <div class="mb-3 text-lg font-semibold text-gray-800 mb-2">
+        <span>Label</span>
+    </div>
+    @if (!$product->label)
+    <assign-label class="mt-5" :id="{{$product->id}}" refresh="true" model="products" title="{{$product->title}}"></assign-label>
+    @else
+    <assigned-label-row  model="products" refresh="true" :label="{{ $product->label }}" :id="{{$product->id}}" title="{{$product->title}}"></assigned-label-row>
+    @endif
+
+    </div>
+    {{-- Product Label End From Here --}}
+
+
     {{-- Product Points Start From Here --}}
     <div class="rounded-lg border border-gray-200 bg-white p-4 my-6">
         <div class="mb-3 text-lg font-semibold text-gray-800 mb-2 ">

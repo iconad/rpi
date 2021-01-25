@@ -60,6 +60,13 @@
                     </div>
                 </div>
                 <div class="mt-5">
+                    <label class="w-full block relative">
+                        <span class="text-sm font-medium mb-1">Additional Price</span>
+                        <input type="text" v-model="editingTable.data.price"
+                        class="form-input text-base font-normal" placeholder="AED">
+                    </label>
+                </div>
+                <div class="mt-5">
                      <ValidationProvider name="editingTable.data.content_types" rules="required">
                         <div slot-scope="{ errors }">
                                 <span class="text-sm font-medium mb-2 block">Product Type</span>
@@ -196,6 +203,7 @@
                 axios.put(`/manage/sizes/${this.editingTable.data.id}`, {
                     region: this.editingTable.data.region,
                     type: this.editingTable.data.type,
+                    price: this.editingTable.data.price,
                     content_types: this.selectedMenus,
                     portrait: this.editingTable.data.portrait,
                     landscape: this.editingTable.data.landscape,

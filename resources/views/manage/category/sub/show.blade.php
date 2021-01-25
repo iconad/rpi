@@ -29,7 +29,23 @@
             </div>
             <!-- form-ele -->
 
-            <div class="form-element hidden">
+            <div class="form-element">
+                <label>
+                    <span class="text-gray-800 block">Sub Title</span>
+                    <input class="form-input" name="subtitle" value="{{ $subCategory->subtitle }}">
+                </label>
+            </div>
+            <!-- form-ele -->
+
+            <div class="form-element">
+                <label>
+                    <span class="text-gray-800 block">One Line Description</span>
+                    <input class="form-input" name="body" value="{{ $subCategory->body }}">
+                </label>
+            </div>
+            <!-- form-ele -->
+
+            <div class="form-element">
                 <div class="mb-3">
                     <img src="{{ $image }}" class="w-32" />
                     </div>

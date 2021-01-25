@@ -45,11 +45,13 @@
                     this.$emit('updated')
                     this.$swal({
                         toast: true,
-                        position: 'center',
+                        position: 'top-end',
                         showConfirmButton: false,
+                        timerProgressBar: true,
                         timer: 3000,
+                        icon: "success",
                         title: 'Record',
-                        text: 'successfully deleted!',
+                        text: 'successfully deleted',
                     });
                 })
             }

@@ -13,7 +13,18 @@ type Query {
     sizes(orderBy: [OrderByClause!] @orderBy): [Size!]!  @all
     sizesbycategory(catg_id: Int): [Size!]!
 
+    templatescategories(orderBy: [OrderByClause!] @orderBy): [TemplateCategory!]!  @all
+    templatesbycategory(category_id: Int): [Template!]!
+    filesbytemplate(template_id: Int): [TemplateFile!]!
+
     finishings(orderBy: [OrderByClause!] @orderBy): [Finishing!]!  @all
+    finishingoptions(finish_id: Int): [FinishingOption!]!
+    finishingsbyproduct(product_id: Int): [Finishing!]!
+
+    printing(orderBy: [OrderByClause!] @orderBy): [Printing!]!  @all
+    printingoptions(print_id: Int): [PrintingOption!]!
+    printingbyproduct(product_id: Int): [Printing!]!
+
     papers(orderBy: [OrderByClause!] @orderBy): [Paper!]!  @all
     paper(id: ID @eq): Paper @find
     packages(orderBy: [OrderByClause!] @orderBy): [Package!]!  @all
@@ -26,6 +37,36 @@ type Query {
     subsbycategory(catg_id: Int): [SubCategory!]!
     subcategory(id: ID @eq): SubCategory @find
 
+    orders: [Order!]! @all
+
+    ordersbystatus(
+        status: String
+        user_id: Int
+        term: String
+        search_by: String
+        ): [Order!]!
+
+    manageordersbyuser(
+        status: String
+        user_id: Int
+        term: String
+        search_by: String
+        ): [Order!]!
+
+    manageorders(
+        status: String
+        term: String
+        search_by: String
+        ): [Order!]!
+
+    managependingproofs(
+        status: String
+        term: String
+        ): [PendingProof!]!
+
+    filesbyorder(order_id: Int): [File!]!
+    subcategory(id: ID @eq): SubCategory @find
+
     TopProducts(menu: Int): [Category!]!
     FeaturedSubCategories(menu: Int): [SubCategory!]!
     TopBanners: [Category!]!
@@ -36,6 +77,7 @@ type Query {
     variants(orderBy: [OrderByClause!] @orderBy): [Variant!]!  @all
 
     products(orderBy: [OrderByClause!] @orderBy): [Product!]!  @all
+    productsbysubcategory(subcatg_id: Int): [Product!]!
     product(id: ID @eq): Product @find
 
     packageprice(id: ID @eq): [PackagePrice!]!  @all
@@ -45,6 +87,13 @@ type User {
     id: ID!
     name: String!
     email: String!
+    mobile: String
+    office: String
+    company: String
+    company_trn: String
+    country: String
+    address: String
+    email_verified_at: String
     created_at: DateTime!
     updated_at: DateTime!
 }
@@ -55,6 +104,35 @@ type Menu {
     slug: String!
     categories: [Category] @hasMany
     status: Int!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+
+type TemplateCategory {
+    id: ID!
+    title: String!
+    slug: String!
+    excerpt: String
+    status: Int!
+    media: [Media] @hasMany
+    templates: [Template] @hasMany
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+
+type Template {
+    id: ID!
+    title: String!
+    slug: String!
+    excerpt: String
+    body: String
+    size: String
+    status: Int!
+    media: [Media] @hasMany
+    files: [TemplateFile] @hasMany
+    category: TemplateCategory @hasOne
     created_at: DateTime!
     updated_at: DateTime!
 }
@@ -79,10 +157,13 @@ type SubCategory {
     id: ID!
     title: String!
     slug: String!
+    subtitle: String
+    slug: String!
     excerpt: String
     body: String
     status: Int!
     featured: Int!
+    media: [Media] @hasMany
     products: [Product] @hasMany
     label: Label @hasOne
     menu: Menu @hasOne
@@ -95,6 +176,7 @@ type Menu {
     id: ID!
     title: String!
     slug: String!
+    link: String
     status: Int!
     label: Label @hasOne
     categories: [Category] @hasMany
@@ -111,6 +193,7 @@ type Size {
     landscape: String!
     unit: String!
     portrait: String!
+    price: Int
     status: Int!
     order: Int!
     menus: [Menu] @hasMany
@@ -130,6 +213,71 @@ type Paper {
     updated_at: DateTime!
 }
 
+type PendingProof {
+    id: ID!
+    status: String!
+    order: Order @hasOne
+    user: User @hasOne
+    created_at: String
+    updated_at: String
+}
+
+type Order {
+    id: ID!
+    title: String!
+    paper_size: String
+    paper_color: String
+    paper: String
+    paper_quantity: String
+    paper_finishings: String
+    shirt_color: String
+    shirt_sizes: String
+    shirt_printings: String
+    turnaround: Int
+    price_product: Int
+    price_extra: Int
+    price_printing: Int
+    price_vat: Int
+    price_total: Int
+    product_type: String
+    user_id: Int
+    user: User @hasOne
+    status: String
+    gift_quantity: Int
+    gift_color: String
+    is_design: String
+    message: String
+    product: Product @hasOne
+    files: [File] @hasMany
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type File {
+    id: ID!
+    title: String!
+    slug: String!
+    cloud: String
+    order_id: Int!
+    media: [Media] @hasMany
+    status: Int!
+    order: Int!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type TemplateFile {
+    id: ID!
+    title: String!
+    type: String
+    template: Template @hasOne
+    media: [Media] @hasMany
+    status: Int!
+    order: Int!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
 type Finishing {
     id: ID!
     title: String!
@@ -138,6 +286,48 @@ type Finishing {
     delivery_time: String!
     status: Int!
     order: Int!
+    options: [FinishingOption] @hasMany
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type FinishingOption {
+    id: ID!
+    title: String!
+    slug: String!
+    price: Int!
+    days: Int!
+    status: Int!
+    media: [Media] @hasMany
+    finishing: Finishing @hasOne
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Printing {
+    id: ID!
+    title: String!
+    body: String!
+    delivery_time: String!
+    status: Int!
+    order: Int!
+    options: [PrintingOption] @hasMany
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type PrintingOption {
+    id: ID!
+    title: String!
+    slug: String!
+    type: String!
+    selection_type: Int!
+    size: String!
+    price: Int!
+    days: Int!
+    status: Int!
+    media: [Media] @hasMany
+    printing: Printing @hasOne
     created_at: DateTime!
     updated_at: DateTime!
 }
@@ -189,12 +379,21 @@ type Variant {
 type Product {
     id: ID!
     title: String!
+
+    unique_code: String
+    gender: String
+    neck: String
+    material: String
+    cloth_type: String
+    brand: String
+
     title_two: String
     slug: String!
     body_title: String
     body_subtitle: String
     delivery_time: Int!
     quantity: String!
+    type: String
     status: Int!
     category: Category @hasOne
     subcategory: SubCategory @hasOne
@@ -203,6 +402,7 @@ type Product {
     variants: [Variant] @hasMany
     points: [Point] @hasMany
     media: [Media] @hasMany
+    color: Color @hasOne
     packages: [Package] @hasMany
     created_at: DateTime!
     updated_at: DateTime!

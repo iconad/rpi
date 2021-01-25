@@ -1,0 +1,52 @@
+query getEvent($status: String!, $user_id: Int!, $term: String, $search_by: String) {
+  ordersbystatus (status: $status, user_id: $user_id, term: $term, search_by: $search_by) {
+    id
+    title
+    price_total
+    status
+    id
+    title
+    paper_size
+    paper_color
+    paper
+    paper_quantity
+    paper_finishings
+    shirt_color
+    shirt_sizes
+    shirt_printings
+    turnaround
+    price_product
+    price_extra
+    price_printing
+    price_vat
+    price_total
+    product_type
+    user_id
+    status
+    gift_quantity
+    gift_color
+    is_design
+    message
+    created_at
+    files {
+      id
+      title
+      title
+      cloud
+      status
+    }
+    product {
+        id
+        title
+        title_two
+        slug
+        body_title
+        body_subtitle
+        delivery_time
+        quantity
+        type
+        status
+        created_at
+    }
+  }
+}

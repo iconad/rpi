@@ -1,0 +1,21 @@
+query getEvent($product_id: Int!) {
+  finishingsbyproduct (product_id: $product_id) {
+    id
+    title
+    body
+    video_link
+    delivery_time
+    status
+    options {
+        title
+        price
+        days
+        media {
+            id
+            name
+            collection_name
+            file_name
+        }
+    }
+  }
+}

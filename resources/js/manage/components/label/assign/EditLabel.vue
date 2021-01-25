@@ -12,7 +12,7 @@
                             <label v-for="(lbl, i) in labels" :key="i" :class="`relative ${lbl.color} h-10 rounded-lg shadow cursor-pointer flex items-center justify-between p-3 font-medium text-gray-100 hover:${lbl.hover}`">
                                 <span>{{lbl.title}}</span>
                                 <span
-                                    :class="selectedLabel === lbl.id ? 'block' : 'hidden' ">
+                                    :class="selectedLabel == lbl.id ? 'block' : 'hidden' ">
                                     <svg class="fill-current w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg>
                                 </span>
                                 <input class="hidden" type="radio" name="colors" v-model="selectedLabel" :value="lbl.id" >
@@ -36,7 +36,7 @@
     import labels from "../../../../../../gql/queries/labels.gql";
 
     export default {
-        props: ['id', "title", "label", "model"],
+        props: ['id', "title", "label", "model", "refresh"],
         data() {
             return {
                 selectedLabel: this.label.id,
@@ -79,6 +79,9 @@
                     });
                 })
                 this.$modal.hide('edit-label')
+                if(this.refresh) {
+                    window.location.reload();
+                }
             },
             showModal () {
                 this.$modal.show('edit-label')

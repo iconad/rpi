@@ -17,8 +17,10 @@ class CreatePrintingsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug')->unique();
+            $table->text('body')->nullable();
+            $table->integer('delivery_time')->default(0);
             $table->integer('user_id');
-            $table->integer('status')->default(0);
+            $table->integer('status')->default(1);
             $table->integer('order')->default(0);
             $table->timestamps();
         });

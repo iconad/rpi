@@ -5,6 +5,9 @@
                 <template v-if="menu == 13">
                     <gift-product-slide :product="product"></gift-product-slide>
                 </template>
+                <template v-else-if="menu == 14">
+                    <shirt-product-slide :product="product"></shirt-product-slide>
+                </template>
                 <template v-else>
                     <product-slide v-if="product.packages.length != 0" :product="product"></product-slide>
                 </template>
@@ -20,12 +23,14 @@
     import ThumbImage from './../../ThumbImage'
     import ProductSlide from './ProductSlide'
     import GiftProductSlide from './GiftProductSlide'
+    import ShirtProductSlide from './ShirtSlide'
 
     export default {
         props: ['products', "menu"],
         components: {
             ThumbImage,
             ProductSlide,
+            ShirtProductSlide,
             GiftProductSlide
         },
         data() {
@@ -38,15 +43,6 @@
                 }
             }
         },
-        // computed: {
-        //     gallery () {
-        //         return this.products.media.filter(e => {
-        //             if(e.collection_name === 'images') {
-        //                 return e
-        //             }
-        //         })
-        //     }
-        // },
     }
 </script>
 

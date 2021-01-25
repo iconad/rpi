@@ -3,6 +3,7 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+require('./bootstrap');
 window._ = require('lodash');
 window.Vue = require("vue");
 import Vuex from 'vuex'
@@ -14,7 +15,7 @@ import VModal from 'vue-js-modal'
 import { VLazyImagePlugin } from "v-lazy-image";
 
 // import PrettyCheckbox from 'pretty-checkbox-vue/check';
-// import VueSweetalert2 from 'vue-sweetalert2';
+import VueSweetalert2 from 'vue-sweetalert2';
 
 import VueApollo from 'vue-apollo'
 import { ApolloClient } from 'apollo-client'
@@ -24,7 +25,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 // HTTP connection to the API
 const httpLink = createHttpLink({
     // You should use an absolute URL here
-    uri: 'http://worki.xyz/graphql',
+    uri: 'http://127.0.0.1:8000/graphql',
 })
 
 // Cache implementation
@@ -50,6 +51,8 @@ Vue.use(VTooltip)
 Vue.use(VModal)
 Vue.use(VueApollo)
 Vue.use(VLazyImagePlugin)
+Vue.use(VueSweetalert2);
+Vue.use(require('vue-moment'));
 
 
 import { store } from './store.js';

@@ -31,7 +31,7 @@
                             </td>
                             <td class="px-4 py-3 text-xs">
                                 <span class="flex items-center">
-                                    <edit-label :model="model" @updated="updatedLabels" :label="label" :title="title" :id="id"></edit-label>
+                                    <edit-label :refresh="refresh" :model="model" @updated="updatedLabels" :label="label" :title="title" :id="id"></edit-label>
                                 </span>
                             </td>
 
@@ -48,7 +48,7 @@
     import EditLabel from './EditLabel'
 
     export default {
-        props: ['label', 'id', 'title', 'model'],
+        props: ['label', 'id', 'title', 'model', "refresh"],
         components: {
             EditLabel
         },

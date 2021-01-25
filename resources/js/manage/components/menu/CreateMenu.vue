@@ -8,7 +8,7 @@
                 <div class="text-xl mb-3 capitalize font-semibold">Add Menu</div>
                 <!-- <hr class="my-2"> -->
                  <ValidationObserver v-slot="{ invalid,passes }">
-                <form @submit.prevent="submitForm" class="form-element flex items-center">
+                <form @submit.prevent="submitForm" class="form-element">
                     <label class="w-full block relative">
                         <ValidationProvider name="paper.value.size" rules="required">
                             <div slot-scope="{ errors }">
@@ -17,7 +17,19 @@
                             </div>
                         </ValidationProvider>
                     </label>
-                    <div class="ml-4 w-32">
+                    <label class="w-full block relative mt-3 flex items-center">
+                        <input type="checkbox" v-model="isLink" class="w-5 h-5">
+                        <span class="text-base font-medium pt-1 inline-block ml-3">External Link </span>
+                    </label>
+                    <label class="w-full block relative mt-3" v-if="isLink">
+                        <ValidationProvider name="paper.value.size" rules="required">
+                            <div slot-scope="{ errors }">
+                                <input type="text" v-model="link" class="form-input text-base font-normal" placeholder="URL">
+                                <p class="text-theme-red-light mt-1 px-1 text-sm font-medium absolute top-100 left-0 w-full">{{ errors[0] }}</p>
+                            </div>
+                        </ValidationProvider>
+                    </label>
+                    <div class="mt-5 w-32">
                         <button
                         type="submit"
                         :disabled="invalid"
@@ -50,14 +62,17 @@
         },
         data() {
             return {
-                name: null
+                name: null,
+                link: "http://127.0.0.1:8000/",
+                isLink: null
             }
         },
         methods: {
             submitForm () {
 
                 axios.post(`/manage/menu`, {
-                    title: this.name
+                    title: this.name,
+                    link: this.link
                 })
                 .then(response => {
                     this.$emit('updated')
@@ -73,6 +88,7 @@
 
                 this.$modal.hide('add-menu')
                 this.name = null
+                this.link = "http://127.0.0.1:8000/"
 
             },
             addModal () {

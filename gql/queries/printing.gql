@@ -1,0 +1,23 @@
+query {
+  printing {
+    id
+    title
+    body
+    delivery_time
+    status
+    options{
+        title
+        price
+        type
+        selection_type
+        size
+        days
+        media {
+            id
+            name
+            collection_name
+            file_name
+        }
+    }
+  }
+}

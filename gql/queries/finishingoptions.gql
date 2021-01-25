@@ -1,0 +1,16 @@
+query ($finish_id: Int!) {
+  finishingoptions(finish_id: $finish_id) {
+    id
+    title
+    slug
+    price
+    days
+    status
+    media {
+        id
+        collection_name
+        name
+        file_name
+    }
+  }
+}

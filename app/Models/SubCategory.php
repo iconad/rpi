@@ -15,7 +15,7 @@ class SubCategory extends Model  implements HasMedia
 {
     use HasFactory, InteractsWithMedia, Sluggable, Filterable;
 
-    public $fillable = ['title', 'slug', 'category_id', 'user_id', 'excerpt', 'body', 'menu_id', 'featured', 'status'];
+    public $fillable = ['title', 'subtitle', 'slug', 'category_id', 'user_id', 'excerpt', 'body', 'menu_id', 'featured', 'status'];
 
     public function sluggable()
     {

@@ -50,6 +50,7 @@
                 'colors' => $colors
                 'color' => $colors[0]
             ]) --}}
+            @if ($product->category->menu->id != 14)
             <div class="form-element">
                 <label>
                     <span class="text-gray-800 block">Color </span>
@@ -62,6 +63,7 @@
                 </label>
             </div>
             <!-- form-ele -->
+            @endif
 
             <div class="form-element mt-8 mb-0">
                 <input type="submit" value="Submit" class="theme-button">

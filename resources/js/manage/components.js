@@ -40,6 +40,21 @@ Vue.component(
 );
 
 Vue.component(
+    "manage-finishing-options",
+    require("./components/finishing/option/ManageOptions.vue").default
+);
+
+Vue.component(
+    "manage-printings",
+    require("./components/printing/ManagePrinting.vue").default
+);
+
+Vue.component(
+    "manage-printing-options",
+    require("./components/printing/option/ManageOptions.vue").default
+);
+
+Vue.component(
     "manage-categories",
     require("./components/Category/ManageCategories.vue").default
 );
@@ -103,4 +118,34 @@ Vue.component(
 Vue.component(
     "manage-prices-sizes",
     require("./components/product/price/ManagePrice.vue").default
+);
+
+Vue.component(
+    "manage-orders",
+    require("./components/order/ManageOrders.vue").default
+);
+
+Vue.component(
+    "manage-user-orders",
+    require("./components/order/ManageUserOrders.vue").default
+);
+
+Vue.component(
+    "manage-pending-proofs",
+    require("./components/proof/ManagePendingProofs.vue").default
+);
+
+Vue.component(
+    "order-selected-shirt-printings",
+    require("./components/order/OrderSelectedShirtPrintings.vue").default
+);
+
+Vue.component(
+    "manage-template-categories",
+    require("./components/template/category/ManageTemplateCategories.vue").default
+);
+
+Vue.component(
+    "manage-templates",
+    require("./components/template/ManageTemplates.vue").default
 );

@@ -7,6 +7,7 @@ import VModal from 'vue-js-modal'
 import PrettyCheckbox from 'pretty-checkbox-vue/check';
 import VueApollo from 'vue-apollo'
 import VueSweetalert2 from 'vue-sweetalert2';
+import { VLazyImagePlugin } from "v-lazy-image";
 
 import { ApolloClient } from 'apollo-client'
 import { createHttpLink } from 'apollo-link-http'
@@ -15,7 +16,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 // HTTP connection to the API
 const httpLink = createHttpLink({
     // You should use an absolute URL here
-    uri: 'http://worki.xyz/graphql',
+    uri: 'http://127.0.0.1:8000/graphql',
 })
 
 // Cache implementation
@@ -44,6 +45,8 @@ Vue.use(VTooltip)
 Vue.use(VModal)
 Vue.use(VueApollo)
 Vue.use(VueSweetalert2);
+Vue.use(VLazyImagePlugin)
+Vue.use(require('vue-moment'));
 
 Vue.component( "p-check", PrettyCheckbox);
 

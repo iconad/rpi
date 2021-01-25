@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="bg-theme-gray p-10 mt-5">
-            <div class="capitalize text-gray-900 text-lg font-semibold">select file form</div>
+            <div class="capitalize text-gray-900 text-lg font-semibold">select file form </div>
 
             <div class="flex mt-3 mb-10">
                 <label class="flex items-center flex-col justify-center text-center w-64 h-32 cursor-pointer hover:bg-theme-gray-light bg-theme-gray-dark border border-gray-400 hover:bg-primary hover:text-red-400 transition ease-linear duration-200 text-xl mr-3" :class="fileFrom === 'computer' ? 'bg-primary text-red-500' : ''">
@@ -22,16 +22,15 @@
 
             <div class="flex items-center w-full justify-center py-16" v-if="fileFrom === 'computer'">
                 <file-upload
+                    :headers="headers"
                     class="px-5 py-2 rounded cursor-pointer hover:bg-transparent border border-gray-400 hover:text-primary"
-                    post-action="/api/upload/post"
-                    extensions="gif,jpg,jpeg,png,webp"
-                    accept="image/png,image/gif,image/jpeg,image/webp"
+                    :post-action="`/profile/orders/${order.id}/store-file`"
+                    extensions="zip,psd,ai,pdf"
+                    :size="1024 * 1024 * 100"
                     :multiple="true"
-                    :size="1024 * 1024 * 10"
                     v-model="files"
                     :drop="true"
                     @input="added"
-                    @input-filter="inputFilter"
                     @input-file="inputFile"
                     ref="upload">
                     <div class="flex items-center">
@@ -41,34 +40,34 @@
                         <span class="inline-block ml-2 text-xl">Select or Drag & Drop Here</span>
                     </div>
                 </file-upload>
+
             </div>
+
             <div class="w-full" v-else>
                 <label :disabled="files" class="text-gray-900 text-lg font-medium mb-2 block"> Paste cloud file URL <small class="text-gray-700 text-sm">Make you have have given permission for the download</small> </label>
                 <textarea v-model="cloud" @input="checkCloud" class="resize-none w-full h-24 bg-gray-100 border border-gray-400 p-3 text-lg focus:outline-none"></textarea>
-            </div>
 
-            <p class="text-theme-red-light mt-1 px-1 text-sm font-medium" v-if="fileError">{{fileErrorMessage}} </p>
-
-
-            <div class="mt-5 flex items-center">
-            </div>
-            <div v-for="(file,i ) in files" :key="i">
-                <span class="p-3 text-info-500 mb-1 text-base rounded block">{{file.name}} </span>
-                <div class="progress" v-if="file.active || file.progress !== '0.00'">
-                <div class="shadow w-full bg-grey-light rounded">
-                    <div :class="{'bg-green-500 text-xs leading-none py-1 font-semibold text-center text-white rounded': true, 'bg-red-500': file.error, 'progress-bar-animated': file.active}" role="progressbar" :style="{width: file.progress + '%'}">{{file.progress}}%</div>
-                    </div>
+                <div class="flex items-center justify-end mt-5">
+                    <button :disabled="!isFiles" :class="!isFiles ? 'bg-gray-500 cursor-not-allowed px-5 py-2 text-white font-medium border border-gray-500' : 'theme-button' " @click="addCloudFile" class=" inline-block ">Add</button>
                 </div>
             </div>
 
-            <div class="comment" :class="fileFrom === 'computer'? 'mt-5' : ''">
-                <label :disabled="files" class="capitalize text-gray-900 text-lg font-medium mb-2 block" for="comment"> Include any message, if you have any </label>
-                <textarea id="comment" class="w-full h-32 bg-gray-100 border border-gray-400 p-3 text-lg focus:outline-none"></textarea>
+            <p class="text-center text-red-500 text-xl mt-1 px-1 text-sm font-medium" v-if="fileError"> {{fileErrorMessage}} </p>
+
+            <div class="mt-5 mb-2 flex items-center font-semibold" v-if="!$apollo.queries.files.loading && files.length != 0">
+                Files
             </div>
 
-            <div class="flex items-center justify-end mt-5">
-                <a href="http://" class="theme-button inline-block mr-2">Back</a>
-                <button :disabled="!isFiles" :class="!isFiles ? 'bg-gray-500 cursor-not-allowed px-5 py-2 text-white font-medium border border-gray-500' : 'theme-button' " @click="confirm" class=" inline-block ">Next</button>
+
+            <order-files :files="files" :order="order" @update-files="updateFiles"></order-files>
+
+            <div class="comment" :class="fileFrom === 'computer'? 'mt-5' : 'mt-5'">
+                <label :disabled="files" class="capitalize text-gray-900 text-lg font-medium mb-2 block" for="comment"> Include any message, if you have any </label>
+                <textarea id="comment" v-model="message" class="w-full h-32 bg-gray-100 border border-gray-400 p-3 text-lg focus:outline-none"></textarea>
+            </div>
+
+            <div class="flex items-center justify-end mt-5" v-if="!$apollo.queries.files.loading && files.length != 0">
+                <button :disabled="files.length === 0" :class="files.length === 0 ? 'bg-gray-500 cursor-not-allowed px-5 py-2 text-white font-medium border border-gray-500' : 'theme-button' " @click="confirm" class=" inline-block ">Place Order </button>
             </div>
 
         </div>
@@ -91,8 +90,8 @@
                     </p-check>
                     <span class="text-base font-medium text-gray-900">Yes, I understand.</span>
                 </div>
-                <span v-if="!check"  @click="confirm" class="bg-gray-500 cursor-not-allowed px-5 py-2 select-none text-white font-medium border border-gray-500 mt-5 inline-block ">Proceed</span>
-                <a href="/" v-else  @click="confirm" class="theme-button mt-5 inline-block ">Proceed</a>
+                <span v-if="!check" class="bg-gray-500 cursor-not-allowed px-5 py-2 select-none text-white font-medium border border-gray-500 mt-5 inline-block ">Proceed</span>
+                <span v-else @click="placeOrder" class="theme-button cursor-pointer mt-5 inline-block ">Proceed</span>
             </div>
         </modal>
 
@@ -106,8 +105,15 @@
     import PrettyCheckbox from 'pretty-checkbox-vue/check';
     import { isWebUri } from 'valid-url';
 
+    import orderFiles from './OrderFiles'
+
+    import gql from 'graphql-tag'
+    import filesByOrderQuery from "../../../../gql/frontend/queries/filesbyorder.gql";
+
     export default {
+        props: ['order'],
         components: {
+            orderFiles,
             FileUpload: VueUploadComponent,
             'p-check': PrettyCheckbox
         },
@@ -116,16 +122,46 @@
                 check: false,
                 fileFrom: 'computer',
                 cloud: null,
-                files: [],
+                message: null,
                 isFiles: false,
                 fileError: false,
+                currentFile: null,
+                isFileLoading: false,
                 fileErrorMessage: "You must select a file"
             }
         },
-        mounted() {
-            // this.$modal.show('are-you-sure');
+        computed: {
+            headers () {
+                return {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': window.csrf_token
+                }
+            }
         },
+        // mounted() {
+            // this.$modal.show('are-you-sure');
+        // },
         methods: {
+            addCloudFile () {
+                axios.post(`/profile/orders/${this.order.id}/add-cloud-file`, {
+                    cloud: this.cloud,
+                })
+                .then(response => {
+                    this.$swal({
+                        toast: false,
+                        position: 'top-right',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        title: 'File',
+                        text: 'Added!',
+                    });
+                    this.$apollo.queries.files.refetch()
+                    this.cloud = null
+                })
+            },
+            updateFiles (file, i) {
+                this.$apollo.queries.files.refetch()
+            },
             checkCloud () {
                 let url = this.cloud
                 if (!isWebUri(url)) {
@@ -136,15 +172,35 @@
                 }
             },
             confirm () {
-                if(!this.isFiles && this.cloud == null) {
+                if(this.files.length === 0) {
                     this.fileError = true
                 }else{
                     this.$nextTick(() => {
-                        // this.$modal.show('are-you-sure');
+                        this.$modal.show('are-you-sure');
                     })
                 }
             },
+            placeOrder () {
+                axios.put(`/profile/orders/${this.order.id}`, {
+                    message: this.message,
+                    status: 'pending',
+                })
+                .then(response => {
+                    this.$swal({
+                        toast: false,
+                        position: 'top-right',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        title: 'Done',
+                        text: 'Your order has beed placed successfully!',
+                    });
+                    // window.location.href = `/`
+                    window.location.href = `/profile/orders/${this.order.id}`
+                })
+
+            },
             added () {
+                this.isFileLoading = true
                 this.isFiles = false
                 this.$refs.upload.active = true
             },
@@ -152,30 +208,43 @@
             inputFile: function (newFile, oldFile) {
                 if (newFile && oldFile && !newFile.active && oldFile.active) {
                     // Get response data
-                    console.log('response', newFile.response)
+                    this.fileError = false
+                    this.fileErrorMessage = ""
+
+                    if(!newFile.response.file_id) {
+                        this.fileError = true
+                        this.fileErrorMessage = newFile.response.message
+                    }
+                    this.$apollo.queries.files.refetch()
+                    // this.isFileLoading = false
+                    // this.currentFile = newFile.response.file_id
+
                     if (newFile.xhr) {
                     //  Get the response status code
-                    console.log('status', newFile.xhr.status)
+                    // console.log('status', newFile.xhr.status)
                     this.isFiles = true
                     }
+
+                    // Upload progress
+                    if (newFile.progress !== oldFile.progress) {
+                        console.log(newFile.progress)
+                    }
+
                 }
             },
-
-            inputFilter: function (newFile, oldFile, prevent) {
-                if (newFile && !oldFile) {
-                    // Filter non-image file
-                    if (!/\.(jpeg|jpe|jpg|gif|png|webp)$/i.test(newFile.name)) {
-                    return prevent()
-                    }
-                }
-
-                // Create a blob field
-                newFile.blob = ''
-                let URL = window.URL || window.webkitURL
-                if (URL && URL.createObjectURL) {
-                    newFile.blob = URL.createObjectURL(newFile.file)
-                }
-            }
+        },
+        apollo: {
+            files() {
+                return {
+                    query: filesByOrderQuery,
+                    variables: {
+                        order_id: this.order.id
+                    },
+                    update(data) {
+                        return data.filesbyorder;
+                    },
+                };
+            },
         }
     }
 </script>

@@ -24,6 +24,15 @@ class CreateProductsTable extends Migration
             $table->string('body_subtitle')->nullable();
             $table->integer('delivery_time')->default(0);
             $table->string('printing_text')->nullable();
+
+            $table->integer('color_id')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('neck')->nullable();
+            $table->string('material')->nullable();
+            $table->string('cloth_type')->nullable();
+            $table->string('brand')->nullable();
+            $table->string('unique_code')->nullable();
+
             $table->integer('printing')->nullable();
             $table->integer('stock')->nullable();
             $table->string('quantity')->nullable();

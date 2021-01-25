@@ -1,0 +1,19 @@
+query ($print_id: Int!) {
+  printingoptions(print_id: $print_id) {
+    id
+    title
+    slug
+    price
+    days
+    type
+    selection_type
+    size
+    status
+    media {
+        id
+        collection_name
+        name
+        file_name
+    }
+  }
+}

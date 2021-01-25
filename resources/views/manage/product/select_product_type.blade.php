@@ -17,8 +17,8 @@
         class="hover:bg-transparent hover:border-primary-200 border transition border-gray-200 rounded flex items-center justify-center text-xl bg-white h-24 xxl:h-32 w-full text-sm block">Banner Display</a>
         <a href="{{route('products.gift.create')}}"
         class="hover:bg-transparent hover:border-primary-200 border transition border-gray-200 rounded flex items-center justify-center text-xl bg-white h-24 xxl:h-32 w-full text-sm block">Personalize Gift</a>
-        <a href="{{route('products.gift.create')}}"
-        class="hover:bg-transparent hover:border-primary-200 border transition border-gray-200 rounded flex items-center justify-center text-xl bg-white h-24 xxl:h-32 w-full text-sm block">T-Shirt <small class="ml-2 text-red-600 text-sm">(pending)</small> </a>
+        <a href="{{route('products.shirt.create')}}"
+        class="hover:bg-transparent hover:border-primary-200 border transition border-gray-200 rounded flex items-center justify-center text-xl bg-white h-24 xxl:h-32 w-full text-sm block">T-Shirt</a>
     </div>
 
 

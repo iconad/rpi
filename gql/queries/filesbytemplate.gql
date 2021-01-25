@@ -1,0 +1,14 @@
+query getEvent($template_id: Int!) {
+  filesbytemplate (template_id: $template_id) {
+    id
+    title
+    type
+    status
+    media {
+        id
+        collection_name
+        name
+        file_name
+    }
+  }
+}

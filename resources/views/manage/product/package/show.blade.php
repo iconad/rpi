@@ -10,7 +10,7 @@
 
 <div id="dashboard">
     <div class="w-full rounded-lg border border-gray-200 bg-white p-4 relative">
-        <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">{{ $product->title }}</h2>
+        <h2 class="my-6 text-xl font-semibold text-gray-700 dark:text-gray-200">{{ $product->title }}'s Paper</h2>
         <form action="/manage/products/{{$product->id}}/packages/{{$package->id}}" method="post" class="">
             @csrf
             {{method_field('PUT')}}

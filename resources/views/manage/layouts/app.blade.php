@@ -10,6 +10,7 @@
     <title>{{ config('app.name', 'Rainbow Printing') }}</title>
 
     <link href="{{ asset('css/manage/app.css') }}" rel="stylesheet">
+    @livewireStyles
     @yield('headlinks')
 </head>
 <body>
@@ -41,7 +42,7 @@
         window.csrf_token = "{{ csrf_token() }}"
     </script>
     <script src="{{ asset('js/manage/app.js') }}"></script>
-
+    @livewireScripts
     @yield('scripts')
 </body>
 </html>

@@ -12,9 +12,8 @@
                 <span>{{$product->packages[0]->prices[0]->size->type}}</span>
                 <span>• {{$product->packages[0]->quantity}} Copies</span>
                 <span>>  {{$product->packages[0]->prices[0]->price}} AED</span>
-
                 <span class="text-gray-800">(Incl. VAT)</span></div>
-            <a href="" class="red-button">Order Now</a>
+            <a href="/product-order/{{$product->slug}}?package={{$product->packages[0]->id}}&category={{$product->category->menu->id}}&type={{$product->type}}" class="red-button">Order Now</a>
         </div>
        </div>
        {{-- page cover --}}
@@ -73,7 +72,10 @@
             <div class="text-3xl font-semibold text-gray-900">Paper & Prices <small class="text-base text-gray-700">(Incl.VAT)</small></div>
         </div>
         <div class="prices-drop-down mt-5">
-            <product-paper-price :pid="{{ json_encode($product->id) }}"></product-paper-price>
+            {{-- /product-order/{{$product->slug}}?package={{$product->packages[0]->id}}&category={{$product->category->menu->id}}&type={{$product->type}} --}}
+            <product-paper-price
+                :pid="{{ json_encode($product->id) }}"
+                ></product-paper-price>
         </div>
         {{-- prices dropdonw --}}
     </section>

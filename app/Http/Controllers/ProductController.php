@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Color;
 use App\Models\Product;
 use App\Models\Finishing;
 use Illuminate\Http\Request;
@@ -49,6 +50,13 @@ class ProductController extends Controller
         return view('manage.product.gift.create', compact('categories', 'finishings'));
     }
 
+    public function createShirtProduct()
+    {
+        $categories = Category::where('menu_id', 14)->get();
+        $colors = Color::all();
+        return view('manage.product.shirt.create', compact('categories', 'colors'));
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -89,6 +97,8 @@ class ProductController extends Controller
 
         $quantity = $request->min_quantity . ' , ' . $request->max_quantity;
 
+        // $request->color;
+
         $product = Product::create([
             'title' => $request->title,
             'title_two' => $request->title_two,
@@ -97,6 +107,16 @@ class ProductController extends Controller
             'printing_text' => $request->printing_text,
             'printing' => $request->printing,
             'quantity' => $quantity,
+
+            'brand' => $request->brand,
+            'color_id' => $request->color,
+            'gender' => $request->gender,
+            'type' => $request->type,
+            'cloth_type' => $request->cloth_type,
+            'neck' => $request->neck,
+            'material' => $request->material,
+            'unique_code' => $request->unique_code,
+
             'category_id' => $request->category_id,
             'sub_category_id' => $request->sub_category_id,
             'delivery_time' => $request->delivery_time,
@@ -155,7 +175,16 @@ class ProductController extends Controller
                 'points',
                 'categories'
         ));
+        }elseif($product->category->menu->id == 14){
+            $colors = Color::all();
+            return view('manage.product.shirt.show', compact(
+                'colors',
+                'product',
+                'image',
+                'categories'
+            ));
         }else{
+            {
             return view('manage.product.show', compact(
                 'product',
                 'min_quantity',
@@ -167,6 +196,7 @@ class ProductController extends Controller
                 'cover',
                 'points',
                 'categories'));
+            }
         }
 
     }
@@ -234,6 +264,16 @@ class ProductController extends Controller
             $product->body_title = $request->points_title;
             $product->body_subtitle = $request->body_subtitle;
             $product->quantity = $quantity;
+
+            $product->brand = $request->brand;
+            $product->color_id = $request->color;
+            $product->gender = $request->gender;
+            $product->type = $request->type;
+            $product->cloth_type = $request->cloth_type;
+            $product->neck = $request->neck;
+            $product->unique_code = $request->unique_code;
+            $product->material = $request->material;
+
             $product->printing_text = $request->printing_text;
             $product->printing = $request->printing;
             $product->category_id = $request->category_id;
@@ -325,4 +365,15 @@ class ProductController extends Controller
     public function selectProductType() {
         return view('manage.product.select_product_type');
     }
+
+    public function assignLabel(Request $request, Product $product)
+    {
+        $product->label_id = $request->label;
+        $done = $product->save();
+        if($done) {
+        return response()->json(['Label added successfully!']);
+        }
+    }
+
+
 }

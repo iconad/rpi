@@ -18,32 +18,25 @@
         <div class=" my-5 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
             <div
             class="border rounded p-3 hover:bg-primary-500 text-gray-800 hover:text-white everything-white-on-hover cursor-pointer"
-            v-for="(slide, i) in slides"
+            v-for="(slide, i) in finishing.options"
             :key="i"
-            @click="add(slide.name)">
-                <div>
-                    <img class="rounded-lg" :src="slide.image" alt="image">
-                </div>
-                <div class="text-lg font-semibold text-center mt-3 mb-2 capitalize">{{slide.name}}</div>
-                <div class="text-sm font-semibold text-center">
-                    <span class="text-theme-red">+</span>
-                    <span>{{slide.price}} AED</span>
-                    <span class="text-theme-red font-normal">(+ {{slide.bizdays}} Biz Days)</span>
-                </div>
+            @click="add(slide)">
+                <finish-image :slide="slide"></finish-image>
             </div>
             <!-- box -->
-
         </div>
     </div>
 </template>
 
 <script>
 
+    import FinishImage from './FinishImage'
+
     import Multiselect from 'vue-multiselect'
 
     export default {
-        props: ['type'],
-        components: {Multiselect},
+        props: ['type', 'finishing'],
+        components: {FinishImage, Multiselect},
         data() {
             return {
                 page: 'front only',
@@ -51,32 +44,6 @@
                 slide: null,
                 pages: ['front only', 'back only'],
                 options: ['Emboss',],
-                slides: [
-                    {
-                        image: "https://www.printarabia.ae/img/finishing/emboss-full.jpg",
-                        name: "Full",
-                        price: 100,
-                        bizdays: 1
-                    },
-                    {
-                        image: "https://www.printarabia.ae/img/finishing/emboss-three-quarter.jpg",
-                        name: "Three Quarter",
-                        price: 140,
-                        bizdays: 2
-                    },
-                    {
-                        image: "https://www.printarabia.ae/img/finishing/emboss-half.jpg",
-                        name: "Half",
-                        price: 190,
-                        bizdays: 1
-                    },
-                    {
-                        image: "https://www.printarabia.ae/img/finishing/emboss-a-quarter.jpg",
-                        name: "A Quarter",
-                        price: 200,
-                        bizdays: 4
-                    },
-                ]
             }
         },
         computed: {
@@ -90,11 +57,13 @@
                 this.slide = val
                 const data = {
                     name: this.type,
+                    price: this.slide.price,
+                    days: this.slide.days,
                     options:
                     {
                         page: this.page,
                         option: this.option,
-                        type: this.slide
+                        type: this.slide.title
                         }
                 }
                 this.$store.dispatch("dipatchSelectedPaperFinishing", data)

@@ -3,7 +3,7 @@
 
         <swiper class="swiper" :options="swiperOptions">
             <swiper-slide>
-                <div class="w-full bg-red-400 inner">
+                <div class="w-full inner">
                     <a href="http://">
                         <img src="https://assets.printarabia.ae/product-preset-banners/production/YrXnavdxJLG10qB/banner-73d9de647abf31f027e9f4de7f861ff7.webp" alt="banner">
                     </a>

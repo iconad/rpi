@@ -3,7 +3,12 @@
         <div class="text-2xl font-semibold text-gray-900 flex items-center justify-between">
             <span>Orders </span>
             <span>
-                <input type="search" placeholder="Search Order by Order Number/Name/Products " class="rounded w-full md:w-35rem text-base p-2 focus:outline-none border">
+                <span class="uppercase text-sm font-medium text-gray-600 inline-block mr-1">Filter Orders by</span>
+                <select v-model="searchBy" class="rounded text-base px-2 py-5px focus:outline-none border">
+                    <option value="id">Order ID</option>
+                    <option value="product">Product Name</option>
+                </select>
+                <input type="search" v-model="term" @keyup="searchOrders" :placeholder="`Search Order ${searchBy}`" class="rounded w-full md:w-20rem text-base px-2 py-1 focus:outline-none border">
             </span>
         </div>
 
@@ -11,87 +16,90 @@
             <div class="flex flex-col">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                <div class="border overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                    <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-gray-100">
-                        <tr>
-                        <th class="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-700 uppercase tracking-wider">
-                            Date Order
-                        </th>
-                        <th class="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-700 uppercase tracking-wider">
-                            Order No.
-                        </th>
-                        <th class="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-700 uppercase tracking-wider">
-                            Product
-                        </th>
-                        <th class="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-700 uppercase tracking-wider">
-                            Price
-                        </th>
-                        <th class="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-700 uppercase tracking-wider">
-                            Status
-                        </th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
-                        <tr>
-                            <td class="px-6 py-4 whitespace-no-wrap">
-                                <div class="text-base leading-5 font-medium text-gray-800">
-                                    05 Nov 1993
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-no-wrap">
-                                <div class="text-base leading-5 font-medium text-gray-800">
-                                    ORD-3423433
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-no-wrap">
-                                <div class="text-base leading-5 font-medium text-gray-800">
-                                    <a href="#" class="theme-link">Prduct Name here</a>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-no-wrap">
-                                <div class="text-base leading-5 font-medium text-gray-800">
-                                    234 AED
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-no-wrap">
-                                <span class="capitalize text-base leading-5 font-semibold rounded-full bg-red-100 text-red-800">
-                                    Denaied
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4 whitespace-no-wrap">
-                                <div class="text-base leading-5 font-medium text-gray-800">
-                                    05 Nov 1993
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-no-wrap">
-                                <div class="text-base leading-5 font-medium text-gray-800">
-                                    ORD-3423433
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-no-wrap">
-                                <div class="text-base leading-5 font-medium text-gray-800">
-                                    <a href="#" class="theme-link">Prduct Name here</a>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-no-wrap">
-                                <div class="text-base leading-5 font-medium text-gray-800">
-                                    234 AED
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-no-wrap">
-                                <span class="capitalize text-base leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                    delivered
-                                </span>
-                            </td>
-                        </tr>
-
-                        <!-- More rows... -->
-                    </tbody>
-                    </table>
-                </div>
+                    <div class="flex items-center justify-end text-sm font-medium">
+                        <label v-for="(sts, i) in allstatus" :key="sts">
+                            <span
+                            :class="[
+                                sts === status ? 'bg-primary-500 text-white border-primary-500' : '',
+                                i === allstatus.length ? 'border-r-0' : '',
+                                i === 0 ? '' : 'border-l-0',
+                                $apollo.queries.orders.loading ? '' : 'border-b-0'
+                             ]"
+                            class="inline-block px-3 py-1 cursor-pointer hover:bg-primary-500 hover:text-white capitalize border border-gray-300 hover:border-primary-500">{{sts}}</span>
+                            <input class="hidden" type="radio" name="status" :value="sts" v-model="status" >
+                        </label>
+                    </div>
+                    <div v-if="$apollo.queries.orders.loading" class="flex justify-center w-full">
+                        <div class="loader"></div>
+                    </div>
+                    <div v-else class="border overflow-hidden border-b border-gray-200 sm:rounded-lg sm:rounded-tr-none">
+                        <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-100">
+                            <tr>
+                            <th class="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-700 uppercase tracking-wider">
+                                Date Order
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-700 uppercase tracking-wider">
+                                Order No.
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-700 uppercase tracking-wider">
+                                Product
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-700 uppercase tracking-wider">
+                                Price
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-700 uppercase tracking-wider">
+                                Status
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-700 uppercase tracking-wider">
+                                Actions
+                            </th>
+                            </tr>
+                        </thead>
+                        <tbody v-if="orders.length != 0" class="bg-white divide-y divide-gray-200">
+                            <tr v-for="order in orders" :key="order.id">
+                                <td class="px-6 py-4 whitespace-no-wrap">
+                                    <div class="text-base leading-5 font-medium text-gray-800">
+                                       {{order.created_at | moment("Do MMMM, YYYY")}}
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-no-wrap">
+                                    <div class="text-base uppercase leading-5 font-medium text-gray-800">
+                                        {{order.id}}
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-no-wrap">
+                                    <div class="text-base leading-5 font-medium text-gray-800">
+                                        <a v-if="order.status == 'cart'" :href="`/profile/orders/${order.id}/upload-your-design`" class="theme-link">{{order.product.title}}</a>
+                                        <a v-else :href="`/profile/orders/${order.id}`" class="theme-link">{{order.product.title}}</a>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-no-wrap">
+                                    <div class="text-base leading-5 font-medium text-gray-800">
+                                        {{order.price_total}} AED
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-no-wrap">
+                                    <span v-if="order.status == 'cart' " class="capitalize text-base leading-5 font-semibold rounded-full bg-blue-100 text-blue-600"> Cart</span>
+                                    <span v-else-if="order.status == 'pending' " class="capitalize text-base leading-5 font-semibold rounded-full bg-orange-100 text-orange-500"> Pending</span>
+                                    <span v-else-if="order.status == 'confirmed' " class="capitalize text-base leading-5 font-semibold rounded-full bg-red-100 text-red-600"> Confirmed</span>
+                                    <span v-else-if="order.status == 'onhold' " class="capitalize text-base leading-5 font-semibold rounded-full bg-orange-100 text-orange-600"> On Hold</span>
+                                    <span v-else-if="order.status == 'delivered' " class="capitalize text-base leading-5 font-semibold rounded-full bg-green-100 text-green-600"> delivered</span>
+                                    <span v-else-if="order.status == 'rejected' " class="capitalize text-base leading-5 font-semibold rounded-full bg-red-100 text-red-600"> rejected</span>
+                                </td>
+                                 <td class="px-6 py-4 whitespace-no-wrap">
+                                     <a v-if="order.status == 'cart'" :href="`/profile/orders/${order.id}/upload-your-design`" class="theme-link hover:border-0 font-medium text-gray-700">View</a>
+                                     <a v-else :href="`/profile/orders/${order.id}`" class="theme-link hover:border-transparent font-medium text-gray-700">View</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody v-else>
+                            <tr>
+                                <td colspan="6" class="text-center p-3 text-base leading-5 font-medium text-gray-600"> 0 record found! </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             </div>
@@ -100,11 +108,56 @@
 </template>
 
 <script>
-    export default {
+    import gql from 'graphql-tag'
+    import ordersQuery from "../../../../gql/frontend/queries/orders.gql";
 
+    export default {
+        props: ['user_id'],
+        data() {
+            return {
+                allstatus: ['all', 'cart', 'pending', 'confirmed', 'delivered', 'on-hold', 'rejected'],
+                status: 'all',
+                term: null,
+                searchBy: 'id'
+            }
+        },
+        watch: {
+            status (value) {
+                this.$apollo.queries.orders.refetch({
+                    status: value
+                })
+            },
+            searchBy (value) {
+                this.$apollo.queries.orders.refetch({
+                    search_by: this.searchBy,
+                })
+            }
+        },
+        methods: {
+            searchOrders: _.debounce(function () {
+                if(this.term != null) {
+                    this.$apollo.queries.orders.refetch({
+                        term : this.term,
+                        search_by: this.searchBy,
+                    })
+                }
+            }, 500)
+        },
+        apollo: {
+            orders() {
+                return {
+                    query: ordersQuery,
+                    variables: {
+                        status: this.status,
+                        user_id: this.user_id,
+                        term: this.term,
+                        search_by: this.searchBy,
+                    },
+                    update(data) {
+                        return data.ordersbystatus;
+                    },
+                };
+            },
+        }
     }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

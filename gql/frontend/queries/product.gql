@@ -8,8 +8,21 @@ query getEvent($id: ID!) {
     body_subtitle
     delivery_time
     quantity
+    type
     status
     created_at
+    color {
+        id
+        title
+        hex
+    }
+    variants {
+        id
+        title
+        short_title
+        stock
+        price
+    }
     packages {
         id
         paper {

@@ -27,7 +27,7 @@
                             <span
                                 v-if="product.label"
                                 :class="[
-                                    `inline-bock px-3 py-px font-medium rounded-lg shadow text-xs bg-${product.label.color}`,
+                                    `inline-bock px-3 py-px font-medium rounded-lg shadow text-xs ${product.label.color}`,
                                     product.label.color === 'yellow-300' ? 'text-gray-900' : 'text-gray-100'
                                 ]">
                                 {{product.label.title}}

@@ -19,8 +19,8 @@
                     </div>
                     <div class="absolute text-xs font-semibold bottom-0 p-8 right-0 w-full text-center">
                         <span class="text-theme-red">+</span>
-                        <span>120 AED</span>
-                        <span class="text-theme-red font-normal">(+ 2 Biz Days)</span>
+                        <span>{{price}} AED</span>
+                        <span class="text-theme-red font-normal">(+ {{day}} Biz Days)</span>
                     </div>
                     <div class="absolute left-0 top-0 h-full w-full flex items-center justify-end ml-12">
                         <span class="text-lg font-semibold text-primary-500">0mm</span>
@@ -76,6 +76,8 @@
                 },
                 size: '3R',
                 sizes: ['3R', '4R', '5R', '6R', '7R'],
+                price: 120,
+                day: 2,
 
             }
         },
@@ -85,13 +87,15 @@
                 this.slide = val
                 const data = {
                     name: this.type,
+                    price: this.price,
+                    days: this.day,
                     options:
                     {
+                        type: this.slide.title,
                         size: this.size,
                         corners: this.corners,
                     }
                 }
-                console.log(data)
                 this.$store.dispatch("dipatchSelectedPaperFinishing", data)
             }
         },

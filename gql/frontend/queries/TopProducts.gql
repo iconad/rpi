@@ -2,6 +2,7 @@ query ($menu: Int!) {
   TopProducts(menu: $menu) {
     id
     title
+    slug
     subcategories {
         id
         title
@@ -14,6 +15,12 @@ query ($menu: Int!) {
     products {
         id
         title
+        unique_code
+        gender
+        material
+        neck
+        cloth_type
+        brand
         slug
         title_two
         body_title
@@ -38,8 +45,9 @@ query ($menu: Int!) {
             }
         }
         category {
-            id,
+            id
             title
+            slug
             menu {
                 id,
                 title

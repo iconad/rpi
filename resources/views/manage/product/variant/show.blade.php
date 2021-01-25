@@ -52,6 +52,7 @@
                 'colors' => $colors,
                 'color' => $variant->color,
             ]) --}}
+            @if ($product->category->menu->id != 14)
             <div class="form-element">
                 <label>
                     <span class="text-gray-800 block">Color </span>
@@ -68,6 +69,7 @@
                 </label>
             </div>
             <!-- form-ele -->
+            @endif
 
             <div class="form-element">
                 <change-status :status="{{$variant->status}}" id="{{$variant->id}}" model="variants"></change-status>

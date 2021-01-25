@@ -19,6 +19,7 @@
                         <th class="px-4 py-3">title</th>
                         <th class="px-4 py-3">delivery time</th>
                         <th class="px-4 py-3">video</th>
+                        <th class="px-4 py-3">Options</th>
                         <th class="px-4 py-3">Status</th>
                         <th class="px-4 py-3">Actions</th>
                         </tr>
@@ -39,6 +40,9 @@
                                     <a :href="finishing.video_link" class="theme-link border-b" target="_blank">Video</a>
                                 </p>
                                 <p v-else>No Video</p>
+                            </td>
+                            <td class="px-4 py-3 text-xs">
+                                <a :href="`/manage/finishings/${finishing.id}/options`"  class="action-button-info cursor-pointer"> {{finishing.options.length}} Options</a>
                             </td>
                             <td class="px-4 py-3 text-xs">
                                 <change-status :status="finishing.status" :id="finishing.id" model="finishings"></change-status>

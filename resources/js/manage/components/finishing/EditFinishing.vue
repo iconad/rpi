@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="p-6 relative w-full">
-            <div class="text-xl mb-3 capitalize font-semibold">Edit Paper</div>
+            <div class="text-xl mb-3 capitalize font-semibold">Edit Finishing</div>
             <!-- <hr class="my-2"> -->
             <ValidationObserver v-slot="{ invalid,passes }">
             <form @submit.prevent="submitForm">

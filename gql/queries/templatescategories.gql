@@ -1,0 +1,23 @@
+query {
+  templatescategories {
+    id
+    title
+    slug
+    excerpt
+    status
+    templates {
+        id
+        title
+        slug
+        size
+        excerpt
+        status
+    }
+    media {
+        id
+        name
+        collection_name
+        file_name
+    }
+  }
+}

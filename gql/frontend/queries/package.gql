@@ -1,0 +1,42 @@
+query getEvent($id: ID!) {
+  package(id: $id) {
+  	id
+    quantity
+    paper {
+        id
+        title
+    }
+    paper {
+        id
+        title
+        side
+    }
+    prices {
+        id
+        price
+        quantity
+        sizes {
+            id
+            price
+            size {
+                id
+                region
+                type
+                portrait
+                landscape
+                unit
+                content_types
+                status
+            }
+        }
+    }
+    product {
+      category {
+        menu {
+          id
+          title
+        }
+      }
+    }
+  }
+}

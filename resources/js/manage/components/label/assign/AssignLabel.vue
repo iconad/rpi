@@ -36,7 +36,7 @@
     import labels from "../../../../../../gql/queries/labels.gql";
 
     export default {
-        props: ['id', "title", "model"],
+        props: ['id', "title", "model", 'refresh'],
         data() {
             return {
                 selectedLabel: '',
@@ -60,6 +60,9 @@
                     });
                 })
                 this.$modal.hide(`add-label-${this.id}`)
+                if(this.refresh) {
+                    window.location.reload();
+                }
             },
             addModal () {
                 this.$modal.show(`add-label-${this.id}`)

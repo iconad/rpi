@@ -57,7 +57,7 @@
 
                         </tbody> -->
                     </table>
-                    <div class="text-center font-medium text-lg my-12">No Results Found!</div>
+                    <div class="text-center font-medium text-lg my-12"> No Results Found! </div>
                 </div>
                 </div>
             </div>
@@ -67,8 +67,28 @@
 </template>
 
 <script>
-    export default {
 
+    import gql from 'graphql-tag'
+    // import ordersQuery from "../../../../gql/frontend/queries/adderss.gql";
+
+    export default {
+        props: ['user_id'],
+        apollo: {
+            orders() {
+                return {
+                    query: ordersQuery,
+                    variables: {
+                        status: this.status,
+                        user_id: this.user_id,
+                        term: this.term,
+                        search_by: this.searchBy,
+                    },
+                    update(data) {
+                        return data.ordersbystatus;
+                    },
+                };
+            },
+        }
     }
 </script>
 

@@ -4,7 +4,8 @@
             {{title}}
         </h2>
         <swiper class="swiper" :options="swiperOptions">
-            <template v-if="menu == 13">
+            <template v-if="menu == 13 || menu == 14">
+                <!-- if Personalized Gifts or T-Shirts -->
                 <swiper-slide class="inner" v-for="(pro,i) in subProducts" :key="i">
                     <products-slider :menu="menu" :products="pro"></products-slider>
                 </swiper-slide>
@@ -30,35 +31,36 @@
     import featuredSubQuery from "../../../../../gql/frontend/queries/FeaturedSubCategories.gql";
 
     export default {
-        props: ['title', 'menu', 'rows'],
+        props: ['title', 'menu', 'columns', 'rows'],
         components: {
             ProductsSlider
         },
         data() {
             return {
                 swiperOptions: {
-                    slidesPerView: 3,
-                        slidesPerColumn: this.rows,
-                        spaceBetween: 25,
-                        navigation: {
-                            nextEl: '.swiper-button-next',
-                            prevEl: '.swiper-button-prev'
+                    simulateTouch:false,
+                    slidesPerView: this.columns,
+                    slidesPerColumn: this.rows,
+                    spaceBetween: 25,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev'
+                    },
+                    autoplay: {
+                        delay: 6000,
+                        disableOnInteraction: true
+                    },
+                    breakpoints: {
+                        1024: {
+                            slidesPerView: 2,
+                            slidesPerColumn: 2,
                         },
-                        autoplay: {
-                            delay: 6000,
-                            disableOnInteraction: true
-                        },
-                        breakpoints: {
-                            1024: {
-                                slidesPerView: 2,
-                                slidesPerColumn: 2,
-                            },
-                            768: {
-                                slidesPerView: 1,
-                                slidesPerColumn: 2,
-                                spaceBetween: 7,
-                            }
+                        768: {
+                            slidesPerView: 1,
+                            slidesPerColumn: 2,
+                            spaceBetween: 7,
                         }
+                    }
                 }
             };
         },

@@ -61,7 +61,7 @@
                 <div>
                     <div >
                         <div class="p-3 text-lg font-semibold text-primary">{{$product->title}}</div>
-                    <a href="/products/personalized-gifts/${product.subcategory.slug}">
+                    <a href="/product-order/gift/{{$product->slug}}">
                         @if($product->getMedia('images')->count() != 0)
                         <thumb-image-blade classess="w-full h-64 object-cover" image="{{$product->getMedia('images')[0]->file_name}}" id="{{$product->getMedia('images')[0]->id}}"></thumb-image-blade>
                         @endif
@@ -97,7 +97,7 @@
                         </div>
                     </div>
                     <div class="flex items-center justify-around p-3 pt-0 border-2 border-t-0 border-l-0 border-r-0 border-sec">
-                        <a href="http://" class="mr-auto theme-link font-medium text-red-500 hover:border-transparent">Order Now</a>
+                        <a href="/product-order/gift/{{$product->slug}}" class="mr-auto theme-link font-medium text-red-500 hover:border-transparent">Order Now</a>
                     </div>
                     </div>
                 </div>

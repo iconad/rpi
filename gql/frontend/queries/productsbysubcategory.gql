@@ -1,0 +1,39 @@
+query getEvent($subcatg_id: Int!) {
+  productsbysubcategory (subcatg_id: $subcatg_id) {
+    id
+    title
+    title_two
+    slug
+    body_title
+    body_subtitle
+    delivery_time
+    quantity
+    status
+    created_at
+    media {
+      id
+      collection_name
+      name
+      file_name
+    }
+    variants {
+        id
+        title
+        stock
+        price
+        short_title
+    }
+    category {
+        id
+        title
+        menu {
+            id
+            title
+        }
+    }
+    label {
+      title
+      color
+    }
+  }
+}

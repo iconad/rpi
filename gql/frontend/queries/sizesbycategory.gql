@@ -1,0 +1,13 @@
+query getEvent($catg_id: Int!) {
+  sizesbycategory (catg_id: $catg_id) {
+    id
+    region
+    type
+    portrait
+    landscape
+    unit
+    price
+    content_types
+    status
+  }
+}

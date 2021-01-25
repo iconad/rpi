@@ -26,6 +26,14 @@ class Product extends Model implements HasMedia
         'featured',
         'status',
         'stock',
+        'brand',
+        'color_id',
+        'cloth_type',
+        'type',
+        'material',
+        'gender',
+        'neck',
+        'unique_code',
         'body_title',
         'body_subtitle',
         'quantity',
@@ -81,8 +89,12 @@ class Product extends Model implements HasMedia
         return $this->belongsToMany(Color::class);
     }
 
+    public function color () {
+        return $this->belongsTo(Color::class);
+    }
+
     public function variants () {
-        return $this->hasMany(Variant::class);
+        return $this->hasMany(Variant::class)->with('color');
     }
 
     public function thumbnail () {

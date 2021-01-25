@@ -41,6 +41,7 @@ class MenuController extends Controller
 
         $done = Menu::create([
             'title' => $request->title,
+            'link' => $request->link,
             'user_id' => auth()->id(),
         ]);
 
@@ -85,6 +86,7 @@ class MenuController extends Controller
             'title' => 'required'
         ]);
         $menu->title = $request->title;
+        $menu->link = $request->link;
         $done = $menu->save();
         if($done) {
             return response()->json(['message' => 'Menu successfully updated!']);

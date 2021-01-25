@@ -27,8 +27,8 @@
 
             </div>
         </div>
-        <div class="paper-price-table mt-10">
-            <product-paper-price-table :header="header" :package="selectedPackage" ></product-paper-price-table>
+        <div class="paper-price-table mt-10" v-if="isProduct">
+            <product-paper-price-table :menu="product.category.menu" :ptype="product.type" :pslug="product.slug" :header="header" :package="selectedPackage" ></product-paper-price-table>
         </div>
     </div>
 </template>

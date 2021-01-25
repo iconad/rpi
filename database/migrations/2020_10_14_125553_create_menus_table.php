@@ -18,6 +18,7 @@ class CreateMenusTable extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->text('excerpt')->nullable();
+            $table->text('link')->nullable();
             $table->integer('user_id');
             $table->integer('label_id')->nullable();
             $table->integer('status')->default(0);

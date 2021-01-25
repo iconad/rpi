@@ -22,7 +22,6 @@ class GiftProductsHeader extends Component
     public function toggleSidbar () {
         $this->isSidebar = !$this->isSidebar;
         $this->isSidebarServer = $this->isSidebar;
-        // $this->emit('isSidebarUpdate', $this->isSidebar);
     }
 
 
