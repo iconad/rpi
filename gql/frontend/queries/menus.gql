@@ -54,6 +54,11 @@ query  {
           prices {
             id
             price
+            quantity
+            sizes {
+                id
+                price
+            }
             size {
               id
               region

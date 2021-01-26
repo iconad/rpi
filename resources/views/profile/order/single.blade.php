@@ -51,7 +51,7 @@
                     <div class="flex items-center border-b border-gray-300 px-2">
                         <div class="w-64 font-semibold"> Finishings </div>
                         <ul>
-                            @foreach (json_decode($order->paper_finishings) as $item)
+                            {{-- @foreach (json_decode($order->paper_finishings) as $item)
                                 <li class="font-semibold">{{$item->name}}
                                     <ul class="ml-3 font-normal">
                                     @foreach ($item->options as $option)
@@ -67,7 +67,7 @@
                                     @endforeach
                                     </ul>
                                 </li>
-                            @endforeach
+                            @endforeach --}}
                         </ul>
 
                     </div>
@@ -83,15 +83,15 @@
                     <div class="flex items-center border-b border-gray-300 p-2">
                         <div class="w-64 font-semibold"> Shirt Sizes / Quantity </div>
                         <div>
-                            @foreach (json_decode($order->shirt_sizes) as $item)
+                            {{-- @foreach (json_decode($order->shirt_sizes) as $item)
                                 {!! $item->title !!} ({!! $item->quantity !!})
-                            @endforeach
+                            @endforeach --}}
                         </div>
                     </div>
 
                     <div class="flex items-center border-b border-gray-300 p-2">
                         <div class="w-64 font-semibold"> Shirt Printings </div>
-                        <order-selected-shirt-printings :printings="{{$order->shirt_printings}}"></order-selected-shirt-printings>
+                        {{-- <order-selected-shirt-printings :printings="{{$order->shirt_printings}}"></order-selected-shirt-printings> --}}
                     </div>
 
                 </template>
@@ -168,14 +168,23 @@
                 @if ($order->files)
                 <div class="flex items-center border-b border-gray-300 p-2">
                     <div class="w-64 font-semibold"> Files  </div>
+
                     <div class="flex flex-col space-y-2">
                         @foreach ($order->files as $file)
+                            @if ($file->cloud != null)
+                            <div class="flex flex-col space-y-2">
+                                <a class="block theme-link" target="_blank" href="{{$order->cloud}}">
+                                    Clound Link
+                                </a>
+                            </div>
+                            @else
                             <a class="block theme-link" download target="_blank" href="{{ URL::asset("storage/".$file->media[0]->id."/".$file->media[0]->file_name) }}">
                                 {{$file->title}}
                             </a>
+                            @endif
+
                         @endforeach
                     </div>
-
                 </div>
                 @endif
 

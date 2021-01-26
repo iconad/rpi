@@ -649,10 +649,10 @@
         methods: {
             onPaperChange (value) {
                 // console.log(value.id)
-                window.location.href = `/product-order/product-added-new?package=${value.id}&category=${this.menu.id}&type=${this.ordertype}`
+                window.location.href = `/product-order/paper/${this.product.slug}?package=${value.id}&category=${this.menu.id}&type=${this.ordertype}`
             },
             onPaperColourChange (value) {
-                window.location.href = `/product-order/product-added-new?package=${value.id}&category=${this.menu.id}&type=${this.ordertype}`
+                window.location.href = `/product-order/paper/${this.product.slug}?package=${value.id}&category=${this.menu.id}&type=${this.ordertype}`
             },
             async filterPaperOrder() {
                 await axios.post("/api/order/paper/price", {

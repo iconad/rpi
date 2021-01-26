@@ -9,7 +9,6 @@
             <h1 class="text-6xl text-white font-bold leading-none">Pro Design Service</h1>
         </div>
     </div>
-    {{-- pages cover --}}
 
     <div class="my-24 text-center text-gray-900">
         <p class="text-3xl font-semibold mb-1">No Design? No Problem.</p>
@@ -85,7 +84,6 @@
     </div>
 
 </section>
-{{-- what we need --}}
 
 <section class="design-fee my-12">
     <div class="text-sec font-semibold text-2xl my-5">Design Fee</div>
@@ -292,7 +290,7 @@
         <a href="http://" class="red-button">Order Now</a>
       </div>
 </section>
-{{-- deisgn fee --}}
+
 
 <section class="my-12">
     <div class="flex flex-wrap md:flex-nowrap">

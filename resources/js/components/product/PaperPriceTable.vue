@@ -45,7 +45,7 @@
             <tfoot>
                 <tr>
                     <td align="right" colspan="4">
-                        <a :href="`/product-order/${pslug}?package=${package.id}&category=${menu.id}&type=${ptype}`" class="red-button">Order Now</a>
+                        <a :href="`/product-order/paper/${pslug}?package=${package.id}&category=${menu.id}&type=paper`" class="red-button">Order Now</a>
                     </td>
                 </tr>
             </tfoot>

@@ -18,6 +18,8 @@ use Laravel\Socialite\Facades\Socialite;
 // Route::get('/', [pagesController, 'home'])->name('homepage');
 Route::get('/', 'pagesController@home')->name('home');
 
+Route::get('/layout-templates', 'pagesController@templateCategories');
+Route::get('/layout-templates/{category}', 'pagesController@templateByCategory');
 Route::get('/estimate', 'pagesController@estimate');
 Route::post('/estimate', 'pagesController@estimateStore');
 Route::get('/category/{category}/products', 'pagesController@showProductsByCategory');
@@ -31,9 +33,12 @@ Route::get('/products/shirts/{category}/{subcategory}', 'pagesController@shirtsB
 
 // Order Filter Product /
 Route::get('/product-order/{type}/{product}', 'pagesController@checkOrderType');
-Route::get('/product-order/{type}/{product}', 'pagesController@checkOrderType');
-Route::get('/product-order/{type}/{product}', 'pagesController@checkOrderType');
+// Route::get('/product-order/{type}/{product}', 'pagesController@checkOrderType');
+// Route::get('/product-order/{type}/{product}', 'pagesController@checkOrderType');
 
+
+//Pages Page
+Route::get('/pages/{page}', 'pagesController@singlePage');
 
 // Static Routes
 Route::get('/terms-and-conditions', 'pagesController@TermsAndConditions');
@@ -98,6 +103,10 @@ Route::group(['prefix' => 'manage'], function() {
         Route::get('/create/gift-product', 'ProductController@createGiftProduct')->name('products.gift.create');
         Route::get('/create/shirt', 'ProductController@createShirtProduct')->name('products.shirt.create');
 
+        Route::put('/page-categories/{category}/change-status', 'PageCategoryController@changeStatus');
+        Route::resource('/page-categories', 'PageCategoryController');
+        Route::put('/page-categories/{category}/pages/{page}/change-status', 'PageController@changeStatus');
+        Route::resource('/page-categories/{category}/pages', 'PageController');
         Route::resource('/products/{product}/points', 'PointController');
         Route::put('/sizes/{size}/change-status', 'SizeController@changeStatus');
         Route::resource('/sizes', 'SizeController');

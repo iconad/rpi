@@ -10,12 +10,16 @@
             <div class="text-sec font-medium text-lg lg:text-xl capitalize">
                 <span>{{$product->packages[0]->prices[0]->size->region}}</span>
                 <span>{{$product->packages[0]->prices[0]->size->type}}</span>
-                <span>• {{$product->packages[0]->quantity}} Copies</span>
-                <span>>  {{$product->packages[0]->prices[0]->price}} AED</span>
+                <span>• {{$product->packages[0]->prices[0]->quantity}} {{ $product->packages[0]->prices[0]->quantity == 1 ? 'Copy' : 'Copies'}}</span>
+                <span>>  {{$product->packages[0]->prices[0]->sizes[0]->price}} AED</span>
                 <span class="text-gray-800">(Incl. VAT)</span></div>
-            <a href="/product-order/{{$product->slug}}?package={{$product->packages[0]->id}}&category={{$product->category->menu->id}}&type={{$product->type}}" class="red-button">Order Now</a>
+            <a href="/product-order/paper/{{$product->slug}}?package={{$product->packages[0]->id}}&category={{$product->category->menu->id}}&type=paper" class="red-button">Order Now</a>
         </div>
        </div>
+
+       <pre>
+
+       </pre>
        {{-- page cover --}}
        <div class="product-navbar lg:flex lg:items-center lg:justify-center bg-theme-gray -mt-2">
             <ul class="lg:flex lg:items-center">

@@ -12,7 +12,10 @@ use App\Models\Estimate;
 use App\Models\Menu;
 use App\Models\Package;
 use App\Models\PackagePrice;
+use App\Models\Page;
 use App\Models\SubCategory;
+use App\Models\Template;
+use App\Models\TemplateCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -27,6 +30,7 @@ class pagesController extends Controller
     }
 
     public function checkOrderType (Request $request, $type, $slug) {
+
         $types = ['shirt', 'paper', 'gift'];
 
         if (!in_array($type, $types)) {
@@ -109,7 +113,6 @@ class pagesController extends Controller
     public function shirtProductOrder(Request $request, $slug)
     {
 
-
         $category = Category::where('slug', $slug)->first();
         $products = $category->products;
 
@@ -136,7 +139,6 @@ class pagesController extends Controller
         }else{
             $orderType = "shirt";
         }
-
 
         return view('order-filter-shirt', compact('orderType', 'products', 'subCategory'));
     }
@@ -174,7 +176,7 @@ class pagesController extends Controller
     }
     public function onetoone()
     {
-        return view('pages.page');
+        return view('onetoone.page');
     }
     public function prodesign()
     {
@@ -183,6 +185,12 @@ class pagesController extends Controller
     public function page()
     {
         return view('product.single');
+    }
+
+    public function singlePage($slug)
+    {
+        $page = Page::where('slug', $slug)->first();
+        return view('pages.page', compact('page'));
     }
 
     /**
@@ -561,6 +569,18 @@ class pagesController extends Controller
             );
         }
 
+    }
+
+    public function templateCategories() {
+        $categories = TemplateCategory::where('status', 1)->get();
+        return view('template.category.index', compact('categories'));
+    }
+
+    public function templateByCategory($slug) {
+        $category = TemplateCategory::where('slug', $slug)->first();
+        $categories = TemplateCategory::where('status', 1)->get();
+        $templates = Template::where('template_category_id', $category->id)->get();
+        return view('template.index', compact('categories', 'category', 'templates'));
     }
 
 }

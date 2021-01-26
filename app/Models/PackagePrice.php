@@ -24,7 +24,7 @@ class PackagePrice extends Model
     }
 
     public function sizes() {
-        return $this->hasMany(PackagePriceSize::class);
+        return $this->hasMany(PackagePriceSize::class, 'package_price_id');
     }
 
 }

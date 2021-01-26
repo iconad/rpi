@@ -147,6 +147,25 @@ Breadcrumbs::for('product.variant', function ($trail, $product, $variant) {
     $trail->push($variant->id, route('variants.show', [$product->id,$variant->id]));
 });
 
+// Dasboard > Page Categories
+Breadcrumbs::for('manage.page-categories', function ($trail) {
+    $trail->parent('manage.dashboard');
+    $trail->push('Page Categories', route('page-categories.index'));
+});
+
+// Dasboard > Page Categories > Create
+Breadcrumbs::for('manage.page-categories.create', function ($trail) {
+    $trail->parent('manage.page-categories');
+    $trail->push('Create', route('page-categories.create'));
+});
+
+// Home > Page Categories > [Page Category]
+Breadcrumbs::for('manage.page-category', function ($trail, $category) {
+    $trail->parent('manage.page-categories');
+    $trail->push($category->id, route('page-categories.show', $category->id));
+});
+
+
 
 // Dasboard > Categories
 Breadcrumbs::for('manage.categories', function ($trail) {

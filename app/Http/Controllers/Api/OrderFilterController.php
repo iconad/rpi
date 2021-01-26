@@ -17,6 +17,7 @@ class OrderFilterController extends Controller
 
         // return $request->size['id'];
 
+
         $sizeId = $request->size['id'];
 
         $pp = PackagePrice::where('quantity', $request->quantity)
@@ -24,6 +25,8 @@ class OrderFilterController extends Controller
                 $query->where('size_id', $sizeId);
             })
             ->first();
+
+            // return $pp;
 
             return response()->json(
                 [

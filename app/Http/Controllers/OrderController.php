@@ -105,7 +105,6 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-
         if(Auth::user()->id === $order->user_id){
             return view('profile.order.single', compact('order'));
         }else{

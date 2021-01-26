@@ -1,0 +1,17 @@
+query  {
+  pagescategories(orderBy:
+      [
+        { field: "order", order: ASC }
+      ],
+    	status:1
+  	) {
+    id
+    title
+    slug
+    pages {
+      id
+      title
+      slug
+    }
+  }
+}

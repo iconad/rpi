@@ -1,6 +1,6 @@
 <div>
     <ul class="hidden lg:flex py-5 px-3 justify-end font-medium text-sm md:text-base">
-        <li class="mr-4">
+        <li class="mr-4 hidden">
             <a class="text-green-500" href="/">Be a Reseller</a>
         </li>
         <li class="mr-4 flex items-center justify-center text-primary-500">

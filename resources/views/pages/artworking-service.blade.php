@@ -9,7 +9,7 @@
             <h1 class="text-5xl md:text-6xl text-white font-bold leading-none">Artworking Service</h1>
         </div>
     </div>
-    {{-- pages cover --}}
+
 
     <div class="my-24 text-center text-gray-900">
         <p class="text-3xl font-semibold mb-1">Send us what you have. We’ll make it work.</p>
@@ -85,7 +85,6 @@
                 </ul>
             </div>
         </div>
-        {{-- end two blocks --}}
 
         <div class="border p-10 mt-10 border-gray-500 relative">
             <div class="arrow-top rotate-45 transform"></div>
@@ -121,7 +120,6 @@
     </div>
 
 </section>
-{{-- what we need --}}
 
 <section class="my-12">
     <div class="flex flex-wrap md:flex-nowrap">

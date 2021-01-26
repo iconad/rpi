@@ -37,7 +37,6 @@
 
                         @if ($variant->color)
                         <div class="font-medium w-32 rounded-full overflow-hidden flex items-center justify-between border" style="border-color: {{$variant->color->hex}}">
-                            <span class="inline-block pl-2 text-xs">{{$variant->color->id}}</span>
                             <span class="inline-block pl-2 text-xs">{{$variant->color->hex}}</span>
                             <span class="inline-block p-3 w-12" style="background: {{$variant->color->hex}}"></span>
                         </div>

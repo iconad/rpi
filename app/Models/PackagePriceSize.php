@@ -15,6 +15,7 @@ class PackagePriceSize extends Model
         return $this->belongsTo(PackagePrice::class)->where('status', 1);
     }
 
+
     public function size() {
         return $this->belongsTo(Size::class)->where('status', 1);
     }

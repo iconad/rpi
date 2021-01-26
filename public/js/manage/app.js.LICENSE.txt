@@ -77,6 +77,12 @@ PERFORMANCE OF THIS SOFTWARE.
  * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  */
 
+/**
+ * v-lazy-image v1.4.0
+ * (c) 2020 Alex Jover Morales <alexjovermorales@gmail.com>
+ * @license MIT
+ */
+
 /**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
  * @version 1.16.1
@@ -101,3 +107,5 @@ PERFORMANCE OF THIS SOFTWARE.
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+
+//! moment.js

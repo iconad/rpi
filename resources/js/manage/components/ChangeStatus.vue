@@ -9,7 +9,7 @@
 
 <script>
     export default {
-        props: ['model','id', 'status'],
+        props: ['model','id', 'status', 'model2', 'id2'],
         data() {
             return {
                 loading: false,
@@ -37,6 +37,13 @@
                 }else{
                     return "Draft"
                 }
+            },
+            api () {
+                if(this.model2) {
+                    return `/manage/${this.model}/${this.id}/${this.model2}/${this.id2}/change-status`;
+                }else{
+                    return `/manage/${this.model}/${this.id}/change-status`
+                }
             }
         },
         methods: {
@@ -55,7 +62,7 @@
                 });
             },
             changeStatus () {
-                axios.put(`/manage/${this.model}/${this.id}/change-status`)
+                axios.put(`${this.api}`)
                 .then(response => {
                     this.watchStatus === 0 ? this.watchStatus = 1 : this.watchStatus = 0
                     this.$swal({

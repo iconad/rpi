@@ -8,6 +8,7 @@ type Query {
     users: [User!]! @paginate(defaultCount: 10)
     user(id: ID @eq): User @find
     menus(orderBy: [OrderByClause!] @orderBy, status: Int @where(status: "like")): [Menu!]!  @all
+    pagescategories(orderBy: [OrderByClause!] @orderBy, status: Int @where(status: "like")): [PageCategory!]!  @all
     # menus: [Menu!]!
 
     sizes(orderBy: [OrderByClause!] @orderBy): [Size!]!  @all
@@ -108,6 +109,28 @@ type Menu {
     updated_at: DateTime!
 }
 
+type Page {
+    id: ID!
+    title: String!
+    slug: String!
+    body: String
+    size: String!
+    category: PageCategory @hasOne
+    status: Int!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type PageCategory {
+    id: ID!
+    title: String!
+    slug: String!
+    body: String
+    pages: [Page] @hasMany
+    status: Int!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
 
 type TemplateCategory {
     id: ID!
