@@ -173,7 +173,7 @@
                         @foreach ($order->files as $file)
                             @if ($file->cloud != null)
                             <div class="flex flex-col space-y-2">
-                                <a class="block theme-link" target="_blank" href="{{$order->cloud}}">
+                                <a class="block theme-link" target="_blank" href="{{$file->cloud}}">
                                     Clound Link
                                 </a>
                             </div>

@@ -46,7 +46,9 @@ class ManagePages extends Controller
         return view('manage.order.index');
     }
 
-    public function order (Order $order) {
+    public function order ($oid) {
+        $order = Order::where('id', $oid)->first();
+        // return $order;
         return view('manage.order.show', compact('order'));
     }
 

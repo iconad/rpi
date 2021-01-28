@@ -172,9 +172,17 @@
                 <div class="w-64 font-semibold"> Files  </div>
                 <div class="flex flex-col space-y-2">
                     @foreach ($order->files as $file)
+                    @if ($file->cloud != null)
+                            <div class="flex flex-col space-y-2">
+                                <a class="block theme-link" target="_blank" href="{{$file->cloud}}">
+                                    Clound Link
+                                </a>
+                            </div>
+                    @else
                         <a class="block theme-link" download target="_blank" href="{{ URL::asset("storage/".$file->media[0]->id."/".$file->media[0]->file_name) }}">
                             {{$file->title}}
                         </a>
+                    @endif
                     @endforeach
                 </div>
 
