@@ -38,6 +38,7 @@
                             @if (count($orders) != 0)
                             <tbody class="bg-white divide-y divide-gray-200">
                                 @foreach ($orders as $order)
+
                                     @foreach ($order->files as $file)
                                     <tr>
                                         <td class="px-6 py-4 whitespace-no-wrap">
@@ -52,9 +53,13 @@
                                         </td>
                                         <td class="px-6 py-4 whitespace-no-wrap">
                                             <div class="text-base leading-5 font-medium text-gray-800">
+                                                @if (count($file->media) != 0)
                                                 <a class="block theme-link hover:border-transparent" download target="_blank" href="{{ URL::asset("storage/".$file->media[0]->id."/".$file->media[0]->file_name) }}">
                                                     {{$file->media[0]->file_name}}
                                                 </a>
+                                                 @else
+                                                 file not found!
+                                                 @endif
                                             </div>
                                         </td>
                                     <td class="px-6 py-4 whitespace-no-wrap">

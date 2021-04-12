@@ -8,12 +8,42 @@
             <div class="text-xl font-medium ">{{$product->delivery_time}} Business Days Delivery*</div>
             <h1 class="text-4xl lg:text-6xl my-2 leading-none text-white font-semibold">{{$product->title}}</h1>
             <div class="text-sec font-medium text-lg lg:text-xl capitalize">
-                <span>{{$product->packages[0]->prices[0]->size->region}}</span>
-                <span>{{$product->packages[0]->prices[0]->size->type}}</span>
-                <span>• {{$product->packages[0]->prices[0]->quantity}} {{ $product->packages[0]->prices[0]->quantity == 1 ? 'Copy' : 'Copies'}}</span>
-                <span>>  {{$product->packages[0]->prices[0]->sizes[0]->price}} AED</span>
-                <span class="text-gray-800">(Incl. VAT)</span></div>
+                @if (count($product->packages) != 0)
+                    @if (count($product->packages[0]->prices) != 0)
+                    <span>{{$product->packages[0]->prices[0]->size->region}}</span>
+                    @endif
+                @endif
+
+                @if (count($product->packages) != 0)
+                    @if (count($product->packages[0]->prices) != 0)
+                    <span>{{$product->packages[0]->prices[0]->size->type}}</span>
+                    @endif
+                @endif
+
+                @if (count($product->packages) != 0)
+                    @if (count($product->packages[0]->prices) != 0)
+                    <span>• {{$product->packages[0]->prices[0]->quantity}} {{ $product->packages[0]->prices[0]->quantity == 1 ? 'Copy' : 'Copies'}}</span>
+                    @endif
+                @endif
+
+                @if (count($product->packages) != 0)
+                    @if (count($product->packages[0]->prices) != 0)
+                        @if (count($product->packages[0]->prices[0]->sizes) != 0)
+                        <span>>  {{$product->packages[0]->prices[0]->sizes[0]->price}} AED</span>
+                        <span class="text-gray-800">(Incl. VAT)</span></div>
+                        @else
+                        no size
+                        @endif
+                    @else
+                    no price
+                    @endif
+                @else
+                no package
+                @endif
+
+                @if (count($product->packages) != 0)
             <a href="/product-order/paper/{{$product->slug}}?package={{$product->packages[0]->id}}&category={{$product->category->menu->id}}&type=paper" class="red-button">Order Now</a>
+            @endif
         </div>
        </div>
 
