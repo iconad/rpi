@@ -175,7 +175,7 @@
             </ValidationObserver>
 
             <div>
-                <order-images-slider></order-images-slider>
+                <order-images-slider :images="images"></order-images-slider>
             </div>
         </div>
 
@@ -218,6 +218,7 @@
             'variants',
             'category',
             'user',
+            'images',
             'ordertype',
             'menu',
             'slug',

@@ -19,6 +19,7 @@
         :slug="{{ json_encode($product->slug) }}"
         :menu="{{ json_encode($menu) }}"
         :category="{{ json_encode($category) }}"
+        :images="{{ json_encode($product->getMedia('product-gallery')) }}"
         ordertype="{{$orderType}}"></order-filter-gift>
 </section>
 

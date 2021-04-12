@@ -18,6 +18,7 @@
         :user="{{ json_encode(Auth::user()) }}"
         :slug="{{ json_encode($product->slug) }}"
         :menu="{{ json_encode($menu) }}"
+        :images="{{ json_encode($product->getMedia('product-gallery')) }}"
         ordertype="{{$orderType}}"></order-filter>
 </section>
 

@@ -1,13 +1,17 @@
 
 <template>
   <div>
+      <!-- <pre>
+          {{images}}
+      </pre> -->
       <splide
       :options="options"
       ref="primary"
       @splide:moved="moved"
     >
-      <splide-slide v-for="slide in slides" :key="slide.src">
-        <img :src="slide.src" alt="slide.alt">
+      <splide-slide v-for="image in images" :key="image.id">
+        <!-- <img :src="image.id" alt="slide.alt"> -->
+        <thumb-image classess="w-full h-full object-cover" :image="image.file_name" :id="image.id"></thumb-image>
       </splide-slide>
     </splide>
     <div class="mt-3">
@@ -15,20 +19,25 @@
         :options="secondaryOptions"
         ref="secondary"
         >
-        <splide-slide v-for="slide in slides" :key="slide.src">
-            <img :src="slide.src" alt="slide.alt">
+        <splide-slide v-for="image in images" :key="image.id">
+            <!-- <img :src="image.id" alt="slide.alt"> -->
+            <thumb-image classess="w-full h-full object-cover" :image="image.file_name" :id="image.id"></thumb-image>
         </splide-slide>
         </splide>
     </div>
   </div>
 </template>
 <script>
-import { Splide, SplideSlide } from '@splidejs/vue-splide';
+
+    import { Splide, SplideSlide } from '@splidejs/vue-splide';
+    import ThumbImage from './../ThumbImage'
 
   export default {
+    props: ['images'],
     components: {
         Splide,
         SplideSlide,
+        ThumbImage
     },
     data() {
       return {

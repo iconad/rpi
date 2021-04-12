@@ -207,7 +207,7 @@
             </ValidationObserver>
 
             <div>
-                <order-images-slider></order-images-slider>
+                <order-images-slider :images="images"></order-images-slider>
             </div>
         </div>
 
@@ -277,6 +277,7 @@
 
     export default {
         props: [
+            'images',
             'ordertype',
             'menu',
             'user',

@@ -17,6 +17,7 @@
         :productsbycategory="{{ json_encode($products) }}"
         :user="{{ json_encode(Auth::user()) }}"
         :menu="{{ json_encode($subCategory->category->menu) }}"
+        :images="{{ json_encode($product->getMedia('product-gallery')) }}"
         ordertype="{{$orderType}}"></order-filter-shirt>
 </section>
 

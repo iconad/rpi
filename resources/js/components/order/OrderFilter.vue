@@ -368,7 +368,7 @@
                 {{customSizes}}
             </div>
             <div>
-                <order-images-slider></order-images-slider>
+                <order-images-slider :images="images"></order-images-slider>
             </div>
         </div>
 
@@ -445,6 +445,7 @@
     export default {
         props: [
             'user',
+            'images',
             'ordertype',
             'menu',
             'currentpaper',
