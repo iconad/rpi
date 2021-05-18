@@ -40,8 +40,9 @@
                             <span v-else>---</span>
                         </td>
                         <td class="px-4 py-3 text-sm">
-                            <span v-if="product.category.menu">{{product.category.menu.title}}</span>
-                            <span v-else>---</span>
+                        {{product.category}}
+                            <!-- <span v-if="product.category.menu">{{product.category.menu.title}}</span> -->
+                            <!-- <span v-else>---</span> -->
                         </td>
                         <td class="px-4 py-3 text-sm">
                             <span>Yes</span>

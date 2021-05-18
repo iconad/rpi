@@ -95,7 +95,7 @@ class ProductController extends Controller
             $pathToFile = $this->createImage($request->cover);
         }
 
-        $quantity = $request->min_quantity . ' , ' . $request->max_quantity;
+        $quantity = $request->min_quantity . ',' . $request->max_quantity;
 
         // $request->color;
 
@@ -257,7 +257,7 @@ class ProductController extends Controller
         }
 
 
-        $quantity = $request->min_quantity . ' , ' . $request->max_quantity;
+        $quantity = $request->min_quantity . ',' . $request->max_quantity;
 
             $product->title = $request->title;
             $product->title_two = $request->title_two;
