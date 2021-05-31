@@ -1,5 +1,7 @@
 query {
-  sizes{
+  sizes (
+    orderBy: [{ field: "created_at", order: DESC }]
+  ) {
     id
     region
     type

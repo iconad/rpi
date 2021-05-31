@@ -85,9 +85,13 @@
             <div class=" {{$product->points->count() < 4  ? 'hidden' : 'grid'}} product-points-grid points-grid grid-cols-2 lg:grid-cols-4 mx-6 mt-16 lg:border lg:border-gray-900 lg:border-b-0 lg:border-l-0 lg:border-r-0">
                 @foreach ($product->points as $point)
                 <div class="point p-5">
+                    @if ($point->media->count() != 0)
+                    <thumb-image-blade classess="mx-auto" image="{{$point->media[0]->file_name}}" id="{{$point->media[0]->id}}"></thumb-image-blade>
+                    @else
                     <img src="https://www.printarabia.ae/img/misc/image-icon/default-icon-1.png" alt="icon" class="mx-auto">
+                    @endif
                     <div class="text-lg font-semibold mt-4">{{$point->title}}</div>
-                    <div class="text-sm text-gray-700">Let's keep fighting Corona virus together!</div>
+                    <div class="text-sm text-gray-700">{{$point->body}}</div>
                 </div>
                 @endforeach
             </div>

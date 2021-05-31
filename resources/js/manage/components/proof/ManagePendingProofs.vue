@@ -81,7 +81,7 @@
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-no-wrap">
-                                    <div class="text-base leading-5 font-medium text-gray-800">
+                                    <div v-if="pp.order.product" class="text-base leading-5 font-medium text-gray-800">
                                         <a v-if="pp.status == 'cart'" :href="`/profile/orders/${pp.id}/upload-your-design`" class="theme-link">{{pp.order.product.title}}</a>
                                         <a v-else :href="`/manage/pending-proofs/${pp.id}`" class="theme-link">{{pp.order.product.title}}</a>
                                     </div>

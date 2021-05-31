@@ -1,5 +1,5 @@
 query {
-  papers{
+  papers (orderBy: [{ field: "created_at", order: DESC }]) {
     id
     title
     side

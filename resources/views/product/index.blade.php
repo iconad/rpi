@@ -13,48 +13,50 @@
             @if ($category->products)
             <div class="grid grid-cols-3 gap-5">
             @foreach ($category->products as $product)
-                <div class="border border-gray-200 rounded-lg">
-                    <div>
-                        <a href="/products/{{$product->slug}}">
-                            <div class="p-3 text-xl font-semibold text-primary-500">{{$product->title}}</div>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="/products/{{$product->slug}}">
-                            @if($product->getMedia('images')->count() != 0)
-                                <thumb-image-blade classess="w-full h-64 object-cover" image="{{$product->getMedia('images')[0]->file_name}}" id="{{$product->getMedia('images')[0]->id}}"></thumb-image-blade>
-                            @endif
-                        </a>
-                    </div>
-                    <div class="p-3">
-                        <div class="mb-2 font-semibold text-sec-500">
-                            @if ($product->packages[0]->prices[0]->size)
-                            <span>
-                                {{$product->packages[0]->prices[0]->size->region}}  ●
-                            </span>
-                            @endif
-                            {{$product->packages[0]->quantity}} Copies >
-                            {{$product->packages[0]->prices[0]->price}} AED
+                @if (count($product->packages) != 0)
+                    <div class="border border-gray-200 rounded-lg">
+                        <div>
+                            <a href="/products/{{$product->slug}}">
+                                <div class="p-3 text-xl font-semibold text-primary-500">{{$product->title}}</div>
+                            </a>
                         </div>
-                        @if ($product->packages && $product->packages[0]->paper)
+                        <div>
+                            <a href="/products/{{$product->slug}}">
+                                @if($product->getMedia('images')->count() != 0)
+                                    <thumb-image-blade classess="w-full h-64 object-cover" image="{{$product->getMedia('images')[0]->file_name}}" id="{{$product->getMedia('images')[0]->id}}"></thumb-image-blade>
+                                @endif
+                            </a>
+                        </div>
+                        <div class="p-3">
+                            <div class="mb-2 font-semibold text-sec-500">
+                                @if ($product->packages[0]->prices[0]->size)
+                                <span>
+                                    {{$product->packages[0]->prices[0]->size->region}}  ●
+                                </span>
+                                @endif
+                                {{$product->packages[0]->quantity}} Copies >
+                                {{$product->packages[0]->prices[0]->price}} AED
+                            </div>
+                            @if ($product->packages && $product->packages[0]->paper)
+                                <div class="mb-2 capitalize">
+                                    <span class="font-semibold text-black">Papers</span>
+                                    {{$product->packages[0]->paper->title}}
+                                </div>
+                            @endif
+
                             <div class="mb-2 capitalize">
-                                <span class="font-semibold text-black">Papers</span>
-                                {{$product->packages[0]->paper->title}}
+                                <span class="font-semibold text-black">Delivery</span>  Same Day
                             </div>
-                        @endif
-
-                        <div class="mb-2 capitalize">
-                            <span class="font-semibold text-black">Delivery</span>  Same Day
+                            @if ($product->packages && $product->packages[0]->paper)
+                                <div class="capitalize">
+                                    <span class="font-semibold text-black">Printing</span>
+                                    {{$product->packages[0]->paper->side}}
+                                </div>
+                            @endif
                         </div>
-                        @if ($product->packages && $product->packages[0]->paper)
-                            <div class="capitalize">
-                                <span class="font-semibold text-black">Printing</span>
-                                {{$product->packages[0]->paper->side}}
-                            </div>
-                        @endif
-                    </div>
 
-                </div>
+                    </div>
+                @endif
             @endforeach
             </div>
             @else

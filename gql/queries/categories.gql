@@ -1,5 +1,5 @@
 query {
-  categories(orderBy: [{ field: "id", order: DESC }]) {
+  categories(orderBy: [{ field: "created_at", order: DESC }]) {
     id
     title
     slug

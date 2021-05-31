@@ -1,5 +1,7 @@
 query {
-  products {
+  products (
+      orderBy: [{ field: "created_at", order: DESC }]
+  ) {
     id
     title
     title_two

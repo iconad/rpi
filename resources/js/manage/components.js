@@ -149,3 +149,9 @@ Vue.component(
     "manage-templates",
     require("./components/template/ManageTemplates.vue").default
 );
+
+
+// Vue.component(
+//     "thumb-image-blade",
+//     require("./components/ThumbImage.vue").default
+// );

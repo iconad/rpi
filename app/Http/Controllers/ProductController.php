@@ -88,11 +88,11 @@ class ProductController extends Controller
         }
 
         if($request->has('image')) {
-            $pathToFile = $this->createImage($request->image);
+            $pathToFileThumb = $this->createImage($request->image);
         }
 
         if($request->has('cover')) {
-            $pathToFile = $this->createImage($request->cover);
+            $pathToFileCover = $this->createImage($request->cover);
         }
 
         $quantity = $request->min_quantity . ',' . $request->max_quantity;
@@ -126,11 +126,11 @@ class ProductController extends Controller
         $product->finishings()->sync($request->finishings);
 
         if($request->has('image')) {
-            $product->addMedia($pathToFile)
+            $product->addMedia($pathToFileThumb)
                     ->toMediaCollection('images');
         }
         if($request->has('cover')) {
-            $product->addMedia($pathToFile)
+            $product->addMedia($pathToFileCover)
                     ->toMediaCollection('covers');
         }
         if ($product) {
@@ -163,6 +163,7 @@ class ProductController extends Controller
         $min_quantity = $quantity[0];
         $max_quantity = $quantity[1];
 
+
         if ($product->category->menu->id == 13) {
             return view('manage.product.gift.show', compact(
                 'product',
@@ -174,7 +175,7 @@ class ProductController extends Controller
                 'image',
                 'points',
                 'categories'
-        ));
+            ));
         }elseif($product->category->menu->id == 14){
             $colors = Color::all();
             return view('manage.product.shirt.show', compact(
