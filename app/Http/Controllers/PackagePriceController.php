@@ -47,8 +47,10 @@ class PackagePriceController extends Controller
             'quantity' => 'required',
         ]);
 
-        $checkQuantity = PackagePrice::whereHas('size', function ($query) use ($request) {
+
+        $checkQuantity = PackagePrice::whereHas('size', function ($query) use ($request, $package) {
             $query->where('id', '=', $request->size);
+            $query->where('package_id', '=', $package->id);
         })
         ->where('quantity', $request->quantity)->get()->count();
 
