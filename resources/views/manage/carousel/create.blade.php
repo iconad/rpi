@@ -6,7 +6,7 @@
 
 @section('content')
 
-{{ Breadcrumbs::render('manage.categories.create') }}
+{{ Breadcrumbs::render('manage.sliders.create') }}
 
 
 @livewire('create-slider', [

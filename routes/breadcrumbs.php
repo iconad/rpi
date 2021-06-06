@@ -38,6 +38,18 @@ Breadcrumbs::for('manage.estimates.respones.create', function ($trail, $estimate
     $trail->push("Add Response", route('responses.create', $estimate->id));
 });
 
+// Home > Estimates > [Estimate]
+Breadcrumbs::for('manage.sliders', function ($trail) {
+    $trail->parent('manage.dashboard');
+    $trail->push("Sliders", route('sliders.index'));
+});
+
+// Home > Estimates > [Estimate] > Respones
+Breadcrumbs::for('manage.sliders.create', function ($trail) {
+    $trail->parent('manage.sliders');
+    $trail->push("Add Slider", route('sliders.create'));
+});
+
 // Home > Users > [user]
 Breadcrumbs::for('manage.user', function ($trail, $user) {
     $trail->parent('manage.users');

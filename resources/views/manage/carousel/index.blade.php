@@ -2,12 +2,13 @@
 
 @section('content')
 
-{{-- {{ Breadcrumbs::render('manage.estimates') }} --}}
+{{ Breadcrumbs::render('manage.sliders') }}
 
 <div id="dashboard">
 
     <div class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200 flex items-center justify-between">
         <span>Sliders</span>
+        <a href="{{route('sliders.create')}}" class="text-sm block theme-link">Add New Slider</a>
     </div>
 
     <div class="w-full overflow-x-auto">
