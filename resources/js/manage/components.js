@@ -153,5 +153,5 @@ Vue.component(
 
 Vue.component(
     "thumb-image-blade",
-    require("../manage/ThumbImage.vue").default
+    require("../manage/components/ThumbImage.vue").default
 );
