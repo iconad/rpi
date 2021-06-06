@@ -1,21 +1,10 @@
 <template>
-    <div>
-
+    <div class="h-22rem overflow-hidden">
         <swiper class="swiper" :options="swiperOptions">
 
-            <swiper-slide>
+            <swiper-slide v-for="(slide, i) in slider" :key="i">
                 <div class="w-full inner">
-                    <a href="http://">
-                        <img src="https://assets.printarabia.ae/product-preset-banners/production/YrXnavdxJLG10qB/banner-73d9de647abf31f027e9f4de7f861ff7.webp" alt="banner">
-                    </a>
-                </div>
-            </swiper-slide>
-
-            <swiper-slide>
-                <div class="w-full bg-green-400 inner">
-                    <a href="http://">
-                     <img src="https://cdn.printarabia.ae/assets/product-preset-banners/production/NQ13q2L90V9aGnK/banner-printarabia-a1c92b15ba30eb0390f8d623a06ece39.webp" alt="banner">
-                    </a>
+                    <home-cover-slide :slide="slide"></home-cover-slide>
                 </div>
             </swiper-slide>
 
@@ -25,9 +14,18 @@
 
 <script>
 
+    import gql from 'graphql-tag'
+    import sliders from "../../../../gql/queries/slidersbytype.gql";
+
+    import homeCoverSlide from './homeCoverSlide'
+
     export default {
+        components: {
+            homeCoverSlide
+        },
         data() {
             return {
+                sliderType: "home-page",
                 swiperOptions: {
                     autoplay: true,
                     effect: 'fade',
@@ -46,6 +44,19 @@
                 }
             }
         },
+        apollo: {
+            slider() {
+                return {
+                    query: sliders,
+                    variables: {
+                        type: this.sliderType
+                    },
+                    update(data) {
+                        return data.slidersbytype;
+                    },
+                };
+            },
+        }
     }
 </script>
 

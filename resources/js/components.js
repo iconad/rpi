@@ -9,6 +9,11 @@ Vue.component(
 );
 
 Vue.component(
+    "home-cover",
+    require("./components/sliders/homeCover.vue").default
+);
+
+Vue.component(
     "top-products",
     require("./components/templates/slider/TopProducts.vue").default
 );

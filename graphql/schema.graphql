@@ -11,6 +11,8 @@ type Query {
     pagescategories(orderBy: [OrderByClause!] @orderBy, status: Int @where(status: "like")): [PageCategory!]!  @all
     # menus: [Menu!]!
 
+    slidersbytype(type: String): [Carousel!]!
+
     sizes(orderBy: [OrderByClause!] @orderBy): [Size!]!  @all
     sizesbycategory(catg_id: Int): [Size!]!
 
@@ -105,6 +107,17 @@ type Menu {
     slug: String!
     categories: [Category] @hasMany
     status: Int!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type Carousel {
+    id: ID!
+    title: String!
+    link: String
+    product: Product @hasOne
+    media: [Media] @hasMany
+    status: Int
     created_at: DateTime!
     updated_at: DateTime!
 }

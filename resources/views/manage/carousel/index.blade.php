@@ -18,35 +18,47 @@
                 >
                 <th class="px-4 py-3">ID</th>
                 <th class="px-4 py-3">product</th>
-                <th class="px-4 py-3">title</th>
+                <th class="px-4 py-3">Cover</th>
                 <th class="px-4 py-3">type</th>
+                <th class="px-4 py-3">Date Created</th>
                 <th class="px-4 py-3">status</th>
                 <th class="px-4 py-3">Action</th>
                 </tr>
             </thead>
             <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800" >
 
-                @foreach ($sliders as $estimate)
+                @foreach ($sliders as $slider)
                 <tr class="text-gray-700 dark:text-gray-400">
                     <td class="px-4 py-3">
-                        <p class="text-gray-700">{{$estimate->id}}</p>
+                        <p class="text-gray-700">{{$slider->id}}</p>
                     </td>
                     <td class="px-4 py-3">
-                        <p class="text-gray-700">{{$estimate->first_name}} {{$estimate->last_name}} </p>
+                        <p class="text-gray-700">{{$slider->title}} </p>
                     </td>
                     <td class="px-4 py-3">
-                        <p class="text-gray-700">{{$estimate->email}}</p>
+                        @if ($slider->product_id != null)
+                            <img class="w-32" src="{{"http://127.0.0.1:8000/storage/".$slider->product->getMedia('covers')[0]->id."/".$slider->product->getMedia('covers')[0]->file_name}}" alt="">
+                        @else
+                        <img class="w-32" src="{{"http://127.0.0.1:8000/storage/".$slider->media[0]->id."/".$slider->media[0]->file_name}}" alt="">
+                        @endif
                     </td>
                     <td class="px-4 py-3">
-                        <p class="text-gray-700">{{date('d M, Y', strtotime($estimate->created_at))}}</p>
+                        <p class="text-gray-700">{{ $slider->type }}</p>
                     </td>
                     <td class="px-4 py-3">
-                        <p class="text-gray-100 font-semibold px-2 rounded inline-block {{count($estimate->responses) != 0 ? 'bg-green-500' : 'bg-red-500'}} ">{{count($estimate->responses)}}</p>
+                        <p class="text-gray-700">{{date('d M, Y', strtotime($slider->created_at))}}</p>
                     </td>
                     <td class="px-4 py-3">
-                        <p class="text-gray-700">
-                            <a href="/manage/estimates/{{$estimate->id}}" class="theme-link"> View </a>
-                        </p>
+                        <change-status :status="{{$slider->status}}" id="{{$slider->id}}" model="sliders"></change-status>
+                    </td>
+                    <td class="px-4 py-3">
+                        <div class="">
+                            <form method="post" action="/manage/sliders/{{$slider->id}}">
+                                @csrf
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="theme-button-red" onclick="return confirm('Are you sure?')">Delete</button>
+                            </form>
+                        </div>
                     </td>
                 </tr>
                 @endforeach

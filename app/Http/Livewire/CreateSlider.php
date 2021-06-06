@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Product;
 use Livewire\Component;
 
 class CreateSlider extends Component
@@ -9,17 +10,30 @@ class CreateSlider extends Component
 
     public $products = null;
     public $coverRadio = 'product';
-    public $selectedProduct = [];
-    public $cover = null;
+    public $selectedProduct = '';
+    public $product = null;
 
-    public function mount ($products) {
+    public function mount($products) {
         $this->products = $products;
-        $this->cover = $products[0];
-        $this->selectedProduct = $products[0];
+        $this->selectedProduct = $products[0]->id;
+
+        if($this->product == null){
+            $this->getProduct();
+        }
+
     }
 
-    public function onSelectProduct ($value) {
-        $this->cover = $this->selectedProduct;
+    public function getProduct () {
+
+        $product = Product::where('id', $this->selectedProduct)->first();
+        $this->product = $product;
+
+    }
+
+    public function onSelectProduct () {
+
+        $product = Product::where('id', json_decode($this->selectedProduct)->id)->first();
+        $this->product = $product;
     }
 
     public function render()
@@ -27,8 +41,4 @@ class CreateSlider extends Component
         return view('livewire.create-slider');
     }
 
-    // public function CreateSlider($value)
-    // {
-    //     $this->selectedProduct = json_encode($value);
-    // }
 }

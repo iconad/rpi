@@ -132,6 +132,7 @@ Route::group(['prefix' => 'manage'], function() {
         Route::get('/pending-proofs/{pp}', 'ManagePages@pendingProof')->name('pending-proofs.show');
         Route::get('/estimates', 'EstimateController@index')->name('manage.estimates.index');
         Route::resource('/sliders', 'CarouselController');
+        Route::put('/sliders/{slider}/change-status', 'CarouselController@changeStatus');
         Route::get('/estimates/{estimate}', 'EstimateController@show')->name('manage.estimates.show');
         Route::resource('/estimates/{estimate}/responses', 'EstimateReplyController');
         Route::get('/users', 'ManagePages@ManageUsers')->name('users.index');

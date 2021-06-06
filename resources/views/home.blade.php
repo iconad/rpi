@@ -3,7 +3,7 @@
 @section('content')
 
 <section id="CoverAdSection" class="mt-6 banner-section">
-    <home-cover-ad></home-cover-ad>
+    <home-cover></home-cover>
 </section>
 
 <section id="TopPrintProducts" class="my-12 top-print-products-section">

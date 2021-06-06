@@ -14,7 +14,7 @@ class ColorController extends Controller
      */
     public function index()
     {
-        return view('manage.color/index');
+        // return view('manage.color/index');
     }
 
     /**
