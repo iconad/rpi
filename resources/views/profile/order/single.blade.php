@@ -83,9 +83,9 @@
                     <div class="flex items-center border-b border-gray-300 p-2">
                         <div class="w-64 font-semibold"> Shirt Sizes / Quantity </div>
                         <div>
-                            {{-- @foreach (json_decode($order->shirt_sizes) as $item)
+                            @foreach (json_decode($order->shirt_sizes) as $item)
                                 {!! $item->title !!} ({!! $item->quantity !!})
-                            @endforeach --}}
+                            @endforeach
                         </div>
                     </div>
 

@@ -1,5 +1,4 @@
 <div>
-
     @livewire('shirt-sub-products-header', [
         'subCategory' => $subCategory,
         'selectedColors' => $selectedColors,

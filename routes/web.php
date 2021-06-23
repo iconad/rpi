@@ -58,6 +58,7 @@ Route::group(['prefix' => 'profile'], function() {
         Route::delete('/orders/{order}/files/{file}', 'FileController@destroy');
         Route::put('/orders/{order}/update-order', 'OrderController@updateOrder');
         Route::resource('/orders', 'OrderController');
+        Route::get('/estimates', 'ProfileController@estimates');
         Route::resource('/address-books', 'AddressBookController');
         Route::get('/designs', 'ProfileController@designs');
         Route::resource('/pending-proofs', 'PendingProofController');

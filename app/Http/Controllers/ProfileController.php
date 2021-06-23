@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Estimate;
 use App\Models\File;
 use App\Models\Order;
 use App\Models\PendingProof;
@@ -20,6 +21,13 @@ class ProfileController extends Controller
     {
         $orders = Order::where('user_id', auth()->id())->get();
         return view('profile.design.index', compact('orders'));
+    }
+
+    public function estimates(Request $request)
+    {
+        $estimates = Estimate::where('user_id', auth()->email())->get();
+        return $estimates;
+        // return view('profile.estimates.index', compact('estimates'));
     }
 
     public function updateProfile(Request $request)

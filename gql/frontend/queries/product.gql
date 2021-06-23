@@ -11,6 +11,11 @@ query getEvent($id: ID!) {
     type
     status
     created_at
+    media{
+        id
+        file_name
+        collection_name
+    }
     color {
         id
         title

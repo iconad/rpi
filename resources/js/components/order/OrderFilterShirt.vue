@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div class="hidden">
+        <pre class="hidden">
             {{selectedShirt}}
             {{notSelectedShirtPrinting}}
-        </div>
+        </pre>
         <pre class="text-red-500">
             <!-- {{$store.state.selectedShirtPrinting}} -->
         </pre>
@@ -403,7 +403,8 @@
             selectedShirt () {
                 if(!this.$apollo.queries.products.loading) {
                     if (this.products.length != 0) {
-                        this.$store.dispatch("getProduct", this.products[0].id)
+                        // this.$store.dispatch("getProduct", this.products[0].id)
+                        this.$store.dispatch("getProduct", this.getPIDfromURL())
                         return this.products[0]
                     }
                 }
@@ -512,14 +513,19 @@
                 this.shirt.value.printing = null
             },
 
-            onSelecteShirtColour () {
+            onSelecteShirtColour (pid) {
                 this.$modal.hide('select-shirt-modal');
                 this.shirt.value.color = null
                 this.shirt.value.printing = null
-                this.refreshEveryThing()
+
+                this.refreshEveryThing(pid)
             },
 
-            refreshEveryThing () {
+            getPIDfromURL () {
+                return window.location.href.split('-').pop().trim();
+            },
+
+            refreshEveryThing (pid) {
                 this.selectedVariants = []
                 this.summed = 0
                 this.$store.commit('clearSelectedShirtPrinting')
@@ -533,6 +539,14 @@
                 this.days.printing = 0
                 this.days.product = 0
                 this.days.total = 0
+
+                const reLast = /-\d+$/;
+                let url = window.location.href.replace(reLast, '')
+                const newURL = url+'-'+pid
+                if (window.location.href != newURL) {
+                    window.location.href = newURL;
+                }
+
             },
 
             submitForm: function () {

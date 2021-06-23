@@ -5,8 +5,6 @@
         'selectedColors' => $selectedColors,
         'colors' => $colors
     ])
-
-
     <div class="lg:flex">
         <div id="productSidebar" class=" {{ $isSidebar ? 'w-1/3' : 'hidden' }} ">
             <div class="mt-5 lg:m-5 ml-0 h-full rounded overflow-hidden">
@@ -184,9 +182,9 @@
                 @foreach ($products as $product)
                 <div>
                     <div>
-                    <div class="p-3 text-lg font-semibold text-primary">{{$product->title}}</div>
+                    <div class="p-3 text-lg font-semibold text-primary">{{$product->title}} </div>
                     <div class="bg-gray-100 rounded-t-lg">
-                        <a href="/product-order/shirt/{{$product->category->slug}}">
+                        <a href="/product-order/shirt/{{$product->category->slug}}-{{$product->id}}">
                             @if($product->getMedia('images')->count() != 0)
                             <thumb-image-blade classess="w-full h-64 object-contain" image="{{$product->getMedia('images')[0]->file_name}}" id="{{$product->getMedia('images')[0]->id}}"></thumb-image-blade>
                             @endif
@@ -225,7 +223,7 @@
                      }
                     @endphp
                     <div class="flex items-center justify-around p-3 pt-0 border-2 border-t-0 border-l-0 border-r-0 border-sec" style="border-color: {{$borderColor}}">
-                        <a href="/product-order/shirt/{{$product->category->slug}}" class="mr-auto theme-link text-base font-medium text-red-500 hover:border-transparent">Order Now</a>
+                        <a href="/product-order/shirt/{{$product->category->slug}}-{{$product->id}}" class="mr-auto theme-link text-base font-medium text-red-500 hover:border-transparent">Order Now</a>
                     </div>
                     </div>
                 </div>

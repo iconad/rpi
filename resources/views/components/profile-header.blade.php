@@ -7,8 +7,8 @@
             <li>
                 <a href="/profile/orders" class="px-4 py-2 hover:bg-primary-500 hover:text-white hover:border-primary-500 rounded border border-gray-300 transition ease-in-out transition-300">Orders</a>
             </li>
-            <li>
-                <a href="/profile/orders" class="px-4 py-2 hover:bg-primary-500 hover:text-white hover:border-primary-500 rounded border border-gray-300 transition ease-in-out transition-300">Estimates</a>
+            <li class="hidden">
+                <a href="/profile/estimates" class="px-4 py-2 hover:bg-primary-500 hover:text-white hover:border-primary-500 rounded border border-gray-300 transition ease-in-out transition-300">Estimates</a>
             </li>
             <li>
                 <a href="/profile/pending-proofs" class="px-4 py-2 hover:bg-primary-500 hover:text-white hover:border-primary-500 rounded border border-gray-300 transition ease-in-out transition-300">Pending Proofs</a>

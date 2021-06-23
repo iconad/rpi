@@ -19,7 +19,15 @@
                     @foreach ($pps as $pp)
                     <tr>
                         <td class="border border-gray-300 p-3 font-semibold text-gray-700"> {{$pp->order->id}} </td>
-                        <td class="border border-gray-300 p-3 text-gray-800 capitalize"> {{$pp->order->product->title}} </td>
+                        <td class="border border-gray-300 p-3 text-gray-800 capitalize">
+                            @if ($pp->order->product)
+                            <span>
+                                {{$pp->order->product->title}}
+                            </span>
+                            @else
+                                Product not available
+                            @endif
+                        </td>
                         <td class="border border-gray-300 p-3 text-gray-800">
                             @if($pp->status === 'pending')
                             <span class="capitalize text-base leading-5 font-semibold rounded-full bg-orange-100 text-orange-600">

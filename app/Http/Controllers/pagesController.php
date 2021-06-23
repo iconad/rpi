@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use Image;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class pagesController extends Controller
 {
@@ -44,11 +45,15 @@ class pagesController extends Controller
                     return $this->productOrder($request, $slug);
                 }
             }elseif($type == 'shirt') {
-                $category = Category::where('slug', $slug)->first();
+
+                $checkedSlug = preg_replace('/-[^-]*$/', '', $slug);
+                $pid = substr($slug, strrpos($slug, '-') + 1);
+
+                $category = Category::where('slug', $checkedSlug)->first();
                 if (!$category) {
                     return redirect('/');
                 }else{
-                    return $this->shirtProductOrder($request, $slug);
+                    return $this->shirtProductOrder($request, $checkedSlug, $pid);
                 }
             }elseif($type == 'gift') {
                 $product = Product::where('slug', $slug)->first();
@@ -110,11 +115,17 @@ class pagesController extends Controller
         return view('order-filter', compact('orderType', 'currentPaper', 'menu', 'product', 'package', "packages"));
     }
 
-    public function shirtProductOrder(Request $request, $slug)
+    public function shirtProductOrder(Request $request, $slug, $pid)
     {
 
         $category = Category::where('slug', $slug)->first();
         $products = $category->products;
+
+        // $product = count($products) != 0 ? $products[1] : null ;
+
+        $images = Media::where('model_id', $pid)->where('collection_name', 'product-gallery')->get();
+
+        // return $product;
 
         if($request->has('subcategory')) {
             // $product = Product::where('sub_category_id', $request->subcategory)->first();
@@ -140,7 +151,7 @@ class pagesController extends Controller
             $orderType = "shirt";
         }
 
-        return view('order-filter-shirt', compact('orderType', 'products', 'subCategory'));
+        return view('order-filter-shirt', compact('orderType', 'products', 'images', 'subCategory'));
     }
 
     public function giftProductOrder(Request $request, $slug, $product)
@@ -338,6 +349,8 @@ class pagesController extends Controller
                 $q2->whereIn('id', $selectedColors);
             })
 
+            ->whereHas('variants')
+
             ->where('status', 1)
 
             ->get()
@@ -367,7 +380,6 @@ class pagesController extends Controller
         $selectedTypes = (array) $selectedTypes;
 
 
-        // return $products;
 
         return view('product.shirt.index',
         compact(

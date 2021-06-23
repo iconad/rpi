@@ -25,7 +25,7 @@
         },
         methods: {
             select (pid) {
-                this.$emit('added')
+                this.$emit('added', pid)
                 // this.$store.commit("mutateSelectedShirtColor", pid)
                 this.$store.dispatch("getProduct", pid)
             }
