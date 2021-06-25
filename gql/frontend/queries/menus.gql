@@ -6,6 +6,7 @@ query  {
     	status:1
   	) {
     id
+    slug
     title
     link
     categories {

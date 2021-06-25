@@ -595,4 +595,25 @@ class pagesController extends Controller
         return view('template.index', compact('categories', 'category', 'templates'));
     }
 
+
+
+
+    public function getCategoriesByMenu ($slug) {
+
+        // if(!Menu::where('slug', $slug)->exists()) {
+        //     return redirect('/');
+        // }
+
+        $menu = Menu::where('slug', $slug)->firstOrFail();
+
+        $categories = Category::where('menu_id', $menu->id)
+                ->whereHas('products')->get();
+
+        return view('category.single', compact('menu', 'categories'));
+
+
+
+    }
+
+
 }

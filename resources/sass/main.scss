@@ -48,7 +48,7 @@ body {
     .category {
         &:hover {
             .sub-category-wrapper {
-                height: 890px;
+                height: auto;
                 border: 1px solid #e2e8f0;
                 @include lg-max {
                     height: auto;

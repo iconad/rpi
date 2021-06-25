@@ -22,6 +22,7 @@ Route::get('/layout-templates', 'pagesController@templateCategories');
 Route::get('/layout-templates/{category}', 'pagesController@templateByCategory');
 Route::get('/estimate', 'pagesController@estimate');
 Route::post('/estimate', 'pagesController@estimateStore');
+Route::get('/categories/{menu}', 'pagesController@getCategoriesByMenu');
 Route::get('/category/{category}/products', 'pagesController@showProductsByCategory');
 Route::get('/products/{product}', 'pagesController@showProduct');
 Route::get('/products/shirt/{product}', 'pagesController@shirtProduct');

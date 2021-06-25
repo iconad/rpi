@@ -51,6 +51,10 @@ class CategoryController extends Controller
             $pathToFile = $this->createImage($request->image);
         }
 
+        if ($request->has('thumb')) {
+            $pathToFile = $this->createImage($request->image);
+        }
+
 
 
         if($request->featured === 'on') {
@@ -71,6 +75,11 @@ class CategoryController extends Controller
         if($request->has('image')) {
             $category->addMedia($pathToFile)
             ->toMediaCollection('images');
+        }
+
+        if($request->has('thumb')) {
+            $category->addMedia($pathToFile)
+            ->toMediaCollection('thumbnail');
         }
 
         if ($category) {
@@ -111,7 +120,8 @@ class CategoryController extends Controller
         // $media = $category->getMedia();
         $menus = Menu::all();
         $image = $category->getFirstMediaUrl('images', 'thumb');
-        return view('manage.category.show', compact('category','image', 'menus'));
+        $thumbnail = $category->getFirstMediaUrl('thumbnail', 'thumb');
+        return view('manage.category.show', compact('category','image', 'thumbnail', 'menus'));
     }
 
     /**
@@ -146,6 +156,15 @@ class CategoryController extends Controller
             }
             $pathToFile = $this->createImage($request->image);
             $category->addMedia($pathToFile)->toMediaCollection('images');
+        }
+
+        if($request->has('thumb')) {
+            $mediaItems = $category->getMedia('thumbnail');
+            if(count($mediaItems) != 0) {
+                $mediaItems[0]->delete();
+            }
+            $pathToFile = $this->createImage($request->thumb);
+            $category->addMedia($pathToFile)->toMediaCollection('thumbnail');
         }
 
         if($request->featured === 'on') {

@@ -2,112 +2,87 @@
 
 @section('content')
 
-    <section id="pageCover">
+    <section class="mt-16" id="pageCover">
        <div>
-           <img src="https://assets.printarabia.ae/product-preset-category-banners/jPqlM7VKQDXQb3G/category-banner-3b9ce22c9f79212c1470540f7fba505d.webp" alt="cover image">
+
+            <h1 class="text-2xl font-semibold text-gray-800">{{$menu->title}}</h1>
+           {{-- <img src="https://assets.printarabia.ae/product-preset-category-banners/jPqlM7VKQDXQb3G/category-banner-3b9ce22c9f79212c1470540f7fba505d.webp" alt="cover image"> --}}
        </div>
+
     </section>
     {{-- cover end --}}
 
-    <section class="products-wrapper mt-16">
-        <div class="products grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-10">
-            <div>
-                <div class="p-3 text-xl font-semibold text-primary">Hand Sanitizer Sticker</div>
-                <img
-                    class="w-full"
-                    src="https://assets.printarabia.ae/product-preset-categories/j8N07V1WwDoaZAO/preset-c05c99840296cc5914f576f7f41530d5.webp"
-                    alt="image"
-                />
-                <div class="p-3">
-                    <div class="mb-2 font-semibold text-sec">A3 (297x420mm) • 1 Copies > 75 AED</div>
-                    <div class="mb-2"><span class="font-semibold text-black">Papers</span> 50gsm PVC White Gloss Sticker </div>
-                    <div class="mb-2"><span class="font-semibold text-black">Delivery</span>  Same Day </div>
-                    <div class="mb-2"><span class="font-semibold text-black">Printing</span>  Printing One side colour </div>
+    <section class="products-wrapper mt-5">
+        @if (count($categories) == 0)
+        <div class="h-64 flex items-center justify-center">
+            <span class="text-2xl md:text-4xl uppercase font-thin text-gray-400">0 Products found!</span>
+        </div>
+        @else
+        <div class="products grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-10">
+            @foreach ($categories as $category)
+
+            @php
+
+                if($menu->id == 14) {
+                    $url = "/products/shirts/$category->slug";
+                }else{
+                    $url = "/category/$category->slug/products";
+                }
+
+            @endphp
+
+            @if ($menu->id != 13)
+            <div class="border rounded overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg"
+                onclick="location.href='{{$url}}'">
+                @if (count($category->getMedia('thumbnail')) != 0)
+                <thumb-image-blade
+                    image="{{$category->getMedia('thumbnail')[0]->file_name}}"
+                    id="{{$category->getMedia('thumbnail')[0]->id}}"
+                    classess="w-full h-64 object-cover">
+                </thumb-image-blade>
+                @else
+                <div class="bg-gray-200 font-semibold text-gray-400 capitalize h-64 flex items-center justify-center">
+                    no image
                 </div>
-                <div class="flex items-center justify-around p-3 pt-0 border-2 border-t-0 border-l-0 border-r-0 border-sec">
-                    <a href="http://" class="mr-auto">Get Started</a>
-                    <a href="http://" class="ml-auto">View All</a>
-                </div>
-            </div>
-            {{-- product end --}}
-            <div>
-                <div class="p-3 text-xl font-semibold text-primary">Hand Sanitizer Sticker</div>
-                <img
-                    class="w-full"
-                    src="https://assets.printarabia.ae/product-preset-categories/j8N07V1WwDoaZAO/preset-c05c99840296cc5914f576f7f41530d5.webp"
-                    alt="image"
-                />
-                <div class="p-3">
-                    <div class="mb-2 font-semibold text-sec">A3 (297x420mm) • 1 Copies > 75 AED</div>
-                    <div class="mb-2"><span class="font-semibold text-black">Papers</span> 50gsm PVC White Gloss Sticker </div>
-                    <div class="mb-2"><span class="font-semibold text-black">Delivery</span>  Same Day </div>
-                    <div class="mb-2"><span class="font-semibold text-black">Printing</span>  Printing One side colour </div>
-                </div>
-                <div class="flex items-center justify-around p-3 pt-0 border-2 border-t-0 border-l-0 border-r-0 border-sec">
-                    <a href="http://" class="mr-auto">Get Started</a>
-                    <a href="http://" class="ml-auto">View All</a>
-                </div>
-            </div>
-            {{-- product end --}}
-            <div>
-                <div class="p-3 text-xl font-semibold text-primary">Hand Sanitizer Sticker</div>
-                <img
-                    class="w-full"
-                    src="https://assets.printarabia.ae/product-preset-categories/j8N07V1WwDoaZAO/preset-c05c99840296cc5914f576f7f41530d5.webp"
-                    alt="image"
-                />
-                <div class="p-3">
-                    <div class="mb-2 font-semibold text-sec">A3 (297x420mm) • 1 Copies > 75 AED</div>
-                    <div class="mb-2"><span class="font-semibold text-black">Papers</span> 50gsm PVC White Gloss Sticker </div>
-                    <div class="mb-2"><span class="font-semibold text-black">Delivery</span>  Same Day </div>
-                    <div class="mb-2"><span class="font-semibold text-black">Printing</span>  Printing One side colour </div>
-                </div>
-                <div class="flex items-center justify-around p-3 pt-0 border-2 border-t-0 border-l-0 border-r-0 border-sec">
-                    <a href="http://" class="mr-auto">Get Started</a>
-                    <a href="http://" class="ml-auto">View All</a>
+                @endif
+
+                <div class="flex items-center justify-between">
+                    <a href="{{$url}}" class="p-3 font-medium text-left text-primary capitalize"> {{$category->title}} </a>
+                    <a href="{{$url}}" class="p-3 text-left text-primary text-gray-500"> ({{count($category->products)}}) </a>
                 </div>
             </div>
             {{-- product end --}}
-            <div>
-                <div class="p-3 text-xl font-semibold text-primary">Hand Sanitizer Sticker</div>
-                <img
-                    class="w-full"
-                    src="https://assets.printarabia.ae/product-preset-categories/j8N07V1WwDoaZAO/preset-c05c99840296cc5914f576f7f41530d5.webp"
-                    alt="image"
-                />
-                <div class="p-3">
-                    <div class="mb-2 font-semibold text-sec">A3 (297x420mm) • 1 Copies > 75 AED</div>
-                    <div class="mb-2"><span class="font-semibold text-black">Papers</span> 50gsm PVC White Gloss Sticker </div>
-                    <div class="mb-2"><span class="font-semibold text-black">Delivery</span>  Same Day </div>
-                    <div class="mb-2"><span class="font-semibold text-black">Printing</span>  Printing One side colour </div>
+            @else
+                @foreach ($category->subcategories as $category)
+
+                    <div class="border rounded overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg"
+                    onclick="location.href='/products/personalized-gifts/{{$category->slug}}'">
+                    @if (count($category->getMedia('thumbnail')) != 0)
+                    <thumb-image-blade
+                        image="{{$category->getMedia('thumbnail')[0]->file_name}}"
+                        id="{{$category->getMedia('thumbnail')[0]->id}}"
+                        classess="w-full h-64 object-cover">
+                    </thumb-image-blade>
+                    @else
+                    <div class="bg-gray-200 font-semibold text-gray-400 capitalize h-64 flex items-center justify-center">
+                        no image
+                    </div>
+                    @endif
+
+                    <div class="flex items-center justify-between">
+                        <a href="/products/personalized-gifts/{{$category->slug}}" class="p-3 font-medium text-left text-primary capitalize"> {{$category->title}} </a>
+                        <a href="/products/personalized-gifts/{{$category->slug}}" class="p-3 text-left text-primary text-gray-500"> ({{count($category->products)}}) </a>
+                    </div>
                 </div>
-                <div class="flex items-center justify-around p-3 pt-0 border-2 border-t-0 border-l-0 border-r-0 border-sec">
-                    <a href="http://" class="mr-auto">Get Started</a>
-                    <a href="http://" class="ml-auto">View All</a>
-                </div>
-            </div>
-            {{-- product end --}}
-            <div>
-                <div class="p-3 text-xl font-semibold text-primary">Hand Sanitizer Sticker</div>
-                <img
-                    class="w-full"
-                    src="https://assets.printarabia.ae/product-preset-categories/j8N07V1WwDoaZAO/preset-c05c99840296cc5914f576f7f41530d5.webp"
-                    alt="image"
-                />
-                <div class="p-3">
-                    <div class="mb-2 font-semibold text-sec">A3 (297x420mm) • 1 Copies > 75 AED</div>
-                    <div class="mb-2"><span class="font-semibold text-black">Papers</span> 50gsm PVC White Gloss Sticker </div>
-                    <div class="mb-2"><span class="font-semibold text-black">Delivery</span>  Same Day </div>
-                    <div class="mb-2"><span class="font-semibold text-black">Printing</span>  Printing One side colour </div>
-                </div>
-                <div class="flex items-center justify-around p-3 pt-0 border-2 border-t-0 border-l-0 border-r-0 border-sec">
-                    <a href="http://" class="mr-auto">Get Started</a>
-                    <a href="http://" class="ml-auto">View All</a>
-                </div>
-            </div>
-            {{-- product end --}}
+                {{-- product end --}}
+
+                @endforeach
+            @endif
+
+            @endforeach
         </div>
         {{-- product --}}
+        @endif
     </section>
 
     <section class="my-24">
@@ -138,4 +113,4 @@
         </div>
     </section>
 
-@endsection;
+@endsection

@@ -33,13 +33,21 @@
     </div>
     <!-- form-ele -->
 
-      <div class="form-element">
-          <label>
-              <span class="text-gray-800 block mb-2">Cover Image</span>
-              <input type="file" name="image" class="focus:outline-none focus:bg-gray-200">
-          </label>
-      </div>
-      <!-- form-ele -->
+    <div class="form-element">
+        <label>
+            <span class="text-gray-800 block mb-2">Thumbnail</span>
+            <input type="file" name="thumb" class="focus:outline-none focus:bg-gray-200">
+        </label>
+    </div>
+    <!-- form-ele -->
+
+    <div class="form-element">
+        <label>
+            <span class="text-gray-800 block mb-2">Cover Image</span>
+            <input type="file" name="image" class="focus:outline-none focus:bg-gray-200">
+        </label>
+    </div>
+    <!-- form-ele -->
 
       <div class="form-element mt-8">
         <input class="custom-checkbox" name="featured" id="styled-checkbox-1" type="checkbox">

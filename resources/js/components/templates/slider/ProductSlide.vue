@@ -3,7 +3,7 @@
         <div v-if="product">
             <div class="p-3 text-xl font-semibold text-primary-500">{{product.title}}</div>
         <a :href="`/products/${product.slug}`">
-            <thumb-image classess="w-full" :image="firstMedia[0].file_name" :id="firstMedia[0].id"></thumb-image>
+            <thumb-image v-if="firstMedia.length != 0" classess="w-full" :image="firstMedia[0].file_name" :id="firstMedia[0].id"></thumb-image>
         </a>
         <div class="p-3">
             <div class="mb-2 font-semibold text-sec">

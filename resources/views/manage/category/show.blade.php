@@ -23,6 +23,17 @@
 
             <div class="form-element">
                 <div class="mb-3">
+                    <img src="{{ $thumbnail }}" class="w-24" />
+                    </div>
+                <label>
+                    <span class="text-gray-800 block mb-2">Thumbnail</span>
+                    <input type="file" name="thumb" class="focus:outline-none focus:bg-gray-200">
+                </label>
+            </div>
+            <!-- form-ele -->
+
+            <div class="form-element">
+                <div class="mb-3">
                     <img src="{{ $image }}" class="w-32" />
                     </div>
                 <label>
