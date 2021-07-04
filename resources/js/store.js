@@ -17,7 +17,7 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
-        publicUrl: "http://127.0.0.1:8000/storage/",
+        publicUrl: "http://worki.xyz/storage/",
         //Order
         selectedPaperFinishing: [],
         selectedPaperFinishingExtraPrice: null,
