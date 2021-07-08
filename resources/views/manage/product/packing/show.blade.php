@@ -28,13 +28,6 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
                 </label>
             </div>
             <!-- form-ele -->
-            <div class="form-element hidden">
-                <label>
-                    <span class="text-gray-800 block">Navbar Heading</span>
-                    <input type="text" class="form-input" name="title_two" value="{{ $product->title_two }}">
-                </label>
-            </div>
-            <!-- form-ele -->
 
             <div class="form-element grid grid-cols-2 gap-5">
                 <div class="w-full">
@@ -76,6 +69,14 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
                         <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                         </div>
                     </div>
+                </label>
+            </div>
+            <!-- form-ele -->
+
+            <div class="form-element">
+                <label>
+                    <span class="text-gray-800 block">Custom Link</span>
+                    <input type="text" class="form-input" name="custom_link" value="{{ $product->custom_link }}">
                 </label>
             </div>
             <!-- form-ele -->
@@ -131,17 +132,6 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
         <manage-product-gallery pid="{!! $product->id !!}"></manage-product-gallery>
     </div>
     {{-- Product Points End From Here --}}
-
-
-        {{-- Product Points Start From Here --}}
-        <div class="rounded-lg border border-gray-200 bg-white p-4 my-6">
-            <div class="mb-3 text-lg font-semibold text-gray-800 mb-2 flex items-center justify-between">
-                <span>Variants</span>
-                <a href="{{route('variants.create', $product->id)}}" class="text-sm block theme-link">Add Variant </a>
-            </div>
-            <x-manage.variants :variants="$product->variants" :pid="$product->id" />
-        </div>
-        {{-- Product Points End From Here --}}
 
 
 

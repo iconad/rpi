@@ -5,19 +5,20 @@ use App\Models\Category;
 use App\Models\SubCategory;
 use Livewire\Component;
 
-class SelectSubCategory extends Component
+class SelectPrintSubCategory extends Component
 {
 
     public $categories = [];
     public $product = null;
-    public $subCategories = null;
     public $nosubcategory = true;
+    public $subCategories = null;
     public $selectedCategory = '';
     public $selectedSubCategory = '';
 
     public function mount($categories, $product) {
         $this->categories = $categories;
         $this->product = $product;
+
 
         if($product != null){
 
@@ -47,8 +48,12 @@ class SelectSubCategory extends Component
 
         if($this->product != null){
             foreach ($subCategories as $catg) {
-                if($catg->id == $this->product->subCategory->id) {
-                    $this->selectedSubCategory = $catg->id;
+                if($this->product->subCategory){
+                    if($catg->id == $this->product->subCategory->id) {
+                        $this->selectedSubCategory = $catg->id;
+                    }
+                }else{
+                    $this->selectedSubCategory = null;
                 }
             }
         }
@@ -62,6 +67,6 @@ class SelectSubCategory extends Component
 
     public function render()
     {
-        return view('livewire.select-sub-category');
+        return view('livewire.select-print-sub-category');
     }
 }

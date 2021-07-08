@@ -16,6 +16,7 @@
     </div>
 
     @if (!$nosubcategory)
+
     <div class="form-element mt-5">
         <label>
             @if ($subCategories->count() == 0)
@@ -33,9 +34,12 @@
                 </div>
             </div>
             @endif
+
         </label>
     </div>
+
     @endif
+
 
     <div class="form-element my-3">
         <label for="subcateogry" class="flex items-center">
@@ -43,7 +47,6 @@
             <span class="inline-block ml-2">No Subcategory</span>
         </label>
     </div>
-
 
 </div>
 

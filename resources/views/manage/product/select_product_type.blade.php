@@ -10,11 +10,13 @@
       <span>Select Product Type</span>
     </div>
 
-    <div class="grid grid-cols-4 xxl:grid-cols-4 gap-3">
+    <div class="grid grid-cols-5 gap-3">
         <a href="{{route('products.create')}}"
         class="hover:bg-transparent hover:border-primary-200 border transition border-gray-200 rounded flex items-center justify-center text-xl bg-white h-24 xxl:h-32 w-full text-sm block">Print Product</a>
         <a href="{{route('products.create')}}"
         class="hover:bg-transparent hover:border-primary-200 border transition border-gray-200 rounded flex items-center justify-center text-xl bg-white h-24 xxl:h-32 w-full text-sm block">Banner Display</a>
+        <a href="{{route('products.packing.create')}}"
+        class="hover:bg-transparent hover:border-primary-200 border transition border-gray-200 rounded flex items-center justify-center text-xl bg-white h-24 xxl:h-32 w-full text-sm block">Packing</a>
         <a href="{{route('products.gift.create')}}"
         class="hover:bg-transparent hover:border-primary-200 border transition border-gray-200 rounded flex items-center justify-center text-xl bg-white h-24 xxl:h-32 w-full text-sm block">Personalize Gift</a>
         <a href="{{route('products.shirt.create')}}"

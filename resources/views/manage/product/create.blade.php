@@ -1,5 +1,7 @@
 @extends('manage.layouts.app')
-
+@section('headlinks')
+    @livewireStyles
+@endsection
 @section('content')
 @php
 $quantity = Array("10", "100", "200", "300", "400", "500", "600", "700", "800", "900", "1000", "2000", "5000", "10000");
@@ -22,7 +24,7 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
             </label>
         </div>
         <!-- form-ele -->
-        <div class="form-element">
+        <div class="form-element hidden">
             <label>
                 <span class="text-gray-800 block">Navbar Heading</span>
                 <input type="text" class="form-input" name="title_two" value="{{ old('title_two') }}">
@@ -156,7 +158,7 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
             <!-- form-ele -->
         </div>
 
-        <div class="form-element mt-10">
+        {{-- <div class="form-element mt-10">
             <label>
                 <span class="text-gray-800 block mb-1">Category</span>
                 <div class="relative">
@@ -170,8 +172,21 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
                     </div>
                 </div>
             </label>
-        </div>
+        </div> --}}
         <!-- form-ele -->
+
+        @php
+         if(isset($product)) {
+             $product = $product;
+         }else{
+             $product = null;
+         }
+         @endphp
+
+        @livewire('select-print-sub-category', [
+            'categories' => $categories,
+            'product' => $product
+        ])
 
 
         <div class="form-element mt-8 mb-0">
@@ -183,4 +198,7 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
   </div>
 
 
+@endsection
+@section('scripts')
+    @livewireScripts
 @endsection

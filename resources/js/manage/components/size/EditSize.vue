@@ -8,7 +8,7 @@
                 <div>
                     <label class="w-full block">
                         <span class="text-sm font-medium mb-1">Title / Name</span>
-                        <ValidationProvider name="editingTable.data.region" rules="required">
+                        <ValidationProvider name="editingTable.data.region">
                             <div slot-scope="{ errors }">
                                 <input type="text" v-model="editingTable.data.region"
                                 :class="errors[0] ? 'border-red-400': ''"
@@ -21,7 +21,7 @@
                 <div>
                     <label class="w-full block relative">
                         <span class="text-sm font-medium mb-1">Type</span>
-                        <ValidationProvider name="editingTable.data.type" rules="required">
+                        <ValidationProvider name="editingTable.data.type">
                             <div slot-scope="{ errors }">
                                 <input type="text" v-model="editingTable.data.type"
                                 :class="errors[0] ? 'border-red-400': ''"
@@ -35,7 +35,7 @@
                     <div class="h-auto">
                         <label class="w-full block">
                             <span class="text-sm font-medium mb-1">Portrait size</span>
-                            <ValidationProvider name="editingTable.data.portait" rules="required">
+                            <ValidationProvider name="editingTable.data.portait">
                                 <div slot-scope="{ errors }">
                                     <input type="number" v-model="editingTable.data.portrait"
                                     :class="errors[0] ? 'border-red-400': ''"
@@ -48,7 +48,7 @@
                     <div class="h-auto">
                         <label class="block w-full">
                             <span class="text-sm font-medium mb-1">Landscape size</span>
-                            <ValidationProvider name="editingTable.data.landscape" rules="required">
+                            <ValidationProvider name="editingTable.data.landscape">
                                 <div slot-scope="{ errors }">
                                     <input type="number" v-model="editingTable.data.landscape"
                                     :class="errors[0] ? 'border-red-400': ''"

@@ -224,7 +224,29 @@ class pagesController extends Controller
     public function showProductsByCategory($slug)
     {
         $category = Category::where('slug', $slug)->first();
-        return view('product.index', compact('category'));
+        $subcategories = SubCategory::where('category_id', $category->id)
+        ->whereHas('products')
+        ->get();
+        if($category->menu->id == 11) {
+            return view('product.packing.index', compact('category', 'subcategories'));
+        }else{
+            return view('product.index', compact('category', 'subcategories'));
+        }
+    }
+
+    public function showPackingByCategory($slug)
+    {
+        $category = Category::where('slug', $slug)->first();
+        $subcategories = SubCategory::where('category_id', $category->id)
+        ->whereHas('products')
+        ->get();
+        return view('product.index', compact('category', 'subcategories'));
+    }
+
+    public function showProductsBySubCategory($category, $sub)
+    {
+        $subcategory = SubCategory::where('slug', $sub)->first();
+        return view('product.productsbysubcategory', compact('subcategory'));
     }
 
     function printProducts ($slug) {
@@ -595,9 +617,6 @@ class pagesController extends Controller
         return view('template.index', compact('categories', 'category', 'templates'));
     }
 
-
-
-
     public function getCategoriesByMenu ($slug) {
 
         // if(!Menu::where('slug', $slug)->exists()) {
@@ -606,9 +625,9 @@ class pagesController extends Controller
 
         $menu = Menu::where('slug', $slug)->firstOrFail();
 
-        $categories = Category::where('menu_id', $menu->id)
+        $categories = Category::with('subcategories')
+                ->where('menu_id', $menu->id)
                 ->whereHas('products')->get();
-
         return view('category.single', compact('menu', 'categories'));
 
 

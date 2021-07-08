@@ -70,7 +70,16 @@
         },
         data() {
             return {
-                sides: ["One Side Colour", "Two Side Colours", "front side", "back side", 'both sides'],
+                sides: [
+                    "One side colour",
+                    "Two Side Colours",
+                    "front side",
+                    "back side",
+                    "both sides",
+                    "color front only",
+                    "Blank no printing",
+                    "Full color all pages"
+                ],
             }
         },
         computed: {

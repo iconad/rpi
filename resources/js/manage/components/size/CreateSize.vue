@@ -8,7 +8,7 @@
                 <div>
                     <label class="w-full block">
                         <span class="text-sm font-medium mb-1">Title / Name</span>
-                        <ValidationProvider name="form.region" rules="required">
+                        <ValidationProvider name="form.region">
                             <div slot-scope="{ errors }">
                                 <input type="text" v-model="form.region"
                                 :class="errors[0] ? 'border-red-400': ''"
@@ -21,7 +21,7 @@
                 <div>
                     <label class="w-full block relative">
                         <span class="text-sm font-medium mb-1">Type</span>
-                        <ValidationProvider name="form.type" rules="required">
+                        <ValidationProvider name="form.type">
                             <div slot-scope="{ errors }">
                                 <input type="text" v-model="form.type"
                                 :class="errors[0] ? 'border-red-400': ''"
@@ -35,7 +35,7 @@
                     <div class="h-auto">
                         <label class="w-full block">
                             <span class="text-sm font-medium mb-1">Portrait size</span>
-                            <ValidationProvider name="form.portait" rules="required">
+                            <ValidationProvider name="form.portait">
                                 <div slot-scope="{ errors }">
                                     <input type="number" v-model="form.portrait"
                                     :class="errors[0] ? 'border-red-400': ''"
@@ -48,7 +48,7 @@
                     <div class="h-auto">
                         <label class="block w-full">
                             <span class="text-sm font-medium mb-1">Landscape size</span>
-                            <ValidationProvider name="form.landscape" rules="required">
+                            <ValidationProvider name="form.landscape">
                                 <div slot-scope="{ errors }">
                                     <input type="number" v-model="form.landscape"
                                     :class="errors[0] ? 'border-red-400': ''"

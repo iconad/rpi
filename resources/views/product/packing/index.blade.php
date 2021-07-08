@@ -50,52 +50,31 @@
     <section class="products {{ $subcategories->count() != 0 ? '' : 'mt-12' }} ">
         <div class="text-lg font-semibold text-gray-800 mb-3">Products</div>
             @if ($category->products)
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             @foreach ($category->products as $product)
-                @if (count($product->packages) != 0)
+                    @php
+                        if($product->custom_link) {
+                            $url = $product->custom_link;
+                        }else{
+                            $url = "/products/".$product->slug;
+                        }
+                    @endphp
+
                     <div class="border border-gray-200 rounded-lg">
                         <div>
-                            <a href="/products/{{$product->slug}}">
-                                <div class="p-3 text-xl font-semibold text-primary-500">{{$product->title}}</div>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="/products/{{$product->slug}}">
+                            <a href="{{$url}}">
                                 @if($product->getMedia('images')->count() != 0)
                                     <thumb-image-blade classess="w-full h-64 object-cover" image="{{$product->getMedia('images')[0]->file_name}}" id="{{$product->getMedia('images')[0]->id}}"></thumb-image-blade>
                                 @endif
                             </a>
                         </div>
-                        <div class="p-3">
-                            <div class="mb-2 font-semibold text-sec-500">
-                                @if ($product->packages[0]->prices[0]->size)
-                                <span>
-                                    {{$product->packages[0]->prices[0]->size->region}}  ●
-                                </span>
-                                @endif
-                                {{$product->packages[0]->quantity}} Copies >
-                                {{$product->packages[0]->prices[0]->price}} AED
-                            </div>
-                            @if ($product->packages && $product->packages[0]->paper)
-                                <div class="mb-2 capitalize">
-                                    <span class="font-semibold text-black">Papers</span>
-                                    {{$product->packages[0]->paper->title}}
-                                </div>
-                            @endif
-
-                            <div class="mb-2 capitalize">
-                                <span class="font-semibold text-black">Delivery</span>  Same Day
-                            </div>
-                            @if ($product->packages && $product->packages[0]->paper)
-                                <div class="capitalize">
-                                    <span class="font-semibold text-black">Printing</span>
-                                    {{$product->packages[0]->paper->side}}
-                                </div>
-                            @endif
+                        <div>
+                            <a href="{{$url}}">
+                                <div class="p-3 pb-2 text-lg font-semibold text-primary-500">{{$product->title}}</div>
+                            </a>
                         </div>
 
                     </div>
-                @endif
             @endforeach
             </div>
             @else

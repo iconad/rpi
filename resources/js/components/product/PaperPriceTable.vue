@@ -6,7 +6,7 @@
                 <th class="border p-4 bg-theme-gray-dark">Quantity</th>
                 <th class="border p-4 bg-theme-gray-dark capitalize" v-for="(head, i) in header" :key="i">
                     {{head.region}}
-                    ({{head.portrait}}x{{head.landscape}})
+                    <template v-if="head.portrait && head.landscape">({{head.portrait}}x{{head.landscape}})</template>
                     {{head.type}}</th>
             </tr>
             </thead>
@@ -20,7 +20,8 @@
                     <template v-for="(td, i) in header.length">
                         <td :key="i" class="border px-6 py-4 whitespace-no-wrap text-center">
                             <span v-for="(pri, p) in price.sizes" :key="p">
-                                <span v-if="pri.size.region === header[i].region">
+                                <!-- {{header[i].region}} -->
+                                <span v-if="pri.size.id === header[i].id">
                                     {{pri.price}} AED
                                 </span>
                             </span>

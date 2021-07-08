@@ -23,7 +23,9 @@ Route::get('/layout-templates/{category}', 'pagesController@templateByCategory')
 Route::get('/estimate', 'pagesController@estimate');
 Route::post('/estimate', 'pagesController@estimateStore');
 Route::get('/categories/{menu}', 'pagesController@getCategoriesByMenu');
+Route::get('/category/{category}/subcategories/{subcategory}/products', 'pagesController@showProductsBySubCategory');
 Route::get('/category/{category}/products', 'pagesController@showProductsByCategory');
+// Route::get('/category/{category}/packing', 'pagesController@showPackingByCategory');
 Route::get('/products/{product}', 'pagesController@showProduct');
 Route::get('/products/shirt/{product}', 'pagesController@shirtProduct');
 Route::get('/products/personalized-gifts', 'pagesController@personalizedGiftsByCategory')->name('personalized-gifts');
@@ -103,6 +105,7 @@ Route::group(['prefix' => 'manage'], function() {
         Route::delete('/products/{product}/gallery-image/{image}', 'ProductController@deleteGalleryImage');
         Route::resource('/products', 'ProductController');
         Route::get('/create/gift-product', 'ProductController@createGiftProduct')->name('products.gift.create');
+        Route::get('/create/packing', 'ProductController@createPacking')->name('products.packing.create');
         Route::get('/create/shirt', 'ProductController@createShirtProduct')->name('products.shirt.create');
 
         Route::put('/page-categories/{category}/change-status', 'PageCategoryController@changeStatus');

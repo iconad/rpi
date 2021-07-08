@@ -223,12 +223,12 @@ type Menu {
 
 type Size {
     id: ID!
-    region: String!
-    type: String!
+    region: String
+    type: String
     content_types: String
-    landscape: String!
-    unit: String!
-    portrait: String!
+    landscape: String
+    unit: String
+    portrait: String
     price: Int
     status: Int!
     order: Int!

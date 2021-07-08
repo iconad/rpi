@@ -11,9 +11,10 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
 {{ Breadcrumbs::render('manage.product', $product) }}
 
 <div class="dashboard mb-50rem">
-    <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-      {{$product->title}}
-    </h2>
+    <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200 flex items-center">
+        <span>{{$product->title}}</span>
+         <a href="/products/shirts/{{$product->category->slug}}" class="ml-3 inline-block text-xs border-b border-gray-400 text-green-500" target="_blank">View Product</a>
+     </h2>
     <div class="w-full rounded-lg border border-gray-200 bg-white p-4 relative">
         <form action="{{route('products.update', $product->id)}}" method="post" enctype="multipart/form-data">
             {{method_field('PUT')}}

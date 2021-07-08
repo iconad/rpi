@@ -36,11 +36,11 @@ class SizeController extends Controller
     public function store(Request $request)
     {
         $this->validate(request(), [
-            'region' => 'required',
-            'portrait' => 'required',
-            'landscape' => 'required',
+            // 'region' => 'required',
+            // 'portrait' => 'required',
+            // 'landscape' => 'required',
             'unit' => 'required',
-            'type' => 'required',
+            // 'type' => 'required',
             'content_types' => 'required',
         ]);
 
@@ -93,11 +93,11 @@ class SizeController extends Controller
     public function update(Request $request, Size $size)
     {
         $this->validate(request(), [
-            'region' => 'required',
-            'portrait' => 'required',
-            'landscape' => 'required',
+            // 'region' => 'required',
+            // 'portrait' => 'required',
+            // 'landscape' => 'required',
             'unit' => 'required',
-            'type' => 'required',
+            // 'type' => 'required',
             'content_types' => 'required',
         ]);
         $size->region = $request->region;

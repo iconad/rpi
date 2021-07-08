@@ -31,10 +31,10 @@
                                 <p>{{i+1}}</p>
                             </td>
                             <td class="px-4 py-3">
-                                <p class="font-semibold hover:border-transparent">{{size.region}}</p>
+                                <p class="font-semibold hover:border-transparent">{{size.region ? size.region : '-'}}</p>
                             </td>
                             <td class="px-4 py-3">
-                                <p>{{size.type}}</p>
+                                <p>{{size.type ? size.type : '-'}}</p>
                             </td>
                             <td class="px-4 py-3">
                                 <p v-if="size.menus.length != 0">
@@ -44,7 +44,10 @@
                                 <p v-else >---</p>
                             </td>
                             <td class="px-4 py-3">
-                                <p>{{size.portrait}}x{{size.landscape}} {{size.unit}}</p>
+                                <p>
+                                    <span v-if="size.portrait && size.landscape">{{size.portrait}}x{{size.landscape}}</span>
+                                    {{size.unit}}
+                                </p>
                             </td>
                             <td class="px-4 py-3">
                                 <p v-if="size.price">{{size.price}}</p>

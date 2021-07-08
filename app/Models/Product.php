@@ -33,6 +33,7 @@ class Product extends Model implements HasMedia
         'material',
         'gender',
         'neck',
+        'custom_link',
         'unique_code',
         'body_title',
         'body_subtitle',

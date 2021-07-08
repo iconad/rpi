@@ -1,5 +1,7 @@
 @extends('manage.layouts.app')
-
+@section('headlinks')
+    @livewireStyles
+@endsection
 @section('content')
 @php
 $quantity = Array("1", "10", "100", "200", "300", "400", "500", "600", "700", "800", "900", "1000", "2000", "5000", "10000");
@@ -9,8 +11,9 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
 {{ Breadcrumbs::render('manage.product', $product) }}
 
 <div class="dashboard mb-50rem">
-    <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-      {{$product->title}}
+    <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200 flex items-center">
+       <span>{{$product->title}}</span>
+        <a href="/products/{{$product->slug}}" class="ml-3 inline-block text-xs border-b border-gray-400 text-green-500" target="_blank">View Product</a>
     </h2>
     <div class="w-full rounded-lg border border-gray-200 bg-white p-4 relative">
         <form action="{{route('products.update', $product->id)}}" method="post" enctype="multipart/form-data">
@@ -23,7 +26,7 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
                 </label>
             </div>
             <!-- form-ele -->
-            <div class="form-element">
+            <div class="form-element hidden">
                 <label>
                     <span class="text-gray-800 block">Navbar Heading</span>
                     <input type="text" class="form-input" name="title_two" value="{{ $product->title_two }}">
@@ -199,26 +202,35 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
             <!-- form-ele -->
         </div>
 
-            <div class="form-element mt-10">
-                <label>
-                    <span class="text-gray-800 block mb-1">Category</span>
-                    <div class="relative">
-                        <select class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-2 px-3 pr-8 rounded leading-tight focus:outline-none" name="category_id">
-                            @foreach ($categories as $catg)
-                                @if ($catg->id == $product->category->id)
-                                <option selected value="{{$catg->id}}">{{$catg->title}}  ({{ $catg->menu->title }})</option>
-                                @else
-                                <option value="{{$catg->id}}">{{$catg->title}}  ({{ $catg->menu->title }})</option>
-                                @endif
-                            @endforeach
-                        </select>
-                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                        </div>
+        {{-- <div class="form-element mt-10">
+            <label>
+                <span class="text-gray-800 block mb-1">Category</span>
+                <div class="relative">
+                    <select class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-2 px-3 pr-8 rounded leading-tight focus:outline-none" name="category_id">
+                        @foreach ($categories as $catg)
+                            @if ($catg->id == $product->category->id)
+                            <option selected value="{{$catg->id}}">{{$catg->title}}  ({{ $catg->menu->title }})</option>
+                            @else
+                            <option value="{{$catg->id}}">{{$catg->title}}  ({{ $catg->menu->title }})</option>
+                            @endif
+                        @endforeach
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                     </div>
-                </label>
-            </div>
-            <!-- form-ele -->
+                </div>
+            </label>
+        </div> --}}
+        <!-- form-ele -->
+        {{-- <pre> --}}
+            {{-- {{$categories}} --}}
+        {{-- </pre> --}}
+
+            @livewire('select-print-sub-category', [
+                'categories' => $categories,
+                'product' => $product
+            ])
+
 
             <div class="form-element mt-10">
                 <change-status :status="{{$product->status}}" id="{{$product->id}}" model="products"></change-status>
@@ -297,4 +309,7 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
 
 
 </div>
+@endsection
+@section('scripts')
+    @livewireScripts
 @endsection

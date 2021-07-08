@@ -33,7 +33,10 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
+        $categories = Category::where('menu_id',10)
+        ->orWhere('menu_id',12)
+        ->get();
+        // $categories = Category::all();
         $finishings = Finishing::all();
         return view('manage.product.create', compact('categories', 'finishings'));
     }
@@ -48,6 +51,12 @@ class ProductController extends Controller
         $categories = Category::where('menu_id', 13)->get();
         $finishings = Finishing::all();
         return view('manage.product.gift.create', compact('categories', 'finishings'));
+    }
+
+    public function createPacking()
+    {
+        $categories = Category::where('menu_id', 11)->get();
+        return view('manage.product.packing.create', compact('categories'));
     }
 
     public function createShirtProduct()
@@ -107,6 +116,7 @@ class ProductController extends Controller
             'printing_text' => $request->printing_text,
             'printing' => $request->printing,
             'quantity' => $quantity,
+            'custom_link' => $request->custom_link,
 
             'brand' => $request->brand,
             'color_id' => $request->color,
@@ -163,7 +173,6 @@ class ProductController extends Controller
         $min_quantity = $quantity[0];
         $max_quantity = $quantity[1];
 
-
         if ($product->category->menu->id == 13) {
             return view('manage.product.gift.show', compact(
                 'product',
@@ -179,6 +188,14 @@ class ProductController extends Controller
         }elseif($product->category->menu->id == 14){
             $colors = Color::all();
             return view('manage.product.shirt.show', compact(
+                'colors',
+                'product',
+                'image',
+                'categories'
+            ));
+        }elseif($product->category->menu->id == 11){
+            $colors = Color::all();
+            return view('manage.product.packing.show', compact(
                 'colors',
                 'product',
                 'image',
@@ -267,6 +284,7 @@ class ProductController extends Controller
             $product->quantity = $quantity;
 
             $product->brand = $request->brand;
+            $product->custom_link = $request->custom_link;
             $product->color_id = $request->color;
             $product->gender = $request->gender;
             $product->type = $request->type;
