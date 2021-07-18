@@ -17,7 +17,7 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
-        publicUrl: "http://rpiuae.ae/storage/",
+        publicUrl: "https://rpiuae.ae/storage/",
         //Order
         selectedPaperFinishing: [],
         selectedPaperFinishingExtraPrice: null,
