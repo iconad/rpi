@@ -81,13 +81,13 @@
                     </a>
                 </li>
                 <li class="mb-1 text-sm text-gray-800 hover:text-sec mt-2">
-                    <a href="mailto:info@printarabia.ae" title="Who We Are" class="footer-link"> info@printarabia.ae </a>
+                    <a href="mailto:info@printarabia.ae" title="Who We Are" class="footer-link"> info@rpi.ae </a>
                 </li>
                 <li class="mb-1 text-sm text-gray-800 hover:text-sec">
-                    <a href="tel:+971 04 551 6095" title="Terms of Services" class="footer-link"> +971 04 551 6095 </a>
+                    <a href="tel:+971 04 551 6095" title="Terms of Services" class="footer-link"> +971 6 534 1113 </a>
                 </li>
                 <li class="mb-1 text-sm text-gray-800 hover:text-sec">
-                    <a href="https://goo.gl/QnUe8i" title="Privacy Policy" class="footer-link"> https://goo.gl/QnUe8i </a>
+                    <a href="https://goo.gl/maps/fbPpCQZv3oov8pe37" title="Privacy Policy" class="footer-link"> https://goo.gl/maps/fbPpCQZv3oov8pe37 </a>
                 </li>
             </ul>
         </div>
