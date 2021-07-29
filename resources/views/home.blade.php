@@ -95,8 +95,8 @@
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-10">
             <div>
                 <img src="https://www.printarabia.ae/img/static/about-us/why-print-arabia/dubai-based.png" alt="image">
-                <h3 class="capitalize text-gray-900 font-semibold text-lg mt-3 mb-1">We are Dubai based</h3>
-                <p class="text-sm">Our office are easy to reach at both locations in Dubai — JLT. And our full-scale print production facility is at Jebel Ali Industrial Area.</p>
+                <h3 class="capitalize text-gray-900 font-semibold text-lg mt-3 mb-1">We are Sharjah based</h3>
+                <p class="text-sm">Our office are easy to reach at both locations in Sharjah — JLT. And our full-scale print production facility is at Jebel Ali Industrial Area.</p>
             </div>
             <div>
                 <img src="https://www.printarabia.ae/img/static/about-us/why-print-arabia/we-speak-your-language.png" alt="image">
@@ -143,7 +143,7 @@
         <div class="grid gid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mt-10">
             <div class="rounded overflow-hidden hover:shadow-lg transition ease-linear duration-300 hover:border border-gray-200">
                 <img class="mb-3" src="https://www.printarabia.ae/storage/images/youtube/FAYE2uNNZ5w.webp" alt="thumbnail">
-                <a href="#" class="block font-medium leading-4 text-sm px-2">Print in Dubai with Printarabia FAQ Which foil is best fo...</a>
+                <a href="#" class="block font-medium leading-4 text-sm px-2">Print in Sharjah with Printarabia FAQ Which foil is best fo...</a>
                 <div class="text-gray-600 text-xs font-medium flex items-center tracking-wider p-2">
                     <span><svg class="fill-current w-4 h-4 block mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M.2 10a11 11 0 0119.6 0A11 11 0 01.2 10zm9.8 4a4 4 0 100-8 4 4 0 000 8zm0-2a2 2 0 110-4 2 2 0 010 4z"/></svg></span>
                     236 views
@@ -152,7 +152,7 @@
             {{-- item --}}
             <div class="rounded overflow-hidden hover:shadow-lg transition ease-linear duration-300 hover:border border-gray-200">
                 <img class="mb-3" src="https://www.printarabia.ae/storage/images/youtube/wpJqEj8KqfE.webp" alt="thumbnail">
-                <a href="#" class="block font-medium leading-4 text-sm px-2">Print in Dubai with Printarabia FAQ Which foil is best fo...</a>
+                <a href="#" class="block font-medium leading-4 text-sm px-2">Print in Sharjah with Printarabia FAQ Which foil is best fo...</a>
                 <div class="text-gray-600 text-xs font-medium flex items-center tracking-wider p-2">
                     <span><svg class="fill-current w-4 h-4 block mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M.2 10a11 11 0 0119.6 0A11 11 0 01.2 10zm9.8 4a4 4 0 100-8 4 4 0 000 8zm0-2a2 2 0 110-4 2 2 0 010 4z"/></svg></span>
                     236 views
@@ -161,7 +161,7 @@
             {{-- item --}}
             <div class="rounded overflow-hidden hover:shadow-lg transition ease-linear duration-300 hover:border border-gray-200">
                 <img class="mb-3" src="https://www.printarabia.ae/storage/images/youtube/kyk-ier5VYs.webp" alt="thumbnail">
-                <a href="#" class="block font-medium leading-4 text-sm px-2">Print in Dubai with Printarabia FAQ Which foil is best fo...</a>
+                <a href="#" class="block font-medium leading-4 text-sm px-2">Print in Sharjah with Printarabia FAQ Which foil is best fo...</a>
                 <div class="text-gray-600 text-xs font-medium flex items-center tracking-wider p-2">
                     <span><svg class="fill-current w-4 h-4 block mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M.2 10a11 11 0 0119.6 0A11 11 0 01.2 10zm9.8 4a4 4 0 100-8 4 4 0 000 8zm0-2a2 2 0 110-4 2 2 0 010 4z"/></svg></span>
                     236 views
@@ -170,7 +170,7 @@
             {{-- item --}}
             <div class="rounded overflow-hidden hover:shadow-lg transition ease-linear duration-300 hover:border border-gray-200">
                 <img class="mb-3" src="https://www.printarabia.ae/storage/images/youtube/upN457kNgCc.webp" alt="thumbnail">
-                <a href="#" class="block font-medium leading-4 text-sm px-2">Print in Dubai with Printarabia FAQ Which foil is best fo...</a>
+                <a href="#" class="block font-medium leading-4 text-sm px-2">Print in Sharjah with Printarabia FAQ Which foil is best fo...</a>
                 <div class="text-gray-600 text-xs font-medium flex items-center tracking-wider p-2">
                     <span><svg class="fill-current w-4 h-4 block mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M.2 10a11 11 0 0119.6 0A11 11 0 01.2 10zm9.8 4a4 4 0 100-8 4 4 0 000 8zm0-2a2 2 0 110-4 2 2 0 010 4z"/></svg></span>
                     236 views
@@ -179,7 +179,7 @@
             {{-- item --}}
             <div class="rounded overflow-hidden hover:shadow-lg transition ease-linear duration-300 hover:border border-gray-200">
                 <img class="mb-3" src="https://www.printarabia.ae/storage/images/youtube/PEnyISbwLx0.webp" alt="thumbnail">
-                <a href="#" class="block font-medium leading-4 text-sm px-2">Print in Dubai with Printarabia FAQ Which foil is best fo...</a>
+                <a href="#" class="block font-medium leading-4 text-sm px-2">Print in Sharjah with Printarabia FAQ Which foil is best fo...</a>
                 <div class="text-gray-600 text-xs font-medium flex items-center tracking-wider p-2">
                     <span><svg class="fill-current w-4 h-4 block mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M.2 10a11 11 0 0119.6 0A11 11 0 01.2 10zm9.8 4a4 4 0 100-8 4 4 0 000 8zm0-2a2 2 0 110-4 2 2 0 010 4z"/></svg></span>
                     236 views
@@ -188,7 +188,7 @@
             {{-- item --}}
             <div class="rounded overflow-hidden hover:shadow-lg transition ease-linear duration-300 hover:border border-gray-200">
                 <img class="mb-3" src="https://www.printarabia.ae/storage/images/youtube/UWf30fIxx04.webp" alt="thumbnail">
-                <a href="#" class="block font-medium leading-4 text-sm px-2">Print in Dubai with Printarabia FAQ Which foil is best fo...</a>
+                <a href="#" class="block font-medium leading-4 text-sm px-2">Print in Sharjah with Printarabia FAQ Which foil is best fo...</a>
                 <div class="text-gray-600 text-xs font-medium flex items-center tracking-wider p-2">
                     <span><svg class="fill-current w-4 h-4 block mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M.2 10a11 11 0 0119.6 0A11 11 0 01.2 10zm9.8 4a4 4 0 100-8 4 4 0 000 8zm0-2a2 2 0 110-4 2 2 0 010 4z"/></svg></span>
                     236 views
@@ -296,7 +296,7 @@
                 </div>
             </div>
             <div>
-                <img class="w-full" src="https://www.printarabia.ae/img/static/contact-us/contact-us/jltoffice.v2.jpg" alt="office image">
+                <img class="w-full" src="https://rpiuae.com/assets/images/slide1.jpg" alt="office image">
             </div>
         </div>
         <div class="border p-5 mt-5">
@@ -333,7 +333,7 @@
                 </div>
             </div>
             <div>
-                <img class="w-full" src="https://www.printarabia.ae/img/static/contact-us/contact-us/jabel-ali-factory.png" alt="office image">
+                <img class="w-full" src="https://i.ibb.co/qdVZBJ5/Whats-App-Image-2021-07-29-at-3-50-01-PM.jpg" alt="office image">
             </div>
         </div>
         <div class="border p-5 mt-5">
