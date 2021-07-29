@@ -133,7 +133,7 @@
 </section>
  --}}
 
-<section class="my-12 md:my-24" id="videoGuide">
+<section class="hidden my-12 md:my-24" id="videoGuide">
     <div class="border border-gray-400 rounded p-12">
         <div class="w-4/5 mx-auto text-center">
             <div class="text-3xl font-semibold text-gray-900 mb-3">Video Guide</div>
@@ -271,19 +271,18 @@
     <div>
         <div class="grid grid-cols-1 md:grid-cols-2 md:gap-10">
             <div>
-                <div class="px-3 py-2 bg-gray-600 text-lg text-white font-semibold">JLT CUSTOMER LOUNGE</div>
+                <div class="px-3 py-2 bg-gray-600 text-lg text-white font-semibold">RPI CUSTOMER LOUNGE</div>
                 <div class="py-5">
-                    <span class="block"> 208 Goldcrest Executive Tower </span>
-                    <span class="block"> Cluster C, Jumeirah Lakes Towers </span>
-                    <span class="block"> P.O. Box 634282, Dubai, UAE </span>
+                    <span class="block"> Rainbow Printing Industries LLC </span>
+                    <span class="block"> P.O. Box 25483, Dubai, UAE </span>
                     <table class="mt-5 w-full">
                         <tr>
                             <td> <span class="font-semibold">Call</span> </td>
-                            <td>+971 (0)4 551 6095</td>
+                            <td>+971 6 534 1113</td>
                         </tr>
                         <tr>
                             <td> <span class="font-semibold">Email</span> </td>
-                            <td>info@printarabia.ae</td>
+                            <td>info@rpi.ae</td>
                         </tr>
                         <tr>
                             <td> <span class="font-semibold">Working Hours</span> </td>
@@ -301,7 +300,7 @@
             </div>
         </div>
         <div class="border p-5 mt-5">
-            <iframe width="100%" height="300" rel="nofollow" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=208%20Goldcrest%20Executive%20Tower%20Cluster%20C%20-%20Sheikh%20Zayed%20Rd%20-%20Dubai%20-%20United%20Arab%20Emirates&amp;key=AIzaSyAgQ2Rwzl3g8elnlX-oBer2z6GXSFukYXI" allowfullscreen=""></iframe>
+            <iframe width="100%" height="300" rel="nofollow" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d412.4546691427452!2d55.42353688114295!3d25.294179094589303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x356b36e009b8f7dc!2sRainbow%20Printing%20Industries%20LLC!5e0!3m2!1sen!2sae!4v1627538752496!5m2!1sen!2sae" allowfullscreen=""></iframe>
         </div>
     </div>
     {{-- office block --}}
@@ -311,17 +310,16 @@
             <div>
                 <div class="px-3 py-2 bg-gray-600 text-lg text-white font-semibold">FACTORY</div>
                 <div class="py-5">
-                    <span class="block"> 208 Goldcrest Executive Tower </span>
-                    <span class="block"> Cluster C, Jumeirah Lakes Towers </span>
-                    <span class="block"> P.O. Box 634282, Dubai, UAE </span>
+                    <span class="block"> Rainbow Printing Industries LLC </span>
+                    <span class="block"> P.O. Box 25483, Dubai, UAE </span>
                     <table class="mt-5 w-full">
                         <tr>
                             <td> <span class="font-semibold">Call</span> </td>
-                            <td>+971 (0)4 551 6095</td>
+                            <td>+971 6 534 1113</td>
                         </tr>
                         <tr>
                             <td> <span class="font-semibold">Email</span> </td>
-                            <td>info@printarabia.ae</td>
+                            <td>info@rpi.ae</td>
                         </tr>
                         <tr>
                             <td> <span class="font-semibold">Working Hours</span> </td>
@@ -339,7 +337,7 @@
             </div>
         </div>
         <div class="border p-5 mt-5">
-            <iframe width="100%" height="300" rel="nofollow" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=208%20Goldcrest%20Executive%20Tower%20Cluster%20C%20-%20Sheikh%20Zayed%20Rd%20-%20Dubai%20-%20United%20Arab%20Emirates&amp;key=AIzaSyAgQ2Rwzl3g8elnlX-oBer2z6GXSFukYXI" allowfullscreen=""></iframe>
+            <iframe width="100%" height="300" rel="nofollow" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d412.4546691427452!2d55.42353688114295!3d25.294179094589303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x356b36e009b8f7dc!2sRainbow%20Printing%20Industries%20LLC!5e0!3m2!1sen!2sae!4v1627538752496!5m2!1sen!2sae" allowfullscreen=""></iframe>
         </div>
     </div>
     {{-- office block --}}
