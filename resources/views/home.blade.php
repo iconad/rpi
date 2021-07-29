@@ -73,7 +73,7 @@
     <div class="our-story mt-24">
         <div class="rounded-lg bg-theme-gray p-5">
             <h3 class="capitalize text-sec font-semibold text-xl mb-3">our story</h3>
-            <p>In 2014 we saw a gap in the UAE market for printing services that offered consistent quality at quick turnarounds. Print Arabia was formed to bridge that gap, with the goal of providing high quality online printing services with quick turnarounds and competetive prices. While our history may be short in the UAE, we make up for it with all our years experience in Print-production, Prepress and Graphic Design. As pioneers, we bring a new era of online print ordering. We are equally well equipped with our state-of-the-art printing and production facility. We promise ‘Made in Japan’ quality print services and are the first ever Japanese printing company established in the UAE and serving in the Middle East.</p>
+            <p>In 2014 we saw a gap in the UAE market for printing services that offered consistent quality at quick turnarounds. Rainbow Printing was formed to bridge that gap, with the goal of providing high quality online printing services with quick turnarounds and competetive prices. While our history may be short in the UAE, we make up for it with all our years experience in Print-production, Prepress and Graphic Design. As pioneers, we bring a new era of online print ordering. We are equally well equipped with our state-of-the-art printing and production facility. We promise ‘Made in Japan’ quality print services and are the first ever Japanese printing company established in the UAE and serving in the Middle East.</p>
         </div>
     </div>
     {{-- our story --}}
