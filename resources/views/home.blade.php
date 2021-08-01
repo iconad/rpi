@@ -296,7 +296,7 @@
                 </div>
             </div>
             <div>
-                <img class="w-full" src="https://rpiuae.com/assets/images/slide1.jpg" alt="office image">
+                <img class="w-full" src="https://i.ibb.co/qdVZBJ5/Whats-App-Image-2021-07-29-at-3-50-01-PM.jpg" alt="office image">
             </div>
         </div>
         <div class="border p-5 mt-5">
@@ -333,7 +333,7 @@
                 </div>
             </div>
             <div>
-                <img class="w-full" src="https://i.ibb.co/qdVZBJ5/Whats-App-Image-2021-07-29-at-3-50-01-PM.jpg" alt="office image">
+                <img class="w-full" src="https://rpiuae.com/assets/images/slide1.jpg" alt="office image">
             </div>
         </div>
         <div class="border p-5 mt-5">
