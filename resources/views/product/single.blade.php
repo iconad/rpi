@@ -421,7 +421,7 @@
             <p> <span class="inline-block mr-1">
                 <svg class="w-7 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.6 20.1"><path d="M23 18L12 1a1 1 0 00-1 0L1 18a1 1 0 000 1 1 1 0 000 1h21a1 1 0 001-1 1 1 0 000-1z" fill="#ffd900" stroke="#231916" stroke-miterlimit="10" stroke-width="1.2"/><path d="M11 12V9 7a2 2 0 010-1 1 1 0 011-1 1 1 0 011 1 3 3 0 010 1v5a3 3 0 01-1 2 1 1 0 01-1 0 4 4 0 010-2zm1 6a1 1 0 01-1-1 1 1 0 010-1 1 1 0 011-1 1 1 0 011 1 1 1 0 010 1 1 1 0 01-1 1z" fill="#231916"/></svg>
             </span>
-             Print Arabia will not be held responsible nor reprint orders due to poorly prepared data. If in doubt please see our <a href="#" class="text-sec font-semibold border-transparent border-b hover:border-sec">Artworking Guidelines</a> for more information on how to prepare your data.Where colour accuracy is critical, we strongly recommend investing in a <a href="#" class="text-sec font-semibold border-transparent border-b hover:border-sec">printed sample</a> to avoid disappointment.</p>
+             Rainbow Printing will not be held responsible nor reprint orders due to poorly prepared data. If in doubt please see our <a href="#" class="text-sec font-semibold border-transparent border-b hover:border-sec">Artworking Guidelines</a> for more information on how to prepare your data.Where colour accuracy is critical, we strongly recommend investing in a <a href="#" class="text-sec font-semibold border-transparent border-b hover:border-sec">printed sample</a> to avoid disappointment.</p>
         </div>
     </section>
     {{-- warning --}}

@@ -106,7 +106,7 @@
             </div>
 
             <div class="w-full my-24 ">
-                <x-ads.fullwidth-small />
+                {{-- <x-ads.fullwidth-small /> --}}
             </div>
 
             <x-google-reviews />

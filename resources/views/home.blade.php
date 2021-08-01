@@ -36,9 +36,9 @@
     </div>
 </section>
 
-<section class="my-12">
-    <top-products menu="14" columns="4" rows="1" title="Top T-shirt Printing"></top-products>
-</section>
+{{-- <section class="my-12"> --}}
+    {{-- <top-products menu="14" columns="4" rows="1" title="Top T-shirt Printing"></top-products> --}}
+{{-- </section> --}}
 
 
 {{-- <section class="my-24">

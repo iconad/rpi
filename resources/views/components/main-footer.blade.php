@@ -3,44 +3,44 @@
         <div class="mb-5 lg:mb-0">
             <div class="font-semibold mb-1">About Us</div>
             <ul>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Why Choose Us" class="footer-link"> Why Choose Us </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Who We Are" class="footer-link"> Who We Are</a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Terms of Services" class="footer-link"> Terms of Services</a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Privacy Policy" class="footer-link"> Privacy Policy</a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Sustainability" class="footer-link"> Sustainability</a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Why Choose Us" class="footer-link"> Why Choose Us </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Who We Are" class="footer-link"> Who We Are</a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Terms of Services" class="footer-link"> Terms of Services</a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Privacy Policy" class="footer-link"> Privacy Policy</a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Sustainability" class="footer-link"> Sustainability</a> </li>
             </ul>
         </div>
         {{-- item --}}
         <div class="mb-5 lg:mb-0">
             <div class="font-semibold mb-1">Getting Started</div>
             <ul>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Why Choose Us" class="footer-link"> How to Order Online </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Who We Are" class="footer-link"> PA Points</a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Terms of Services" class="footer-link"> Paper Guide </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Privacy Policy" class="footer-link"> Delivery & Turnaround </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Sustainability" class="footer-link"> All Products </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Why Choose Us" class="footer-link"> How to Order Online </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Who We Are" class="footer-link"> PA Points</a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Terms of Services" class="footer-link"> Paper Guide </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Privacy Policy" class="footer-link"> Delivery & Turnaround </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Sustainability" class="footer-link"> All Products </a> </li>
             </ul>
         </div>
         {{-- item --}}
         <div class="mb-5 lg:mb-0">
             <div class="font-semibold mb-1">Help & Support</div>
             <ul>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Why Choose Us" class="footer-link"> FAQ </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Who We Are" class="footer-link"> Ways to Pay </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Terms of Services" class="footer-link"> Download Templates </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Privacy Policy" class="footer-link"> Yearly Calendar </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Sustainability" class="footer-link"> Video Guide </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Why Choose Us" class="footer-link"> FAQ </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Who We Are" class="footer-link"> Ways to Pay </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Terms of Services" class="footer-link"> Download Templates </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Privacy Policy" class="footer-link"> Yearly Calendar </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Sustainability" class="footer-link"> Video Guide </a> </li>
             </ul>
         </div>
         {{-- item --}}
         <div class="mb-5 lg:mb-0">
             <div class="font-semibold mb-1">Contact Us</div>
             <ul>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Why Choose Us" class="footer-link"> Contact Us </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Who We Are" class="footer-link"> Paper Sample Kit </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Terms of Services" class="footer-link"> Paper Sample Books </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Privacy Policy" class="footer-link"> Print Sample Pack </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Sustainability" class="footer-link"> Careers </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Why Choose Us" class="footer-link"> Contact Us </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Who We Are" class="footer-link"> Paper Sample Kit </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Terms of Services" class="footer-link"> Paper Sample Books </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Privacy Policy" class="footer-link"> Print Sample Pack </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Sustainability" class="footer-link"> Careers </a> </li>
             </ul>
         </div>
         {{-- item --}}
@@ -51,12 +51,12 @@
                     <span class="block mr-1"> <img src="{{ asset('assets/images/visa.png') }}" title="visa card" class="w-8" alt="card"> </span>
                     <span class="block mr-1"> <img src="{{ asset('assets/images/master-card.png') }}" title="Master card" class="w-8" alt="card"> </span>
                     <span class="block mr-1"> <img src="{{ asset('assets/images/maestro.png') }}" title="Maestro" class="w-8" alt="card"> </span>
-                    <span class="block mr-1"> <img src="{{ asset('assets/images/paypal.png') }}" title="Paypal" class="w-8" alt="card"> </span>
+                    {{-- <span class="block mr-1"> <img src="{{ asset('assets/images/paypal.png') }}" title="Paypal" class="w-8" alt="card"> </span> --}}
                 </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Who We Are" class="footer-link"> Cash-On-Delivery* </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Terms of Services" class="footer-link"> Bank Transfer </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Privacy Policy" class="footer-link"> Cheques </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a href="" title="Sustainability" class="footer-link"> Design Service </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Who We Are" class="footer-link"> Cash-On-Delivery* </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Terms of Services" class="footer-link"> Bank Transfer </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Privacy Policy" class="footer-link"> Cheques </a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Sustainability" class="footer-link"> Design Service </a> </li>
             </ul>
         </div>
         {{-- item --}}
