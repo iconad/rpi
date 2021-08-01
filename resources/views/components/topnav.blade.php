@@ -8,7 +8,7 @@
                 <span class="block mr-2">
                     <img class="w-4" src="{{ asset('assets/images/call-icon.png') }}" alt="">
                 </span>
-                <span class="block hover:text-sec tracking-wider">04 551 6095</span>
+                <span class="block hover:text-sec tracking-wider">+971 6 534 1113</span>
             </a>
             <a href="/" class="block ml-4">
                 <span class="block text-green-500">
