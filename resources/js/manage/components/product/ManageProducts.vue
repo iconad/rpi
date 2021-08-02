@@ -41,8 +41,13 @@
                         </td>
                         <td class="px-4 py-3 text-sm">
                         <!-- {{product.category}} -->
-                            <span v-if="product.category.menu">{{product.category.menu.title}}</span>
+                            <span v-if="product.category">
+                                <template v-if="product.category.menu">
+                                    {{product.category.menu.title}}
+                                </template>
+                            </span>
                             <span v-else>---</span>
+                            <!-- <span >{{product.category}}</span> -->
                         </td>
                         <td class="px-4 py-3 text-sm">
                             <span>Yes</span>
