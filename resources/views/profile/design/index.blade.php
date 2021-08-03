@@ -67,8 +67,8 @@
                                         @if ($order->product)
                                             @if ($order->product_type == 'paper')
                                                 <a href="/products/{{$order->product->slug}}" class="capitalize theme-link hover:border-transparent">{{$order->product->title}}</a>
-                                            @elseif($order->product_type == 'shirt')
-                                                <a href="/products/shirts/{{$order->product->category->slug}}" class="capitalize theme-link hover:border-transparent">{{$order->product->title}}</a>
+                                            {{-- @elseif($order->product_type == 'shirt')
+                                                <a href="/products/shirts/{{$order->product->category->slug}}" class="capitalize theme-link hover:border-transparent">{{$order->product->title}}</a> --}}
                                             @elseif($order->product_type == 'gift')
                                                 <a href="/products/personalized-gifts/{{$order->product->category->slug}}" class="capitalize theme-link hover:border-transparent">{{$order->product->title}}</a>
                                             @endif
