@@ -47,8 +47,10 @@ class SelectSubCategory extends Component
 
         if($this->product != null){
             foreach ($subCategories as $catg) {
-                if($catg->id == $this->product->subCategory->id) {
-                    $this->selectedSubCategory = $catg->id;
+                if($this->product->subCategory){
+                    if($catg->id == $this->product->subCategory->id) {
+                        $this->selectedSubCategory = $catg->id;
+                    }
                 }
             }
         }

@@ -1,8 +1,12 @@
 <template>
     <div>
-        <pre>
+        <!-- <pre> -->
             <!-- {{selectedPaperFinishing}} -->
-        </pre>
+            <!-- {{productQuantity}} -->
+            <!-- {{productQuantity}} -->
+            <!-- -- -->
+            <!-- {{package.prices}} -->
+        <!-- </pre> -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-10">
             <ValidationObserver v-slot="{ invalid,passes }">
             <form @submit.prevent="passes(submitForm)">
@@ -21,7 +25,10 @@
 
                                         <template slot="singleLabel" slot-scope="props">
                                             <span class="option__desc">
-                                                <span class="option__title" v-if="props.option.paper">{{props.option.paper.title}}</span>
+                                                <span class="option__title" v-if="props.option.paper">
+                                                    {{props.option.paper.id}} -
+                                                    {{props.option.paper.title}}
+                                                </span>
                                             </span>
                                         </template>
 
@@ -52,7 +59,10 @@
                                     <multiselect class="customulti" @input="onPaperColourChange" v-model="paper.value.color" :options="product.packages">
                                         <template slot="singleLabel" slot-scope="props">
                                             <span class="option__desc">
-                                                <span class="option__title" v-if="props.option.paper">{{props.option.paper.side}}</span>
+                                                <span class="option__title" v-if="props.option.paper">
+                                                    {{props.option.paper.id}} -
+                                                    {{props.option.paper.side}}
+                                                </span>
                                             </span>
                                         </template>
 
@@ -85,7 +95,10 @@
 
                                         <template slot="singleLabel" slot-scope="props">
                                             <span class="option__desc">
-                                                <span class="option__title">{{props.option.region}}</span>
+                                                <span class="option__title">
+                                                    {{props.option.id}} -
+                                                    {{props.option.region}}
+                                                    </span>
                                                 (<span class="option__title">{{ props.option.portrait }}</span>
                                                 <span class="option__title">x</span>
                                                 <span class="option__title">{{ props.option.landscape }}</span>)
@@ -229,7 +242,6 @@
                                     <p class="text-theme-red-light mt-1 px-1 text-sm font-medium">{{ errors[0] }}</p>
                                 </div>
                             </ValidationProvider>
-
                         </div>
                     </div>
                     <!-- input wrapper -->
@@ -468,6 +480,7 @@
         },
         data() {
             return {
+                productQuantity: [],
                 shirt: {
                     value: {
                         printing: null,
@@ -543,6 +556,7 @@
             paper: {
                 deep: true,
                 handler(order) {
+                    this.filterPaperOrder()
                     if( order.value.color != null &&
                         order.value.paper != null &&
                         order.value.quantity != null &&
@@ -556,7 +570,6 @@
                         order.value.customsize.height != "")))
                     {
                         this.isPaperOrder = true
-                        this.filterPaperOrder()
                     }else{
                         this.isPaperOrder = false
                     }
@@ -604,13 +617,12 @@
                     let rec = this.productSizes.unshift(data)
                 }
             },
-            productQuantity() {
-                if(this.isProduct) {
-                    let arrays = this.package.prices.map(p => p.quantity);
-
-                    return _.uniqBy([].concat.apply([], arrays));
-                }
-            },
+            // productQuantity() {
+            //     if(this.isProduct) {
+            //         let arrays = this.package.prices.map(p => p.quantity);
+            //         return _.uniqBy([].concat.apply([], arrays));
+            //     }
+            // },
             selectedShirt () {
                 return this.$store.state.selectedShirt
             },
@@ -658,13 +670,26 @@
             async filterPaperOrder() {
                 await axios.post("/api/order/paper/price", {
                     size: this.paper.value.size,
-                    paper: this.paper.value.paper,
+                    package: this.paper.value.paper,
                     color: this.paper.value.color,
                     quantity: this.paper.value.quantity,
                     customsize: this.paper.value.customsize
                 })
                 .then(response => {
-                    this.price.product = response.data.result.price
+                    this.productQuantity = response.data.quantities
+                    if(response.data.result != null) {
+                        this.price.product = response.data.result.price
+                    }else{
+                        if(this.productQuantity.length !=0) {
+                            this.paper.value.quantity = this.productQuantity[0]
+                        }else{
+                            this.paper.value.quantity = null
+                            this.price.product = 0
+                            this.price.total = 0
+                            this.price.vat = 0
+
+                        }
+                    }
 
                     this.total = 0
                     this.days.total = this.product.delivery_time + parseInt(this.days.finishing)

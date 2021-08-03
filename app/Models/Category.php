@@ -52,6 +52,10 @@ class Category extends Model implements HasMedia
         return $this->belongsTo(Menu::class)->where('status', 1);
     }
 
+    public function allmenu() {
+        return $this->belongsTo(Menu::class);
+    }
+
     public function products() {
         return $this->hasMany(Product::class)->where('status', 1);
     }

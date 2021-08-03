@@ -11,4 +11,9 @@ class Paper extends Model
 
     public $fillable = ['title', 'side', 'user_id', 'status', 'order'];
 
+    public function packages() {
+        return $this->hasMany(Package::class);
+    }
+
+
 }

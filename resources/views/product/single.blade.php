@@ -137,7 +137,7 @@
 
 
             <div class="mt-8">
-                <a class="text-primary font-semibold text-lg text-primary-500 theme-link border-b border-transparent hover:border-primary " href="http://">Download Templates</a>
+                <a class="text-primary font-semibold text-lg text-primary-500 theme-link border-b border-transparent hover:border-primary " href="/layout-templates">Download Templates</a>
             </div>
         </div>
         {{-- prices dropdonw --}}
