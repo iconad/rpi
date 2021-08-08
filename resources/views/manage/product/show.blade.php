@@ -302,7 +302,7 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
                 <span>Packages</span>
                 <a href="{{route('packages.create', $product->id)}}" class="text-sm block theme-link">Add Package </a>
             </div>
-            <x-manage.packages :packages="$product->packages" :pid="$product->id" />
+            <x-manage.packages :packages="$product->allpackages" :pid="$product->id" />
         </div>
         {{-- Product Points End From Here --}}
 

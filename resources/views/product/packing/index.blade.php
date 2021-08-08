@@ -18,7 +18,7 @@
             @foreach ($subcategories as $subcategory)
 
             <div class="border rounded overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg"
-                onclick="location.href='/category/{{$category->slug}}/subcategories/{{$subcategory->slug}}/products'">
+                onclick="location.href='/estimate'">
                 @if (count($subcategory->getMedia('images')) != 0)
                 <thumb-image-blade
                     image="{{$subcategory->getMedia('images')[0]->file_name}}"
@@ -32,10 +32,10 @@
                 @endif
 
                 <div class="flex items-center justify-between">
+                    {{-- /category/{{$category->slug}}/subcategories/{{$subcategory->slug}}/products --}}
+                    <a href="/estimate" class="px-3 py-2 font-medium text-left text-primary text-sm capitalize"> {{$subcategory->title}} </a>
 
-                    <a href="/category/{{$category->slug}}/subcategories/{{$subcategory->slug}}/products" class="px-3 py-2 font-medium text-left text-primary text-sm capitalize"> {{$subcategory->title}} </a>
-
-                    <a href="/category/{{$category->slug}}/subcategories/{{$subcategory->slug}}/products" class="text-sm font-medium px-3 py-2 text-left text-primary text-gray-500"> ({{count($subcategory->products)}}) </a>
+                    <a href="/estimate" class="text-sm font-medium px-3 py-2 text-left text-primary text-gray-500"> ({{count($subcategory->products)}}) </a>
 
                 </div>
             </div>

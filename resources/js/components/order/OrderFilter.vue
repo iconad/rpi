@@ -26,7 +26,6 @@
                                         <template slot="singleLabel" slot-scope="props">
                                             <span class="option__desc">
                                                 <span class="option__title" v-if="props.option.paper">
-                                                    {{props.option.paper.id}} -
                                                     {{props.option.paper.title}}
                                                 </span>
                                             </span>
@@ -60,7 +59,6 @@
                                         <template slot="singleLabel" slot-scope="props">
                                             <span class="option__desc">
                                                 <span class="option__title" v-if="props.option.paper">
-                                                    {{props.option.paper.id}} -
                                                     {{props.option.paper.side}}
                                                 </span>
                                             </span>
@@ -96,7 +94,6 @@
                                         <template slot="singleLabel" slot-scope="props">
                                             <span class="option__desc">
                                                 <span class="option__title">
-                                                    {{props.option.id}} -
                                                     {{props.option.region}}
                                                     </span>
                                                 (<span class="option__title">{{ props.option.portrait }}</span>
@@ -118,7 +115,7 @@
                                     <p class="text-theme-red-light mt-1 px-1 text-sm font-medium">{{ errors[0] }}</p>
                                 </div>
                             </ValidationProvider>
-                            <div class="grid grid-cols-2 gap-3 mt-3" v-if="paper.value.size && paper.value.size.region === 'custom size'">
+                            <!-- <div class="grid grid-cols-2 gap-3 mt-3" v-if="paper.value.size && paper.value.size.region === 'custom size'">
                                 <div>
                                     <ValidationProvider name="paper.value.customsize.width" rules="required">
                                         <div slot-scope="{ errors }">
@@ -135,7 +132,7 @@
                                         </div>
                                     </ValidationProvider>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -376,9 +373,9 @@
             </form>
             </ValidationObserver>
 
-            <div class="hidden">
-                {{customSizes}}
-            </div>
+            <!-- <div class="hidden"> -->
+                <!-- {{customSizes}} -->
+            <!-- </div> -->
             <div>
                 <order-images-slider :images="images"></order-images-slider>
             </div>
@@ -389,6 +386,7 @@
                 <svg class="fill-current w-6 h-6"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 9L3 2 2 3l7 7-7 7 1 1 7-7 7 7 1-1-7-7 7-7-1-1-7 7z"/></svg>
             </div>
             <div class="p-6">
+
                 <order-paper-finishings :finishings="finishings" @added="hideModal" :type="paper.value.finishing"></order-paper-finishings>
             </div>
         </modal>
@@ -676,7 +674,9 @@
                     customsize: this.paper.value.customsize
                 })
                 .then(response => {
-                    this.productQuantity = response.data.quantities
+                    const quanities = response.data.quantities.filter((item,index) => response.data.quantities.indexOf(item) === index)
+                    this.productQuantity = quanities
+
                     if(response.data.result != null) {
                         this.price.product = response.data.result.price
                     }else{
@@ -690,7 +690,6 @@
 
                         }
                     }
-
                     this.total = 0
                     this.days.total = this.product.delivery_time + parseInt(this.days.finishing)
                 });

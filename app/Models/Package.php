@@ -21,6 +21,9 @@ class Package extends Model
     public function prices() {
         return $this->hasMany(PackagePrice::class);
     }
+    public function pricessizes() {
+        return $this->hasMany(PackagePrice::class)->whereHas('sizes');
+    }
     public function paper() {
         return $this->belongsTo(Paper::class)->where('status', 1);
     }

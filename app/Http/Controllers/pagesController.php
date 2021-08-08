@@ -592,7 +592,7 @@ class pagesController extends Controller
             );
 
             Mail::to($request->email)->send(new EstimateemailtouserMail($data));
-            Mail::to('info@rpi.ae')->send(new EstimateEmailToAdmin($adminData));
+            Mail::to('hammad@rpi.ae')->send(new EstimateEmailToAdmin($adminData));
 
 
             return response()->json(

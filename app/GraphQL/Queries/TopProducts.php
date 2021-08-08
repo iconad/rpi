@@ -14,6 +14,11 @@ class TopProducts
         $categoreis = Category::whereHas('products', function ($query) {
             $query->where('status', '=', 1);
         })
+        ->whereHas('products.packages', function ($query) {
+            $query->where('status', '=', 1);
+        })
+        ->whereHas('products.packages.prices')
+        ->whereHas('products.packages.prices.sizes')
         ->where('menu_id',$args['menu'])
         ->where('status', 1)
         ->get();

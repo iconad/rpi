@@ -36,6 +36,7 @@ class CreateProductsTable extends Migration
             $table->integer('printing')->nullable();
             $table->integer('stock')->nullable();
             $table->string('quantity')->nullable();
+            $table->string('link')->nullable();
             $table->integer('user_id');
             $table->integer('category_id')->unsigned();
             $table->integer('label_id')->nullable();

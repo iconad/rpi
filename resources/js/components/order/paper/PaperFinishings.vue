@@ -5,6 +5,7 @@
         <emboss :finishing="finishing" v-if="isEmboss" :type="type" @added="added"></emboss>
         <punch-hole :finishing="finishing" v-if="isPunchHole" :type="type" @added="added"></punch-hole>
         <round-corner :finishing="finishing" v-if="isRoundCorner" :type="type" @added="added"></round-corner>
+        <other-finishing :finishing="finishing" v-if="!isRoundCorner && !isPunchHole && !isEmboss && !isHotFoil" :type="type" @added="added"></other-finishing>
     </div>
 </template>
 
@@ -16,11 +17,13 @@
     import Emboss from './Emboss'
     import PunchHole from './PunchHole'
     import RoundCorner from './RoundCorner'
+    import OtherFinishing from './OtherFinishing.vue'
 
     export default {
         props: ['type', 'finishings'],
-        components: {HotFoil, Emboss, PunchHole, RoundCorner},
+        components: {HotFoil, Emboss, PunchHole, RoundCorner, OtherFinishing},
         computed: {
+
             isHotFoil () {
                 return this.type.toLowerCase() === 'hot foil'
             },

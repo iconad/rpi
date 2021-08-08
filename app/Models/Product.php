@@ -82,6 +82,10 @@ class Product extends Model implements HasMedia
         return $this->hasMany(Package::class)->where('status', 1);
     }
 
+    public function allpackages() {
+        return $this->hasMany(Package::class);
+    }
+
     public function finishings () {
         return $this->belongsToMany(Finishing::class)->where('status', 1);
     }

@@ -427,7 +427,7 @@
     {{-- warning --}}
 
 
-    <section class="turnaround-page my-16">
+    <section class="turnaround-page my-16 hidden">
         <x-product-useful-links />
     </section>
     {{-- useful links ended --}}

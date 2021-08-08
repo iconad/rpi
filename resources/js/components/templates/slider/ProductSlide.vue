@@ -7,11 +7,10 @@
         </a>
         <div class="p-3">
             <div class="mb-2 font-semibold text-sec">
-                <span v-if="product.packages[0].prices[0].size">
+                <span v-if="product.packages[0].prices[0] ">
                     {{product.packages[0].prices[0].size.region}}  ●
                 </span>
-                {{product.packages[0].quantity}} Copies >
-                {{product.packages[0].prices[0].price}} AED
+                {{product.packages[0].quantity}} Copies > {{prices[0][0].price}} AED
             </div>
             <div v-if="product.packages && product.packages[0].paper" class="mb-2 capitalize"><span class="font-semibold text-black">Papers</span> {{product.packages[0].paper.title}} </div>
             <div class="mb-2 capitalize"><span class="font-semibold text-black">Delivery</span>  Same Day </div>
@@ -39,6 +38,14 @@
             ThumbImage
         },
         computed: {
+            prices() {
+                return this.product.packages.filter( p => p.prices.length != 0 ).map(i => i.prices)[0].map(s=>s.sizes)
+            },
+            lowPrice () {
+                // if(this.prices) {
+                //     return this.price.map(p => p.sizes)
+                // }
+            },
             firstMedia (){
                 return this.product.media.filter(e => {
                     if(e.collection_name === 'images') {
