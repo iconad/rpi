@@ -26,41 +26,6 @@
     </div>
 </section>
 
-<section class="my-12">
-    <top-products menu="13" columns="3" rows="1" title="Top Personalized Gifts"></top-products>
-</section>
-
-<section class="ad-space my-12">
-    <div class="w-full md:w-2/3 mx-auto">
-        {{-- <x-ads.fullwidth-small /> --}}
-    </div>
-</section>
-
-{{-- <section class="my-12"> --}}
-    {{-- <top-products menu="14" columns="4" rows="1" title="Top T-shirt Printing"></top-products> --}}
-{{-- </section> --}}
-
-
-{{-- <section class="my-24">
-    <div class="grid grid-cols-3 gap-12 w-full md:w-4/5 mx-auto">
-        <div class="text-center">
-            <img src="{{ asset('assets/images/free-delivery.png') }}" class="mb-5 w-24   mx-auto" alt="icon">
-            <div class="font-semibold text-lg">Free Delivery in Dubai</div>
-            <p>With order above 100 AED</p>
-        </div>
-        <div class="text-center">
-            <img src="{{ asset('assets/images/pro-design-service.png') }}" class="mb-5 w-24  mx-auto" alt="icon">
-            <div class="font-semibold text-lg">Pro Design Service</div>
-            <p>Work with our expert designers</p>
-        </div>
-        <div class="text-center">
-            <img src="{{ asset('assets/images/free-template.png') }}" class="mb-5 w-24   mx-auto" alt="icon">
-            <div class="font-semibold text-lg">Free Layout Templates</div>
-            <p>Ready to download</p>
-        </div>
-    </div>
-</section>
- --}}
 
 <section class="my-12" id="whyChoose">
     <div class="text-center">

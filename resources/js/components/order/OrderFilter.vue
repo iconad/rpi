@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- <pre> -->
-            <!-- {{selectedPaperFinishing}} -->
+            <!-- {{productPapers}} -->
             <!-- {{productQuantity}} -->
             <!-- {{productQuantity}} -->
             <!-- -- -->
@@ -115,24 +115,6 @@
                                     <p class="text-theme-red-light mt-1 px-1 text-sm font-medium">{{ errors[0] }}</p>
                                 </div>
                             </ValidationProvider>
-                            <!-- <div class="grid grid-cols-2 gap-3 mt-3" v-if="paper.value.size && paper.value.size.region === 'custom size'">
-                                <div>
-                                    <ValidationProvider name="paper.value.customsize.width" rules="required">
-                                        <div slot-scope="{ errors }">
-                                            <input type="text" v-model="paper.value.customsize.width" class="border w-full p-2 focus:outline-none" placeholder="Width (mm)">
-                                            <p class="text-theme-red-light mt-1 px-1 text-sm font-medium">{{ errors[0] }}</p>
-                                        </div>
-                                    </ValidationProvider>
-                                </div>
-                                <div>
-                                    <ValidationProvider name="paper.value.customsize.height" rules="required">
-                                        <div slot-scope="{ errors }">
-                                            <input type="text" v-model="paper.value.customsize.height" class="border w-full p-2 focus:outline-none" placeholder="Height (mm)">
-                                            <p class="text-theme-red-light mt-1 px-1 text-sm font-medium">{{ errors[0] }}</p>
-                                        </div>
-                                    </ValidationProvider>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
 
@@ -596,6 +578,7 @@
                     this.package.prices.map(p => {
                         data.push(p.sizes.map(s => s.size))
                     });
+                    console.log(data)
                     return  _.uniqBy([].concat.apply([], data), 'id');
                 }
             },
@@ -615,12 +598,6 @@
                     let rec = this.productSizes.unshift(data)
                 }
             },
-            // productQuantity() {
-            //     if(this.isProduct) {
-            //         let arrays = this.package.prices.map(p => p.quantity);
-            //         return _.uniqBy([].concat.apply([], arrays));
-            //     }
-            // },
             selectedShirt () {
                 return this.$store.state.selectedShirt
             },

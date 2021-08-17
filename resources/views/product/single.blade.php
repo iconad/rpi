@@ -30,7 +30,7 @@
                     @if (count($product->packages[0]->prices) != 0)
                         @if (count($product->packages[0]->prices[0]->sizes) != 0)
                         <span>>  {{$product->packages[0]->prices[0]->sizes[0]->price}} AED</span>
-                        <span class="text-gray-800">(Incl. VAT)</span></div>
+                    </div>
                         @else
                         no size
                         @endif
@@ -107,7 +107,7 @@
 
     <section class="price-page my-16" id="paperPrice">
         <div class="text-center">
-            <div class="text-3xl font-semibold text-gray-900">Paper & Prices <small class="text-base text-gray-700">(Incl.VAT)</small></div>
+            <div class="text-3xl font-semibold text-gray-900">Paper & Prices </div>
         </div>
         <div class="prices-drop-down mt-5">
             {{-- /product-order/{{$product->slug}}?package={{$product->packages[0]->id}}&category={{$product->category->menu->id}}&type={{$product->type}} --}}
