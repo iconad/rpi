@@ -99,6 +99,7 @@
                                                 (<span class="option__title">{{ props.option.portrait }}</span>
                                                 <span class="option__title">x</span>
                                                 <span class="option__title">{{ props.option.landscape }}</span>)
+                                                <span class="lovercase">({{ props.option.type }})</span>
                                             </span>
                                         </template>
 
@@ -108,7 +109,9 @@
                                                 <span class="option__title">
                                                     ({{ props.option.portrait }}
                                                      x
-                                                     {{ props.option.landscape }})</span>
+                                                     {{ props.option.landscape }})
+                                                     ({{ props.option.type }})
+                                                     </span>
                                             </div>
                                         </template>
                                     </multiselect>
@@ -579,7 +582,7 @@
                         data.push(p.sizes.map(s => s.size))
                     });
                     console.log(data)
-                    return  _.uniqBy([].concat.apply([], data), 'id', 'type');
+                    return  _.uniqBy([].concat.apply([], data), 'id');
                 }
             },
             customSizes () {
