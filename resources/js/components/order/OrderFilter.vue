@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- <pre> -->
-            <!-- {{productPapers}} -->
+            <!-- {{productSizes}} -->
             <!-- {{productQuantity}} -->
             <!-- {{productQuantity}} -->
             <!-- -- -->
@@ -579,7 +579,7 @@
                         data.push(p.sizes.map(s => s.size))
                     });
                     console.log(data)
-                    return  _.uniqBy([].concat.apply([], data), 'id');
+                    return  _.uniqBy([].concat.apply([], data), 'id', 'type');
                 }
             },
             customSizes () {
