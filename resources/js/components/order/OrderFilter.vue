@@ -99,7 +99,7 @@
                                                 (<span class="option__title">{{ props.option.portrait }}</span>
                                                 <span class="option__title">x</span>
                                                 <span class="option__title">{{ props.option.landscape }}</span>)
-                                                <span class="lovercase">({{ props.option.type }})</span>
+                                                <span class="lovercase">{{ props.option.type }}</span>
                                             </span>
                                         </template>
 
@@ -110,7 +110,7 @@
                                                     ({{ props.option.portrait }}
                                                      x
                                                      {{ props.option.landscape }})
-                                                     ({{ props.option.type }})
+                                                     {{ props.option.type }}
                                                      </span>
                                             </div>
                                         </template>
@@ -581,7 +581,6 @@
                     this.package.prices.map(p => {
                         data.push(p.sizes.map(s => s.size))
                     });
-                    console.log(data)
                     return  _.uniqBy([].concat.apply([], data), 'id');
                 }
             },
