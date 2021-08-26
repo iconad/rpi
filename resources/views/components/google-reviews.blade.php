@@ -157,7 +157,7 @@
             </div>
             <p class="text-base">Fast service, prompt support and great quality prints at a very cost effective price</p>
             <div class="mt-3 text-sm">
-                By <span class="font-medium">Sumita Chugh</span> • <span>Dubai</span> • <span>18 minutes ago</span>
+                By <span class="font-medium">hammad</span> • <span>Dubai</span> • <span>18 minutes ago</span>
             </div>
         </div>
         {{-- review --}}

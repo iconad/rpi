@@ -29,11 +29,11 @@
 
 <section class="my-12" id="whyChoose">
     <div class="text-center">
-        <h2 class="text-3xl font-semibold text-gray-900 mb-5">Why choose Rainbow Printing?</h2>
-        <p>We are the leading online printing company in the UAE. <br>
-            Our automated estimate system is the first of its kind in the UAE, <br>
-            and we publish all our prices online (our best prices!). We provide high quality Printing, <br>
-            Design and Delivery services across the UAE, with quick turnarounds and at attractive prices.</p>
+        <h2 class="text-3xl font-semibold text-gray-900 mb-5"> RPI- ONE OF THE LEADING PRINTING PRESSES IN THE UAE</h2>
+        <p>Rainbow Printing Press is one of the most trusted and reputed name in the Printing Industry in the UAE. </p>
+             We provide state of the art service for printing of Stationery, Books, Magazines, Catalogues, Directories etc.<br>
+              With a team of dedicated and experienced printing experts, Rainbow Printing Press is always committed to provide top quality service for all your printing need. <br>
+          
     </div>
     <div class="our-story mt-24">
         <div class="rounded-lg bg-theme-gray p-5">

@@ -81,7 +81,7 @@
                     </a>
                 </li>
                 <li class="mb-1 text-sm text-gray-800 hover:text-sec mt-2">
-                    <a href="mailto:info@printarabia.ae" title="Who We Are" class="footer-link"> info@rpi.ae </a>
+                    <a href="mailto:info@rpi.ae" title="Who We Are" class="footer-link"> info@rpi.ae </a>
                 </li>
                 <li class="mb-1 text-sm text-gray-800 hover:text-sec">
                     <a href="tel:+971 04 551 6095" title="Terms of Services" class="footer-link"> +971 6 534 1113 </a>

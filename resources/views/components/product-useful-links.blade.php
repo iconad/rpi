@@ -1,6 +1,6 @@
 <div>
     <div class="text-center w-full md:w-2/3 mx-auto">
-        <div class="text-3xl font-semibold text-gray-900">Useful Links</div>
+        <div class="text-3xl font-semibold text-gray-900">Our Useful Links</div>
         <p class="text-xl text-gray-800">Get familiar with our special features and distinctive services</p>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-5 lg:mt-10">
