@@ -5,7 +5,7 @@
             <ul>
                 <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Why Choose Us" class="footer-link"> Why Choose Us </a> </li>
                 <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Who We Are" class="footer-link"> Who We Are</a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Terms of Services" class="footer-link"> Terms of Services</a> </li>
+                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Terms of Services" class="footer-link"> Term of Services</a> </li>
                 <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Privacy Policy" class="footer-link"> Privacy Policy</a> </li>
                 <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Sustainability" class="footer-link"> Sustainability</a> </li>
             </ul>
