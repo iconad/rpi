@@ -232,8 +232,8 @@
 
 
 <section class="my-12 md:my-24" id="contactSection">
-    <h3 class="capitalize text-sec font-semibold text-xl mb-3 mt-6 md:mt-12">Contact information</h3>
-    <div>
+    
+  <!--  <div>
         <div class="grid grid-cols-1 md:grid-cols-2 md:gap-10">
             <div>
                 <div class="px-3 py-2 bg-gray-600 text-lg text-white font-semibold">RPI CUSTOMER LOUNGE</div>
@@ -267,14 +267,20 @@
         <div class="border p-5 mt-5">
             <iframe width="100%" height="300" rel="nofollow" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d412.4546691427452!2d55.42353688114295!3d25.294179094589303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x356b36e009b8f7dc!2sRainbow%20Printing%20Industries%20LLC!5e0!3m2!1sen!2sae!4v1627538752496!5m2!1sen!2sae" allowfullscreen=""></iframe>
         </div>
-    </div>
+    </div> --> 
     {{-- office block --}}
 
     <div class="mt-12">
         <div class="grid grid-cols-1 md:grid-cols-2 md:gap-10">
             <div>
-                <div class="px-3 py-2 bg-gray-600 text-lg text-white font-semibold">FACTORY</div>
-                <div class="py-5">
+                <div class="px-4 py-3 bg-blue-600 text-lg text-white font-semibold">Contact US </div>
+                <div class="border p-5 mt-5">
+            <iframe width="100%" height="320" rel="nofollow" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d412.4546691427452!2d55.42353688114295!3d25.294179094589303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x356b36e009b8f7dc!2sRainbow%20Printing%20Industries%20LLC!5e0!3m2!1sen!2sae!4v1627538752496!5m2!1sen!2sae" allowfullscreen=""></iframe>
+        </div>
+               
+            </div>
+            <div>
+               <div class="py-5">
                     <span class="block"> Rainbow Printing Industries LLC </span>
                     <span class="block"> P.O. Box 25483, Dubai, UAE </span>
                     <table class="mt-5 w-full">
@@ -296,14 +302,12 @@
                         </tr>
                     </table>
                 </div>
-            </div>
-            <div>
+                <div>
                 <img class="w-full" src="https://rpiuae.com/assets/images/slide1.jpg" alt="office image">
             </div>
+            </div>
         </div>
-        <div class="border p-5 mt-5">
-            <iframe width="100%" height="300" rel="nofollow" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d412.4546691427452!2d55.42353688114295!3d25.294179094589303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x356b36e009b8f7dc!2sRainbow%20Printing%20Industries%20LLC!5e0!3m2!1sen!2sae!4v1627538752496!5m2!1sen!2sae" allowfullscreen=""></iframe>
-        </div>
+      
     </div>
     {{-- office block --}}
 
