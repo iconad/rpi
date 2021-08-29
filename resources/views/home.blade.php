@@ -55,24 +55,15 @@
     {{-- why we are different --}}
 
 
-    <div class="our-strength mt-24">
-        <h3 class="capitalize text-sec font-semibold text-xl mb-3">Our Strength</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-10">
-            <div>
-                <img src="https://www.printarabia.ae/img/static/about-us/why-print-arabia/dubai-based.png" alt="image">
-                <h3 class="capitalize text-gray-900 font-semibold text-lg mt-3 mb-1">We are Sharjah based</h3>
-                <p class="text-sm">Our office are easy to reach at both locations in Sharjah — JLT. And our full-scale print production facility is at Jebel Ali Industrial Area.</p>
-            </div>
-            <div>
-                <img src="https://www.printarabia.ae/img/static/about-us/why-print-arabia/we-speak-your-language.png" alt="image">
-                <h3 class="capitalize text-gray-900 font-semibold text-lg mt-3 mb-1">We speak your language</h3>
-                <p class="text-sm">We communicate in more than 11 international languages: English, Arabic, Hindi, Japanese, Malayalam, Tagalog, Spanish, Hungarian, German, Gujarati and Amharic.</p>
-            </div>
-            <div>
-                <img src="https://www.printarabia.ae/img/static/about-us/why-print-arabia/satisfaction.png" alt="image">
-                <h3 class="capitalize text-gray-900 font-semibold text-lg mt-3 mb-1">We provide 100% satisfaction</h3>
-                <p class="text-sm">Customer satisfaction is a prime concern of our business. Thus, our services are our best sales point, and we are delivering same to our clients.</p>
-            </div>
+    <div class="our-strength mt-24 hidden">
+        <h3 class="capitalize text-sec font-semibold text-xl mb-3">Our Process</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-1 gap-10">
+
+
+    <img src="{{ asset('assets/images/press.png') }}" style="width:100%;height:280px;"alt="image" >
+           
+           
+          
         </div>
     </div>
     {{-- our strength --}}
