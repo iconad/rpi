@@ -6,7 +6,8 @@
                 <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
                 <th class="border-r p-3"><img class="h-16" src="https://www.rpiuae.ae/assets/images/logo.png" alt="logo"></th>
                 </a>
-                <p class="mt-2 text-sm text-gray-500">LEADING PRINTING PRESSES IN THE UAE!</p>
+                <p class=" mt-2 text-sm text-gray-500">LEADING PRINTING PRESSES IN THE UAE!</p>
+              
                 <div class="mt-4">
                     <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
                         <a class="text-gray-500 cursor-pointer hover:text-gray-700">
@@ -47,18 +48,37 @@
      
       <div class="p-4 mt-10  ">
          <div class="text-sm  uppercase text-indigo-600 font-bold">Services</div>
-         <a class="my-3 block" href="https://www.rpiuae.ae/categories/print-products">Print Products <span class="text-teal-600 text-xs p-1"></span></a>
-         <a  class="my-3 block" href="https://www.rpiuae.ae/categories/packaging">Packaging <span class="text-teal-600 text-xs p-1"></span></a>
-         <a class="my-3 block" href="https://www.rpiuae.ae/categories/banners-displays">Banners & Displays <span class="text-teal-600 text-xs p-1">New</span></a> 
+        
+        
+         <li class="mt-3">
+                            <a href="https://www.rpiuae.ae/categories/print-products"  class="text-gray-500 cursor-pointer hover:text-gray-900">Print Products</a>
+                        </li>
+
+                        <li class="mt-3">
+                            <a href="https://www.rpiuae.ae/categories/packaging"  class="text-gray-500 cursor-pointer hover:text-gray-900">Packaging </a>
+                        </li>
+
+                        <li class="mt-3">
+                            <a href="https://www.rpiuae.ae/categories/banners-displays"  class="text-gray-500 cursor-pointer hover:text-gray-900">Banners & Displays</a>
+                        </li>
+        
       </div>
       <div class="p-4 mt-10 ">
          <div class="text-sm uppercase text-indigo-600 font-bold">Support</div>
-         <a class="my-3 block" href="/#">Help Center <span class="text-teal-600 text-xs p-1">
 
-         </span></a><a 
-         class="my-3 block" href="/#">Privacy Policy <span class="text-teal-600 text-xs p-1">
 
-         </span></a><a class="my-3 block" href="/#">Conditions <span class="text-teal-600 text-xs p-1"></span></a> 
+         <li class="mt-3">
+                            <a href="#"  class="text-gray-500 cursor-pointer hover:text-gray-900">Help Center</a>
+                        </li>
+
+                        <li class="mt-3">
+                            <a href="#"  class="text-gray-500 cursor-pointer hover:text-gray-900">Privacy Policy </a>
+                        </li>
+
+                        <li class="mt-3">
+                            <a href="#"  class="text-gray-500 cursor-pointer hover:text-gray-900">Conditions </a>
+                        </li>
+      
       </div>
     
       <div class="p-5 mt-10 ">
@@ -68,8 +88,10 @@
                         <li class="mt-3">
                             <a href="https://www.rpiuae.ae/estimate"  class="text-gray-500 cursor-pointer hover:text-gray-900">Request a Quote</a>
                         </li>
-                        <li class="mt-3">
-                            <a  class="text-gray-500 cursor-pointer hover:text-gray-900">info@rpi.ae</a>
+                         <li class="mt-3">
+                         <a href="mailto:info@rpi.ae" class="... md:no-underline md:hover:underline text-gray-900">Send Email</a>	
+                            
+                        
                         </li>
                         <li class="mt-3">
                             <a class="text-gray-500 cursor-pointer hover:text-gray-900">+971 6 534 1113</a>
