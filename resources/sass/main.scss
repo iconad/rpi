@@ -438,23 +438,25 @@ input:checked ~ .shirt {
 }
 
 
-.loader {
-    border: 3px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 3px solid $primarycolor;
-    width: 50px;
-    height: 50px;
-    -webkit-animation: spin 0.6s linear infinite; /* Safari */
-    animation: spin 0.6s linear infinite;
-  }
+// Variables
+$facebook: #3b5998;
+$twitter: #1da1f2;
 
-  /* Safari */
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
+// Custom CSS
+.bg-facebook {
+  background-color: $facebook;
 
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  &:hover {
+    background-color: darken($facebook, 5%);
   }
+}
+
+.bg-twitter {
+  background-color: $twitter;
+
+  &:hover {
+    background-color: darken($twitter, 5%);
+  }
+}
+
+

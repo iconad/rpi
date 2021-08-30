@@ -27,18 +27,127 @@
 </section>
 
 
+
+
+
+
+
+<div class="bg-white">
+    <nav class="border-b">
+        <div class="container px-6 py-2 mx-auto md:flex md:justify-between md:items-center">
+         
+        </div>
+    </nav>
+    <div class="container px-6 py-10 mx-auto md:py-16">
+        <div class="flex flex-col space-y-6 md:flex-row md:items-center md:space-x-6">
+            <div class="w-full md:w-1/2">
+                <div class="max-w-lg">
+                    <h1 class="text-2xl font-medium tracking-wide text-gray-800 md:text-4xl">
+                    Why us?
+                    </h1>
+                    <p class="mt-5 leading-7 text-gray-600">
+                    Rainbow Printing Press is one of the most trusted and reputed name in the Printing Industry in the UAE.
+
+We provide state of the art service for printing of Stationery, Books, Magazines, Catalogues, Directories etc.
+ <br />
+ With a team of dedicated and experienced printing experts, 
+ Rainbow Printing Press is always committed to provide top quality service  <br /> for all your printing need.
+                    </p>
+                    </p>
+                    <div class="grid gap-6 mt-8 sm:grid-cols-2">
+                        <div class="flex items-center space-x-6 text-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Offset Printing</span>
+                        </div>
+                        <div class="flex items-center space-x-6 text-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Graphic Design</span>
+                        </div>
+                        <div class="flex items-center space-x-6 text-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Large Format Printing</span>
+                        </div>
+                        <div class="flex items-center space-x-6 text-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Customized Boxes</span>
+                        </div>
+                        <div class="flex items-center space-x-6 text-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Gift Items</span>
+                        </div>
+                        <div class="flex items-center space-x-6 text-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Roll Up Offer</span>
+                            
+                        </div>
+                        
+                    </div>
+                 
+                </div>
+            </div>
+            <div class=" transform scale-40  ">
+                 <img src="{{ asset('assets/images/img_history.jpg') }}"
+                    alt="printing" class="w-full h-full max-w-2xl rounded" />
+            </div>
+        </div>
+    </div>
+  
+       
+    </div>
+    <div class="container px-6 py-10 mx-auto md:py-16">
+        
+
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
 <section class="my-12" id="whyChoose">
-    <div class="text-center">
+    <div class="text-center hidden">
         <h2 class="text-3xl font-semibold text-gray-900 mb-5"> RPI- ONE OF THE LEADING PRINTING PRESSES IN THE UAE</h2>
         <p>Rainbow Printing Press is one of the most trusted and reputed name in the Printing Industry in the UAE. </p>
              We provide state of the art service for printing of Stationery, Books, Magazines, Catalogues, Directories etc.<br>
               With a team of dedicated and experienced printing experts, Rainbow Printing Press is always committed to provide top quality service for all your printing need. <br>
           
     </div>
-    <div class="our-story mt-24">
+    <div class="our-story mt-24 hidden">
         <div class="rounded-lg bg-theme-gray p-5">
             <h3 class="capitalize text-sec font-semibold text-xl mb-3">our story</h3>
-            <p>In 2014 we saw a gap in the UAE market for printing services that offered consistent quality at quick turnarounds. Rainbow Printing was formed to bridge that gap, with the goal of providing high quality online printing services with quick turnarounds and competetive prices. While our history may be short in the UAE, we make up for it with all our years experience in Print-production, Prepress and Graphic Design. As pioneers, we bring a new era of online print ordering. We are equally well equipped with our state-of-the-art printing and production facility. We promise ‘Made in Japan’ quality print services and are the first ever Japanese printing company established in the UAE and serving in the Middle East.</p>
+            <p>RPI has provided quality printing services to the United Arab Emirates since 1989! We specialize in commercial offset printing and digital printing services
+                 to cover all your needs.
+                 From brochures to banners, we are your one-stop print shop..</p>
         </div>
     </div>
     {{-- our story --}}
@@ -55,12 +164,13 @@
     {{-- why we are different --}}
 
 
-    <div class="our-strength mt-24 hidden">
-        <h3 class="capitalize text-sec font-semibold text-xl mb-3">Our Process</h3>
+    <div class="our-strength mt-24 ">
+    <div class="px-4 py-3 bg-blue-600 text-lg text-white font-semibold capitalize text-sec font-semibold text-xl mb-3">Our Process </div>
+       
         <div class="grid grid-cols-1 sm:grid-cols-1 gap-10">
 
 
-    <img src="{{ asset('assets/images/press.png') }}" style="width:100%;height:280px;"alt="image" >
+    <img src="{{ asset('assets/images/press.png') }}" alt="image" >
            
            
           

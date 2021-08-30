@@ -1,104 +1,103 @@
-<div>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 p-5 border">
-        <div class="mb-5 lg:mb-0">
-            <div class="font-semibold mb-1">About Us</div>
-            <ul>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Why Choose Us" class="footer-link"> Why Choose Us </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Who We Are" class="footer-link"> Who We Are</a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Terms of Services" class="footer-link"> Term of Services</a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Privacy Policy" class="footer-link"> Privacy Policy</a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Sustainability" class="footer-link"> Sustainability</a> </li>
-            </ul>
-        </div>
-        {{-- item --}}
-        <div class="mb-5 lg:mb-0">
-            <div class="font-semibold mb-1">Getting Started</div>
-            <ul>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Why Choose Us" class="footer-link"> How to Order Online </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Who We Are" class="footer-link"> PA Points</a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Terms of Services" class="footer-link"> Paper Guide </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Privacy Policy" class="footer-link"> Delivery & Turnaround </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Sustainability" class="footer-link"> All Products </a> </li>
-            </ul>
-        </div>
-        {{-- item --}}
-        <div class="mb-5 lg:mb-0">
-            <div class="font-semibold mb-1">Help & Support</div>
-            <ul>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Why Choose Us" class="footer-link"> FAQ </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Who We Are" class="footer-link"> Ways to Pay </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Terms of Services" class="footer-link"> Download Templates </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Privacy Policy" class="footer-link"> Yearly Calendar </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Sustainability" class="footer-link"> Video Guide </a> </li>
-            </ul>
-        </div>
-        {{-- item --}}
-        <div class="mb-5 lg:mb-0">
-            <div class="font-semibold mb-1">Contact Us</div>
-            <ul>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Why Choose Us" class="footer-link"> Contact Us </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Who We Are" class="footer-link"> Paper Sample Kit </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Terms of Services" class="footer-link"> Paper Sample Books </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Privacy Policy" class="footer-link"> Print Sample Pack </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Sustainability" class="footer-link"> Careers </a> </li>
-            </ul>
-        </div>
-        {{-- item --}}
-        <div class="mb-5 lg:mb-0">
-            <div class="font-semibold mb-1">Accepted Payment</div>
-            <ul>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec flex items-center">
+<div class="bg-gray-50 pt-5  ">
+   <div class=" sm:px-6 text-gray-200 sm:grid md:grid-cols-4 sm:grid-cols-4 mx-auto">
+   <div class="p-4  ">
+
+            <div class="flex-shrink-0 w-64 mx-auto text-center  mt-8  md:mx-0 md:text-left">
+                <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
+                <th class="border-r p-3"><img class="h-16" src="https://www.rpiuae.ae/assets/images/logo.png" alt="logo"></th>
+                </a>
+                <p class="mt-2 text-sm text-gray-500">LEADING PRINTING PRESSES IN THE UAE!</p>
+                <div class="mt-4">
+                    <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
+                        <a class="text-gray-500 cursor-pointer hover:text-gray-700">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                             
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                </path>
+                             </svg>
+                        </a>
+                        <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                            </svg>
+                        </a>
+                        <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path stroke="none"
+                                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                                </path>
+                                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                            </svg>
+                        </a>
+                    </span>
+                </div>
+            </div>
+      </div>
+     
+      <div class="p-4 mt-10  ">
+         <div class="text-sm  uppercase text-indigo-600 font-bold">Services</div>
+         <a class="my-3 block" href="https://www.rpiuae.ae/categories/print-products">Print Products <span class="text-teal-600 text-xs p-1"></span></a>
+         <a  class="my-3 block" href="https://www.rpiuae.ae/categories/packaging">Packaging <span class="text-teal-600 text-xs p-1"></span></a>
+         <a class="my-3 block" href="https://www.rpiuae.ae/categories/banners-displays">Banners & Displays <span class="text-teal-600 text-xs p-1">New</span></a> 
+      </div>
+      <div class="p-4 mt-10 ">
+         <div class="text-sm uppercase text-indigo-600 font-bold">Support</div>
+         <a class="my-3 block" href="/#">Help Center <span class="text-teal-600 text-xs p-1">
+
+         </span></a><a 
+         class="my-3 block" href="/#">Privacy Policy <span class="text-teal-600 text-xs p-1">
+
+         </span></a><a class="my-3 block" href="/#">Conditions <span class="text-teal-600 text-xs p-1"></span></a> 
+      </div>
+    
+      <div class="p-5 mt-10 ">
+      <nav class="mb-10 list-none">
+      <h2 class="text-sm uppercase text-indigo-600 font-bold">Contact Us </h2>
+                       
+                        <li class="mt-3">
+                            <a href="https://www.rpiuae.ae/estimate"  class="text-gray-500 cursor-pointer hover:text-gray-900">Request a Quote</a>
+                        </li>
+                        <li class="mt-3">
+                            <a  class="text-gray-500 cursor-pointer hover:text-gray-900">info@rpi.ae</a>
+                        </li>
+                        <li class="mt-3">
+                            <a class="text-gray-500 cursor-pointer hover:text-gray-900">+971 6 534 1113</a>
+                        </li>
+                    </nav>
+         
+      </div>
+
+   </div>
+</div>
+
+<div class="bg-gray-100 pt-2  ">
+   <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col
+      max-w-screen-lg items-center">
+      <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
+       
+      <li class="mb-px text-sm text-gray-800 hover:text-sec flex items-center">
                     <span class="block mr-1"> <img src="{{ asset('assets/images/visa.png') }}" title="visa card" class="w-8" alt="card"> </span>
                     <span class="block mr-1"> <img src="{{ asset('assets/images/master-card.png') }}" title="Master card" class="w-8" alt="card"> </span>
                     <span class="block mr-1"> <img src="{{ asset('assets/images/maestro.png') }}" title="Maestro" class="w-8" alt="card"> </span>
                     {{-- <span class="block mr-1"> <img src="{{ asset('assets/images/paypal.png') }}" title="Paypal" class="w-8" alt="card"> </span> --}}
                 </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Who We Are" class="footer-link"> Cash-On-Delivery* </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Terms of Services" class="footer-link"> Bank Transfer </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Privacy Policy" class="footer-link"> Cheques </a> </li>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec"> <a title="Sustainability" class="footer-link"> Design Service </a> </li>
-            </ul>
-        </div>
-        {{-- item --}}
-        <div class="mb-5 lg:mb-0">
-            <div class="font-semibold mb-1">Connect with Us</div>
-            <ul>
-                <li class="mb-px text-sm text-gray-800 hover:text-sec flex items-center">
-                    <a href="#" class="block mr-1 border p-2 rounded">
-                        <img class="grayscaleimage" src="{{ asset('assets/images/facebook.png') }}" title="facebook" class="w-3" alt="card">
-                    </a>
-                    <a href="#" class="block mr-1 border p-2 rounded">
-                        <img class="grayscaleimage" src="{{ asset('assets/images/twitter.png') }}" title="twitter" class="w-3" alt="card">
-                    </a>
-                    <a href="#" class="block mr-1 border p-2 rounded">
-                        <img class="grayscaleimage" src="{{ asset('assets/images/instagram.png') }}" title="instagram" class="w-3" alt="card">
-                    </a>
-                    <a href="#" class="block mr-1 border p-2 rounded">
-                        <img class="grayscaleimage" src="{{ asset('assets/images/whatsapp.png') }}" title="whatsapp" class="w-3" alt="card">
-                    </a>
-                    <a href="#" class="block mr-1 border p-2 rounded">
-                        <img class="grayscaleimage" src="{{ asset('assets/images/pinterest.png') }}" title="pinterest" class="w-3" alt="card">
-                    </a>
-                </li>
-                <li class="mb-1 text-sm text-gray-800 hover:text-sec mt-2">
-                    <a href="mailto:info@rpi.ae" title="Who We Are" class="footer-link"> info@rpi.ae </a>
-                </li>
-                <li class="mb-1 text-sm text-gray-800 hover:text-sec">
-                    <a href="tel:+971 04 551 6095" title="Terms of Services" class="footer-link"> +971 6 534 1113 </a>
-                </li>
-                <li class="mb-1 text-sm text-gray-800 hover:text-sec">
-                    <a href="https://goo.gl/maps/fbPpCQZv3oov8pe37" title="Privacy Policy" class="footer-link"> Google Map </a>
-                </li>
-            </ul>
-        </div>
-        {{-- item --}}
-    </div>
-    {{-- grid end --}}
-    <div class="copyright text-center my-6">
-        <p class="text-xs sm:text-sm">
-            <span class="md:block">Intellectual and other property rights to the information contained in this site are held by <b class="text-gray-800">Icon Advertising LLC Dubai Branch</b> <span>
-            <span class="md:block">with all rights reserved since © 2015. Copying any or parts of our site, will result in a court case against you and you will be</span>
-            <span class="md:block">prosecuted according to the Federal Law No. (7) of 2002 of the UAE on Copyrights Infringement and related rights.</span>
-        </p>
-    </div>
+      </div>
+      
+      <div class="my-5">RPI© Copyright 2021. All Rights Reserved.</div>
+   </div>
 </div>
+
+
+
+
