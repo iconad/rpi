@@ -1,318 +1,79 @@
-    <div class="why-we-are-different-table">
-        <div class="flex flex-col">
-            <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                <div class="overflow-hidden border sm:rounded-lg">
-                <table class="min-w-full divide-y divide-gray-200">
-                    <thead>
-                    <tr>
-                        <th class="border-r"></th>
-                        <th class="border-r p-3"><img class="h-16" src="{{ asset('assets/images/logo.png') }}" alt="logo"></th>
-                        <th class="border-r px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-semibold text-black uppercase tracking-wider">
-                            Others Online
-                            Printers
-                        </th>
-                        <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-semibold text-black uppercase tracking-wider">
-                            Local
-                            Print shops
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
-                    <tr>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-semibold text-gray-900">
-                                Online Design App
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                YES, you dont need to buy expensive Adobe software!
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Nope
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Nope
-                            </span>
-                        </td>
-                    </tr>
-                    {{-- row end --}}
-                    <tr>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-semibold text-gray-900">
-                                Editable Design Templates
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                YES, 1000+ Free templates! Only us in Dubai!
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Nope
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Nope
-                            </span>
-                        </td>
-                    </tr>
-                    {{-- row end --}}
-
-                    <tr>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-semibold text-gray-900">
-                                Published Prices
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                YES, our pricing is transparent!
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                A few
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Nope
-                            </span>
-                        </td>
-                    </tr>
-                    {{-- row end --}}
-
-                    <tr>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-semibold text-gray-900">
-                                Instant Online Estimator
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                YES, no need to wait for response!
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                A few
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Nope
-                            </span>
-                        </td>
-                    </tr>
-                    {{-- row end --}}
-
-                    <tr>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-semibold text-gray-900">
-                                No Hidden Costs
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                YES, what you see is what you pay!
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Unlikely
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Unlikely
-                            </span>
-                        </td>
-                    </tr>
-                    {{-- row end --}}
-
-                    <tr>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-semibold text-gray-900">
-                                Quick Turnaround
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                YES, we can deliver express business cards within today
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Unlikely
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Nope
-                            </span>
-                        </td>
-                    </tr>
-                    {{-- row end --}}
-
-                    <tr>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-semibold text-gray-900">
-                                Free Delivery in Dubai
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                YES, if you spend more than 100 AED
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Unlikely
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Unlikely
-                            </span>
-                        </td>
-                    </tr>
-                    {{-- row end --}}
-
-                    <tr>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-semibold text-gray-900">
-                                Customer Support Care
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                YES, we speak 10 languages
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Unlikely
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Unlikely
-                            </span>
-                        </td>
-                    </tr>
-                    {{-- row end --}}
-
-                    <tr>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-semibold text-gray-900">
-                                Wide range of products
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                YES, more than 100 products online
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                A few
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Unlikely
-                            </span>
-                        </td>
-                    </tr>
-                    {{-- row end --}}
-
-                    <tr>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-semibold text-gray-900">
-                                Design Services
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                YES, we have talented professional designers
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Unlikely
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Unlikely
-                            </span>
-                        </td>
-                    </tr>
-                    {{-- row end --}}
-
-                    <tr>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-semibold text-gray-900">
-                                Satisfaction Guaranteed
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                YES, we try our best!
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Unlikely
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Unlikely
-                            </span>
-                        </td>
-                    </tr>
-                    {{-- row end --}}
-
-                    <tr>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-semibold text-gray-900">
-                                Flexible Payment Options
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                YES, credit card, bank transfer, COD
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Partially
-                            </span>
-                        </td>
-                        <td class="border-r px-6 py-4 whitespace-no-wrap">
-                            <span class="text-sm leading-5 font-medium text-gray-900">
-                                Partially
-                            </span>
-                        </td>
-                    </tr>
-                    {{-- row end --}}
-
-                    <!-- More rows... -->
-                    </tbody>
-                </table>
+<div class="bg-gray-100 pt-10">
+    <div class="mx-auto max-w-6xl">
+        <div class="p-2 bg-gray-100 rounded">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/3 p-4 text-sm">
+                    <div class="text-3xl">Frequently asked <span class="font-medium">Questions</span></div>
+                    <div class="my-2">Wondering how our service works ?</div>
+                    <div class="mb-2">Confused about how we can improve your business ?</div>
+                    <div class="text-xs text-gray-600">Dive into our FAQ for more details</div>
+                </div>
+                <div class="md:w-2/3">
+                    <div class="p-4">
+                        <div class="mb-2">
+                            <div class="font-medium rounded-sm text-lg px-2 py-3 flex text-gray-800 flex-row-reverse mt-2 cursor-pointer text-black bg-white hover:bg-white">
+                                <div class="flex-auto">How to install it with windows server ?</div>
+                                <div class="px-2 mt-1">
+                                    <div style="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down w-5 h-5">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="font-medium rounded-sm text-lg px-2 py-3 flex text-gray-800 flex-row-reverse mt-2 cursor-pointer text-black bg-white hover:bg-white">
+                                <div class="flex-auto">How to use it with other integrations ?</div>
+                                <div class="px-2 mt-1">
+                                    <div style="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down w-5 h-5">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="font-medium rounded-sm text-lg px-2 py-3 flex text-gray-800 flex-row-reverse mt-2 cursor-pointer text-black bg-white hover:bg-white">
+                                <div class="flex-auto">How to build an app ?</div>
+                                <div class="px-2 mt-1">
+                                    <div style="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up w-5 h-5">
+                                            <polyline points="18 15 12 9 6 15"></polyline>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-2 text-justify text-left text-gray-800 mb-5 bg-white" style="">Lorem, ipsum dolor sit amet consectetur <span class="font-bold">adipisicing elit</span>. Mollitia temporibus doloremque non eligendi unde ipsam? Voluptatibus, suscipit deserunt quidem delectus perferendis velit molestias, veritatis officia fugiat cumque quaerat earum adipisci?</div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="font-medium rounded-sm text-lg px-2 py-3 flex text-gray-800 flex-row-reverse mt-2 cursor-pointer text-black bg-white hover:bg-white">
+                                <div class="flex-auto">How to download it ?</div>
+                                <div class="px-2 mt-1">
+                                    <div style="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down w-5 h-5">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <div class="font-medium rounded-sm text-lg px-2 py-3 flex text-gray-800 flex-row-reverse mt-2 cursor-pointer text-black bg-white hover:bg-white">
+                                <div class="flex-auto">How to use extensions ?</div>
+                                <div class="px-2 mt-1">
+                                    <div style="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down w-5 h-5">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    </div>
-    {{-- why we are different table --}}
+</div>
