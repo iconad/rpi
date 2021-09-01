@@ -153,7 +153,7 @@ We provide state of the art service for printing of Stationery, Books, Magazines
 
     <div class="why-we-are-defferent mt-8">
         <div class="p-5">
-            <h3 class="capitalize text-sec font-semibold text-xl mb-3">Why We Are Different</h3>
+
 
             <x-we-are-different-table />
 
@@ -371,6 +371,56 @@ We provide state of the art service for printing of Stationery, Books, Magazines
 
 
 
+
+
+
+
+
+    {{-- office block --}}
+
+    <div class="mt-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-10">
+            <div>
+                <div class="px-4 py-3 bg-blue-600 text-lg text-white font-semibold">Contact US </div>
+                <div class="border p-5 mt-5">
+            <iframe width="100%" height="320" rel="nofollow" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d412.4546691427452!2d55.42353688114295!3d25.294179094589303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x356b36e009b8f7dc!2sRainbow%20Printing%20Industries%20LLC!5e0!3m2!1sen!2sae!4v1627538752496!5m2!1sen!2sae" allowfullscreen=""></iframe>
+        </div>
+
+            </div>
+            <div>
+               <div class="py-5">
+                    <span class="block"> Rainbow Printing Industries LLC </span>
+                    <span class="block"> P.O. Box 25483, Dubai, UAE </span>
+                    <table class="mt-5 w-full">
+                        <tr>
+                            <td> <span class="font-semibold">Call</span> </td>
+                            <td>+971 6 534 1113</td>
+                        </tr>
+                        <tr>
+                            <td> <span class="font-semibold">Email</span> </td>
+                            <td>info@rpi.ae</td>
+                        </tr>
+                        <tr>
+                            <td> <span class="font-semibold">Working Hours</span> </td>
+                            <td>9am to 6pm, Sat to Thu</td>
+                        </tr>
+                        <tr>
+                            <td> <span class="font-semibold">Closed</span> </td>
+                            <td>Fri & National Holidays</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                <img class="w-full" src="https://rpiuae.com/assets/images/slide1.jpg" alt="office image">
+            </div>
+            </div>
+        </div>
+
+    </div>
+    {{-- office block --}}
+
+
+
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js"></script>
     <script>
@@ -416,14 +466,15 @@ We provide state of the art service for printing of Stationery, Books, Magazines
 <!-- Slider Logo  -->
 
 
-      <div class="flex flex-col my-10" data-controller="slider">
+      <div class="flex flex-col my-8" data-controller="slider">
         <h1 class="text-3xl text-gray-900 text-center mb-4">Our Clients</h1>
-        <div class="flex overflow-x-hidden hide-scroll-bar overscroll-x-contain gallery" data-slider-target="scrollContainer">
-          <div class="w-48 h-26 px-4 flex-shrink-0 gallery-item" data-slider-target="image" id="1">
-            <img src="https://rpiuae.com/assets/images/clients/client37.jpg" />
-          </div>
+        <div class="flex overflow-x-auto hide-scroll-bar overscroll-x-contain gallery" data-slider-target="scrollContainer">
+
           <div class="w-48 h-26 px-4 flex-shrink-0 gallery-item" data-slider-target="image" id="2">
             <img src="https://rpiuae.com/assets/images/clients/client38.png" />
+          </div>
+          <div class="w-48 h-26 px-4 flex-shrink-0 gallery-item" data-slider-target="image" id="1">
+            <img src="https://rpiuae.com/assets/images/clients/client37.jpg" />
           </div>
           <div class="w-48 h-26 px-4 flex-shrink-0 gallery-item" data-slider-target="image" id="3">
             <img src="https://rpiuae.com/assets/images/clients/client39.png" />
@@ -469,58 +520,8 @@ We provide state of the art service for printing of Stationery, Books, Magazines
   </body>
 
 
+
    <!-- End of Slider Logo -->
-
-
-
-
-
-    {{-- office block --}}
-
-    <div class="mt-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-10">
-            <div>
-                <div class="px-4 py-3 bg-primary-400 text-lg text-white font-semibold">Contact US </div>
-                <div class="border p-5 mt-5">
-            <iframe width="100%" height="320" rel="nofollow" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d412.4546691427452!2d55.42353688114295!3d25.294179094589303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x356b36e009b8f7dc!2sRainbow%20Printing%20Industries%20LLC!5e0!3m2!1sen!2sae!4v1627538752496!5m2!1sen!2sae" allowfullscreen=""></iframe>
-        </div>
-
-            </div>
-            <div>
-               <div class="py-5">
-                    <span class="block"> Rainbow Printing Industries LLC </span>
-                    <span class="block"> P.O. Box 25483, Dubai, UAE </span>
-                    <table class="mt-5 w-full">
-                        <tr>
-                            <td> <span class="font-semibold">Call</span> </td>
-                            <td>+971 6 534 1113</td>
-                        </tr>
-                        <tr>
-                            <td> <span class="font-semibold">Email</span> </td>
-                            <td>info@rpi.ae</td>
-                        </tr>
-                        <tr>
-                            <td> <span class="font-semibold">Working Hours</span> </td>
-                            <td>9am to 6pm, Sat to Thu</td>
-                        </tr>
-                        <tr>
-                            <td> <span class="font-semibold">Closed</span> </td>
-                            <td>Fri & National Holidays</td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                <img class="w-full" src="https://rpiuae.com/assets/images/slide1.jpg" alt="office image">
-            </div>
-            </div>
-        </div>
-
-    </div>
-    {{-- office block --}}
-
-
-
-
 
 
 
