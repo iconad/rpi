@@ -132,8 +132,6 @@ We provide state of the art service for printing of Stationery, Books, Magazines
 
 
 
-
-
 <section class="my-12" id="whyChoose">
     <div class="text-center hidden">
         <h2 class="text-3xl font-semibold text-gray-900 mb-5"> RPI- ONE OF THE LEADING PRINTING PRESSES IN THE UAE</h2>
@@ -369,6 +367,114 @@ We provide state of the art service for printing of Stationery, Books, Magazines
             <iframe width="100%" height="300" rel="nofollow" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d412.4546691427452!2d55.42353688114295!3d25.294179094589303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x356b36e009b8f7dc!2sRainbow%20Printing%20Industries%20LLC!5e0!3m2!1sen!2sae!4v1627538752496!5m2!1sen!2sae" allowfullscreen=""></iframe>
         </div>
     </div> -->
+
+
+
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js"></script>
+    <script>
+      (() => {
+        const application = Stimulus.Application.start()
+
+        application.register("slider", class extends Stimulus.Controller {
+          static get targets() {
+            return [ "scrollContainer", "image", "indicator" ]
+          }
+          initialize() {
+            this.observer = new IntersectionObserver(this.onIntersectionObserved.bind(this), {
+              root: this.scrollContainerTarget,
+              threshold: 0.5
+            })
+            this.imageTargets.forEach(image => {
+              this.observer.observe(image)
+            })
+          }
+          onIntersectionObserved(entries) {
+            entries.forEach(entry => {
+              if (entry.intersectionRatio > 0.5) {
+                const intersectingIndex = this.imageTargets.indexOf(entry.target)
+                this.indicatorTargets[intersectingIndex].classList.add("bg-blue-700")
+              }
+              else {
+                const intersectingIndex = this.imageTargets.indexOf(entry.target)
+                this.indicatorTargets[intersectingIndex].classList.remove("bg-blue-700")
+              }
+            })
+          }
+          scrollTo() {
+            const imageId = event.target.dataset.imageId
+            const imageElement = document.getElementById(imageId)
+            const imageCoordinates = imageElement.getBoundingClientRect()
+            this.scrollContainerTarget.scrollTo({ left: (this.scrollContainerTarget.scrollLeft + imageCoordinates.left), top: false, behavior: "smooth" })
+          }
+        })
+      })()
+    </script>
+
+
+<!-- Slider Logo  -->
+
+
+      <div class="flex flex-col my-10" data-controller="slider">
+        <h1 class="text-3xl text-gray-900 text-center mb-4">Our Clients</h1>
+        <div class="flex overflow-x-hidden hide-scroll-bar overscroll-x-contain gallery" data-slider-target="scrollContainer">
+          <div class="w-48 h-26 px-4 flex-shrink-0 gallery-item" data-slider-target="image" id="1">
+            <img src="https://rpiuae.com/assets/images/clients/client37.jpg" />
+          </div>
+          <div class="w-48 h-26 px-4 flex-shrink-0 gallery-item" data-slider-target="image" id="2">
+            <img src="https://rpiuae.com/assets/images/clients/client38.png" />
+          </div>
+          <div class="w-48 h-26 px-4 flex-shrink-0 gallery-item" data-slider-target="image" id="3">
+            <img src="https://rpiuae.com/assets/images/clients/client39.png" />
+          </div>
+          <div class="w-48 h-26 px-4 flex-shrink-0 gallery-item" data-slider-target="image" id="4">
+            <img src="https://rpiuae.com/assets/images/clients/client40.jpg" />
+          </div>
+          <div class="w-48 h-26 px-4 flex-shrink-0 gallery-item" data-slider-target="image" id="5">
+            <img src="https://rpiuae.com/assets/images/clients/client41.jpg" />
+          </div>
+          <div class="w-48 h-26 px-4 flex-shrink-0 gallery-item" data-slider-target="image" id="6">
+            <img src="https://rpiuae.com/assets/images/clients/client42.jpg" />
+          </div>
+
+          <div class="w-48 h-26 px-4 flex-shrink-0 gallery-item" data-slider-target="image" id="7">
+            <img src="https://rpiuae.com/assets/images/clients/client43.jpg" />
+          </div>
+
+          <div class="w-48 h-26 px-4 flex-shrink-0 gallery-item" data-slider-target="image" id="8">
+            <img src="https://rpiuae.com/assets/images/clients/client46.jpg" />
+          </div>
+
+          <div class="w-48 h-26 px-4 flex-shrink-0 gallery-item" data-slider-target="image" id="9">
+            <img src="https://rpiuae.com/assets/images/clients/client48.jpg" />
+          </div>
+        </div>
+        <div class="flex mx-auto my-3">
+          <ul class="flex justify-center">
+            <!-- Note that we have one <li> for each image in our gallery -->
+            <li class="h-4 w-4 rounded-full mx-2 cursor-pointer bg-gray-500" data-slider-target="indicator" data-image-id="1" data-action="click->slider#scrollTo"></li>
+            <li class="h-4 w-4 rounded-full mx-2 cursor-pointer bg-gray-500" data-slider-target="indicator" data-image-id="2" data-action="click->slider#scrollTo"></li>
+            <li class="h-4 w-4 rounded-full mx-2 cursor-pointer bg-gray-500" data-slider-target="indicator" data-image-id="3" data-action="click->slider#scrollTo"></li>
+            <li class="h-4 w-4 rounded-full mx-2 cursor-pointer bg-gray-500" data-slider-target="indicator" data-image-id="4" data-action="click->slider#scrollTo"></li>
+            <li class="h-4 w-4 rounded-full mx-2 cursor-pointer bg-gray-500" data-slider-target="indicator" data-image-id="5" data-action="click->slider#scrollTo"></li>
+            <li class="h-4 w-4 rounded-full mx-2 cursor-pointer bg-gray-500" data-slider-target="indicator" data-image-id="6" data-action="click->slider#scrollTo"></li>
+            <li class="h-4 w-4 rounded-full mx-2 cursor-pointer bg-gray-500" data-slider-target="indicator" data-image-id="7" data-action="click->slider#scrollTo"></li>
+            <li class="h-4 w-4 rounded-full mx-2 cursor-pointer bg-gray-500" data-slider-target="indicator" data-image-id="8" data-action="click->slider#scrollTo"></li>
+            <li class="h-4 w-4 rounded-full mx-2 cursor-pointer bg-gray-500" data-slider-target="indicator" data-image-id="8" data-action="click->slider#scrollTo"></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+
+
+   <!-- End of Slider Logo -->
+
+
+
+
+
     {{-- office block --}}
 
     <div class="mt-12">
@@ -411,6 +517,11 @@ We provide state of the art service for printing of Stationery, Books, Magazines
 
     </div>
     {{-- office block --}}
+
+
+
+
+
 
 
 </section>
