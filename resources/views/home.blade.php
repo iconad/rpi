@@ -35,7 +35,7 @@
 <div class="bg-white">
     <nav class="border-b">
         <div class="container px-6 py-2 mx-auto md:flex md:justify-between md:items-center">
-         
+
         </div>
     </nav>
     <div class="container px-6 py-10 mx-auto md:py-16">
@@ -50,7 +50,7 @@
 
 We provide state of the art service for printing of Stationery, Books, Magazines, Catalogues, Directories etc.
  <br />
- With a team of dedicated and experienced printing experts, 
+ With a team of dedicated and experienced printing experts,
  Rainbow Printing Press is always committed to provide top quality service  <br /> for all your printing need.
                     </p>
                     </p>
@@ -102,11 +102,11 @@ We provide state of the art service for printing of Stationery, Books, Magazines
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
                             <span>Roll Up Offer</span>
-                            
+
                         </div>
-                        
+
                     </div>
-                 
+
                 </div>
             </div>
             <div class=" transform scale-40  ">
@@ -115,13 +115,13 @@ We provide state of the art service for printing of Stationery, Books, Magazines
             </div>
         </div>
     </div>
-  
-       
+
+
     </div>
     <div class="container px-6 py-10 mx-auto md:py-16">
-        
 
-    
+
+
 </div>
 
 
@@ -140,7 +140,7 @@ We provide state of the art service for printing of Stationery, Books, Magazines
         <p>Rainbow Printing Press is one of the most trusted and reputed name in the Printing Industry in the UAE. </p>
              We provide state of the art service for printing of Stationery, Books, Magazines, Catalogues, Directories etc.<br>
               With a team of dedicated and experienced printing experts, Rainbow Printing Press is always committed to provide top quality service for all your printing need. <br>
-          
+
     </div>
     <div class="our-story mt-24 hidden">
         <div class="rounded-lg bg-theme-gray p-5">
@@ -165,15 +165,15 @@ We provide state of the art service for printing of Stationery, Books, Magazines
 
 
     <div class="our-strength mt-24 ">
-    <div class="px-4 py-3 bg-blue-600 text-lg text-white font-semibold capitalize text-sec font-semibold text-xl mb-3">Our Process </div>
-       
+    <div class="px-4 py-3 bg-primary-400 text-lg text-white font-semibold capitalize text-sec font-semibold text-xl mb-3">Our Process </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-1 gap-10">
 
 
     <img src="{{ asset('assets/images/press.png') }}" alt="image" >
-           
-           
-          
+
+
+
         </div>
     </div>
     {{-- our strength --}}
@@ -333,7 +333,7 @@ We provide state of the art service for printing of Stationery, Books, Magazines
 
 
 <section class="my-12 md:my-24" id="contactSection">
-    
+
   <!--  <div>
         <div class="grid grid-cols-1 md:grid-cols-2 md:gap-10">
             <div>
@@ -368,17 +368,17 @@ We provide state of the art service for printing of Stationery, Books, Magazines
         <div class="border p-5 mt-5">
             <iframe width="100%" height="300" rel="nofollow" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d412.4546691427452!2d55.42353688114295!3d25.294179094589303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x356b36e009b8f7dc!2sRainbow%20Printing%20Industries%20LLC!5e0!3m2!1sen!2sae!4v1627538752496!5m2!1sen!2sae" allowfullscreen=""></iframe>
         </div>
-    </div> --> 
+    </div> -->
     {{-- office block --}}
 
     <div class="mt-12">
         <div class="grid grid-cols-1 md:grid-cols-2 md:gap-10">
             <div>
-                <div class="px-4 py-3 bg-blue-600 text-lg text-white font-semibold">Contact US </div>
+                <div class="px-4 py-3 bg-primary-400 text-lg text-white font-semibold">Contact US </div>
                 <div class="border p-5 mt-5">
             <iframe width="100%" height="320" rel="nofollow" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d412.4546691427452!2d55.42353688114295!3d25.294179094589303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x356b36e009b8f7dc!2sRainbow%20Printing%20Industries%20LLC!5e0!3m2!1sen!2sae!4v1627538752496!5m2!1sen!2sae" allowfullscreen=""></iframe>
         </div>
-               
+
             </div>
             <div>
                <div class="py-5">
@@ -408,7 +408,7 @@ We provide state of the art service for printing of Stationery, Books, Magazines
             </div>
             </div>
         </div>
-      
+
     </div>
     {{-- office block --}}
 

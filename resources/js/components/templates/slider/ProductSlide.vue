@@ -2,24 +2,43 @@
     <div>
         <div v-if="product">
             <div class="p-3 text-xl font-semibold text-primary-500">{{product.title}}</div>
-        <a :href="`/products/${product.slug}`">
-            <thumb-image v-if="firstMedia.length != 0" classess="w-full" :image="firstMedia[0].file_name" :id="firstMedia[0].id"></thumb-image>
-        </a>
-        <div class="p-3">
-            <div class="mb-2 font-semibold text-sec">
-                <span v-if="product.packages[0].prices[0] ">
-                    {{product.packages[0].prices[0].size.region}}  ●
-                </span>
-                {{product.packages[0].quantity}} Copies > {{prices[0][0].price}} AED
+            <a :href="`/products/${product.slug}`">
+                <thumb-image v-if="firstMedia.length != 0" classess="w-full" :image="firstMedia[0].file_name" :id="firstMedia[0].id"></thumb-image>
+            </a>
+            <div class="border border-t-0 rounded-b overflow-hidden">
+                <div class="font-semibold text-sec text-center grid grid-cols-3 gap-0">
+                    <span class="border-b p-2 pt-3" v-if="product.packages[0].prices[0] ">
+                        {{product.packages[0].prices[0].size.region}}
+                    </span>
+                    <span class="border border-t-0 p-2 pt-3">
+                        {{product.packages[0].quantity}} Copies
+                    </span>
+                        <span class="border-b p-2 pt-3">
+                            {{prices[0][0].price}} AED
+                        </span>
+                </div>
+                <div class="capitalize">
+                    <div v-if="product.packages && product.packages[0].paper" class="flex">
+                        <span class="block p-2 w-32 border-b font-semibold text-black">Papers</span>
+                        <span class="block p-2 w-full border border-t-0 border-r-0"> {{product.packages[0].paper.title}} </span>
+                    </div>
+                    <div class="flex">
+                        <span class="block p-2 w-32 border-b font-semibold text-black">Delivery</span>
+                        <span class="block p-2 w-full border border-t-0 border-r-0"> Same Day </span>
+                    </div>
+                    <div v-if="product.packages && product.packages[0].paper" class="flex">
+                        <span class="block p-2 w-32 border-b font-semibold text-black">Printing</span>
+                        <span class="block p-2 w-full border border-t-0 border-r-0"> {{product.packages[0].paper.side}} </span>
+                    </div>
+                </div>
+
+                <div class="text-sm">
+                    <a :href="`/category/${product.category.slug}/products`" class="block w-full text-center hover:bg-primary-400 hover:text-white p-2 transition-all duration-200 font-medium text-gray-600">View Product</a>
+                </div>
+
             </div>
-            <div v-if="product.packages && product.packages[0].paper" class="mb-2 capitalize"><span class="font-semibold text-black">Papers</span> {{product.packages[0].paper.title}} </div>
-            <div class="mb-2 capitalize"><span class="font-semibold text-black">Delivery</span>  Same Day </div>
-            <div v-if="product.packages && product.packages[0].paper" class="mb-2 capitalize"><span class="font-semibold text-black">Printing</span>  {{product.packages[0].paper.side}} </div>
-        </div>
-        <div class="flex items-center justify-around p-3 pt-0 border-2 border-t-0 border-l-0 border-r-0 border-sec">
-            <a :href="`/products/${product.slug}`" class="mr-auto">Get Started</a>
-            <a :href="`/category/${product.category.slug}/products`" class="ml-auto">View All</a>
-        </div>
+
+
         </div>
         <div v-else class="flex items-center justify-center h-64 w-full">
             <div class="text-xl text-red-500">

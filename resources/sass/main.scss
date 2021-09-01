@@ -251,8 +251,9 @@ body {
 
 .product-swiper-pagination {
     .swiper-pagination-bullet {
-        height: 4px!important;
-        border-radius: 0%!important;
+        width: 6px!important;
+        height: 6px!important;
+        // border-radius: 50%!important;
     }
     .swiper-pagination-bullet-active {
         background: $primarycolor!important;

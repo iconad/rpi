@@ -54,8 +54,8 @@ module.exports = {
                 "theme-red": "#d62828",
                 "theme-red-light": "#ef233c",
                 "youtube": "#c4302b",
-                "primary": "#0C4472",
-                "sec": "#ef476f",
+                "theme-primary": "#0C4472",
+                "theme-sec": "#ef476f",
                 sec: {
                     50: '#FEF6F8',
                     100: '#FDEDF1',
