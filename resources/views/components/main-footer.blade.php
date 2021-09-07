@@ -71,7 +71,7 @@
 
                         <ul>
                             <li class="mt-3">
-                                <a href="#"  class="text-gray-500 cursor-pointer hover:text-gray-900">Help Center</a>
+                                <a href="https://www.rpiuae.ae/pages/help-centre"  class="text-gray-500 cursor-pointer hover:text-gray-900">Help Center</a>
                             </li>
 
                             <li class="mt-3">
@@ -79,7 +79,7 @@
                             </li>
 
                             <li class="mt-3">
-                                <a href="#"  class="text-gray-500 cursor-pointer hover:text-gray-900">Conditions </a>
+                                <a href="https://www.rpiuae.ae/pages/terms-and-condition"  class="text-gray-500 cursor-pointer hover:text-gray-900">Conditions </a>
                             </li>
                         </ul>
 
