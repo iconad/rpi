@@ -5,7 +5,7 @@
 
        <div class="page-cover" style="background: url({{$cover}}) no-repeat center; background-size: cover;">
         <div class="inner p-8 w-full md:w-1/2">
-            <div class="text-xl font-medium ">{{$product->delivery_time}} Business Days Delivery*</div>
+            <div class="text-xl underline font-medium ">{{$product->delivery_time}}  Days Delivery*</div>
             <h1 class="text-4xl lg:text-6xl my-2 leading-none text-white font-semibold">{{$product->title}}</h1>
             <div class="text-sec font-medium text-lg lg:text-xl capitalize">
                 @if (count($product->packages) != 0)
@@ -50,6 +50,12 @@
        <pre>
 
        </pre>
+
+
+
+
+
+       
        {{-- page cover --}}
        <div class="product-navbar lg:flex lg:items-center lg:justify-center bg-theme-gray -mt-2">
             <ul class="lg:flex lg:items-center">
@@ -107,7 +113,7 @@
 
     <section class="price-page my-16" id="paperPrice">
         <div class="text-center">
-            <div class="text-3xl font-semibold text-gray-900">Paper & Prices </div>
+            <div class="text-3xl font-semibold text-gray-900">PAPER TYPE & PRICES</div>
         </div>
         <div class="prices-drop-down mt-5">
             {{-- /product-order/{{$product->slug}}?package={{$product->packages[0]->id}}&category={{$product->category->menu->id}}&type={{$product->type}} --}}
