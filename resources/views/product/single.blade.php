@@ -47,9 +47,6 @@
         </div>
        </div>
 
-       <pre>
-
-       </pre>
        {{-- page cover --}}
        <div class="product-navbar lg:flex lg:items-center lg:justify-center bg-theme-gray -mt-2">
             <ul class="lg:flex lg:items-center">
@@ -111,9 +108,7 @@
         </div>
         <div class="prices-drop-down mt-5">
             {{-- /product-order/{{$product->slug}}?package={{$product->packages[0]->id}}&category={{$product->category->menu->id}}&type={{$product->type}} --}}
-            <product-paper-price
-                :pid="{{ json_encode($product->id) }}"
-                ></product-paper-price>
+            <product-paper-price :pid="{{ json_encode($product->id) }}"></product-paper-price>
         </div>
         {{-- prices dropdonw --}}
     </section>
@@ -432,5 +427,6 @@
     </section>
     {{-- useful links ended --}}
 
-
 @endsection
+
+

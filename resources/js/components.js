@@ -14,6 +14,11 @@ Vue.component(
 );
 
 Vue.component(
+    "home-faq",
+    require("./components/FAQ.vue").default
+);
+
+Vue.component(
     "top-products",
     require("./components/templates/slider/TopProducts.vue").default
 );

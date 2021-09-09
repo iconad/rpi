@@ -154,8 +154,7 @@ We provide state of the art service for printing of Stationery, Books, Magazines
     <div class="why-we-are-defferent mt-8">
         <div class="p-5">
 
-
-            <x-we-are-different-table />
+            <home-faq />
 
         </div>
     </div>
@@ -465,7 +464,7 @@ We provide state of the art service for printing of Stationery, Books, Magazines
 
 <!-- Slider Logo  -->
 
-      <div class="flex flex-col my-8" data-controller="slider">
+      <div class="flex flex-col my-16 mt-32" data-controller="slider">
         <h1 class="text-3xl text-gray-900 text-center mb-4">Our Clients</h1>
         <div class="flex overflow-x-auto hide-scroll-bar overscroll-x-contain gallery" data-slider-target="scrollContainer">
 
@@ -490,17 +489,17 @@ We provide state of the art service for printing of Stationery, Books, Magazines
 
 
 
-          
-       
 
 
-          
+
+
+
           <div class="w-48 h-26 px-4 mt-10 flex-shrink-0 gallery-item" data-slider-target="Armani" id="19">
           <img src="{{ asset('assets/images/Armani.png') }}" />
           </div>
 
 
-             
+
           <div class="w-48 h-26 px-4  flex-shrink-0 gallery-item" data-slider-target="GAP" id="19">
           <img src="{{ asset('assets/images/GAP.png') }}" />
           </div>
@@ -528,19 +527,19 @@ We provide state of the art service for printing of Stationery, Books, Magazines
           <div class="w-48 h-26 px-4 mt-8 flex-shrink-0 gallery-item" data-slider-target="image" id="9">
             <img src="https://www.boehringer-ingelheim.com/sites/default/files/boehringer-ingelheim.jpg" />
           </div>
-  
+
 
           <div class="w-32 h-20 px-2 flex-shrink-0 gallery-item" data-slider-target="image" id="9">
             <img src="https://scontent.ffjr1-2.fna.fbcdn.net/v/t1.6435-9/52695056_2098628663537699_950779130813612032_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=qDC3kJj6OggAX9OosVS&_nc_ht=scontent.ffjr1-2.fna&oh=a483ddb80b52a22a9288fde5c9ab851e&oe=615BE862" />
           </div>
-  
 
 
-          
+
+
           <div class="w-48 h-26 px-4  mb-8 flex-shrink-0 gallery-item" data-slider-target="GrandStore llc" id="14">
             <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQG1TUvgiOAc3A/company-logo_200_200/0/1519909402568?e=1639008000&v=beta&t=CZ3yDlYLcSxGhFmCVcdIikK_v48lSsmwQ8FYZzthw-s" />
           </div>
- 
+
 
 
 
@@ -550,30 +549,30 @@ We provide state of the art service for printing of Stationery, Books, Magazines
           <div class="w-48 h-26 px-4 mt-8 flex-shrink-0 gallery-item" data-slider-target="image" id="14">
             <img src="https://www.dhcc.ae/logo/extra01.png" />
           </div>
- 
+
           <div class="w-48 h-26 px-4 flex-shrink-0 gallery-item" data-slider-target="image" id="15">
             <img src="https://www.gulffloorcarpet.com/uploads/hWACgSQF/229x0_397x0/logo-gulfloor.jpg" />
           </div>
- 
+
           <div class="w-48 h-26 px-4 mt-8 flex-shrink-0 gallery-item" data-slider-target="image" id="16">
             <img src="https://cdn.emiratesnbd.com/plugins/cardprivileges/images/inner_images/harvey_nicholas_logo.jpg" />
           </div>
- 
-      
- 
-       
-  
+
+
+
+
+
           <div class="w-48 h-26 px-4 mt-8 flex-shrink-0 gallery-item" data-slider-target="image" id="19">
             <img src="https://www.kingspan.com/meati/assets/img/design/kingspan-logo.svg" />
           </div>
- 
 
 
 
 
 
 
-        
+
+
 
 
 

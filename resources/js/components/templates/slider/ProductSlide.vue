@@ -24,7 +24,7 @@
                     </div>
                     <div class="flex">
                         <span class="block p-2 w-32 border-b font-semibold text-black">Delivery</span>
-                        <span class="block p-2 w-full border border-t-0 border-r-0"> Same Day </span>
+                        <span class="block p-2 w-full border border-t-0 border-r-0"> {{product.delivery_time}} {{ product.delivery_time > 1 ? 'Days' : 'Day'}} </span>
                     </div>
                     <div v-if="product.packages && product.packages[0].paper" class="flex">
                         <span class="block p-2 w-32 border-b font-semibold text-black">Printing</span>
