@@ -1,3 +1,5 @@
+
+
 <div class="bg-gray-50 pt-5  ">
    <div class=" sm:px-6 text-gray-200 sm:grid md:grid-cols-4 sm:grid-cols-4 mx-auto">
    <div class="p-4  ">
@@ -75,7 +77,7 @@
                             </li>
 
                             <li class="mt-3">
-                                <a href="#"  class="text-gray-500 cursor-pointer hover:text-gray-900">Privacy Policy </a>
+                                <a href="https://www.rpiuae.ae/pages/privacy-policy"  class="text-gray-500 cursor-pointer hover:text-gray-900">Privacy Policy </a>
                             </li>
 
                             <li class="mt-3">
