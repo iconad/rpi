@@ -126,7 +126,7 @@
                 {{-- <x-ads.fullwidth-small /> --}}
             </div>
 
-            <x-google-reviews />
+            <customer-review />
         </div>
     </section>
 

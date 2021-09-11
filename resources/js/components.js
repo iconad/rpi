@@ -18,6 +18,14 @@ Vue.component(
     require("./components/FAQ.vue").default
 );
 
+//new one added
+
+Vue.component(
+    "customer-review",
+    require("./components/review.vue").default
+);
+
+
 Vue.component(
     "top-products",
     require("./components/templates/slider/TopProducts.vue").default

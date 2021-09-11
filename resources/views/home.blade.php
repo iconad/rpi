@@ -158,7 +158,19 @@ We provide state of the art service for printing of Stationery, Books, Magazines
 
         </div>
     </div>
+
     {{-- why we are different --}}
+
+
+
+    
+    <div class="why-we-are-defferent mt-8">
+        <div class="p-5">
+
+            <customer-review/>
+
+        </div>
+    </div>
 
 
     <div class="our-strength mt-24 ">
