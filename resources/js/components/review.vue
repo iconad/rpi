@@ -93,7 +93,7 @@
                         <div class="shadow-lg mx-3 xl:mx-3 sm:mx-0 lg:mx-0 rounded">
                             <div class="bg-indigo-700 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
                                 <p class="text-xl text-white pb-1">Not disappointed at all !!</p>
-                                <p class="text-base text-indigo-200">Vishnu</p>
+                                <p class="text-base text-indigo-200">Rabika</p>
                             </div>
                             <div class="pl-6 pr-6 pt-10 relative h-72">
                                 <div class="h-16 w-16 rounded-full bg-cover border-4 border-white absolute top-0 right-0 -mt-8 mr-6">
