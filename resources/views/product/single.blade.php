@@ -123,6 +123,23 @@
     </section>
     {{-- price and page section ended here --}}
 
+
+    <section class="how-to-order my-16" id="howToOrder">
+        <div class="text-center w-full md:w-2/3 mx-auto">
+            <div class="text-3xl font-semibold text-gray-900">Our Process</div>
+            <p class="text-xl text-gray-800">These are tried and true favorites that will have you set to get down to business.</p>
+        </div>
+        <div>
+            <product-how-to-order />
+            
+        </div>
+    </section>
+
+
+
+
+
+
     <section class="product-size-specifications my-16" id="specifications">
         <div class="text-center">
             <div class="text-3xl font-semibold text-gray-900">Specifications </div>
@@ -152,15 +169,16 @@
 
     <section class="quantity-section my-16 p-6">
         <div class="flex flex-wrap lg:flex-nowrap items-center">
-            <div class="w-auto mb-5 lg:mb-0 text-2xl font-semibold text-gray-900 flex items-center">
-                <span class="text-gray-600 inline-block mr-2">
-                    <svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2 2c0-1.1.9-2 2-2h12a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V2zm3 1v2h10V3H5zm0 4v2h2V7H5zm4 0v2h2V7H9zm4 0v2h2V7h-2zm-8 4v2h2v-2H5zm4 0v2h2v-2H9zm4 0v6h2v-6h-2zm-8 4v2h2v-2H5zm4 0v2h2v-2H9z"/></svg>
-                </span>
+            <div class="text-center w-auto mb-5 lg:mb-0 text-2xl font-semibold text-indigo-800 flex items-center">
+                <span class=" text-gray-600 inline-block mr-2">
+                <svg class="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16 xl:w-20 xl:h-20" stroke="currentColor" viewBox="0 0 52 52">
+            <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+          </svg>  </span>
                 <span>
-                    Quantity
+                    QuoteLine
                 </span>
             </div>
-            <div class="text-3xl font-semibold text-gray-900 ml-0 md:ml-6 w-full mt-5">
+            <div class="text-3xl font-semibold text-indigo-800 ml-0 md:ml-6 w-full mt-5">
                 <product-quantity-chart></product-quantity-chart>
             </div>
         </div>
@@ -170,7 +188,7 @@
 
     <section class="printing-section my-16 bg-theme-gray p-6">
         <div class="flex flex-wrap lg:flex-nowrap items-center">
-            <div class="w-auto mb-5 lg:mb-0 text-2xl font-semibold text-gray-900 flex items-center">
+            <div class="uppercase w-auto mb-5 lg:mb-0 text-2xl font-semibold text-indigo-800 flex items-center">
                 <span class="text-gray-600 inline-block mr-2">
                     <svg class="fill-current w-8 h-8" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.06 31.06"><path d="M20.87 19.87a6 6 0 008.44 0 6 6 0 000-8.44 6 6 0 00-8.44 0 6 6 0 000 8.44z" fill="#00a1e9"/><path d="M11.43 29.31a6 6 0 008.44 0 6 6 0 000-8.44 6 6 0 00-8.44 0 6 6 0 000 8.44z" fill="#e4007f"/><path d="M11.19 10.19a6 6 0 008.44 0 6 6 0 000-8.44 6 6 0 00-8.44 0 6 6 0 000 8.44z" fill="#ffe200"/><path d="M1.75 19.64a6 6 0 008.44 0 6 6 0 000-8.44 6 6 0 00-8.44 0 6 6 0 000 8.44z" fill="#9fa0a0"/></svg>
                 </span>
@@ -194,7 +212,8 @@
         <div class="flex flex-wrap lg:flex-nowrap items-start">
             <div class="w-full lg:w-auto mb-10 lg:mb-0 text-2xl font-semibold text-gray-900 flex items-center">
                 <span class="text-gray-600 inline-block mr-2 md:mt-0">
-                    <svg class="w-6 h-6 fill-current" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.8 26.3"><path class="cls-1" d="M383 26a9 9 0 01-7-4c-5-6 5-18 6-21l2-1 1 1a54 54 0 015 8c3 6 3 11 1 13a9 9 0 01-8 4zm0-22c-3 5-8 13-5 17a7 7 0 0011 0c3-4-2-13-6-17z" transform="translate(-366)"/><path class="cls-1" d="M375 0c-1 1-12 16-7 22a9 9 0 0015 0c5-6-7-21-8-22z" transform="translate(-366)"/></svg>
+                    <svg class="w-6 h-6 fill-current" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" 
+                    viewBox="0 0 25.8 26.3"><path class="cls-1" d="M383 26a9 9 0 01-7-4c-5-6 5-18 6-21l2-1 1 1a54 54 0 015 8c3 6 3 11 1 13a9 9 0 01-8 4zm0-22c-3 5-8 13-5 17a7 7 0 0011 0c3-4-2-13-6-17z" transform="translate(-366)"/><path class="cls-1" d="M375 0c-1 1-12 16-7 22a9 9 0 0015 0c5-6-7-21-8-22z" transform="translate(-366)"/></svg>
                 </span>
                 <span>
                     Finishings
@@ -227,9 +246,10 @@
         </div>
     </section>
     {{-- finishing section --}}
+ 
 
 
-    <section class="turnaround-page my-16" id="turnaround">
+    <! ––  <section class="turnaround-page my-16" id="turnaround">
         <div class="text-center w-full md:w-2/3 mx-auto">
             <div class="text-3xl font-semibold text-gray-900">Turnaround</div>
             <p class="text-xl text-gray-800">{{$product->delivery_time}} Business Days (not included Fri, Sat & Holidays)</p>
@@ -246,7 +266,7 @@
                 </p>
             </div>
         </div>
-
+        
         <div class="mt-6 bg-theme-gray">
             <div class="text-2xxl py-2 text-gray-100 bg-primary-500 font-semibold text-lg text-center p-3">2 Business Days Turnaround Schedule</div>
             <div class="flex flex-wrap lg:flex-nowrap items-center justify-center py-10">
@@ -339,26 +359,23 @@
             <div class="pb-8 text-xl text-gray-800 text-primary text-center font-semibold">+ Additional 1 day for delivery outside Dubai</div>
         </div>
 
-    </section>
+    </section> 
+
+
+
+
+
+
+
     {{-- turnaround section ended here --}}
 
 
-    <section class="how-to-order my-16" id="howToOrder">
-        <div class="text-center w-full md:w-2/3 mx-auto">
-            <div class="text-3xl font-semibold text-gray-900">How to order</div>
-            <p class="text-xl text-gray-800">It’s simple. It’s easy. It’s just a few clicks away</p>
-        </div>
-        <div>
-            <product-how-to-order />
-        </div>
-    </section>
-
+ 
 
     <section class="turnaround-page my-16" id="knowBeforeOrder">
-        <div class="text-center w-full md:w-2/3 mx-auto">
-            <div class="text-3xl font-semibold text-gray-900">Know Before Order</div>
-            <p class="text-xl text-gray-800">While preparing your data, please take note of the following</p>
-        </div>
+       
+
+        <turn-around />
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10 mt-10">
             <div class="box border-2 border-primary p-10">
                 <div class="flex items-center justify-center text-2xl text-primary font-semibold">
@@ -420,6 +437,9 @@
         </div>
     </section>
 
+    <our-projects />
+
+    
     <section class="warning my-12 md:my-24">
         <div class="w-4/5 mx-auto text-center text-lg">
             <p> <span class="inline-block mr-1">

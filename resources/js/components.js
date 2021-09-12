@@ -26,6 +26,7 @@ Vue.component(
 );
 
 
+
 Vue.component(
     "top-products",
     require("./components/templates/slider/TopProducts.vue").default
@@ -50,6 +51,19 @@ Vue.component(
     "product-quantity-chart",
     require("./components/product/QuantityChart.vue").default
 );
+
+// turnaround
+Vue.component(
+    "turn-around",
+    require("./components/turnaround.vue").default
+);
+
+Vue.component(
+    "our-projects",
+    require("./components/projects.vue").default
+);
+
+
 
 Vue.component(
     "product-how-to-order",
