@@ -11,7 +11,7 @@
       </div>
       <div class="text-center">
         <div class="flex items-center justify-center w-10 h-10 mx-auto mb-3 rounded-full bg-teal-accent-400 sm:w-12 sm:h-12">
-              <img class="mb-3" src="https://image.flaticon.com/icons/png/512/747/747376.png" alt="thumbnail">>
+              <img class="mb-3" src="https://image.flaticon.com/icons/png/512/747/747376.png" alt="thumbnail">
         </div>
         <h6 class="text-4xl font-bold text-deep-purple-accent-400">1.3K</h6>
         <p class="mb-2 font-bold text-md">Users</p>
