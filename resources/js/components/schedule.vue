@@ -7,7 +7,7 @@
                     <div class="lg:flex justify-between w-full">
                         <div>
                             <div class="flex w-full justify-between lg:justify-start items-center">
-                                <h1 class="text-color font-black text-3xl lg:text-5xl lg:mr-8">Today 1PM</h1>
+                                <h1 class="text-color font-black text-2xl lg:text-5xl lg:mr-8">Today 1PM</h1>
                              
                             </div>
                             <div class="pt-3">
@@ -15,7 +15,7 @@
                             </div>
                         </div>
                         <div class="pt-8 lg:pt-0 flex items-center flex-col">
-                            <h1 class="f-f-l font-black text-color text-4xl lg:text-7xl">Day 1</h1>
+                            <h1 class="f-f-l font-black text-color text-2xl lg:text-3xl">Day 1</h1>
                             <button class="py-4 px-4 xl:px-10 bg-gray-100 focus:outline-none f-f-r text-xl font-bold text-color mt-7">3PM TO 8PM</button>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                     <div class="lg:flex justify-between w-full">
                         <div>
                             <div class="flex w-full justify-between lg:justify-start items-center">
-                                <h1 class="text-color font-black text-3xl lg:text-5xl lg:mr-8">Overview</h1>
+                                <h1 class="text-color font-black text-3xl lg:text-3xl lg:mr-8">Overview</h1>
                                 <div data-menu="" class="cursor-pointer">
                                     <button class="w-10 h-10 bg-gray-100 focus:outline-none flex items-center justify-center rounded-full">
                                         <svg id="andicators" class="" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -50,7 +50,7 @@
                                     </div>
                                     <div class="text-2xl f-f-r">Sun 01pm</div>
                                 </div>
-                                      <button class="py-4 px-4 xl:px-10 bg-indigo-700  f-f-r text-xl font-bold text-white mt-7">Sun(3pm-8pm)</button>
+                                      <button class="text-2xxl py-2 text-gray-100 bg-primary-500 font-semibold text-lg text-center p-3">Sun(3pm-8pm)</button>
                           
                                 <div class="flex items-center mt-7">
                                     <div class="pr-3">
@@ -60,7 +60,7 @@
                                     </div>
                                 <div class="text-2xl f-f-r">Mon 01pm</div>
                                 </div>
-                                      <button class="py-4 px-4 xl:px-10 bg-indigo-700  f-f-r text-xl font-bold text-white mt-7">Mon (3pm-8pm)</button>
+                                      <button class="text-2xxl py-2 text-gray-100 bg-primary-500 font-semibold text-lg text-center p-3">Mon (3pm-8pm)</button>
                                 <div class="flex items-center mt-7">
                                     <div class="pr-3">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -69,7 +69,7 @@
                                     </div>
                                  <div class="text-2xl f-f-r">Tue 01pm</div>
                                 </div>
-                                      <button class="py-4 px-4 xl:px-10 bg-indigo-700  f-f-r text-xl font-bold text-white mt-7">Tue(3pm-8pm)</button>
+                                      <button class="text-2xxl py-2 text-gray-100 bg-primary-500 font-semibold text-lg text-center p-3">Tue(3pm-8pm)</button>
                                 <div class="flex items-center mt-7">
                                     <div class="pr-3">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -78,7 +78,7 @@
                                     </div>
                                  <div class="text-2xl f-f-r">Wed 01pm</div>
                                 </div>
-                                      <button class="py-4 px-4 xl:px-10 bg-indigo-700  f-f-r text-xl font-bold text-white mt-7">Wed(3pm-8pm)</button>
+                                      <button class="text-2xxl py-2 text-gray-100 bg-primary-500 font-semibold text-lg text-center p-3">Wed(3pm-8pm)</button>
                                 <div class="flex items-center mt-7">
                                     <div class="pr-3">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -87,7 +87,7 @@
                                     </div>
                                  <div class="text-2xl f-f-r">Thu 01pm</div>
                                 </div>
-                                      <button class="py-4 px-4 xl:px-10 bg-indigo-700  f-f-r text-xl font-bold text-white mt-7">Thu(3pm-8pm)</button>
+                                      <button class="text-2xxl py-2 text-gray-100 bg-primary-500 font-semibold text-lg text-center p-3">Thu(3pm-8pm)</button>
                                 <div class="flex items-center mt-7">
                                     <div class="pr-3">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -96,7 +96,7 @@
                                     </div>
                                  <div class="text-2xl f-f-r">Sat 01pm</div>
                                 </div>
-                                      <button class="py-4 px-4 xl:px-10 bg-indigo-700  f-f-r text-xl font-bold text-white mt-7">Sat(3pm-8pm)</button>
+                                      <button class="text-2xxl py-2 text-gray-100 bg-primary-500 font-semibold text-lg text-center p-3">Sat(3pm-8pm)</button>
                                 <div class="flex items-center mt-7">
                                  
                                 </div>
@@ -105,7 +105,7 @@
                         </div>
                         <div class="pt-8 lg:pt-0 flex items-center flex-col">
                            
-                            <button class="py-4 px-4 xl:px-10 bg-indigo-700 hover:bg-indigo-800 f-f-r text-xl font-bold text-white mt-7">Delivery Schedule</button>
+                            <button class="text-2xxl py-2 text-gray-100 bg-primary-500 font-semibold text-lg text-center p-3">Delivery Schedule</button>
                         </div>
                     </div>
                 </div>

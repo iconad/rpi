@@ -233,8 +233,7 @@
 
     
 <div class="text-center w-full md:w-2/3 mx-auto">
-    <div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-2xl md:text-4xl xl:text-4xl 
-    font-black text-center text-white md:leading-tight">Print Process </div>
+    <div class="text-4xl py-2 text-gray-100 bg-primary-500 font-semibold text-lg text-center p-7">Print Process </div>
     <p class="text-xl text-red-600 ">Product will be Delivered ({{$product->delivery_time}}  Business Days )</p>
   
     <print-schedule />
