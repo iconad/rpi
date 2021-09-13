@@ -25,6 +25,12 @@ Vue.component(
     require("./components/review.vue").default
 );
 
+// schedule
+
+Vue.component(
+    "print-schedule",
+    require("./components/schedule.vue").default
+);
 
 
 Vue.component(

@@ -86,11 +86,12 @@
 
     <section class="product-tree mt-12" id="overview">
         <div class="text-center block ">
-            <h2 class="mt-5 text-2xl lg:text-4xl font-semibold text-gray-900">{{$product->body_title}}</h2>
-            <div class="text-lg lg:text-xl text-gray-800">{{$product->body_subtitle}}</div>
-            <div class=" {{$product->points->count() < 4  ? 'hidden' : 'grid'}} product-points-grid points-grid grid-cols-2 lg:grid-cols-4 mx-6 mt-16 lg:border lg:border-gray-900 lg:border-b-0 lg:border-l-0 lg:border-r-0">
+            <h2 class="mt-5 text-2xl lg:text-4xl uppercase font-semibold text-indigo-900">{{$product->body_title}}</h2>
+            <div class="text-lg lg:text-xl text-indigo-900">{{$product->body_subtitle}}</div>
+            <div class=" {{$product->points->count() < 4  ? 'hidden' : 'grid'}} product-points-grid points-grid grid-cols-2 lg:grid-cols-4 mx-6 mt-16 lg:border 
+            lg:border-gray-900 lg:border-b-0 lg:border-l-0 lg:border-r-0">
                 @foreach ($product->points as $point)
-                <div class="point p-5">
+                <div class="point p-7">
                     @if ($point->media->count() != 0)
                     <thumb-image-blade classess="mx-auto" image="{{$point->media[0]->file_name}}" id="{{$point->media[0]->id}}"></thumb-image-blade>
                     @else
@@ -136,21 +137,82 @@
     </section>
 
 
+    <section class="turnaround-page my-16" id="knowBeforeOrder">
+    <turn-around />
 
+ 
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10 mt-10">
+            <div class="box border-2 border-primary p-10">
+                <div class="flex items-center justify-center text-2xl text-primary font-semibold">
+                    <span>CMYK Data</span>
+                    <span class="block ml-3 w-10 h-10 border border-primary rounded-full flex items-center justify-center">
+                        <svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg>
+                    </span>
+                </div>
+                <div class="my-5">
+                    <img src="{{asset('assets/images/cmyk-data.png')}}" alt="cmyk-data" class="w-1/2  mx-auto">
+                </div>
+                <ul class="list-disc text-base">
+                    <li>
+                        <p>Data saved in CMYK colours is the correct format, as printing on paper is done by combining four colour inks: CMYK (Cyan, Magenta, Yellow and Black).</p>
+                    </li>
+                </ul>
+            </div>
+            {{-- box --}}
+            <div class="box border-2 border-primary p-10">
+                <div class="flex items-center justify-center text-2xl text-primary font-semibold">
+                    <span>PANTONE Data</span>
+                    <span class="block ml-3 w-10 h-10 border border-primary rounded-full flex items-center justify-center">
+                        <svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 9L3 2 2 3l7 7-7 7 1 1 7-7 7 7 1-1-7-7 7-7-1-1-7 7z"/></svg>
+                    </span>
+                </div>
+                <div class="my-5">
+                    <img src="{{asset('assets/images/pantone-data.png')}}" alt="pantone-data" class="w-1/2  mx-auto">
+                </div>
+                <ul class="list-disc text-base">
+                    <li class="mb-3">
+                        <p>We don’t print Pantone or Spot colours for Large Formate printing. If your data has Pantone or Spot colours, you must convert it to CMYK colours.</p>
+                    </li>
+                    <li>
+                        <p>If above is disregarded, than Spot/ Pantone colours will be converted to CMYK colours. In such case, expect a colour shift in printing</p>
+                    </li>
+                </ul>
+            </div>
+            {{-- box --}}
+            <div class="box border-2 border-primary p-10">
+                <div class="flex items-center justify-center text-2xl text-primary font-semibold">
+                    <span>RGB Data</span>
+                    <span class="block ml-3 w-10 h-10 border border-primary rounded-full flex items-center justify-center">
+                        <svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 9L3 2 2 3l7 7-7 7 1 1 7-7 7 7 1-1-7-7 7-7-1-1-7 7z"/></svg>
+                    </span>
+                </div>
+                <div class="my-5">
+                    <img src="{{asset('assets/images/rgb-data.png')}}" alt="rgb-data" class="w-1/2  mx-auto">
+                </div>
+                <ul class="list-disc text-base">
+                    <li class="mb-3">
+                        <p>Data in RGB colours (primarly used for Monitors, TV Screens and Phones) are not correct colours at all for printing on paper.</p>
+                    </li>
+                    <li>
+                        <p>Make sure your data is created or converted to CMYK, and not RGB. If not, we will change to CMYK colours. In such case, colours may come out different.</p>
+                    </li>
+                </ul>
+            </div>
+            {{-- box --}}
+        </div>
+    </section>
 
 
 
     <section class="product-size-specifications my-16" id="specifications">
         <div class="text-center">
-            <div class="text-3xl font-semibold text-gray-900">Specifications </div>
-            <p>Sizes, Templates, Printing, Finishings, etc.</p>
+            <div class="text-3xl font-semibold text-gray-900">Product Specifications </div>
+ 
         </div>
         <div class="sizess mt-5 bg-theme-gray p-8">
             <div class="text-2xl flex items-center font-semibold text-gray-800 mb-5">
-                <span class="inline-block mr-2">
-                    <svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.8 15.8L0 13v7h7l-2.8-2.8 4.34-4.32-1.42-1.42L2.8 15.8zM17.2 4.2L20 7V0h-7l2.8 2.8-4.34 4.32 1.42 1.42L17.2 4.2zm-1.4 13L13 20h7v-7l-2.8 2.8-4.32-4.34-1.42 1.42 4.33 4.33zM4.2 2.8L7 0H0v7l2.8-2.8 4.32 4.34 1.42-1.42L4.2 2.8z"/></svg>
-                </span>
-                <span>Sizes </span>
+               
+                <span>Product Size </span>
             </div>
             {{-- header --}}
 
@@ -161,11 +223,118 @@
                 <a class="text-primary font-semibold text-lg text-primary-500 theme-link border-b border-transparent hover:border-primary " href="/layout-templates">Download Templates</a>
             </div>
         </div>
+       
         {{-- prices dropdonw --}}
     </section>
     {{-- price and page section ended here --}}
 
+    <! ––  <section class="turnaround-page my-16" id="turnaround">
 
+
+    
+<div class="text-center w-full md:w-2/3 mx-auto">
+    <div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-2xl md:text-4xl xl:text-4xl 
+    font-black text-center text-white md:leading-tight">Print Process </div>
+    <p class="text-xl text-red-600 ">Product will be Delivered ({{$product->delivery_time}}  Business Days )</p>
+  
+    <print-schedule />
+    <hr class=" h-px bg-gray-500 my-3">
+  
+</div>
+
+<div class="mt-6 bg-theme-gray">
+   
+   <!--   <div class="flex flex-wrap lg:flex-nowrap items-center justify-center py-10">
+        <div class="w-full lg:w-20rem py-4 md:mr-10 text-center lg:text-left">
+            <div class="text-2xl text-blue-500 font-semibold text-center">Today</div>
+            <div class="text-theme-red-light font-semibold text-semibold text-xl pl-3">01pm</div>
+            <div class="turnaround-lines arrow border-b h-px border-dashed border-blue-500 relative my-2"></div>
+            <div class="font-semibold text-xl text-gray-900">Proof approval by 01pm</div>
+        </div>
+        <div class="hidden lg:block h-16 w-1 bg-blue-600 rounded-full mt-8"></div>
+        <div class="w-full lg:w-20rem py-4 md:ml-10">
+            <div class="text-2xl text-blue-500 font-semibold text-center">Day 1</div>
+            <div class="text-theme-red-light font-semibold text-semibold text-xl pl-3 flex items-center justify-center">
+                <span>3pm</span>
+                <span class="mx-3 rounded-full h-1 block bg-theme-red-light w-24"></span>
+                <span>8pm</span>
+            </div>
+            <div class="turnaround-lines circle border-b h-px border-dashed border-blue-500 relative my-2"></div>
+            <div class="font-semibold text-xl text-gray-900 text-center">Delivery Schedule</div>
+        </div>
+    </div>
+    <div class="text-xl text-gray-800 text-primary text-center font-semibold">Overview of Weekly Turnaround Schedule</div>
+<div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 p-3 md:p-12">
+        <div class="box">
+            <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Sun</span> 01pm</div>
+            <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
+
+            <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
+                <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
+            </span>
+
+                <span class="font-semibold">Sun</span>
+                 <span class="block">(3pm-8pm)</span>
+            </div>
+        </div>
+        {{-- box --}}
+        <div class="box">
+            <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Mon</span> 01pm</div>
+            <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
+
+            <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
+                <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
+            </span>
+
+                <span class="font-semibold">Mon</span>
+                <span class="block">(3pm-8pm)</span>
+            </div>
+        </div>
+        {{-- box --}}
+        <div class="box">
+            <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Tue</span> 01pm</div>
+            <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
+
+            <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
+                <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
+            </span>
+
+                <span class="font-semibold">Tue</span>
+                <span class="block">(3pm-8pm)</span>
+            </div>
+        </div>
+        {{-- box --}}
+        <div class="box">
+            <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Wed</span> 01pm</div>
+            <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
+
+            <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
+                <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
+            </span>
+
+                <span class="font-semibold">Wed</span>
+                <span class="block">(3pm-8pm)</span>
+            </div>
+        </div>
+        {{-- box --}}
+        <div class="box col-span-2 xl:col-span-1">
+            <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Thu</span> 01pm</div>
+            <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
+
+            <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
+                <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
+            </span>
+
+                <span class="font-semibold">Thu</span>
+                <span class="block">(3pm-8pm)</span>
+            </div>
+        </div>
+        {{-- box --}}
+    </div> -->
+
+</div>
+
+</section> 
 
     <section class="quantity-section my-16 p-6">
         <div class="flex flex-wrap lg:flex-nowrap items-center">
@@ -249,117 +418,8 @@
  
 
 
-    <! ––  <section class="turnaround-page my-16" id="turnaround">
-        <div class="text-center w-full md:w-2/3 mx-auto">
-            <div class="text-3xl font-semibold text-gray-900">Turnaround</div>
-            <p class="text-xl text-gray-800">{{$product->delivery_time}} Business Days (not included Fri, Sat & Holidays)</p>
 
-            <hr class=" h-px bg-gray-500 my-3">
-            <div>
-                <p class="text-lg text-red-600 ">
-                    <span class="block flex items-start">
-                        <span class="inline-block mr-2">
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.6 20.1"><path d="M23 18L12 1a1 1 0 00-1 0L1 18a1 1 0 000 1 1 1 0 000 1h21a1 1 0 001-1 1 1 0 000-1z" fill="#ffd900" stroke="#231916" stroke-miterlimit="10" stroke-width="1.2"/><path d="M11 12V9 7a2 2 0 010-1 1 1 0 011-1 1 1 0 011 1 3 3 0 010 1v5a3 3 0 01-1 2 1 1 0 01-1 0 4 4 0 010-2zm1 6a1 1 0 01-1-1 1 1 0 010-1 1 1 0 011-1 1 1 0 011 1 1 1 0 010 1 1 1 0 01-1 1z" fill="#231916"/></svg>
-                        </span>
-                        Production will only start after you have approved the digital proof of your submitted data.</span>
-                    <span class="block font-semibold">The proof approval deadline is strictly by 01pm.</span>
-                </p>
-            </div>
-        </div>
-        
-        <div class="mt-6 bg-theme-gray">
-            <div class="text-2xxl py-2 text-gray-100 bg-primary-500 font-semibold text-lg text-center p-3">2 Business Days Turnaround Schedule</div>
-            <div class="flex flex-wrap lg:flex-nowrap items-center justify-center py-10">
-                <div class="w-full lg:w-20rem py-4 md:mr-10 text-center lg:text-left">
-                    <div class="text-2xl text-blue-500 font-semibold text-center">Today</div>
-                    <div class="text-theme-red-light font-semibold text-semibold text-xl pl-3">01pm</div>
-                    <div class="turnaround-lines arrow border-b h-px border-dashed border-blue-500 relative my-2"></div>
-                    <div class="font-semibold text-xl text-gray-900">Proof approval by 01pm</div>
-                </div>
-                <div class="hidden lg:block h-16 w-1 bg-blue-600 rounded-full mt-8"></div>
-                <div class="w-full lg:w-20rem py-4 md:ml-10">
-                    <div class="text-2xl text-blue-500 font-semibold text-center">Day 1</div>
-                    <div class="text-theme-red-light font-semibold text-semibold text-xl pl-3 flex items-center justify-center">
-                        <span>3pm</span>
-                        <span class="mx-3 rounded-full h-1 block bg-theme-red-light w-24"></span>
-                        <span>8pm</span>
-                    </div>
-                    <div class="turnaround-lines circle border-b h-px border-dashed border-blue-500 relative my-2"></div>
-                    <div class="font-semibold text-xl text-gray-900 text-center">Delivery Schedule</div>
-                </div>
-            </div>
-            <div class="text-xl text-gray-800 text-primary text-center font-semibold">Overview of Weekly Turnaround Schedule</div>
-            <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 p-3 md:p-12">
-                <div class="box">
-                    <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Sun</span> 01pm</div>
-                    <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
-
-                    <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
-                        <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
-                    </span>
-
-                        <span class="font-semibold">Sun</span>
-                         <span class="block">(3pm-8pm)</span>
-                    </div>
-                </div>
-                {{-- box --}}
-                <div class="box">
-                    <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Mon</span> 01pm</div>
-                    <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
-
-                    <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
-                        <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
-                    </span>
-
-                        <span class="font-semibold">Mon</span>
-                        <span class="block">(3pm-8pm)</span>
-                    </div>
-                </div>
-                {{-- box --}}
-                <div class="box">
-                    <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Tue</span> 01pm</div>
-                    <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
-
-                    <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
-                        <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
-                    </span>
-
-                        <span class="font-semibold">Tue</span>
-                        <span class="block">(3pm-8pm)</span>
-                    </div>
-                </div>
-                {{-- box --}}
-                <div class="box">
-                    <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Wed</span> 01pm</div>
-                    <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
-
-                    <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
-                        <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
-                    </span>
-
-                        <span class="font-semibold">Wed</span>
-                        <span class="block">(3pm-8pm)</span>
-                    </div>
-                </div>
-                {{-- box --}}
-                <div class="box col-span-2 xl:col-span-1">
-                    <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Thu</span> 01pm</div>
-                    <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
-
-                    <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
-                        <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
-                    </span>
-
-                        <span class="font-semibold">Thu</span>
-                        <span class="block">(3pm-8pm)</span>
-                    </div>
-                </div>
-                {{-- box --}}
-            </div>
-            <div class="pb-8 text-xl text-gray-800 text-primary text-center font-semibold">+ Additional 1 day for delivery outside Dubai</div>
-        </div>
-
-    </section> 
+   
 
 
 
@@ -372,87 +432,16 @@
 
  
 
-    <section class="turnaround-page my-16" id="knowBeforeOrder">
-       
+ 
 
-        <turn-around />
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10 mt-10">
-            <div class="box border-2 border-primary p-10">
-                <div class="flex items-center justify-center text-2xl text-primary font-semibold">
-                    <span>CMYK Data</span>
-                    <span class="block ml-3 w-10 h-10 border border-primary rounded-full flex items-center justify-center">
-                        <svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg>
-                    </span>
-                </div>
-                <div class="my-5">
-                    <img src="{{asset('assets/images/cmyk-data.png')}}" alt="cmyk-data" class="w-1/2  mx-auto">
-                </div>
-                <ul class="list-disc text-base">
-                    <li>
-                        <p>Data saved in CMYK colours is the correct format, as printing on paper is done by combining four colour inks: CMYK (Cyan, Magenta, Yellow and Black).</p>
-                    </li>
-                </ul>
-            </div>
-            {{-- box --}}
-            <div class="box border-2 border-primary p-10">
-                <div class="flex items-center justify-center text-2xl text-primary font-semibold">
-                    <span>PANTONE Data</span>
-                    <span class="block ml-3 w-10 h-10 border border-primary rounded-full flex items-center justify-center">
-                        <svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 9L3 2 2 3l7 7-7 7 1 1 7-7 7 7 1-1-7-7 7-7-1-1-7 7z"/></svg>
-                    </span>
-                </div>
-                <div class="my-5">
-                    <img src="{{asset('assets/images/pantone-data.png')}}" alt="pantone-data" class="w-1/2  mx-auto">
-                </div>
-                <ul class="list-disc text-base">
-                    <li class="mb-3">
-                        <p>We don’t print Pantone or Spot colours for Large Formate printing. If your data has Pantone or Spot colours, you must convert it to CMYK colours.</p>
-                    </li>
-                    <li>
-                        <p>If above is disregarded, than Spot/ Pantone colours will be converted to CMYK colours. In such case, expect a colour shift in printing</p>
-                    </li>
-                </ul>
-            </div>
-            {{-- box --}}
-            <div class="box border-2 border-primary p-10">
-                <div class="flex items-center justify-center text-2xl text-primary font-semibold">
-                    <span>RGB Data</span>
-                    <span class="block ml-3 w-10 h-10 border border-primary rounded-full flex items-center justify-center">
-                        <svg class="fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 9L3 2 2 3l7 7-7 7 1 1 7-7 7 7 1-1-7-7 7-7-1-1-7 7z"/></svg>
-                    </span>
-                </div>
-                <div class="my-5">
-                    <img src="{{asset('assets/images/rgb-data.png')}}" alt="rgb-data" class="w-1/2  mx-auto">
-                </div>
-                <ul class="list-disc text-base">
-                    <li class="mb-3">
-                        <p>Data in RGB colours (primarly used for Monitors, TV Screens and Phones) are not correct colours at all for printing on paper.</p>
-                    </li>
-                    <li>
-                        <p>Make sure your data is created or converted to CMYK, and not RGB. If not, we will change to CMYK colours. In such case, colours may come out different.</p>
-                    </li>
-                </ul>
-            </div>
-            {{-- box --}}
-        </div>
-    </section>
 
     <our-projects />
 
-    
-    <section class="warning my-12 md:my-24">
-        <div class="w-4/5 mx-auto text-center text-lg">
-            <p> <span class="inline-block mr-1">
-                <svg class="w-7 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.6 20.1"><path d="M23 18L12 1a1 1 0 00-1 0L1 18a1 1 0 000 1 1 1 0 000 1h21a1 1 0 001-1 1 1 0 000-1z" fill="#ffd900" stroke="#231916" stroke-miterlimit="10" stroke-width="1.2"/><path d="M11 12V9 7a2 2 0 010-1 1 1 0 011-1 1 1 0 011 1 3 3 0 010 1v5a3 3 0 01-1 2 1 1 0 01-1 0 4 4 0 010-2zm1 6a1 1 0 01-1-1 1 1 0 010-1 1 1 0 011-1 1 1 0 011 1 1 1 0 010 1 1 1 0 01-1 1z" fill="#231916"/></svg>
-            </span>
-             Rainbow Printing will not be held responsible nor reprint orders due to poorly prepared data. If in doubt please see our <a href="#" class="text-sec font-semibold border-transparent border-b hover:border-sec">Artworking Guidelines</a> for more information on how to prepare your data.Where colour accuracy is critical, we strongly recommend investing in a <a href="#" class="text-sec font-semibold border-transparent border-b hover:border-sec">printed sample</a> to avoid disappointment.</p>
-        </div>
-    </section>
     {{-- warning --}}
 
 
     <section class="turnaround-page my-16 hidden">
-        <x-product-useful-links />
+ 
     </section>
     {{-- useful links ended --}}
 
