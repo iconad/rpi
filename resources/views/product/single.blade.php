@@ -86,7 +86,8 @@
 
     <section class="product-tree mt-12" id="overview">
         <div class="text-center block ">
-            <h2 class="mt-5 text-2xl lg:text-4xl uppercase font-semibold text-indigo-900">{{$product->body_title}}</h2>
+            <h2 class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-2xl md:text-4xl xl:text-4xl 
+    font-black text-center text-white md:leading-tight">{{$product->body_title}}</h2>
             <div class="text-lg lg:text-xl text-indigo-900">{{$product->body_subtitle}}</div>
             <div class=" {{$product->points->count() < 4  ? 'hidden' : 'grid'}} product-points-grid points-grid grid-cols-2 lg:grid-cols-4 mx-6 mt-16 lg:border 
             lg:border-gray-900 lg:border-b-0 lg:border-l-0 lg:border-r-0">
@@ -114,7 +115,7 @@
 
     <section class="price-page my-16" id="paperPrice">
         <div class="text-center">
-            <div class="text-3xl font-semibold text-gray-900">PAPER TYPE & PRICES</div>
+            <div class="text-3xl font-semibold text-gray-900">PRICES & PAPER</div>
         </div>
         <div class="prices-drop-down mt-5">
             {{-- /product-order/{{$product->slug}}?package={{$product->packages[0]->id}}&category={{$product->category->menu->id}}&type={{$product->type}} --}}
@@ -233,7 +234,8 @@
 
     
 <div class="text-center w-full md:w-2/3 mx-auto">
-    <div class="text-4xl py-2 text-gray-100 bg-primary-500 font-semibold text-lg text-center p-7">Print Process </div>
+    <div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-2xl md:text-4xl xl:text-4xl 
+    font-black text-center text-white md:leading-tight">Print Process </div>
     <p class="text-xl text-red-600 ">Product will be Delivered ({{$product->delivery_time}}  Business Days )</p>
   
     <print-schedule />

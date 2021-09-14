@@ -39,7 +39,7 @@
                             </div>
                             
                             <div class="pt-3">
-                                <p class="text-2xl f-f-r lg:w-10/12">Weekly Turnaround  &amp; Schedule</p>
+                             
                             </div>
                             <div id="listHolder" class="hidden pt-12">
                                 <div class="flex items-center">
@@ -50,7 +50,7 @@
                                     </div>
                                     <div class="text-2xl f-f-r">Sun 01pm</div>
                                 </div>
-                                      <button class="text-2xxl py-2 text-gray-100 bg-primary-500 font-semibold text-lg text-center p-3">Sun(3pm-8pm)</button>
+                                      <button class="ml- text-2xxl py-2 text-gray-100 bg-primary-500 font-semibold text-lg text-center p-3">Sun(3pm-8pm)</button>
                           
                                 <div class="flex items-center mt-7">
                                     <div class="pr-3">
@@ -105,7 +105,7 @@
                         </div>
                         <div class="pt-8 lg:pt-0 flex items-center flex-col">
                            
-                            <button class="text-2xxl py-2 text-gray-100 bg-primary-500 font-semibold text-lg text-center p-3">Delivery Schedule</button>
+  <p class="text-2xl f-f-r lg:w-10/12">Weekly Turnaround  &amp; Schedule</p>
                         </div>
                     </div>
                 </div>
