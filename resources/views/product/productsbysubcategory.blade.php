@@ -46,7 +46,7 @@
                             @endif
 
                             <div class="mb-2 capitalize">
-                                <span class="font-semibold text-black">Delivery</span>  Same Day
+                                <span class="font-semibold text-black">Delivery</span>  {{$product->delivery_time}} {{ $product->delivery_time > 1 ? 'Days' : 'Day'}}
                             </div>
                             @if ($product->packages && $product->packages[0]->paper)
                                 <div class="capitalize">
