@@ -164,6 +164,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         EloquentFilter\ServiceProvider::class,
+        Davmixcool\MetaManager\MetaServiceProvider::class,
 
         /*
          * Package Service Providers...
