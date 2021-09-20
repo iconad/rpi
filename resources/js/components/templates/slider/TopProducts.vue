@@ -42,6 +42,7 @@
                     slidesPerView: this.columns,
                     slidesPerColumn: this.rows,
                     spaceBetween: 25,
+
                     navigation: {
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev'

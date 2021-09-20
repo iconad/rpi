@@ -14,7 +14,6 @@
             </swiper-slide>
             <div class="product-swiper-pagination" slot="pagination"></div>
         </swiper>
-
     </div>
 </template>
 
