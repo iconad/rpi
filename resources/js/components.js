@@ -33,14 +33,6 @@ Vue.component(
 );
 
 
-// our Clients
-
-Vue.component(
-    "our-clients",
-    require("./components/rpiclients.vue").default
-);
-
-
 
 Vue.component(
     "top-products",
