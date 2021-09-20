@@ -44,6 +44,8 @@ Route::get('/product-order/{type}/{product}', 'pagesController@checkOrderType');
 Route::get('/pages/{page}', 'pagesController@singlePage');
 
 // Static Routes
+// Route::get('/test-page', 'pagesController@testPage');
+
 Route::get('/terms-and-conditions', 'pagesController@TermsAndConditions');
 Route::get('/cart', 'pagesController@cart');
 Route::get('/page/artworking-service', 'pagesController@artnetwork');

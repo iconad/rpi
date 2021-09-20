@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section('headlinks')
+@include('meta::manager', [
+    'twitter_card' => $product->getMedia('product-gallery')->first()->getUrl()
+])
+@endsection
+
 @section('content')
     <section id="pageCover">
 
@@ -55,7 +61,7 @@
 
 
 
-       
+
        {{-- page cover --}}
        <div class="product-navbar lg:flex lg:items-center lg:justify-center bg-theme-gray -mt-2">
             <ul class="lg:flex lg:items-center">
@@ -86,10 +92,10 @@
 
     <section class="product-tree mt-12" id="overview">
         <div class="text-center block ">
-            <h2 class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-2xl md:text-4xl xl:text-4xl 
+            <h2 class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-2xl md:text-4xl xl:text-4xl
     font-black text-center text-white md:leading-tight">{{$product->body_title}}</h2>
             <div class="text-lg lg:text-xl text-indigo-900">{{$product->body_subtitle}}</div>
-            <div class=" {{$product->points->count() < 4  ? 'hidden' : 'grid'}} product-points-grid points-grid grid-cols-2 lg:grid-cols-4 mx-6 mt-16 lg:border 
+            <div class=" {{$product->points->count() < 4  ? 'hidden' : 'grid'}} product-points-grid points-grid grid-cols-2 lg:grid-cols-4 mx-6 mt-16 lg:border
             lg:border-gray-900 lg:border-b-0 lg:border-l-0 lg:border-r-0">
                 @foreach ($product->points as $point)
                 <div class="point p-7">
@@ -133,7 +139,7 @@
         </div>
         <div>
             <product-how-to-order />
-            
+
         </div>
     </section>
 
@@ -141,7 +147,7 @@
     <section class="turnaround-page my-16" id="knowBeforeOrder">
     <turn-around />
 
- 
+
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10 mt-10">
             <div class="box border-2 border-primary p-10">
                 <div class="flex items-center justify-center text-2xl text-primary font-semibold">
@@ -208,11 +214,11 @@
     <section class="product-size-specifications my-16" id="specifications">
         <div class="text-center">
             <div class="text-3xl font-semibold text-gray-900">Product Specifications </div>
- 
+
         </div>
         <div class="sizess mt-5 bg-theme-gray p-8">
             <div class="text-2xl flex items-center font-semibold text-gray-800 mb-5">
-               
+
                 <span>Product Size </span>
             </div>
             {{-- header --}}
@@ -224,7 +230,7 @@
                 <a class="text-primary font-semibold text-lg text-primary-500 theme-link border-b border-transparent hover:border-primary " href="/layout-templates">Download Templates</a>
             </div>
         </div>
-       
+
         {{-- prices dropdonw --}}
     </section>
     {{-- price and page section ended here --}}
@@ -232,19 +238,19 @@
     <! ––  <section class="turnaround-page my-16" id="turnaround">
 
 
-    
+
 <div class="text-center w-full md:w-2/3 mx-auto">
-    <div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-2xl md:text-4xl xl:text-4xl 
+    <div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-2xl md:text-4xl xl:text-4xl
     font-black text-center text-white md:leading-tight">Print Process </div>
     <p class="text-xl text-red-600 ">Product will be Delivered ({{$product->delivery_time}}  Business Days )</p>
-  
+
     <print-schedule />
     <hr class=" h-px bg-gray-500 my-3">
-  
+
 </div>
 
 <div class="mt-6 bg-theme-gray">
-   
+
    <!--   <div class="flex flex-wrap lg:flex-nowrap items-center justify-center py-10">
         <div class="w-full lg:w-20rem py-4 md:mr-10 text-center lg:text-left">
             <div class="text-2xl text-blue-500 font-semibold text-center">Today</div>
@@ -335,7 +341,7 @@
 
 </div>
 
-</section> 
+</section>
 
     <section class="quantity-section my-16 p-6">
         <div class="flex flex-wrap lg:flex-nowrap items-center">
@@ -382,7 +388,7 @@
         <div class="flex flex-wrap lg:flex-nowrap items-start">
             <div class="w-full lg:w-auto mb-10 lg:mb-0 text-2xl font-semibold text-gray-900 flex items-center">
                 <span class="text-gray-600 inline-block mr-2 md:mt-0">
-                    <svg class="w-6 h-6 fill-current" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" 
+                    <svg class="w-6 h-6 fill-current" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 25.8 26.3"><path class="cls-1" d="M383 26a9 9 0 01-7-4c-5-6 5-18 6-21l2-1 1 1a54 54 0 015 8c3 6 3 11 1 13a9 9 0 01-8 4zm0-22c-3 5-8 13-5 17a7 7 0 0011 0c3-4-2-13-6-17z" transform="translate(-366)"/><path class="cls-1" d="M375 0c-1 1-12 16-7 22a9 9 0 0015 0c5-6-7-21-8-22z" transform="translate(-366)"/></svg>
                 </span>
                 <span>
@@ -416,11 +422,11 @@
         </div>
     </section>
     {{-- finishing section --}}
- 
 
 
 
-   
+
+
 
 
 
@@ -431,9 +437,9 @@
     {{-- turnaround section ended here --}}
 
 
- 
 
- 
+
+
 
 
     <our-projects />
@@ -442,7 +448,7 @@
 
 
     <section class="turnaround-page my-16 hidden">
- 
+
     </section>
     {{-- useful links ended --}}
 

@@ -635,4 +635,10 @@ class pagesController extends Controller
     }
 
 
+
+    // function testPage () {
+    //     return view('test');
+    // }
+
+
 }

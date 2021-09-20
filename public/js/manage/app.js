@@ -105692,7 +105692,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 var httpLink = Object(apollo_link_http__WEBPACK_IMPORTED_MODULE_8__["createHttpLink"])({
   // You should use an absolute URL here
-  uri: 'https://www.rpiuae.ae/graphql'
+  uri: 'http://127.0.0.1:8000/graphql'
 }); // Cache implementation
 
 var cache = new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_9__["InMemoryCache"](); // Create the apollo client
@@ -110593,7 +110593,7 @@ __webpack_require__.r(__webpack_exports__);
 vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_3__["default"]);
 var store = new vuex__WEBPACK_IMPORTED_MODULE_3__["default"].Store({
   state: {
-    publicUrl: "https://www.rpiuae.ae/storage/",
+    publicUrl: "http://127.0.0.1:8000/storage/",
     productGallery: [],
     isSidebar: false,
     sidebarType: null,

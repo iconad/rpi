@@ -25,7 +25,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 // HTTP connection to the API
 const httpLink = createHttpLink({
     // You should use an absolute URL here
-    uri: 'https://www.rpiuae.ae/graphql',
+    uri: 'http://127.0.0.1:8000/graphql',
 })
 
 // Cache implementation
