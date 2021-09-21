@@ -1,7 +1,7 @@
 <template>
     <div class="container mx-auto pt-16">
         <div class="pb-12">
-            <h1 class="text-3xl xl:text-5xl font-extrabold text-gray-800 mx-auto text-center xl:text-left pb-4 items-center ">Hear From Our Customers</h1>
+            <h1 class="text-3xl xl:text-5xl font-bold text-gray-700 mx-auto text-center xl:text-left pb-4 items-center ">Hear From Our Customers</h1>
             <p class="text-xl text-gray-600 xl:w-3/4 w-11/12 mx-auto xl:mx-0 text-center sm:text-left">I just wanted to share a quick note and let you know that
              you guys do a really good job. </p>
         </div>
@@ -10,7 +10,7 @@
                 <div class="flex flex-wrap justify-around">
                     <div class="xl:w-1/3 lg:w-5/12 w-11/12 sm:w-3/5 md:w-5/12 xl:pb-0 pb-12">
                         <div class="shadow-lg mx-3 xl:mx-3 sm:mx-0 lg:mx-0 rounded">
-                            <div class="bg-indigo-700 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
+                            <div class="bg-primary-400 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
                                 <p class="text-xl text-white pb-1">Great expierence</p>
                                 <p class="text-base text-indigo-200">Rami</p>
                             </div>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="xl:w-1/3 lg:w-5/12 w-11/12 sm:w-3/5 md:w-5/12 xl:mb-0 mb-12">
                         <div class="shadow-lg mx-3 xl:mx-3 sm:mx-0 lg:mx-0 rounded">
-                            <div class="bg-indigo-700 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
+                            <div class="bg-primary-400 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
                                 <p class="text-xl text-white pb-1"> Quality + Details</p>
                                 <p class="text-base text-indigo-200">kurmaan</p>
                             </div>
@@ -45,7 +45,7 @@
                                     <img src="https://cdn.tuk.dev/assets/photo-1548958921-c5c0fe1b307d.jfif" alt="" class="h-full w-full object-cover rounded-full overflow-hidden" />
                                 </div>
 
-                                <p class="text-base text-gray-600 leading-8">RPI definitely does all the little things right! I’ve ordered other items from Moo before, 
+                                <p class="text-base text-gray-600 leading-8">RPI definitely does all the little things right! I’ve ordered other items from Moo before,
                                     and the quality (and little details) keeps me coming back for more.</p>
                                 <div class="flex justify-end mt-2">
                                     <svg width="44" height="37" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +62,7 @@
                     </div>
                     <div class="xl:w-1/3 lg:w-5/12 w-11/12 sm:w-3/5 md:w-5/12 xl:mb-0 mb-12">
                         <div class="shadow-lg mx-3 xl:mx-3 sm:mx-0 lg:mx-0 rounded">
-                            <div class="bg-indigo-700 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
+                            <div class="bg-primary-400 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
                                 <p class="text-xl text-white pb-1">Tangible Experience</p>
                                 <p class="text-base text-indigo-200">BAYRAK </p>
                             </div>
@@ -91,7 +91,7 @@
                 <div class="flex flex-wrap justify-around">
                     <div class="xl:w-1/3 lg:w-5/12 w-11/12 sm:w-3/5 md:w-5/12 xl:mb-0 mb-12">
                         <div class="shadow-lg mx-3 xl:mx-3 sm:mx-0 lg:mx-0 rounded">
-                            <div class="bg-indigo-700 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
+                            <div class="bg-primary-400 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
                                 <p class="text-xl text-white pb-1">Not disappointed at all !!</p>
                                 <p class="text-base text-indigo-200">Rabika</p>
                             </div>
@@ -116,7 +116,7 @@
                     </div>
                     <div class="xl:w-1/3 lg:w-5/12 w-11/12 sm:w-3/5 md:w-5/12 xl:pb-0 pb-12">
                         <div class="shadow-lg mx-3 xl:mx-3 sm:mx-0 lg:mx-0 rounded">
-                            <div class="bg-indigo-700 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
+                            <div class="bg-primary-400 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
                                 <p class="text-xl text-white pb-1">Fantastic business cards</p>
                                 <p class="text-base text-indigo-200">Ahmad hasnain</p>
                             </div>
@@ -141,7 +141,7 @@
                     </div>
                     <div class="xl:w-1/3 lg:w-5/12 w-11/12 sm:w-3/5 md:w-5/12 xl:mb-0 mb-12">
                         <div class="shadow-lg mx-3 xl:mx-3 sm:mx-0 lg:mx-0 rounded">
-                            <div class="bg-indigo-700 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
+                            <div class="bg-primary-400 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
                                 <p class="text-xl text-white pb-1">Happy as always!</p>
                                 <p class="text-base text-indigo-200">Martin</p>
                             </div>
@@ -170,7 +170,7 @@
                 <div class="flex flex-wrap justify-around">
                     <div class="xl:w-1/3 lg:w-5/12 w-11/12 sm:w-3/5 md:w-5/12 xl:mb-0 mb-12">
                         <div class="shadow-lg mx-3 xl:mx-3 sm:mx-0 lg:mx-0 rounded">
-                            <div class="bg-indigo-700 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
+                            <div class="bg-primary-400 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
                                 <p class="text-xl text-white pb-1">Exactly what I had in mind</p>
                                 <p class="text-base text-indigo-200">CHRISTEEN</p>
                             </div>
@@ -193,8 +193,8 @@
                             </div>
                         </div>
                     </div>
-            
-                  
+
+
                 </div>
             </figure>
         </section>
