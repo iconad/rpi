@@ -1,6 +1,8 @@
 @extends('layouts.app')
+
 @section('headlinks')
 @include('meta::manager')
+
 @endsection
 @section('content')
 <section id="CoverAdSection" class="mt-6 banner-section">
@@ -232,7 +234,6 @@ We provide state of the art service for printing of Stationery, Books, Magazines
 
     </div>
     {{-- office block --}}
-
 
 
 </section>

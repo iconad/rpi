@@ -38,6 +38,7 @@ Vue.component(
 );
 
 
+
 Vue.component(
     "top-products",
     require("./components/templates/slider/TopProducts.vue").default
