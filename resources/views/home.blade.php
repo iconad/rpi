@@ -1,8 +1,13 @@
 @extends('layouts.app')
 
 @section('headlinks')
-@include('meta::manager')
-
+@include('meta::manager', [
+    'title'         => 'Printing Services Dubai, Sharjah, UAE | Rainbow Printing Press',
+    'description'   => 'Rainbow Printing Press offers quality &amp; affordable services to businesses in Dubai, Sharjah, Abu Dhabi &amp; all across the Gulf. Call: 06 534 1113',
+    'image'         => 'Url to the image',
+    'keywords'      => 'digital printing dubai, digital printing sharjah, uae digital printing, printing press in uae, printing press in Sharjah, printing press in dubai, offset printing in uae, offset printing Sharjah, offset printing dubai, printing companies in uae, printing companies in Sharjah, printing companies in dubai, large format printing, large format printing dubai, printing services,
+     printing press, digital printing, digital printing uae, offset printing',
+])
 @endsection
 @section('content')
 <section id="CoverAdSection" class="mt-6 banner-section">
@@ -49,12 +54,12 @@
                     Why us?
                     </h1>
                     <p class="mt-5 leading-7 text-gray-600">
-                    Rainbow Printing Press is one of the most trusted and reputed name in the Printing Industry in the UAE.
+                   PRINTO is one of the most trusted and reputed name in the Printing Industry in the UAE.
 
 We provide state of the art service for printing of Stationery, Books, Magazines, Catalogues, Directories etc.
  <br />
  With a team of dedicated and experienced printing experts,
- Rainbow Printing Press is always committed to provide top quality service  <br /> for all your printing need.
+ Printo is always committed to provide top quality service  <br /> for all your printing need.
                     </p>
                     </p>
                     <div class="grid gap-6 mt-8 sm:grid-cols-2">
@@ -131,8 +136,8 @@ We provide state of the art service for printing of Stationery, Books, Magazines
 
 <section class="my-12" id="whyChoose">
     <div class="text-center hidden">
-        <h2 class="text-3xl font-semibold text-gray-900 mb-5"> RPI- ONE OF THE LEADING PRINTING PRESSES IN THE UAE</h2>
-        <p>Rainbow Printing Press is one of the most trusted and reputed name in the Printing Industry in the UAE. </p>
+        <h2 class="text-3xl font-semibold text-gray-900 mb-5"> PRINTO - ONE OF THE LEADING PRINTING PRESSES IN THE UAE</h2>
+        <p>PRINTO is one of the most trusted and reputed name in the Printing Industry in the UAE. </p>
              We provide state of the art service for printing of Stationery, Books, Magazines, Catalogues, Directories etc.<br>
               With a team of dedicated and experienced printing experts, Rainbow Printing Press is always committed to provide top quality service for all your printing need. <br>
 
@@ -199,14 +204,15 @@ We provide state of the art service for printing of Stationery, Books, Magazines
             <div>
                 <div class="px-4 py-3  bg-primary-400 text-lg text-white font-semibold">Contact US </div>
                 <div class="border p-5 mt-5">
-            <iframe width="100%" height="320" rel="nofollow" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d412.4546691427452!2d55.42353688114295!3d25.294179094589303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x356b36e009b8f7dc!2sRainbow%20Printing%20Industries%20LLC!5e0!3m2!1sen!2sae!4v1627538752496!5m2!1sen!2sae" allowfullscreen=""></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.9605465949867!2d55.42899581501177!3d25.305529583845942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe6afcce8ce885a66!2sPrinto!5e0!3m2!1sen!2sae!4v1632745034727!5m2!1sen!2sae" width="100%" height="320" rel="nofollow" frameborder="0" style="border:0"></iframe>
+ 
         </div>
 
             </div>
             <div>
                <div class="py-5">
-                    <span class="block"> Rainbow Printing Industries LLC </span>
-                    <span class="block"> P.O. Box 25483, Dubai, UAE </span>
+                    <span class="block"> Printo </span>
+                    <span class="block"> P.O. Box 25483, Sharjah, UAE </span>
                     <table class="mt-5 w-full">
                         <tr>
                             <td> <span class="font-semibold">Call</span> </td>
@@ -214,7 +220,7 @@ We provide state of the art service for printing of Stationery, Books, Magazines
                         </tr>
                         <tr>
                             <td> <span class="font-semibold">Email</span> </td>
-                            <td>info@rpi.ae</td>
+                            <td>info@printo.ae</td>
                         </tr>
                         <tr>
                             <td> <span class="font-semibold">Working Hours</span> </td>
@@ -240,4 +246,3 @@ We provide state of the art service for printing of Stationery, Books, Magazines
 {{-- contact section --}}
 
 @endsection
-

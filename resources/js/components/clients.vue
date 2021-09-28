@@ -9,7 +9,8 @@
                 <swiper class="swiper" :options="swiperOption">
                     <swiper-slide v-for="(client, index) in clients" :key="index">
                         <div class="w-full text-center">
-                            <img :src="client.logo" class="h-32 h-32 mx-auto object-cover rounded-full" alt="user image">
+                            <img :src="client.logo" class="h-42 h-42 mx-auto object-cover rounded-full" alt="user image">
+
                         </div>
                     </swiper-slide>
                     <div class="swiper-pagination clients-swiper-pagination" slot="pagination"></div>
@@ -29,53 +30,77 @@
             {
                 id: 1,
                 name: "client name",
-                logo: "https://rpiuae.com/assets/images/clients/client48.jpg"
+                logo: "https://i.ibb.co/L8f931P/3.png"
             },
             {
                 id: 2,
                 name: "client name",
-                logo: "https://rpiuae.com/assets/images/clients/client13.jpg"
+                logo: "https://i.ibb.co/7zBJHVq/4.png"
             },
             {
                 id: 3,
                 name: "client name",
-                logo: "https://rpiuae.com/assets/images/clients/client46.jpg"
+                logo: "https://i.ibb.co/7VNnxd1/armani.png"
             },
             {
                 id: 4,
                 name: "client name",
-                logo: "https://www.adnc.ae/images/adnc-logo1.jpg"
+                logo: "https://i.ibb.co/Xp4BR9G/awj.png"
             },
             {
                 id: 5,
                 name: "client name",
-                logo: "https://images.ctfassets.net/keh7myspeaj0/2rHSxDjOROmUXaLVfTgU1y/a95092e5c890c779b97f646a5d5cbed4/logo_en.svg"
+                logo: "https://i.ibb.co/gD4w7Td/Boehringer.png"
             },
             {
                 id: 6,
                 name: "client name",
-                logo: "https://i.ibb.co/hZ8xnmm/gap.jpg"
+                logo: "https://i.ibb.co/zrMfc7K/national-paint.png"
             },
             {
                 id: 7,
                 name: "client name",
-                logo: "https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+                logo: "https://i.ibb.co/N6smgFv/daral-Marfa.png"
             },
             {
                 id: 8,
                 name: "client name",
-                logo: "https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+                logo: "https://i.ibb.co/jJH5d1g/dubai-Healthcare.png"
             },
             {
                 id: 9,
                 name: "client name",
-                logo: "https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+                logo: "https://i.ibb.co/dKn0JLj/gap.png"
             },
             {
                 id: 10,
                 name: "client name",
-                logo: "https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+                logo: "https://i.ibb.co/ZTFHrq3/gfc.png"
             },
+               { id:11,
+                 name: "client name",
+                logo: "https://i.ibb.co/bbHZ7FD/grandstores.png"
+      },
+            {    id:12,
+                 name: "client name",
+                logo: "https://i.ibb.co/7W8rRcS/kingspan.png"
+      },
+               { id:13,
+                 name: "client name",
+                logo: "https://i.ibb.co/VWX2bQp/lifco.png"
+      },
+               { id:14,
+                 name: "client name",
+                logo: "https://i.ibb.co/P6r84Kf/mamas.png"
+      },
+               { id:15,
+                 name: "client name",
+                logo: "https://i.ibb.co/R007XKB/sharjah-Chamber.png"
+      },
+               { id:16,
+                logo: "https://i.ibb.co/yn7L4q6/taqeef.pngg"
+      },
+
         ],
         swiperOption: {
           slidesPerView: 5,

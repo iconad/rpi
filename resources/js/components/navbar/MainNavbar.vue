@@ -3,7 +3,7 @@
         <div class="flex items-center relative text-sm lg:text-base font-medium z-10">
             <div class="logo hidden lg:block">
                 <a href="/">
-                    <img class="absolute h-16 left-0 top-0" src="../../../../public/assets/images/logo.png" alt="logo" />
+                    <img class="absolute h-16 left-0 top-0" src="../../../../public/assets/images/logoprintoa.png" alt="logo" />
                 </a>
             </div>
             <!-- logo -->
