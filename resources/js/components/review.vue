@@ -10,7 +10,7 @@
                 <div class="flex flex-wrap justify-around">
                     <div class="xl:w-1/3 lg:w-5/12 w-11/12 sm:w-3/5 md:w-5/12 xl:pb-0 pb-12">
                         <div class="shadow-lg mx-3 xl:mx-3 sm:mx-0 lg:mx-0 rounded">
-                            <div class="bg-primary-400 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
+                            <div class="bg-cyan-500 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
                                 <p class="text-xl text-white pb-1">Great expierence</p>
                                 <p class="text-base text-indigo-200">Rami</p>
                             </div>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="xl:w-1/3 lg:w-5/12 w-11/12 sm:w-3/5 md:w-5/12 xl:mb-0 mb-12">
                         <div class="shadow-lg mx-3 xl:mx-3 sm:mx-0 lg:mx-0 rounded">
-                            <div class="bg-primary-400 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
+                            <div class="bg-cyan-500 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
                                 <p class="text-xl text-white pb-1"> Quality + Details</p>
                                 <p class="text-base text-indigo-200">kurmaan</p>
                             </div>
@@ -62,7 +62,7 @@
                     </div>
                     <div class="xl:w-1/3 lg:w-5/12 w-11/12 sm:w-3/5 md:w-5/12 xl:mb-0 mb-12">
                         <div class="shadow-lg mx-3 xl:mx-3 sm:mx-0 lg:mx-0 rounded">
-                            <div class="bg-primary-400 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
+                            <div class="bg-cyan-500 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
                                 <p class="text-xl text-white pb-1">Tangible Experience</p>
                                 <p class="text-base text-indigo-200">BAYRAK </p>
                             </div>
@@ -91,7 +91,7 @@
                 <div class="flex flex-wrap justify-around">
                     <div class="xl:w-1/3 lg:w-5/12 w-11/12 sm:w-3/5 md:w-5/12 xl:mb-0 mb-12">
                         <div class="shadow-lg mx-3 xl:mx-3 sm:mx-0 lg:mx-0 rounded">
-                            <div class="bg-primary-400 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
+                            <div class="bg-cyan-500 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
                                 <p class="text-xl text-white pb-1">Not disappointed at all !!</p>
                                 <p class="text-base text-indigo-200">Rabika</p>
                             </div>
@@ -116,7 +116,7 @@
                     </div>
                     <div class="xl:w-1/3 lg:w-5/12 w-11/12 sm:w-3/5 md:w-5/12 xl:pb-0 pb-12">
                         <div class="shadow-lg mx-3 xl:mx-3 sm:mx-0 lg:mx-0 rounded">
-                            <div class="bg-primary-400 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
+                            <div class="bg-cyan-500 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
                                 <p class="text-xl text-white pb-1">Fantastic business cards</p>
                                 <p class="text-base text-indigo-200">Ahmad hasnain</p>
                             </div>
@@ -141,7 +141,7 @@
                     </div>
                     <div class="xl:w-1/3 lg:w-5/12 w-11/12 sm:w-3/5 md:w-5/12 xl:mb-0 mb-12">
                         <div class="shadow-lg mx-3 xl:mx-3 sm:mx-0 lg:mx-0 rounded">
-                            <div class="bg-primary-400 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
+                            <div class="bg-cyan-500 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
                                 <p class="text-xl text-white pb-1">Happy as always!</p>
                                 <p class="text-base text-indigo-200">Martin</p>
                             </div>
@@ -170,7 +170,7 @@
                 <div class="flex flex-wrap justify-around">
                     <div class="xl:w-1/3 lg:w-5/12 w-11/12 sm:w-3/5 md:w-5/12 xl:mb-0 mb-12">
                         <div class="shadow-lg mx-3 xl:mx-3 sm:mx-0 lg:mx-0 rounded">
-                            <div class="bg-primary-400 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
+                            <div class="bg-cyan-500 pt-6 pb-6 pl-6 rounded-tl rounded-tr">
                                 <p class="text-xl text-white pb-1">Exactly what I had in mind</p>
                                 <p class="text-base text-indigo-200">CHRISTEEN</p>
                             </div>

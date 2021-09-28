@@ -56,7 +56,7 @@
                     <p class="mt-5 leading-7 text-gray-600">
                    PRINTO is one of the most trusted and reputed name in the Printing Industry in the UAE.
 
-We provide state of the art service for printing of Stationery, Books, Magazines, Catalogues, Directories etc.
+    We provide state of the art service for printing of Stationery, Books, Magazines, Catalogues, Directories etc.
  <br />
  With a team of dedicated and experienced printing experts,
  Printo is always committed to provide top quality service  <br /> for all your printing need.
@@ -176,7 +176,7 @@ We provide state of the art service for printing of Stationery, Books, Magazines
 
 
     <div class="our-strength mt-24 ">
-    <div class="px-4 py-3 bg-primary-400 text-lg text-white font-semibold capitalize text-sec font-semibold text-xl mb-3">Our Process </div>
+    <div class="px-4 py-3 bg-cyan-500 text-lg text-white font-semibold capitalize text-sec font-semibold text-xl mb-3">Our Process </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-1 gap-10">
 
@@ -202,9 +202,10 @@ We provide state of the art service for printing of Stationery, Books, Magazines
     <div class="mt-12">
         <div class="grid grid-cols-1 md:grid-cols-2 md:gap-10">
             <div>
-                <div class="px-4 py-3  bg-primary-400 text-lg text-white font-semibold">Contact US </div>
+                <div class="px-4 py-3  bg-cyan-500 text-lg text-white font-semibold">Contact US </div>
                 <div class="border p-5 mt-5">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.9605465949867!2d55.42899581501177!3d25.305529583845942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe6afcce8ce885a66!2sPrinto!5e0!3m2!1sen!2sae!4v1632745034727!5m2!1sen!2sae" width="100%" height="320" rel="nofollow" frameborder="0" style="border:0"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.9605465949867!2d55.42899581501177!3d25.305529583845942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe6afcce8ce885a66!2sPrinto!5e0!3m2!1sen!2sae!4v1632745034727!5m2!1sen!2sae" 
+                    width="100%" height="320" rel="nofollow" frameborder="0" style="border:0"></iframe>
  
         </div>
 
