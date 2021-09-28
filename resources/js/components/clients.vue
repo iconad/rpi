@@ -10,7 +10,6 @@
                     <swiper-slide v-for="(client, index) in clients" :key="index">
                         <div class="w-full text-center">
                             <img :src="client.logo" class="h-32 h-32 mx-auto object-cover rounded-full" alt="user image">
-                            <span class="block mt-3 font-medium text-gray-700">{{client.name}}</span>
                         </div>
                     </swiper-slide>
                     <div class="swiper-pagination clients-swiper-pagination" slot="pagination"></div>
@@ -30,32 +29,32 @@
             {
                 id: 1,
                 name: "client name",
-                logo: "https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+                logo: "https://rpiuae.com/assets/images/clients/client48.jpg"
             },
             {
                 id: 2,
                 name: "client name",
-                logo: "https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+                logo: "https://rpiuae.com/assets/images/clients/client13.jpg"
             },
             {
                 id: 3,
                 name: "client name",
-                logo: "https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+                logo: "https://rpiuae.com/assets/images/clients/client46.jpg"
             },
             {
                 id: 4,
                 name: "client name",
-                logo: "https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+                logo: "https://www.adnc.ae/images/adnc-logo1.jpg"
             },
             {
                 id: 5,
                 name: "client name",
-                logo: "https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+                logo: "https://images.ctfassets.net/keh7myspeaj0/2rHSxDjOROmUXaLVfTgU1y/a95092e5c890c779b97f646a5d5cbed4/logo_en.svg"
             },
             {
                 id: 6,
                 name: "client name",
-                logo: "https://i.pinimg.com/564x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+                logo: "https://i.ibb.co/hZ8xnmm/gap.jpg"
             },
             {
                 id: 7,
