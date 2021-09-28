@@ -18,6 +18,11 @@ Vue.component(
     require("./components/FAQ.vue").default
 );
 
+Vue.component(
+    "home-clients",
+    require("./components/clients.vue").default
+);
+
 //new one added
 
 Vue.component(
