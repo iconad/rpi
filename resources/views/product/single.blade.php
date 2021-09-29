@@ -63,7 +63,7 @@
 
 
        {{-- page cover --}}
-       <div class="product-navbar lg:flex lg:items-center lg:justify-center bg-theme-gray -mt-2">
+       <div class="product-navbar lg:flex lg:items-center lg:justify-center bg-cyan-50 -mt-2">
             <ul class="lg:flex lg:items-center">
                 <li>
                     <a href="#overview" class="block px-6 py-4 font-semibold text-lg text-gray-900 hover:bg-theme-gray-dark">Overview</a>
@@ -74,11 +74,9 @@
                 <li>
                     <a href="#specifications" class="block px-6 py-4 font-semibold text-lg text-gray-900 hover:bg-theme-gray-dark">Specifications</a>
                 </li>
+               
                 <li>
-                    <a href="#turnaround" class="block px-6 py-4 font-semibold text-lg text-gray-900 hover:bg-theme-gray-dark">Turnaround</a>
-                </li>
-                <li>
-                    <a href="#howToOrder" class="block px-6 py-4 font-semibold text-lg text-gray-900 hover:bg-theme-gray-dark">How to Order</a>
+                    <a href="#howToOrder" class="block px-6 py-4 font-semibold text-lg text-gray-900 hover:bg-theme-gray-dark">Order</a>
                 </li>
                 <li>
                     <a href="#knowBeforeOrder" class="block px-6 py-4 font-semibold text-lg text-gray-900 hover:bg-theme-gray-dark">Know Before Order</a>
@@ -92,7 +90,7 @@
 
     <section class="product-tree mt-12" id="overview">
         <div class="text-center block ">
-            <h2 class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-2xl md:text-4xl xl:text-4xl
+            <h2 class="bg-cyan-500 text-2xl md:text-4xl xl:text-4xl
     font-black text-center text-white md:leading-tight">{{$product->body_title}}</h2>
             <div class="text-lg lg:text-xl text-indigo-900">{{$product->body_subtitle}}</div>
             <div class=" {{$product->points->count() < 4  ? 'hidden' : 'grid'}} product-points-grid points-grid grid-cols-2 lg:grid-cols-4 mx-6 mt-16 lg:border
@@ -240,7 +238,7 @@
 
 
 <div class="text-center w-full md:w-2/3 mx-auto">
-    <div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-2xl md:text-4xl xl:text-4xl
+    <div class="bg-cyan-500 text-2xl md:text-4xl xl:text-4xl
     font-black text-center text-white md:leading-tight">Print Process </div>
     <p class="text-xl text-red-600 ">Product will be Delivered ({{$product->delivery_time}}  Business Days )</p>
 

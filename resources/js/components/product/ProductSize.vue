@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="px-4 py-2 bg-primary-500 text-white text-lg font-semibold">{{size.region}} Standard ({{size.landscape}}x{{size.portrait}}{{size.unit}})</div>
+        <div class="px-4 py-2 bg-cyan-500 text-white text-lg font-semibold">{{size.region}} Standard ({{size.landscape}}x{{size.portrait}}{{size.unit}})</div>
         <div class="flex flex-wrap lg:flex-nowrap items-center justify-around p-5 lg:pb-0 bg-white pb-10 pt-16 lg:py-0 lg:h-18rem">
             <div class="w-full">
                 <div class="w-64 h-32 bg-gray-300 relative mx-auto">
