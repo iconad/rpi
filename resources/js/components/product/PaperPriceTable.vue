@@ -3,8 +3,8 @@
         <table v-if="package" class="table-auto w-full divide-y divide-gray-200">
             <thead>
             <tr>
-                <th class="border p-4 bg-theme-gray-dark">Quantity</th>
-                <th class="border p-4 bg-theme-gray-dark capitalize" v-for="(head, i) in header" :key="i">
+                <th class="border p-4 bg-cyan-50">Quantity</th>
+                <th class="border p-4 bg-cyan-50 capitalize" v-for="(head, i) in header" :key="i">
                     {{head.region}}
                     <template v-if="head.portrait && head.landscape">({{head.portrait}}x{{head.landscape}})</template>
                     {{head.type}}</th>
