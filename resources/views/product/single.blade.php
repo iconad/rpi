@@ -130,6 +130,29 @@
     {{-- price and page section ended here --}}
 
 
+    <section class="product-size-specifications my-16" id="specifications">
+        <div class="text-center">
+            <div class="text-3xl font-semibold text-gray-900">Product Specifications </div>
+
+        </div>
+        <div class="sizess mt-5 bg-theme-gray p-8">
+            <div class="text-2xl flex items-center font-semibold text-gray-800 mb-5">
+
+                <span>Product Size </span>
+            </div>
+            {{-- header --}}
+
+                <product-sizes></product-sizes>
+
+
+            <div class="mt-8">
+                <a class="text-primary font-semibold text-lg text-primary-500 theme-link border-b border-transparent hover:border-primary " href="/layout-templates">Download Templates</a>
+            </div>
+        </div>
+
+        {{-- prices dropdonw --}}
+    </section>
+
     <section class="how-to-order my-16" id="howToOrder">
         <div class="text-center w-full md:w-2/3 mx-auto">
             <div class="text-3xl font-semibold text-gray-900">Our Process</div>
@@ -209,28 +232,7 @@
 
 
 
-    <section class="product-size-specifications my-16" id="specifications">
-        <div class="text-center">
-            <div class="text-3xl font-semibold text-gray-900">Product Specifications </div>
-
-        </div>
-        <div class="sizess mt-5 bg-theme-gray p-8">
-            <div class="text-2xl flex items-center font-semibold text-gray-800 mb-5">
-
-                <span>Product Size </span>
-            </div>
-            {{-- header --}}
-
-                <product-sizes></product-sizes>
-
-
-            <div class="mt-8">
-                <a class="text-primary font-semibold text-lg text-primary-500 theme-link border-b border-transparent hover:border-primary " href="/layout-templates">Download Templates</a>
-            </div>
-        </div>
-
-        {{-- prices dropdonw --}}
-    </section>
+   
     {{-- price and page section ended here --}}
 
     <! ––  <section class="turnaround-page my-16" id="turnaround">

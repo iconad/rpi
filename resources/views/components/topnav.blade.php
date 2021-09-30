@@ -11,14 +11,14 @@
      
         <li class="mr-4  flex justify-start  text-primary-500">
 
-        <a href="/" class="flex items-center">
+        <a  class="flex items-center">
                 <span class="block mr-2 ">
                     <img class="w-4" src="{{ asset('assets/images/call-icon.png') }}" alt="">
                 </span>
                 <span class="block hover:text-sec tracking-wider">+971 6 534 1113</span>
             </a>
            
-            <a href="info@printo.ae" class="flex items-center ml-4">
+            <a href="mailto:info@printo.ae" class="flex items-center ml-4">
                 <span class="block mr-2">
                     <img class="w-4" src="{{ asset('assets/images/email.png') }}" alt="">
                 </span>
