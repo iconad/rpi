@@ -39,15 +39,15 @@
 
                         <ul>
                             <li class="mt-3">
-                                <a href="https://www.rpiuae.ae/pages/help-centre"  class="text-gray-500 cursor-pointer hover:text-gray-900">Help Center</a>
+                                <a href="https://printo.ae/pages/contact"  class="text-gray-500 cursor-pointer hover:text-gray-900">Help Center</a>
                             </li>
 
                             <li class="mt-3">
-                                <a href="https://www.rpiuae.ae/pages/privacy-policy"  class="text-gray-500 cursor-pointer hover:text-gray-900">Privacy Policy </a>
+                                <a href="https://printo.ae/pages/privacy-policy"  class="text-gray-500 cursor-pointer hover:text-gray-900">Privacy Policy </a>
                             </li>
 
                             <li class="mt-3">
-                                <a href="https://www.rpiuae.ae/pages/terms-and-condition"  class="text-gray-500 cursor-pointer hover:text-gray-900">Conditions </a>
+                                <a href="https://printo.ae/pages/terms-and-condition"  class="text-gray-500 cursor-pointer hover:text-gray-900">Conditions </a>
                             </li>
                         </ul>
 
@@ -58,10 +58,10 @@
                         <h2 class="text-sm uppercase text-primary-700 font-bold">Contact Us </h2>
 
                         <li class="mt-3">
-                            <a href="https://www.rpiuae.ae/estimate"  class="text-gray-500 cursor-pointer hover:text-gray-900">Request a Quote</a>
+                            <a href="https://printo.ae/estimate"  class="text-gray-500 cursor-pointer hover:text-gray-900">Request a Quote</a>
                         </li>
                          <li class="mt-3">
-                         <a href="mailto:info@rpi.ae" class="... md:no-underline md:hover:underline text-gray-900">Send Email</a>
+                         <a href="mailto:info@printo.ae" class="... md:no-underline md:hover:underline text-gray-900">Send Email</a>
 
 
                         </li>
