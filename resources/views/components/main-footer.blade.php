@@ -20,15 +20,15 @@
 
                         <ul>
                             <li class="mt-3">
-                                <a href="https://www.rpiuae.ae/categories/print-products"  class="text-gray-500 cursor-pointer hover:text-gray-900">Print Products</a>
+                                <a href="https://printo.ae/categories/print-products"  class="text-gray-500 cursor-pointer hover:text-gray-900">Print Products</a>
                             </li>
 
                             <li class="mt-3">
-                                <a href="https://www.rpiuae.ae/categories/packaging"  class="text-gray-500 cursor-pointer hover:text-gray-900">Packaging </a>
+                                <a href="https://printo.ae/categories/packaging"  class="text-gray-500 cursor-pointer hover:text-gray-900">Packaging </a>
                             </li>
 
                             <li class="mt-3">
-                                <a href="https://www.rpiuae.ae/categories/banners-displays"  class="text-gray-500 cursor-pointer hover:text-gray-900">Banners & Displays</a>
+                                <a href="https://printo.ae/categories/banners-displays"  class="text-gray-500 cursor-pointer hover:text-gray-900">Banners & Displays</a>
                             </li>
                         </ul>
 
@@ -39,7 +39,7 @@
 
                         <ul>
                             <li class="mt-3">
-                                <a href="https://printo.ae/pages/contact"  class="text-gray-500 cursor-pointer hover:text-gray-900">Help Center</a>
+                                <a href="https://printo.ae/pages/contact"  class="text-gray-500 cursor-pointer hover:text-gray-900">Contact Us</a>
                             </li>
 
                             <li class="mt-3">
@@ -127,7 +127,7 @@
                         </a>
                     </span>
                 </div>
-      <div class="my-5">RPI© Copyright 2021. All Rights Reserved.</div>
+      <div class="my-5">Printo© Copyright 2021. All Rights Reserved.</div>
    </div>
 </div>
 

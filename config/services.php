@@ -33,7 +33,7 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'http://rpiuae.ae/auth/google/callback',
+        'redirect' => 'http://printo.ae/auth/google/callback',
     ],
 
 ];

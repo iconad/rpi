@@ -51,7 +51,7 @@ class EstimateReplyController extends Controller
         if ($reply->save()) {
 
 
-            $subject = "Estimate response from RPI";
+            $subject = "Estimate response from Printo";
 
 
             $message = $request->message . " if you have any question please contact us on +971 000 00000";
