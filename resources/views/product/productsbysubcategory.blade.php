@@ -14,7 +14,11 @@
             @if ($subcategory->products)
             <div class="grid grid-cols-3 gap-5">
             @foreach ($subcategory->products as $product)
-                @if (count($product->packages) != 0)
+                @if (
+                    count($product->packages) != 0 &&
+                    count($product->packages[0]->pricessizes) != 0 &&
+                    count($product->packages[0]->pricessizes[0]->sizes) != 0
+                )
                     <div class="border border-gray-200 rounded-lg">
                         <div>
                             <a href="/products/{{$product->slug}}">
@@ -36,7 +40,7 @@
                                 </span>
                                 @endif
                                 {{$product->packages[0]->quantity}} Copies >
-                                {{$product->packages[0]->prices[0]->price}} AED
+                                {{$product->packages[0]->pricessizes[0]->sizes[0]->price}} AED
                             </div>
                             @if ($product->packages && $product->packages[0]->paper)
                                 <div class="mb-2 capitalize">

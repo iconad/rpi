@@ -11,7 +11,8 @@
                         {{product.packages[0].prices[0].size.region}}
                     </span>
                     <span class="border border-t-0 p-2 pt-3">
-                        {{product.packages[0].quantity}} Copies
+                        {{product.packages[0].quantity}}
+                        {{ product.packages[0].quantity == 1 ? 'Copy' : 'Copies' }}
                     </span>
                         <span class="border-b p-2 pt-3">
                             {{prices[0][0].price}} AED
