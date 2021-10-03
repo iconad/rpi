@@ -59,14 +59,19 @@
                                         <template slot="singleLabel" slot-scope="props">
                                             <span class="option__desc">
                                                 <span class="option__title" v-if="props.option.paper">
-                                                    {{props.option.paper.side}}
+                                                     {{props.option.paper.side}} -
+                                                     <span class="text-xs">{{props.option.paper.title}} </span>
                                                 </span>
                                             </span>
                                         </template>
 
                                         <template slot="option" slot-scope="props">
                                             <div class="option__desc">
-                                                <span class="option__title" v-if="props.option.paper">{{props.option.paper.side}}</span>
+                                                <span class="option__title" v-if="props.option.paper">
+                                                    {{props.option.paper.side}}
+                                                    -
+                                                    <span class="text-xs">{{props.option.paper.title}}</span>
+                                                </span>
                                             </div>
                                         </template>
                                     </multiselect>

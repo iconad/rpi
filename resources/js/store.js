@@ -17,7 +17,7 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
-        publicUrl: "http://127.0.0.1:8000/storage/",
+        publicUrl: "https://www.printo.ae/storage/",
         //Order
         selectedPaperFinishing: [],
         selectedPaperFinishingExtraPrice: null,
