@@ -30,75 +30,83 @@
             {
                 id: 1,
                 name: "client name",
-                logo: "https://i.ibb.co/L8f931P/3.png"
+                logo: "https://printo.ae/assets/images/our-clients/3.png"
             },
             {
                 id: 2,
                 name: "client name",
-                logo: "https://i.ibb.co/7zBJHVq/4.png"
+                logo: "https://printo.ae/assets/images/our-clients/4.png"
             },
             {
                 id: 3,
                 name: "client name",
-                logo: "https://i.ibb.co/7VNnxd1/armani.png"
+                logo: "https://printo.ae/assets/images/our-clients/Armani.png"
             },
             {
                 id: 4,
                 name: "client name",
-                logo: "https://i.ibb.co/Xp4BR9G/awj.png"
+                logo: "https://printo.ae/assets/images/our-clients/awj.png"
             },
             {
                 id: 5,
                 name: "client name",
-                logo: "https://i.ibb.co/gD4w7Td/Boehringer.png"
+                logo: "https://printo.ae/assets/images/our-clients/Boehringer.png"
             },
             {
                 id: 6,
                 name: "client name",
-                logo: "https://i.ibb.co/zrMfc7K/national-paint.png"
+                logo: "https://printo.ae/assets/images/our-clients/daralMarfa.png"
             },
             {
                 id: 7,
                 name: "client name",
-                logo: "https://i.ibb.co/N6smgFv/daral-Marfa.png"
+                logo: "https://printo.ae/assets/images/our-clients/daralMarfa.png"
+            },
+
+               { id:16,
+                logo: "https://printo.ae/assets/images/our-clients/nationalpaint.png"
             },
             {
                 id: 8,
                 name: "client name",
-                logo: "https://i.ibb.co/jJH5d1g/dubai-Healthcare.png"
+                logo: "https://printo.ae/assets/images/our-clients/dubaiHealthcare.png"
             },
             {
                 id: 9,
                 name: "client name",
-                logo: "https://i.ibb.co/dKn0JLj/gap.png"
+                logo: "https://printo.ae/assets/images/our-clients/GAP.png"
             },
             {
                 id: 10,
                 name: "client name",
-                logo: "https://i.ibb.co/ZTFHrq3/gfc.png"
+                logo: "https://printo.ae/assets/images/our-clients/gfc.png"
             },
                { id:11,
                  name: "client name",
-                logo: "https://i.ibb.co/bbHZ7FD/grandstores.png"
+                logo: "https://printo.ae/assets/images/our-clients/grandstores.png"
       },
             {    id:12,
                  name: "client name",
-                logo: "https://i.ibb.co/7W8rRcS/kingspan.png"
+                logo: "https://printo.ae/assets/images/our-clients/harveyNicolos.png"
       },
                { id:13,
                  name: "client name",
-                logo: "https://i.ibb.co/VWX2bQp/lifco.png"
+                logo: "https://printo.ae/assets/images/our-clients/kingspan.png"
       },
                { id:14,
                  name: "client name",
-                logo: "https://i.ibb.co/P6r84Kf/mamas.png"
+                logo: "https://printo.ae/assets/images/our-clients/lifco.png"
       },
                { id:15,
                  name: "client name",
-                logo: "https://i.ibb.co/R007XKB/sharjah-Chamber.png"
+                logo: "https://printo.ae/assets/images/our-clients/mamas.png"
       },
-               { id:16,
-                logo: "https://i.ibb.co/yn7L4q6/taqeef.pngg"
+            
+              { id:16,
+                logo: "https://printo.ae/assets/images/our-clients/sharjahChamber.png"
+      },
+                { id:16,
+                logo: "https://printo.ae/assets/images/our-clients/taqeef.png"
       },
 
         ],
