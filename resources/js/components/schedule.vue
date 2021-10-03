@@ -1,21 +1,21 @@
 <template>
     <div class="mx-auto container">
-       
+
         <div class="mx-auto container px-4 xl:px-0 pt-16 lg:pt-36">
             <div class="flex flex-col w-full items-center justify-center f-f-l">
                 <div class="bg-white w-full xl:w-11/12 px-6 py-8 xl:px-16 lg:py-16 shadow-lg">
                     <div class="lg:flex justify-between w-full">
                         <div>
                             <div class="flex w-full justify-between lg:justify-start items-center">
-                                <h1 class="text-color font-black text-2xl lg:text-5xl lg:mr-8">Today 1PM</h1>
-                             
+                                <h1 class="font-black text-2xl lg:text-5xl lg:mr-8 text-gray-700">Today 1PM</h1>
+
                             </div>
                             <div class="pt-3">
                                 <p class="text-2xl f-f-r lg:w-10/12">Proof approval by  &amp; 01pm</p>
                             </div>
                         </div>
                         <div class="pt-8 lg:pt-0 flex items-center flex-col">
-                            <h1 class="f-f-l font-black text-color text-2xl lg:text-3xl">Day 1</h1>
+                            <h1 class="f-f-l font-black text-2xl lg:text-3xl text-gray-700">Day 1</h1>
                             <button class="py-4 px-4 xl:px-10 bg-gray-100 focus:outline-none f-f-r text-xl font-bold text-color mt-7">3PM TO 8PM</button>
                         </div>
                     </div>
@@ -37,9 +37,9 @@
                                     </button>
                                 </div>
                             </div>
-                            
+
                             <div class="pt-3">
-                             
+
                             </div>
                             <div id="listHolder" class="hidden pt-12">
                                 <div class="flex items-center">
@@ -51,7 +51,7 @@
                                     <div class="text-2xl f-f-r">Sun 01pm</div>
                                 </div>
                                       <button class="ml- text-2xxl py-2 text-gray-100 bg-cyan-500 font-semibold text-lg text-center p-3">Sun(3pm-8pm)</button>
-                          
+
                                 <div class="flex items-center mt-7">
                                     <div class="pr-3">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -98,19 +98,19 @@
                                 </div>
                                       <button class="text-2xxl py-2 text-gray-100 bg-cyan-500 font-semibold text-lg text-center p-3">Sat(3pm-8pm)</button>
                                 <div class="flex items-center mt-7">
-                                 
+
                                 </div>
-                                  
+
                             </div>
                         </div>
                         <div class="pt-8 lg:pt-0 flex items-center flex-col">
-                           
+
   <p class="text-2xl f-f-r lg:w-10/12">Weekly Turnaround  &amp; Schedule</p>
                         </div>
                     </div>
                 </div>
-            
-                
+
+
             </div>
         </div>
     </div>

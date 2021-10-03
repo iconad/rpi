@@ -6,11 +6,11 @@
 
             <div class="flex-shrink-0 w-64 mx-auto text-center  mt-8  md:mx-0 md:text-left">
                 <a class="flex  font-medium text-gray-900 title-font md:justify-start">
-                <th class="border-r p-3"><img class="h-40 w-64" src="assets/images/logoprinto.png" alt="logo"></th>
+                <th class="border-r p-3"><img class="h-40 w-64" src="/assets/images/logoprinto.png" alt="logo"></th>
                 </a>
-               
 
-            
+
+
             </div>
       </div>
 
@@ -90,7 +90,7 @@
       <div class="mt-4">
                     <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
 
-                    
+
                         <a  href="https://www.facebook.com/Printo-103831525403061" class="text-gray-500 cursor-pointer hover:text-gray-700">
                             <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 class="w-5 h-5" viewBox="0 0 24 24">

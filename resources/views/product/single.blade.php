@@ -11,7 +11,7 @@
 
        <div class="page-cover" style="background: url({{$cover}}) no-repeat center; background-size: cover;">
         <div class="inner p-8 w-full md:w-1/2">
-            <div class="text-xl underline font-medium ">{{$product->delivery_time}}  Days Delivery*</div>
+            <div class="text-xl font-medium ">{{$product->delivery_time}}  Days Delivery*</div>
             <h1 class="text-4xl lg:text-6xl my-2 leading-none text-white font-semibold">{{$product->title}}</h1>
             <div class="text-sec font-medium text-lg lg:text-xl capitalize">
                 @if (count($product->packages) != 0)
@@ -53,33 +53,25 @@
         </div>
        </div>
 
-       <pre>
-
-       </pre>
-
-
-
-
-
 
        {{-- page cover --}}
        <div class="product-navbar lg:flex lg:items-center lg:justify-center bg-cyan-50 -mt-2">
             <ul class="lg:flex lg:items-center">
                 <li>
-                    <a href="#overview" class="block px-6 py-4 font-semibold text-lg text-gray-900 hover:bg-theme-gray-dark">Overview</a>
+                    <a href="#overview" class="block px-6 py-4 font-semibold text-lg text-gray-900 hover:bg-white">Overview</a>
                 </li>
                 <li>
-                    <a href="#paperPrice" class="block px-6 py-4 font-semibold text-lg text-gray-900 hover:bg-theme-gray-dark">Paper & Prices</a>
+                    <a href="#paperPrice" class="block px-6 py-4 font-semibold text-lg text-gray-900 hover:bg-white">Paper & Prices</a>
                 </li>
                 <li>
-                    <a href="#specifications" class="block px-6 py-4 font-semibold text-lg text-gray-900 hover:bg-theme-gray-dark">Specifications</a>
+                    <a href="#specifications" class="block px-6 py-4 font-semibold text-lg text-gray-900 hover:bg-white">Specifications</a>
                 </li>
-               
+
                 <li>
-                    <a href="#howToOrder" class="block px-6 py-4 font-semibold text-lg text-gray-900 hover:bg-theme-gray-dark">Order</a>
+                    <a href="#howToOrder" class="block px-6 py-4 font-semibold text-lg text-gray-900 hover:bg-white">Order</a>
                 </li>
                 <li>
-                    <a href="#knowBeforeOrder" class="block px-6 py-4 font-semibold text-lg text-gray-900 hover:bg-theme-gray-dark">Know Before Order</a>
+                    <a href="#knowBeforeOrder" class="block px-6 py-4 font-semibold text-lg text-gray-900 hover:bg-white">Know Before Order</a>
                 </li>
             </ul>
        </div>
@@ -90,9 +82,10 @@
 
     <section class="product-tree mt-12" id="overview">
         <div class="text-center block ">
-            <h2 class="bg-cyan-500 text-2xl md:text-4xl xl:text-4xl
-    font-black text-center text-white md:leading-tight">{{$product->body_title}}</h2>
-            <div class="text-lg lg:text-xl text-indigo-900">{{$product->body_subtitle}}</div>
+            <h2 class="text-2xl md:text-4xl xl:text-4xl font-black text-center text-white md:leading-tight">
+                <span class="bg-cyan-500 inline-block p-2">{{$product->body_title}}</span>
+            </h2>
+            <div class="text-lg lg:text-xl text-indigo-900 mt-4">{{$product->body_subtitle}}</div>
             <div class=" {{$product->points->count() < 4  ? 'hidden' : 'grid'}} product-points-grid points-grid grid-cols-2 lg:grid-cols-4 mx-6 mt-16 lg:border
             lg:border-gray-900 lg:border-b-0 lg:border-l-0 lg:border-r-0">
                 @foreach ($product->points as $point)
@@ -146,7 +139,7 @@
 
 
             <div class="mt-8">
-                <a class="text-primary font-semibold text-lg text-primary-500 theme-link border-b border-transparent hover:border-primary " 
+                <a class="text-primary font-semibold text-lg text-primary-500 theme-link border-b border-transparent hover:border-primary "
                 href="/layout-templates">Explore our Templates</a>
             </div>
         </div>
@@ -233,116 +226,23 @@
 
 
 
-   
+
     {{-- price and page section ended here --}}
 
-    <! ––  <section class="turnaround-page my-16" id="turnaround">
+     <section class="turnaround-page my-16" id="turnaround">
 
-
-
-<div class="text-center w-full md:w-2/3 mx-auto">
-    <div class="bg-cyan-500 text-2xl md:text-4xl xl:text-4xl
-    font-black text-center text-white md:leading-tight">Print Process </div>
-    <p class="text-xl text-red-600 ">Product will be Delivered ({{$product->delivery_time}}  Business Days )</p>
-
-    <print-schedule />
-    <hr class=" h-px bg-gray-500 my-3">
-
-</div>
-
-<div class="mt-6 bg-theme-gray">
-
-   <!--   <div class="flex flex-wrap lg:flex-nowrap items-center justify-center py-10">
-        <div class="w-full lg:w-20rem py-4 md:mr-10 text-center lg:text-left">
-            <div class="text-2xl text-blue-500 font-semibold text-center">Today</div>
-            <div class="text-theme-red-light font-semibold text-semibold text-xl pl-3">01pm</div>
-            <div class="turnaround-lines arrow border-b h-px border-dashed border-blue-500 relative my-2"></div>
-            <div class="font-semibold text-xl text-gray-900">Proof approval by 01pm</div>
-        </div>
-        <div class="hidden lg:block h-16 w-1 bg-blue-600 rounded-full mt-8"></div>
-        <div class="w-full lg:w-20rem py-4 md:ml-10">
-            <div class="text-2xl text-blue-500 font-semibold text-center">Day 1</div>
-            <div class="text-theme-red-light font-semibold text-semibold text-xl pl-3 flex items-center justify-center">
-                <span>3pm</span>
-                <span class="mx-3 rounded-full h-1 block bg-theme-red-light w-24"></span>
-                <span>8pm</span>
+        <div class="text-center w-full md:w-2/3 mx-auto">
+            <div class="mb-4 text-2xl md:text-4xl xl:text-4xl font-black text-center text-white md:leading-tight">
+                <span class="inline-block bg-cyan-500 p-2">Print Process</span>
             </div>
-            <div class="turnaround-lines circle border-b h-px border-dashed border-blue-500 relative my-2"></div>
-            <div class="font-semibold text-xl text-gray-900 text-center">Delivery Schedule</div>
+            <p class="text-base font-medium text-red-600 ">Product will be Delivered ({{$product->delivery_time}}  Business Days )</p>
+
+            <print-schedule />
+            <hr class=" h-px bg-gray-500 my-3">
+
         </div>
-    </div>
-    <div class="text-xl text-gray-800 text-primary text-center font-semibold">Overview of Weekly Turnaround Schedule</div>
-<div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 p-3 md:p-12">
-        <div class="box">
-            <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Sun</span> 01pm</div>
-            <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
 
-            <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
-                <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
-            </span>
-
-                <span class="font-semibold">Sun</span>
-                 <span class="block">(3pm-8pm)</span>
-            </div>
-        </div>
-        {{-- box --}}
-        <div class="box">
-            <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Mon</span> 01pm</div>
-            <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
-
-            <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
-                <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
-            </span>
-
-                <span class="font-semibold">Mon</span>
-                <span class="block">(3pm-8pm)</span>
-            </div>
-        </div>
-        {{-- box --}}
-        <div class="box">
-            <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Tue</span> 01pm</div>
-            <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
-
-            <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
-                <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
-            </span>
-
-                <span class="font-semibold">Tue</span>
-                <span class="block">(3pm-8pm)</span>
-            </div>
-        </div>
-        {{-- box --}}
-        <div class="box">
-            <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Wed</span> 01pm</div>
-            <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
-
-            <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
-                <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
-            </span>
-
-                <span class="font-semibold">Wed</span>
-                <span class="block">(3pm-8pm)</span>
-            </div>
-        </div>
-        {{-- box --}}
-        <div class="box col-span-2 xl:col-span-1">
-            <div class="p-3 bg-blue-600 text-white font-medium text-center text-lg lg:text-xl"> <span class="font-semibold">Thu</span> 01pm</div>
-            <div class="relative text-xl font-medium text-blue-600 text-center bg-white h-24 p-3 lg:flex items-end justify-center space-x-2">
-
-            <span class="hidden turnaround-lines-vertical absolute left-0 top-0 lg:block w-full">
-                <span class="relative arrow mx-auto border-l-2 border-dashed border-blue-600 h-8 block w-px"></span>
-            </span>
-
-                <span class="font-semibold">Thu</span>
-                <span class="block">(3pm-8pm)</span>
-            </div>
-        </div>
-        {{-- box --}}
-    </div> -->
-
-</div>
-
-</section>
+    </section>
 
     <section class="quantity-section my-16 p-6">
         <div class="flex flex-wrap lg:flex-nowrap items-center">
@@ -423,25 +323,6 @@
         </div>
     </section>
     {{-- finishing section --}}
-
-
-
-
-
-
-
-
-
-
-
-
-    {{-- turnaround section ended here --}}
-
-
-
-
-
-
 
     <our-projects />
 
