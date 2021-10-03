@@ -57,11 +57,8 @@
                 name: "client name",
                 logo: "https://printo.ae/assets/images/our-clients/daralMarfa.png"
             },
-            {
-                id: 7,
-                name: "client name",
-                logo: "https://printo.ae/assets/images/our-clients/daralMarfa.png"
-            },
+            
+           
 
                { id:16,
                 logo: "https://printo.ae/assets/images/our-clients/nationalpaint.png"
