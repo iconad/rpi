@@ -32,7 +32,7 @@ class EstimateEmailToAdmin extends Mailable
     public function build()
     {
         {
-            return $this->from('info@rpi.com', 'Rainbow Printing')
+            return $this->from('info@printo.com', 'Printo')
             ->subject($this->data['subject'])
             ->view('mail.admin.estimateemail', ['data'=>$this->data]);
         }

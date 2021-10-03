@@ -31,7 +31,7 @@ class UpdateorderMail extends Mailable
      */
     public function build()
     {
-        return $this->from('info@rpi.com', 'Rainbow Printing')
+        return $this->from('info@printo.com', 'Printo')
         ->subject($this->data['sub'])
         ->view('mail.user.ordrestatustouser', ['data'=>$this->data]);
     }
