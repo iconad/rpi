@@ -3,7 +3,7 @@
         <div v-if="isSend" class="h-64 flex items-center justify-center">
             <div class="text-xl text-center">
                 <span class="block text-green-600 mb-2 font-semibold">Your estimate inquiry has been successfully sent</span>
-                <span class="w-full md:w-1/2 mx-auto block text-gray-700 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae sed nobis doloremque consequuntur reprehenderit similique.</span>
+                
                 <span class="mt-3 flex items-center justify-center space-x-3 text-base">
                     <a href="/" class="cursor-pointer theme-button py-1 rounded bg-transparent text-gray-700 text-sm border-gray-300"> Home </a>
                     <button @click="isSend = false" class="cursor-pointer theme-button py-1 rounded bg-transparent text-gray-700 text-sm border-gray-300"> Send Another Estimate </button>

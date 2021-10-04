@@ -242,14 +242,14 @@
 </td>
 </tr>
 <tr>
-<td style="padding-top: 20px; background-color: #ffffff;">Thank you so much,<br />Rainbow Printing LLC.</td>
+<td style="padding-top: 20px; background-color: #ffffff;">Thank you so much,<br />Printo.</td>
 </tr>
 </tbody>
 </table>
 </td>
 </tr>
 <tr>
-<td class="footer-cell" valign="top">Rainbow Printing LLC.<br />an Awesome Co Technologies, INC company</td>
+<td class="footer-cell" valign="top">Printo<br />Online Digital Printing Company</td>
 </tr>
 </tbody>
 </table>
