@@ -74,7 +74,57 @@
 
         <modal height="auto" name="are-you-sure" class="relative">
             <div class="p-10 text-center">
-            
+         <!--    <div class="text-3xl text-sec font-semibold mb-3">IMPORTANT NOTICE!</div>
+                <p class="text-base text-800 mt-5">Please pay the below amount and send us the proof of payment with your ordre ID on our email <a href="mailto:info@rpi.ae" class="font-semibold hover:underline">info@rpi.ae</a> or Whatsapp us on <span class="font-semibold">+971 55 207 4007</span>, and will start working on you order ASAP.</p>
+                <table class="w-full text-left mt-5 text-red-500">
+                    <tr>
+                        <td class="font-medium border p-2">Order ID</td>
+                        <td class="font-medium border p-2">{{order.id}}</td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium border p-2">Amount to pay</td>
+                        <td class="font-medium border p-2">{{order.price_total}} AED</td>
+                    </tr>
+                </table>
+                <table class="w-full text-left mt-5">
+                    <tr>
+                        <td colspan="2" class="border p-2 font-semibold">Bank Detail</td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium border p-2">Company Name</td>
+                        <td class="border p-2">Rainbow Printing Ind .LLC (R.P.I)</td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium border p-2">Bank Name</td>
+                        <td class="border p-2">The National Bank of Ras Al Khaima (P.S.C)</td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium border p-2">Branch</td>
+                        <td class="border p-2">Sharjah Industrial Area</td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium border p-2">Po Box</td>
+                        <td class="border p-2">1531 Dubai, United Arab of Emirates</td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium border p-2">A/C No</td>
+                        <td class="border p-2">0362518809001</td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium border p-2">IBAN</td>
+                        <td class="border p-2">AE530400000362518809001</td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium border p-2">Swift Code</td>
+                        <td class="border p-2">NRAKAEAK</td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium border p-2">Routing Code</td>
+                        <td class="border p-2">804020101</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="p-10 text-center hidden"> -->
                 <div class="text-3xl text-sec font-semibold mb-3">IMPORTANT NOTICE!</div>
                 <p class="text-lg text-800 mt-5">After we have checked your data carefully, we will display a digital screen proof in your account that you must approve and pay.</p>
                 <p class="text-base text-800 text-theme-red mb-5 mt-2 font-medium">
@@ -138,9 +188,9 @@
                 }
             }
         },
-        mounted() {
-            this.$modal.show('are-you-sure');
-       },
+       mounted() {
+           this.$modal.show('are-you-sure');
+        },
         methods: {
             addCloudFile () {
                 axios.post(`/profile/orders/${this.order.id}/add-cloud-file`, {
