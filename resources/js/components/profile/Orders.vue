@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="text-2xl font-semibold text-gray-900 flex items-center justify-between">
+         <div class="text-2xl font-semibold text-gray-900 flex items-center justify-between">
             <span>Orders </span>
             <span>
                 <span class="uppercase text-sm font-medium text-gray-600 inline-block mr-1">Filter Orders by</span>
@@ -56,6 +56,8 @@
                             </th>
                             </tr>
                         </thead>
+
+                        
                         <tbody v-if="orders.length != 0" class="bg-white divide-y divide-gray-200">
                             <tr v-for="order in orders" :key="order.id">
                                 <td class="px-6 py-4 whitespace-no-wrap">
@@ -100,9 +102,12 @@
                         <tbody v-else>
                             <tr>
                                 <td colspan="6" class="text-center p-3 text-base leading-5 font-medium text-gray-600"> 0 record found! </td>
+
                             </tr>
                         </tbody>
+
                         </table>
+                
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Rainbow Printing') }}</title>
+    <title>{{ config('app.name', 'Printo') }}</title>
 
     <!-- Styles -->
     {{-- <link href="{{ asset('css/admin.css') }}" rel="stylesheet"> --}}
