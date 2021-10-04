@@ -24,7 +24,8 @@
             @foreach ($categories as $category)
                 <a href="/layout-templates/{{$category->slug}}" class="category-box border hover:bg-orange-100 transition bg-gray-100">
                     <span class="image h-32 md:h-48 p-5 flex items-center justify-center">
-                        <thumb-image-blade classess="w-4/5 md:w-full h-full object-cover" image="{{$category->media[0]->file_name}}" id="{{$category->media[0]->id}}"></thumb-image-blade>
+                        <thumb-image-blade classess="w-4/5 md:w-full h-full object-cover" image="{{$category->media[0]->file_name}}" id="{{$category->media[0]->id}}">
+                    </thumb-image-blade>
                     </span>
                     <span class="py-5 px-2 block text-center">
                         <span class="block text-xs font-medium text-gray-800">{{$category->title}}</span>

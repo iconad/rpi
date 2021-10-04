@@ -10,10 +10,10 @@
                     <span class="border-b p-2 pt-3" v-if="product.packages[0].prices[0] ">
                         {{product.packages[0].prices[0].size.region}}
                     </span>
-                    <span class="border border-t-0 p-2 pt-3">
-                        {{product.packages[0].quantity}}
-                        {{ product.packages[0].quantity == 1 ? 'Copy' : 'Copies' }}
-                    </span>
+                  
+         <span class="border border-t-0 p-2 pt-3">   {{product.packages[0].prices[0].quantity}} {{product.packages[0].prices[0].quantity == 1 ? 'Copy' : 'Copies'}}                 
+                                  </span>
+           
                         <span class="border-b p-2 pt-3">
                             {{prices[0][0].price}} AED
                         </span>
@@ -23,6 +23,7 @@
                         <span class="block p-2 w-32 border-b font-semibold text-black">Papers</span>
                         <span class="block p-2 w-full border border-t-0 border-r-0"> {{product.packages[0].paper.title}} </span>
                     </div>
+                    
                     <div class="flex">
                         <span class="block p-2 w-32 border-b font-semibold text-black">Delivery</span>
                         <span class="block p-2 w-full border border-t-0 border-r-0"> {{product.delivery_time}} {{ product.delivery_time > 1 ? 'Days' : 'Day'}} </span>

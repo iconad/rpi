@@ -77,9 +77,12 @@
                                 <span>
                                     {{$product->packages[0]->prices[0]->size->region}}  ●
                                 </span>
-                                @endif
-                                {{$product->packages[0]->quantity}} Copies >
-                                {{$product->packages[0]->pricessizes[0]->sizes[0]->price}} AED
+                                @endif 
+                                
+                                {{$product->packages[0]->prices[0]->quantity}} {{ $product->packages[0]->prices[0]->quantity == 1 ? 'Copy' : 'Copies'}}
+
+                          
+                              > {{$product->packages[0]->pricessizes[0]->sizes[0]->price}} AED
                             </div>
                             @if ($product->packages && $product->packages[0]->paper)
                                 <div class="mb-2 capitalize">
