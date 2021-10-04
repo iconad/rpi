@@ -5,7 +5,7 @@
 
         <x-profile-header />
         <div class="text-center text-3xl text-sec font-semibold mb-3">IMPORTANT NOTICE!</div>
-                <p class="text-base text-800 mt-5">Please pay the below amount and send us the proof of payment with your order ID on our email <a href="mailto:info@rpi.ae" class="font-semibold hover:underline">info@rpi.ae</a> or Whatsapp us on <span class="font-semibold">+971 55 207 4007</span>, and will start working on you order ASAP.</p>
+                <p class="text-base text-800 mt-5">Please pay the below amount and send us the proof of payment with your order ID on our email <a href="mailto:finance@rpi.ae" class="font-semibold hover:underline">finance@rpi.ae</a> or Whatsapp us on <span class="font-semibold">+971 56 287 6500</span>, and will start working on you order ASAP.</p>
                 <div class="border border-b-0 border-gray-200 w-full text-center px-4 py-2 capitalize font-semibold text-gray-700">
                     {{$order->product->title}}
                     <span class="text-gray-500">/ ORD-{{$order->id}}</span>
