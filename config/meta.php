@@ -59,7 +59,7 @@ return [
     | engines understand it better.
     |
     */
-	'title'	=> 'Rainbow Printing UAE',
+	'title'	=> 'Printo',
 
 	/*
     |--------------------------------------------------------------------------
@@ -70,7 +70,7 @@ return [
     | help search engines understand it better.
     |
     */
-	'description' => 'RPI Rainbow Printing in sharjah UAE',
+	'description' => 'Printo in sharjah UAE',
 
 	/*
     |--------------------------------------------------------------------------

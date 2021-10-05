@@ -243,6 +243,11 @@
     {{-- office block --}}
 
 
+
+    <a href="https://api.whatsapp.com/send?phone=971562876500&text=Iam intreasted in printo Services" class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
+
 </section>
 {{-- contact section --}}
 

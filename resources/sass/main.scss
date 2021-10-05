@@ -1,3 +1,5 @@
+
+
 $primarycolor: #0C4472;
 $seccolor: #ef476f;
 html {
@@ -495,5 +497,25 @@ $twitter: #1da1f2;
           padding-bottom: 2px;
         }
       }
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    
             
+// whats app floating 
+
+      .float{
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:40px;
+        left:40px;
+        background-color:#25d366;
+        color:#FFF;
+        border-radius:50px;
+        text-align:center;
+      font-size:30px;
+        box-shadow: 2px 2px 3px #999;
+      z-index:100;
+    }
+    
+    .my-float{
+        margin-top:16px;
+    }

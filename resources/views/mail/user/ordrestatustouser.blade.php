@@ -227,9 +227,9 @@
 @if(array_key_exists('link', $data))
 <tr>
     <td style="width: 200px; background: #008000;">
-    <div>
+  <!--  <div>
         <a style="background-color: #008000; color: #ffffff; display: inline-block; font-family: sans-serif; font-size: 18px; line-height: 40px; text-align: center; text-decoration: none; width: 200px; -webkit-text-size-adjust: none;" href="{{$data['link']}}">Payment Link</a>
-    </div>
+    </div> -->
     </td>
     <td style="background-color: #ffffff; font-size: 0; line-height: 0;" width="360">&nbsp;</td>
 </tr>

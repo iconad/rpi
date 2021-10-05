@@ -2,7 +2,7 @@
 module.exports = {
     client: {
       service: {
-        name: 'RPI',
+        name: 'Printo',
         // URL to the GraphQL API
         url: 'http://localhost:3000/graphql',
       },

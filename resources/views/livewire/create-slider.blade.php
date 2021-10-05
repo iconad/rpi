@@ -41,7 +41,7 @@
 
                 <div class="mt-3">
                     @if ($product->getMedia('covers')->count() != 0)
-                        <img class="w-1/4" src="{{"https://rpiuae.ae/storage/".$product->getMedia('covers')[0]->id."/".$product->getMedia('covers')[0]->file_name}}" alt="">
+                        <img class="w-1/4" src="{{"https://printo.ae/storage/".$product->getMedia('covers')[0]->id."/".$product->getMedia('covers')[0]->file_name}}" alt="">
                     @else
                         <div class="text-base font-semibold text-red-500">Cover not uploaded for this product.</div>
                     @endif

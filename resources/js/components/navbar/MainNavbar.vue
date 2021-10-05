@@ -20,7 +20,7 @@
                     </div>
                     <div class="w-full pt-3 text-center">
                         <a href="/">
-                            <img class="mx-auto h-12 left-0 top-0" src="../../../../public/assets/images/logo.png" alt="logo" />
+                            <img class="mx-auto h-12 left-0 top-0" src="../../../../public/assets/images/logoprintoa.png" alt="logo" />
                         </a>
                     </div>
                     <div class="w-auto p-2">
