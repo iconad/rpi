@@ -4,7 +4,7 @@
 @include('meta::manager', [
     'title'         => 'Online Printing Services Dubai, Sharjah, UAE | Printo',
     'description'   => 'Printo Press offers quality &amp; affordable services to businesses in Dubai, Sharjah, Abu Dhabi &amp; all across the Gulf. Call: 06 534 1113',
-    'image'         => 'https://printo.ae/assets/images/Seo/our-story.jpg',
+    'image'         => 'https://printo.ae/assets/images/Seo/Printo-story.jpg',
     'twitter_card' => 'summary_large_image',
     'author' => 'Printo',
     'twitter_site' => '@PrintoUae',
