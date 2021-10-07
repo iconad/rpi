@@ -1,15 +1,8 @@
 <div>
 
-
-
-
-
-
     <ul class="hidden lg:flex py-5 px-3 justify-end font-medium text-sm md:text-base">
 
-    
-     
-        <li class="mr-4  flex justify-start  text-primary-500">
+            <li class="mr-4  flex justify-start  text-primary-500">
 
         <a  class="flex items-center">
                 <span class="block mr-2 ">
@@ -25,8 +18,6 @@
                 <span class="block hover:text-sec tracking-wider">info@printo.ae</span>
             </a>
 
-
-          
         </li>
         <li class="flex items-center ml-auto text-primary-500 hover:text-sec">
             @if (Auth::check())

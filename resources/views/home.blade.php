@@ -2,10 +2,10 @@
 
 @section('headlinks')
 @include('meta::manager', [
-    'title'         => 'Printing Services Dubai, Sharjah, UAE | Rainbow Printing Press',
-    'description'   => 'Rainbow Printing Press offers quality &amp; affordable services to businesses in Dubai, Sharjah, Abu Dhabi &amp; all across the Gulf. Call: 06 534 1113',
-    'image'         => 'Url to the image',
-    'keywords'      => 'digital printing dubai, digital printing sharjah, uae digital printing, printing press in uae, printing press in Sharjah, printing press in dubai, offset printing in uae, offset printing Sharjah, offset printing dubai, printing companies in uae, printing companies in Sharjah, printing companies in dubai, large format printing, large format printing dubai, printing services,
+    'title'         => 'Online Printing Services Dubai, Sharjah, UAE | Printo',
+    'description'   => 'Printo Press offers quality &amp; affordable services to businesses in Dubai, Sharjah, Abu Dhabi &amp; all across the Gulf. Call: 06 534 1113',
+    'image'         => 'https://printo.ae/assets/images/Seo/our-story.jpg',
+    'keywords'      => 'Printo Online,  digital printing dubai, digital printing sharjah, uae digital printing, printing press in uae, printing press in Sharjah, printing press in dubai, offset printing in uae, offset printing Sharjah, offset printing dubai, printing companies in uae, printing companies in Sharjah, printing companies in dubai, large format printing, large format printing dubai, printing services,
      printing press, digital printing, digital printing uae, offset printing',
 ])
 @endsection
@@ -20,7 +20,7 @@
 
 <section class="ad-space my-12">
     <div class="w-full md:w-2/3 mx-auto">
-        {{-- <x-ads.fullwidth-small /> --}}
+        {{-- <x-fullwidth-small /> --}}
     </div>
 </section>
 
@@ -33,8 +33,6 @@
         {{-- <x-ads.fullwidth-small /> --}}
     </div>
 </section>
-
-
 
 
 
@@ -136,7 +134,7 @@
 
 <section class="my-12" id="whyChoose">
     <div class="text-center hidden">
-        <h2 class="text-3xl font-semibold text-gray-900 mb-5"> PRINTO - ONE OF THE LEADING PRINTING PRESSES IN THE UAE</h2>
+        <h2 class="text-3xl font-semibold text-gray-900 mb-5"> PRINTO - ONE OF THE LEADING ONLINE DIGITAL PRINTING PRESSES IN THE UAE</h2>
         <p>PRINTO is one of the most trusted and reputed name in the Printing Industry in the UAE. </p>
              We provide state of the art service for printing of Stationery, Books, Magazines, Catalogues, Directories etc.<br>
               With a team of dedicated and experienced printing experts, Rainbow Printing Press is always committed to provide top quality service for all your printing need. <br>
@@ -145,7 +143,7 @@
     <div class="our-story mt-24 hidden">
         <div class="rounded-lg bg-theme-gray p-5">
             <h3 class="capitalize text-sec font-semibold text-xl mb-3">our story</h3>
-            <p>RPI has provided quality printing services to the United Arab Emirates since 1989! We specialize in commercial offset printing and digital printing services
+            <p>Printo has provided quality online printing services which is managed by Rainbow Printing Press which was introducted to the United Arab Emirates since 1989! We specialize in commercial offset printing and digital printing services
                  to cover all your needs.
                  From brochures to banners, we are your one-stop print shop..</p>
         </div>
@@ -244,10 +242,14 @@
 
 
 
+
+
     <a href="https://api.whatsapp.com/send?phone=971562876500&text=Iam intreasted in printo Services" class="float" target="_blank">
 <i class="fa fa-whatsapp my-float"></i>
 </a>
+<x-Social-links />
 
+<x-Social-links />
 </section>
 {{-- contact section --}}
 

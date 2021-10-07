@@ -10,7 +10,7 @@
 <section class="my-12">
     <div class="text-center">
         <h1 class="text-3xl font-semibold text-gray-900">Terms of Use</h1>
-        <h2 class="text-xl font-medium text-gray-700">For using the services of rpi.ae</h2>
+        <h2 class="text-xl font-medium text-gray-700">For using the services of printo.ae</h2>
     </div>
     <div class="terms bg-gray-100 border border-gray-100 rounded-lg p-10 mt-10">
 

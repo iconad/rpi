@@ -43,8 +43,8 @@
                 content: [
                     {
                         id: 1,
-                        title: "What Kind Of Printers/Printing types does RPI have?",
-                        detail: "<p> Rainbow printing press has proven its expertise as a leading printing press in the UAE for <b> digital print solutions </b> We work with all types of firms, such as Public relation, Global Brands and Design agencies. </p>",
+                        title: "What Kind Of Printers/Printing types does Printo have?",
+                        detail: "<p> Printo has proven its expertise as a leading printing press in the UAE for <b> digital print solutions </b> We work with all types of firms, such as Public relation, Global Brands and Design agencies. </p>",
                         isOpen: false
                     },
                     {
@@ -56,19 +56,19 @@
                     {
                         id: 3,
                         title: "Do you supply overseas?",
-                        detail: "<p> Yes, Rainbow Printing Ind. Proudly delivers overseas! <b> Anywhere around </b> the world to satisfy our clients with any printing inquiry. </p>",
+                        detail: "<p> Yes, Printo. Proudly delivers overseas! <b> Anywhere around </b> the world to satisfy our clients with any printing inquiry. </p>",
                         isOpen: false
                     },
                     {
                         id: 4,
-                        title: "RPI’s service time or how quick is our delivery?",
-                        detail: "<p> RPI’s service time or how quick is our delivery? Every job is different <b> Some jobs </b> can be produced in minutes while some may take several days to complete. Let us know when you need your job completed and we'll let you know if it can be done. We go to great lengths to meet even your most demanding timelines. </p>",
+                        title: "Printo’s service time or how quick is our delivery?",
+                        detail: "<p> Printo’s service time or how quick is our delivery? Every job is different <b> Some jobs </b> can be produced in minutes while some may take several days to complete. Let us know when you need your job completed and we'll let you know if it can be done. We go to great lengths to meet even your most demanding timelines. </p>",
                         isOpen: false
                     },
                     {
                         id: 5,
                         title: "How can I place an order?",
-                        detail: "<p> You can select the product of your choice, make appropriate selections from the options available, select the required quantity, then you can either select <b> DESIGN IT </b> if you want to design on your own) or you can UPLOAD your FILES (if you either have print ready files or want RPI's designer's free support) and then make the payment and checkout </p>",
+                        detail: "<p> You can select the product of your choice, make appropriate selections from the options available, select the required quantity, then you can either select <b> DESIGN IT </b> if you want to design on your own) or you can UPLOAD your FILES (if you either have print ready files or want Printo's designer's free support) and then make the payment and checkout </p>",
                         isOpen: false
                     }
                 ]

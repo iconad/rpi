@@ -2,10 +2,13 @@
 
 @section('headlinks')
 @include('meta::manager', [
-    'twitter_card' => $product->getMedia('product-gallery')->first()->getUrl()
+    'title'         => 'Online Printing Services Dubai, Sharjah, UAE | Printo',
+    'description'   => 'Printo Press offers quality &amp; affordable services to businesses in Dubai, Sharjah, Abu Dhabi &amp; all across the Gulf. Call: 06 534 1113',
+    'image'         => 'https://printo.ae/assets/images/Seo/our-story.jpg',
+    'keywords'      => 'Printo Online,  digital printing dubai, digital printing sharjah, uae digital printing, printing press in uae, printing press in Sharjah, printing press in dubai, offset printing in uae, offset printing Sharjah, offset printing dubai, printing companies in uae, printing companies in Sharjah, printing companies in dubai, large format printing, large format printing dubai, printing services,
+     printing press, digital printing, digital printing uae, offset printing',
 ])
 @endsection
-
 @section('content')
     <section id="pageCover">
 
