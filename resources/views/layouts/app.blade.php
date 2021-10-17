@@ -16,6 +16,7 @@
     <!-- Styles -->
     {{-- <link href="{{ asset('css/admin.css') }}" rel="stylesheet"> --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png') }}">
     @yield('headlinks')
 </head>
 {{-- y[^M8@XV>Yp],/bJ --}}
