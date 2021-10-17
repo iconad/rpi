@@ -5,7 +5,7 @@
     'title'         => 'Online Digital Printing Shop in UAE | Printo',
     'description'   => 'Printo offers Online Digital printing &amp; affordable services to businesses in Dubai, Sharjah, Abu Dhabi &amp; all across the Gulf. Call: 06 534 1113',
     'image'         => 'https://printo.ae/assets/images/Seo/Printo-story.jpg',
-    'twitter_card' => 'Desktop Calendar',
+    'twitter_card' =>  'Desktop Calendar',
     'author' => 'Printo',
     'twitter_site' => '@PrintoUae',
     'fb_app_id' => '',

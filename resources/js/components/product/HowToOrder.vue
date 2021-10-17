@@ -95,7 +95,7 @@
                 <div class="p-2 text-white bg-cyan-500 text-lg font-medium">We keep you posted for the free delivery schedule</div>
                 <div class="mt-8 text-lg w-4/5 mx-auto">
                     <p class="mb-5">Clicking the <span class="font-semibold">We have got highly secured online payment portal. You can proceed with the payment process.
-                        On successful completion of payment, you will receive a confirmation mail and an invoice. RPI  will contact you shortly and start with the printing process
+                        On successful completion of payment, you will receive a confirmation mail and an invoice. Printo  will contact you shortly and start with the printing process
                         ’</span>  <span class="font-semibold">‘‘Order Now’</span></p>
                     <p class="mb-5">
                         Customise your specifications by selecting size, paper, colour, quantity and any finishing options. Depending on which options or finishings are selected, the estimated <span class="font-semibold">delivery date</span> will adjust. The <span class="font-semibold">price</span> sub-total will automatically update at the bottom.
