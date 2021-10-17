@@ -10,7 +10,8 @@
     'twitter_site' => '@PrintoUae',
     'fb_app_id' => '',
     'keywords'      => 'online digital printing shop, print shop, printing services, printing near me, photo printing, printing press, print online dubai, print shop near me, Printo Online,  digital printing dubai, digital printing sharjah, uae digital printing, printing press in uae, printing press in Sharjah, printing press in dubai, offset printing in uae, offset printing Sharjah, offset printing dubai, printing companies in uae, printing companies in Sharjah, printing companies in dubai, large format printing, large format printing dubai, printing services,
-     printing press, digital printing, digital printing uae, online printing, offset printing, online printing services dubai, online business card printing dubai',
+     printing press, digital printing, digital printing uae, online printing, offset printing, online printing services dubai, 
+     online business card printing dubai',
 ])
 @endsection
 @section('content')
