@@ -7,6 +7,7 @@
     'image'         => 'https://printo.ae/assets/images/Seo/Printo-story.jpg',
     'twitter_card' =>  'Desktop Calendar',
     'author' => 'Printo',
+    'fb_app_id' => '103831525403061',
     'twitter_site' => '@PrintoUae',
     'dcterms.Relation' => 'PRINTO - The Cheapest Online Printing Company in UAE',
     'og:site_name' => 'PRINTO - The Cheapest Online Printing Company in UAE',
