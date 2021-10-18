@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Online Digital Printing Shop in UAE | Printo | Guaranteed Lowest Price</title>
+    <title>Printo | Online Digital Printing Shop in UAE | Guaranteed Lowest Price</title>
  
     
  <meta name="description" content="Printo has become well known for its outstanding customer service, instant online pricing and fast delivery of print orders than other online printing companies call us: 0653 41 113">
@@ -33,11 +33,10 @@
         <meta name="twitter:site" content="@PrintoUae">
         <meta name="twitter:creator" content="@PrintoUae">
         <meta name="google-site-verification" content="wnjAvBoDOeWI7MhNwKkha40MJO9JU3XnYIfPhELJ5A0" />
-        <meta name="geo.placename" content="Online Digital Printing Shop in UAE | Printo | Guaranteed Lowest Price">
-
-        <meta name="dcterms.Relation" content="Online Digital Printing Shop in UAE | Printo | Guaranteed Lowest Price">
-	<meta name="dcterms.Publisher" content="Online Digital Printing Shop in UAE | Printo | Guaranteed Lowest Price">
-  <meta property="og:site_name" content="Online Digital Printing Shop in UAE | Printo | Guaranteed Lowest Price">
+        <meta name="geo.region" content="AE" />
+        <meta name="geo.placename" content="Sharjah" />
+        <meta name="geo.position" content="25.29424;55.423648" />
+        <meta name="ICBM" content="25.29424, 55.423648" />
 
     <!-- Styles -->
     {{-- <link href="{{ asset('css/admin.css') }}" rel="stylesheet"> --}}
