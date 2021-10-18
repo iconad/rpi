@@ -6,6 +6,7 @@ use App\Models\PackagePrice;
 use App\Models\PackagePriceSize;
 use App\Models\Product;
 use App\Models\Package;
+use App\Models\PackagePriceSizesPrice;
 use App\Models\Size;
 use Illuminate\Http\Request;
 
@@ -145,6 +146,25 @@ class PackagePriceController extends Controller
                 'size_id' => $request->size,
                 'price' => $request->price,
             ]);
+
+            if($request->finishings AND count($request->finishings) != 0) {
+                foreach ($request->finishings as $value) {
+                    PackagePriceSizesPrice::create([
+                        'option_title' => $value['option_title'],
+                        'finishing' => $value['finishing_title'],
+                        'price' => $value['price'],
+                        'days' => $value['days'],
+                        'finishing_id' => $value['finishing_id'],
+                        'option_id' => $value['option_id'],
+                        'package_price_size_id' => $packagepricesize->id
+                    ]);
+                }
+            }
+
+
+
+        }else{
+            return $request;
         }
 
         return response()->json(['message' => 'Package successfully updated!']);

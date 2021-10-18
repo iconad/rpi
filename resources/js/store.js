@@ -66,6 +66,9 @@ export const store = new Vuex.Store({
         state.selectedPaperFinishingExtraPrice = _.sum(state.selectedPaperFinishing.map(e => e.price));
         state.selectedPaperFinishingExtraDays = _.sum(state.selectedPaperFinishing.map(e => e.days));
       },
+      removeAllSelectedPaperFin (state) {
+        state.selectedPaperFinishing = []
+      },
       mutateSelectedShirtPrinting ( state, payload) {
         state.selectedShirtPrinting.push(payload);
 

@@ -52,6 +52,7 @@ class OrderFilterController extends Controller
                             'package_prices.id as package_prices_id',
                             'package_prices.quantity',
                             'package_price_sizes.price',
+                            'package_price_sizes.id as package_price_size_id',
                             'sizes.id as size_id',
                             'sizes.region',
                          )

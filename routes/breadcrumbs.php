@@ -122,6 +122,13 @@ Breadcrumbs::for('product.point', function ($trail, $product, $point) {
     $trail->push($point->title, route('points.show', [$product->id,$point->id]));
 });
 
+// Home > Products > [product] > finishings
+Breadcrumbs::for('product.finishings', function ($trail, $product) {
+    $trail->parent('manage.product', $product);
+    $trail->push("Finishings", route('product.finishings', $product->id));
+});
+
+
 // Home > Products > [product] > packages
 Breadcrumbs::for('product.packages', function ($trail, $product) {
     $trail->parent('manage.product', $product);

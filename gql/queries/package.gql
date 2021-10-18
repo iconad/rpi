@@ -7,7 +7,27 @@ query getEvent($id: ID!) {
         title
     }
     product {
+        selectedFinishings {
+            id
+            options {
+                id
+                title
+                slug
+                price
+                days
+                option {
+                    id
+                    title
+                    price
+                    days
+                }
+            }
+            finishing {
+                title
+            }
+      }
       category {
+          id
         menu {
           id
           title

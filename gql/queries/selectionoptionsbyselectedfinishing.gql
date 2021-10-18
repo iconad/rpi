@@ -1,0 +1,16 @@
+query getEvent($selected_finishing_id: Int!) {
+  selectedoptions(selected_finishing_id: $selected_finishing_id) {
+    id
+    title
+    slug
+    price
+    days
+    option {
+      id
+      title
+      slug
+      price
+      days
+    }
+  }
+}

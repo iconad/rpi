@@ -101,6 +101,7 @@ Route::group(['prefix' => 'manage'], function() {
         Route::resource('/colors', 'ColorController');
 
         Route::get('/select-product-type', 'ProductController@selectProductType')->name('select_product_type');
+        Route::get('/products/{product}/finishings', 'ProductController@productFinishings')->name('product.finishings');
         Route::post('/products/{product}/gallery', 'ProductController@storeGallery');
         Route::put('/products/{product}/assign-label', 'ProductController@assignLabel');
         Route::put('/products/{product}/change-status', 'ProductController@changeStatus');
@@ -133,6 +134,7 @@ Route::group(['prefix' => 'manage'], function() {
         Route::put('/prices/{price}/change-status', 'PackagePriceController@changeStatus');
         Route::resource('/products/{product}/packages/{package}/prices', 'PackagePriceController');
         Route::delete('/packagepricesizes/{packagepricesize}', 'PackagePriceSizeController@destroy');
+        Route::delete('/package-price-sizes-price/{finishingid}', 'PackagePriceSizesPriceController@destroy');
         Route::get('/orders', 'ManagePages@orders')->name('orders.index');
         Route::get('/orders/{order}', 'ManagePages@order')->name('orders.show');
         Route::get('/pending-proofs', 'ManagePages@pendingProofs')->name('pending-proofs.index');

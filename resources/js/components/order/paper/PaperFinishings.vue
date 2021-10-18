@@ -1,11 +1,8 @@
 <template>
     <div>
-        <!-- {{finishing}} -->
-        <hot-foil :finishing="finishing" v-if="isHotFoil" :type="type" @added="added"></hot-foil>
-        <emboss :finishing="finishing" v-if="isEmboss" :type="type" @added="added"></emboss>
-        <punch-hole :finishing="finishing" v-if="isPunchHole" :type="type" @added="added"></punch-hole>
-        <round-corner :finishing="finishing" v-if="isRoundCorner" :type="type" @added="added"></round-corner>
-        <other-finishing :finishing="finishing" v-if="!isRoundCorner && !isPunchHole && !isEmboss && !isHotFoil" :type="type" @added="added"></other-finishing>
+        <other-finishing :finishing="finishing" v-if="normalFinishing" :type="type" @added="added"></other-finishing>
+        <round-corner :finishing="finishing" v-else-if="isRoundCorner" :type="type" @added="added"></round-corner>
+
     </div>
 </template>
 
@@ -13,33 +10,26 @@
 
 
     // components
-    import HotFoil from './HotFoil'
-    import Emboss from './Emboss'
-    import PunchHole from './PunchHole'
     import RoundCorner from './RoundCorner'
-    import OtherFinishing from './OtherFinishing.vue'
+    import OtherFinishing from './Finishings.vue'
 
     export default {
         props: ['type', 'finishings'],
-        components: {HotFoil, Emboss, PunchHole, RoundCorner, OtherFinishing},
+        components: {RoundCorner, OtherFinishing},
         computed: {
 
-            isHotFoil () {
-                return this.type.toLowerCase() === 'hot foil'
+            normalFinishing () {
+                return this.type.toLowerCase() !== 'round corner'
             },
-            isEmboss () {
-                return this.type.toLowerCase() === 'emboss'
-            },
-            isPunchHole () {
-                return this.type.toLowerCase() === 'punch hole'
-            },
+
             isRoundCorner () {
                 return this.type.toLowerCase() === 'round corner'
             },
+
             finishing () {
-                return this.finishings.find(f => {
-                    return f.title == this.type
-                })
+                if(this.finishings && this.finishings[`${this.type}`]) {
+                    return this.finishings[`${this.type}`]
+                }
             }
         },
         methods: {

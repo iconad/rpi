@@ -11,6 +11,13 @@
                 <ValidationProvider name="form.size" rules="required">
                     <div class="relative">
                         <select class="form-input text-lg" v-model="csize" @change="onSelectSize">
+                            <option v-if="method == 'update'" class="capitalize" :value="selectedSize.size.id">
+                                {{ selectedSize.size.region }}
+                                <span class="capitalize"> / {{selectedSize.size.type}}</span>
+                                <span> / {{selectedSize.size.portrait}}</span>
+                                <span> / {{selectedSize.size.landscape}}</span>
+                                <span>{{selectedSize.size.unit}}</span>
+                            </option>
                             <option class="capitalize" v-for="size in asizes" :key="size.id" :value="size.id">
                                 {{ size.region }}
                                 <span class="capitalize"> / {{size.type}}</span>
@@ -43,14 +50,14 @@
     });
 
     export default {
-        props: ['menu', 'currentsize', 'selectedsizes'],
+        props: ['menu', 'currentsize', 'selectedsizes', 'selectedSize', 'method'],
         components: {
             ValidationProvider,
             ValidationObserver,
         },
         data() {
             return {
-                size: null
+                size: null,
             }
         },
         computed: {
@@ -64,9 +71,14 @@
             },
             csize: {
                 get: function () {
-                    return this.size
+                    if(this.method == 'update') {
+                        return this.selectedSize.size.id
+                    }else{
+                        return this.size
+                    }
                 },
                 set: function (value) {
+                    console.log(value)
                     return this.size = value
                 },
             }

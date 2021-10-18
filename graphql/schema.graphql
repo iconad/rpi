@@ -24,6 +24,9 @@ type Query {
     finishingoptions(finish_id: Int): [FinishingOption!]!
     finishingsbyproduct(product_id: Int): [Finishing!]!
 
+    selectedoptions(selected_finishing_id: Int): [SelectedOptions!]!
+    finishingsbyquantity(package_price_size_id: Int): [PackagePriceSizesPrice!]!
+
     printing(orderBy: [OrderByClause!] @orderBy): [Printing!]!  @all
     printingoptions(print_id: Int): [PrintingOption!]!
     printingbyproduct(product_id: Int): [Printing!]!
@@ -340,6 +343,29 @@ type FinishingOption {
     updated_at: DateTime!
 }
 
+type SelectedFinishing {
+    id: ID!
+    finishing: Finishing @hasOne
+    product: Product @hasOne
+    options: [SelectedOptions] @hasMany
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type SelectedOptions {
+    id: ID!
+    title: String
+    slug: String!
+    price: Int!
+    days: Int!
+    status: Int!
+    finishing: Finishing @hasOne
+    option: FinishingOption @hasOne
+    selected_finishing: SelectedFinishing @hasOne
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
 type Printing {
     id: ID!
     title: String!
@@ -434,6 +460,7 @@ type Product {
     category: Category @hasOne
     subcategory: SubCategory @hasOne
     label: Label @hasOne
+    selectedFinishings: [SelectedFinishing] @hasMany
     packages: [Package] @hasMany
     variants: [Variant] @hasMany
     points: [Point] @hasMany
@@ -480,6 +507,19 @@ type PackagePriceSize {
     id: ID
     price: Int
     pacakge_price: PackagePrice @hasOne
+    size: Size @hasOne
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+type PackagePriceSizesPrice {
+    id: ID
+    option_title: String
+    finishing: String
+    price: Int
+    days: Int
+    selectedOption: SelectedOptions @hasOne
+    selectedFinishing: SelectedFinishing @hasOne
     size: Size @hasOne
     created_at: DateTime!
     updated_at: DateTime!
