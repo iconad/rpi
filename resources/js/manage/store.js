@@ -12,7 +12,9 @@ export const store = new Vuex.Store({
         productGallery: [],
         isSidebar: false,
         sidebarType: null,
-        editingTable: null
+        editingTable: null,
+        isSizeEdit: false,
+        newFinishings: [],
 
 
     },
@@ -23,11 +25,21 @@ export const store = new Vuex.Store({
       isSidebar (state, payload) {
         state.isSidebar = payload;
       },
+      isSizeEdit (state, payload) {
+        state.isSizeEdit = payload;
+      },
       sidebarType (state, payload) {
         state.sidebarType = payload;
       },
       editingTable (state, payload) {
         state.editingTable = payload;
+      },
+      newFinishings (state, payload) {
+          if (payload == 'clear') {
+              state.newFinishings = []
+          }else{
+            state.newFinishings.push(payload);
+          }
       },
       deleteSizePriceFromPackage (state, payload) {
         state.editingTable.data.sizes.splice(payload, 1);

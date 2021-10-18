@@ -1,0 +1,21 @@
+query getEvent($package_price_size_id: Int) {
+  finishingsbyquantity(package_price_size_id: $package_price_size_id) {
+    id
+    option_title
+    finishing
+    price
+    days
+    selectedOption {
+      id
+      title
+      price
+      days
+    }
+    selectedFinishing {
+      id
+      finishing {
+        title
+      }
+    }
+  }
+}

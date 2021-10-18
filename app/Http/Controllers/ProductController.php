@@ -336,6 +336,10 @@ class ProductController extends Controller
         }
     }
 
+    public function productFinishings(Request $request, Product $product){
+        return view('manage.product.finishings', compact('product'));
+    }
+
     public function createImage($file) {
         $file =  $file;
         $monthYear = date('FY');

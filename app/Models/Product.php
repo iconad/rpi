@@ -90,6 +90,10 @@ class Product extends Model implements HasMedia
         return $this->belongsToMany(Finishing::class)->where('status', 1);
     }
 
+    public function selectedFinishings () {
+        return $this->hasMany(SelectedFinishing::class);
+    }
+
     public function colors () {
         return $this->belongsToMany(Color::class);
     }

@@ -1,8 +1,12 @@
 <template>
     <div>
         <!-- <pre> -->
-            <!-- {{productSizes}} -->
+            <!-- {{notSelectedPaperFinishing}} -->
+            <!-- {{paper.value.size}} -->
+            <!-- {{filterFinishingsBySize}} -->
+            <!-- {{finishingsbysize}} -->
             <!-- {{productQuantity}} -->
+            <!-- {{productSizes}} -->
             <!-- {{productQuantity}} -->
             <!-- -- -->
             <!-- {{package.prices}} -->
@@ -110,7 +114,7 @@
 
                                         <template slot="option" slot-scope="props">
                                             <div class="option__desc">
-                                                <span class="option__title">{{props.option.region}}</span>
+                                                <span class="option__title">  {{props.option.region}}</span>
                                                 <span class="option__title">
                                                     ({{ props.option.portrait }}
                                                      x
@@ -232,7 +236,7 @@
                         </div>
                     </div>
                     <!-- input wrapper -->
-                    <div v-if="ordertype == 'paper'" class="lg:flex items-center mb-5 input-wrapper">
+                    <div v-if="filterFinishingsBySize && ordertype == 'paper'" class="lg:flex items-center mb-5 input-wrapper">
                         <div class="w-full lg:w-64 mb-2 flex items-center">
                             <span class="text-gray-600">
                                 <svg class="fill-current w-6 h-6" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.8 26.3"><path class="cls-1" d="M383 26a9 9 0 01-7-4c-5-6 5-18 6-21l2-1 1 1a54 54 0 015 8c3 6 3 11 1 13a9 9 0 01-8 4zm0-22c-3 5-8 13-5 17a7 7 0 0011 0c3-4-2-13-6-17z" transform="translate(-366)"/><path class="cls-1" d="M375 0c-1 1-12 16-7 22a9 9 0 0015 0c5-6-7-21-8-22z" transform="translate(-366)"/></svg>
@@ -376,8 +380,7 @@
                 <svg class="fill-current w-6 h-6"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 9L3 2 2 3l7 7-7 7 1 1 7-7 7 7 1-1-7-7 7-7-1-1-7 7z"/></svg>
             </div>
             <div class="p-6">
-
-                <order-paper-finishings :finishings="finishings" @added="hideModal" :type="paper.value.finishing"></order-paper-finishings>
+                <order-paper-finishings :finishings="filterFinishingsBySize" @added="hideModal" :type="paper.value.finishing"></order-paper-finishings>
             </div>
         </modal>
 
@@ -419,6 +422,7 @@
     import sizesbycategory from "../../../../gql/frontend/queries/sizesbycategory.gql";
     import finishingbyproduct from "../../../../gql/frontend/queries/finishingsbyproduct.gql";
     // import product from "../../../../gql/frontend/queries/product.gql";
+    import finishingsbyquantityQuery from "../../../../gql/frontend/queries/finishingsbyquantity.gql";
 
 
    import _ from 'lodash'
@@ -468,7 +472,9 @@
         },
         data() {
             return {
+                package_price_size_id: null,
                 productQuantity: [],
+                selectedFinishingNames: [],
                 shirt: {
                     value: {
                         printing: null,
@@ -534,6 +540,11 @@
             }
         },
         watch: {
+            package_price_size_id: function (newValue, oldValue){
+                if(newValue !== oldValue ) {
+                    this.$store.commit("removeAllSelectedPaperFin")
+                }
+            },
             price: {
                 handler(val){
                     let vat = (5 / 100) * (val.product + val.extra);
@@ -569,7 +580,6 @@
             isProduct () {
                 return this.$store.state.isProduct
             },
-
             product () {
                 if(this.isProduct) {
                     return this.$store.state.product
@@ -583,26 +593,18 @@
             productSizes () {
                 let data = []
                 if(this.package.prices.length != 0) {
-                    this.package.prices.map(p => {
-                        data.push(p.sizes.map(s => s.size))
+                    this.package.prices.map((p, pindex) => {
+                        data.push(p.sizes.map((s,sindex) => {
+                            let obj = s.size
+                            obj.package_price_size_id = p.sizes[sindex].id
+                            obj.package_price_id = p.sizes[sindex].package_price_id
+                            obj.quantity = p.quantity
+                            return obj
+                        } ))
                     });
-                    return  _.uniqBy([].concat.apply([], data), 'id');
-                }
-            },
-            customSizes () {
-                let data = {
-                    content_types: `[${this.menu.id}]`,
-                    id: 0,
-                    landscape: 0,
-                    portrait: 0,
-                    region: "custom size",
-                    status: 0,
-                    type: "none",
-                    unit: "none",
-                }
+                    // return  _.uniqBy([].concat.apply([], data), 'id');
+                    return  [].concat.apply([], data).filter(item => item.package_price_id == this.package.prices[0].id);
 
-                if(this.productSizes) {
-                    let rec = this.productSizes.unshift(data)
                 }
             },
             selectedShirt () {
@@ -617,8 +619,8 @@
                 return this.$store.state.selectedPaperFinishing
             },
             notSelectedPaperFinishing () {
-                const selected = this.$store.state.selectedPaperFinishing.map(e=>e.name)
-                return _.difference(this.computedFinishings,selected);
+                const selected = this.$store.state.selectedPaperFinishing.map( e => e.name )
+                return _.difference(this.selectedFinishingNames,selected);
             },
             notSelectedShirtPrinting () {
                 const selected = this.$store.state.selectedShirtPrinting.map(e=>e.name)
@@ -635,15 +637,54 @@
                 else {
                     return false
                 }
+            },
+            filterFinishingsBySize () {
+                if(!this.$apollo.queries.finishingsbysize.loading && this.finishingsbysize.length != 0){
+
+                    let data = this.finishingsbysize.reduce(function (r, a) {
+
+                        //  let option = {
+                        //      options: [a.selectedOption],
+                        //      finishing: {
+                        //         title: a.finishing,
+                        //         price: a.price,
+                        //         days: a.days
+                        //      }
+                        //  }
+
+
+                         r[a.finishing] = r[a.finishing] || [];
+                         r[a.finishing].push({
+                             new_price: a.price,
+                             new_days: a.days,
+                             option: a.selectedOption
+                         });
+                         return r;
+                    }, {})
+
+                    this.selectedFinishingNames = _.uniqBy(this.finishingsbysize, 'finishing').map(e => e.finishing);
+
+                    return data;
+
+                }
+
             }
+        },
+        created() {
+            // this.getQuantitiesByFirstProductSize()
         },
         mounted() {
             // this.$modal.show('shirt-printing');
+            // this.filterPaperOrder()
             this.$store.dispatch("getProduct", this.pid)
         },
         methods: {
+            getFinishingsBySize () {
+                this.$apollo.queries.finishingsbysize.refetch({
+                    package_price_size_id: this.package_price_size_id
+                })
+            },
             onPaperChange (value) {
-                // console.log(value.id)
                 window.location.href = `/product-order/paper/${this.product.slug}?package=${value.id}&category=${this.menu.id}&type=${this.ordertype}`
             },
             onPaperColourChange (value) {
@@ -663,6 +704,9 @@
 
                     if(response.data.result != null) {
                         this.price.product = response.data.result.price
+                        this.package_price_size_id = response.data.result.package_price_size_id
+                        this.getFinishingsBySize()
+
                     }else{
                         if(this.productQuantity.length !=0) {
                             this.paper.value.quantity = this.productQuantity[0]
@@ -802,6 +846,17 @@
                     update(data) {
                         return data.finishingsbyproduct
                     },
+                };
+            },
+            finishingsbysize() {
+                return {
+                    query: finishingsbyquantityQuery,
+                    variables: {
+                        package_price_size_id: this.package_price_size_id
+                    },
+                    update(data) {
+                        return data.finishingsbyquantity;
+                    }
                 };
             },
         }

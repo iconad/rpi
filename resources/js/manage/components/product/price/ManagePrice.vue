@@ -2,7 +2,7 @@
     <div>
 
             <!-- Old Name "Add New price / Size" -->
-            <!-- change to "Package" -->
+            <!-- change to "Package price" -->
 
 
         <div class="mb-3 text-lg font-semibold text-gray-800 mb-2 flex items-center justify-between">
@@ -24,14 +24,13 @@
                         <th class="px-4 py-3">Quantity</th>
                         <th class="px-4 py-3">Price</th>
                         <th class="px-4 py-3">Region</th>
-                        <th class="px-4 py-3">Type</th>
                         <th class="px-4 py-3">Actions</th>
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800" >
                         <tr class="text-gray-700 dark:text-gray-400" v-for="(price, i) in prices" :key="i">
                             <td class="px-4 py-3">
-                                <p>{{i+1}}</p>
+                                <p>{{i+1}} </p>
                             </td>
                             <td class="px-4 py-3">
                                 <p v-if="price.quantity">{{price.quantity}}</p>
@@ -45,11 +44,6 @@
                             <td class="px-4 py-3 font-medium">
                                 <ul class="text-sm text-gray-800">
                                     <li v-for="(size, i) in price.sizes" :key="i">{{size.size.region}}</li>
-                                </ul>
-                            </td>
-                            <td class="px-4 py-3 font-medium">
-                                <ul class="text-sm text-gray-800">
-                                    <li v-for="(size, i) in price.sizes" :key="i">{{size.size.type}}</li>
                                 </ul>
                             </td>
                             <td class="px-4 py-3 text-xs">
@@ -121,5 +115,9 @@
 </script>
 
 <style lang="scss" scoped>
-
+    .borderlist {
+        &:last-child {
+            border: none!important;
+        }
+    }
 </style>

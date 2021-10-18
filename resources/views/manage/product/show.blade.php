@@ -152,30 +152,6 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
             <!-- form-ele -->
 
 
-        {{-- {{ ($product->finishings=="1") ? "selected" : "" }} --}}
-        <div class="form-element mt-10">
-            <label>
-                <span class="text-gray-800 block">Finishings</span>
-                <div class="relative">
-                    <select multiple class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-2 px-3 pr-8 rounded leading-tight focus:outline-none" name="finishings[]" value="{{ old('finishings') }}">
-                            @foreach ($product->finishings as $fin)
-                                    <option  value="{{$fin->id}}" selected >{{$fin->title}}</option>
-                            @endforeach
-                            @foreach ($notFinish as $fin)
-                                    <option  value="{{$fin->id}}" >{{$fin->title}}</option>
-                            @endforeach
-                        @foreach ($notSelectedFinishings as $nf)
-                        <option  value="{{$nf->id}}">{{$nf->title}}</option>
-                        @endforeach
-                      </select>
-                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                    </div>
-                  </div>
-            </label>
-        </div>
-        <!-- form-ele -->
-
         <div class="p-5 pb-0 border rounded">
             <div class="form-element">
                 <label>
@@ -253,6 +229,39 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
         </div>
     </div>
 
+
+    {{-- Product Links Start From Here --}}
+    <div class="rounded-lg border border-gray-200 bg-white p-4 my-6">
+        <div class="mb-3 text-lg font-semibold text-gray-800 mb-2">
+        <span>Links</span>
+    </div>
+
+    <div class="w-full overflow-x-auto">
+        <table class="w-full whitespace-no-wrap">
+            <thead>
+                <tr
+                class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+                >
+                <th class="px-4 py-3">Name</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800" >
+
+                <tr class="text-gray-700 dark:text-gray-400">
+                    <td class="px-4 py-3">
+                        <div class="flex items-center text-sm">
+                            <div>
+                                <a href="/manage/products/{{$product->id}}/finishings" class="font-semibold hover:border-transparent">Manage Finishings</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    </div>
+    {{-- Product Links End From Here --}}
 
     {{-- Product Label Start From Here --}}
     <div class="rounded-lg border border-gray-200 bg-white p-4 my-6">
