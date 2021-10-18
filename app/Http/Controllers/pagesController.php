@@ -570,7 +570,7 @@ class pagesController extends Controller
             $subject = "Your estimate successfully has beed received!";
 
 
-            $message = $subject. " " . " One of team member will contact you ASAP. " . "if you have any question please contact us on +971 000 00000";
+            $message = $subject. " " . " One of team member will contact you ASAP. " . "if you have any question please contact us on +971 6 534 1113";
 
             $data = array(
                 'name' => $request->name,

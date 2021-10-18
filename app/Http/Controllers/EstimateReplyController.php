@@ -54,7 +54,7 @@ class EstimateReplyController extends Controller
             $subject = "Estimate response from Printo";
 
 
-            $message = $request->message . " if you have any question please contact us on +971 000 00000";
+            $message = $request->message . " if you have any question please contact us on +971 6 534 1113";
 
             $data = array(
                 'name' => $request->first_name,

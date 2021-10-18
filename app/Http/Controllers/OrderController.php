@@ -280,7 +280,7 @@ class OrderController extends Controller
         $sub = "Your order has been approved!";
 
 
-        $message = $subject. " " . $message . " Please click on the below link for you payment in order to process your order " . "if you have any question please contact us on +971 000 00000";
+        $message = $subject. " " . $message . " Please click on the below link for you payment in order to process your order " . "if you have any question please contact us on +971 6 534 1113;
 
 
         $data = array(
@@ -304,7 +304,7 @@ class OrderController extends Controller
         $subject = "You order <b>$order->id</b> has been moved back to $status";
         $sub = "Your order has been moved back to $status";
 
-        $message = $subject ." " . $message . " if you have any question please contact us on +971 000 00000";
+        $message = $subject ." " . $message . " if you have any question please contact us on +971 6 534 1113";
 
         $pp = PendingProof::where('order_id', $order->id)->first();
         $pp->status = 'decline';
@@ -328,7 +328,7 @@ class OrderController extends Controller
         $subject = "Your order <b>$order->id</b> has been rejected!";
         $sub = "Your order has been rejected!";
 
-        $message = $subject. " " . $message . " " . "if you have any question please contact us on +971 000 00000";
+        $message = $subject. " " . $message . " " . "if you have any question please contact us on +971 6 534 1113";
 
         $pp = PendingProof::where('order_id', $order->id)->first();
         $pp->status = 'declined';
@@ -352,7 +352,7 @@ class OrderController extends Controller
         $subject = "Your order <b>$order->id</b> has been put on hold!";
         $sub = "Your order has been put on hold!";
 
-        $message = $subject. " " . $message . " " . "if you have any question please contact us on +971 000 00000";
+        $message = $subject. " " . $message . " " . "if you have any question please contact us on +971 6 534 1113";
 
         $pp = PendingProof::where('order_id', $order->id)->first();
         $pp->status = 'declined';
@@ -376,7 +376,7 @@ class OrderController extends Controller
         $subject = "Your order <b>$order->id</b> has been put on pending!";
         $sub = "Your order has been put on pending!";
 
-        $message = $subject. " " . $message . " " . "if you have any question please contact us on +971 000 00000";
+        $message = $subject. " " . $message . " " . "if you have any question please contact us on +971 6 534 1113";
 
         $pp = PendingProof::where('order_id', $order->id)->first();
         $pp->status = 'declined';
@@ -400,7 +400,7 @@ class OrderController extends Controller
         $subject = "Your order <b>$order->id</b> has been cancelled!";
         $sub = "Your order has been cancelled!";
 
-        $message = $subject. " " . $message . " " . "if you have any question please contact us on +971 000 00000";
+        $message = $subject. " " . $message . " " . "if you have any question please contact us on +971 6 534 1113";
 
         $pp = PendingProof::where('order_id', $order->id)->first();
         $pp->status = 'declined';
@@ -424,7 +424,7 @@ class OrderController extends Controller
         $subject = "Your order <b>$order->id</b> has been delivered!";
         $sub = "Your order has been delivered!";
 
-        $message = $subject. " " . $message . " " . "if you have any question please contact us on +971 000 00000";
+        $message = $subject. " " . $message . " " . "if you have any question please contact us on +971 6 534 1113";
 
         $pp = PendingProof::where('order_id', $order->id)->first();
         $pp->status = 'paid';
