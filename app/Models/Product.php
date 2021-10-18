@@ -91,7 +91,7 @@ class Product extends Model implements HasMedia
     }
 
     public function selectedFinishings () {
-        return $this->hasMany(selectedFinishing::class);
+        return $this->hasMany(SelectedFinishing::class);
     }
 
     public function colors () {
