@@ -280,7 +280,7 @@ class OrderController extends Controller
         $sub = "Your order has been approved!";
 
 
-        $message = $subject. " " . $message . " Please click on the below link for you payment in order to process your order " . "if you have any question please contact us on +971 6 534 1113;
+        $message = $subject. " " . $message . " Please click on the below link for you payment in order to process your order " . "if you have any question please contact us on +971 6 534 1113";
 
 
         $data = array(
