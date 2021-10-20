@@ -33,7 +33,7 @@ class ProductSelectedFinishings extends Component
     }
 
     public function getSelectedFinishigs () {
-        $finishings = SelectedFinishing::all();
+        $finishings = SelectedFinishing::where('product_id', $this->product->id)->get();
         $this->finishings = $finishings;
     }
 

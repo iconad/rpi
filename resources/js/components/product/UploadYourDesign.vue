@@ -189,7 +189,7 @@
             }
         },
        mounted() {
-           this.$modal.show('are-you-sure');
+        //    this.$modal.show('are-you-sure');
         },
         methods: {
             addCloudFile () {

@@ -41,11 +41,18 @@ class ProductFinishings extends Component
     }
 
     public function getSelectedOptionsIds () {
-        $selectedOptionsIds = SelectedOptions::pluck('option_id');
+        // $selectedOptionsIds = SelectedOptions::pluck('option_id');
+        $product = $this->product;
+        $selectedOptionsIds = SelectedOptions::whereHas('selectedFinishing', function ($q) use ($product) {
+            $q->where('product_id', $product->id);
+        })->pluck('option_id');
+        // dd($selectedOptionsIds);
         $this->selectedOptionsIds = $selectedOptionsIds;
     }
 
     public function submitFinishings () {
+
+        // return dd($this->checkedFinishings);
 
         foreach ($this->checkedFinishings as $op) {
 
@@ -65,8 +72,10 @@ class ProductFinishings extends Component
                 $this->Sfinishings = SelectedFinishing::where('product_id', $this->product->id)->where('finishing_id', $finishing->id)->first();
             }
 
-
-            $checkOption = SelectedOptions::where('option_id', $op)->count();
+            $product = $this->product;
+            $checkOption = SelectedOptions::whereHas('selectedFinishing', function ($q) use ($product) {
+                $q->where('product_id', $product->id);
+            })->where('option_id', $op)->count();
 
             if($checkOption == 0) {
                 SelectedOptions::create([
