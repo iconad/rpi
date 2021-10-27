@@ -2,7 +2,6 @@
     <div>
         <other-finishing :finishing="finishing" v-if="normalFinishing" :type="type" @added="added"></other-finishing>
         <round-corner :finishing="finishing" v-else-if="isRoundCorner" :type="type" @added="added"></round-corner>
-
     </div>
 </template>
 

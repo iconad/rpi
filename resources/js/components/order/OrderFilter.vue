@@ -643,16 +643,6 @@
 
                     let data = this.finishingsbysize.reduce(function (r, a) {
 
-                        //  let option = {
-                        //      options: [a.selectedOption],
-                        //      finishing: {
-                        //         title: a.finishing,
-                        //         price: a.price,
-                        //         days: a.days
-                        //      }
-                        //  }
-
-
                          r[a.finishing] = r[a.finishing] || [];
                          r[a.finishing].push({
                              new_price: a.price,

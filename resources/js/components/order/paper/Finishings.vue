@@ -9,7 +9,12 @@
             v-for="(slide, i) in finishing"
             :key="i"
             @click="add(slide)">
-                <finish-image :slide="slide.option" :price="slide.new_price" :days="slide.new_days"></finish-image>
+                <template v-if="slide.opiton != null">
+                    <finish-image :slide="slide.option" :price="slide.new_price" :days="slide.new_days"></finish-image>
+                </template>
+                <template v-else>
+                    <div class="font-medium text-center capitalize">No finishing available!</div>
+                </template>
             </div>
             <!-- box -->
         </div>
