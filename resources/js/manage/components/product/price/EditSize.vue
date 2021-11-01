@@ -41,7 +41,7 @@
                 <span v-if="checkOptions" class="text-sm font-medium mb-1">Add Finishing </span>
                 <span v-else class="text-sm font-medium mb-1">No finishing found! </span>
             </label>
-            <ul class="mt-3 text-lg grid grid-cols-4 gap-3">
+            <ul class="mt-3 text-lg grid grid-cols-4 gap-3" v-if="finishings.length != 0">
                 <template v-for="item in finishings">
                 <li v-if="item.options.length != 0" :key="item.id" :value="item.id">
 

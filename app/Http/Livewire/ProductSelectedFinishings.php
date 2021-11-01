@@ -51,6 +51,10 @@ class ProductSelectedFinishings extends Component
         $option = SelectedOptions::where('id', $this->deletingOption['id'])->get();
         // return dd($option[0]);
         $option[0]->delete();
+        $countOptions = count($option[0]->selectedFinishing->options);
+        if($countOptions == 0) {
+            $option[0]->selectedFinishing->delete();
+        }
         $this->isDeleteModal = false;
         $this->getSelectedFinishigs();
 
