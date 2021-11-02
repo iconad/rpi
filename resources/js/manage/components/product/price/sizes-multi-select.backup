@@ -11,8 +11,6 @@
                 <ValidationProvider name="form.size" rules="required">
                     <div class="relative">
 
-                        {{csize}}
-
                         <multiselect
                             v-model="csize"
                             :options="asizes">
@@ -104,18 +102,21 @@
             },
             csize: {
                 get: function () {
+
                     if(this.method == 'update') {
                         return this.selectedSize.size
                     }else{
                         return this.size
                     }
+
                 },
                 set: function (value) {
+
                     if(typeof value === 'object' && value !== null) {
-                        this.$emit('update', value)
-                        return this.size = value
-                    }else{
                         this.$emit('update', value.id)
+                        return this.size = value.id
+                    }else{
+                        this.$emit('update', value)
                         return this.size = value
                     }
 

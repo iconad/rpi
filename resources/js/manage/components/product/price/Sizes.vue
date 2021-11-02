@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-if="$apollo.queries.sizes.loading" class="mx-12">
+        <div v-if="selectedSize && $apollo.queries.sizes.loading" class="mx-12">
             <div class="loader-dots"></div>
         </div>
         <div v-else class="form-element">
@@ -10,35 +10,7 @@
                 </span>
                 <ValidationProvider name="form.size" rules="required">
                     <div class="relative">
-
-                        <multiselect
-                            v-model="csize"
-                            :options="asizes">
-
-                            <template slot="singleLabel" slot-scope="props">
-                                <div class="option__desc">
-                                    {{ props.option.region }}
-                                    <span class="capitalize"> / {{props.option.type}}</span>
-                                    <span> / {{props.option.portrait}}</span>
-                                    <span> / {{props.option.landscape}}</span>
-                                    <span>{{props.option.unit}}</span>
-                                </div>
-                            </template>
-
-                            <template slot="option" slot-scope="props">
-                                <div class="option__desc">
-                                    {{ props.option.region }}
-                                    <span class="capitalize"> / {{props.option.type}}</span>
-                                    <span> / {{props.option.portrait}}</span>
-                                    <span> / {{props.option.landscape}}</span>
-                                    <span>{{props.option.unit}}</span>
-                                </div>
-                            </template>
-
-
-                            </multiselect>
-
-                        <!-- <select class="form-input text-lg" v-model="csize" @change="onSelectSize">
+                        <select class="form-input text-lg" v-model="csize" @change="onSelectSize">
                             <option v-if="method == 'update'" class="capitalize" :value="selectedSize.size.id">
                                 {{ selectedSize.size.region }}
                                 <span class="capitalize"> / {{selectedSize.size.type}}</span>
@@ -53,7 +25,7 @@
                                 <span> / {{size.landscape}}</span>
                                 <span>{{size.unit}}</span>
                             </option>
-                        </select> -->
+                        </select>
                         <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                         </div>
                     </div>
@@ -69,8 +41,6 @@
     import gql from 'graphql-tag'
     import sizes from "../../../../../../gql/queries/sizesbycategory.gql";
 
-    import Multiselect from 'vue-multiselect'
-
     import { extend,ValidationProvider,ValidationObserver } from 'vee-validate';
     import { required } from 'vee-validate/dist/rules';
 
@@ -82,7 +52,6 @@
     export default {
         props: ['menu', 'currentsize', 'selectedsizes', 'selectedSize', 'method'],
         components: {
-            Multiselect,
             ValidationProvider,
             ValidationObserver,
         },
@@ -102,31 +71,21 @@
             },
             csize: {
                 get: function () {
-
                     if(this.method == 'update') {
-                        return this.selectedSize.size
+                        return this.selectedSize.size.id
                     }else{
                         return this.size
                     }
-
                 },
                 set: function (value) {
-
-                    if(typeof value === 'object' && value !== null) {
-                        this.$emit('update', value.id)
-                        return this.size = value.id
-                    }else{
-                        this.$emit('update', value)
-                        return this.size = value
-                    }
-
+                    return this.size = value
                 },
             }
         },
         methods: {
-            // onSelectSize () {
-            //     this.$emit('update', this.size)
-            // }
+            onSelectSize () {
+                this.$emit('update', this.size)
+            }
         },
         // watch: {
         //     size (newValue, oldValue) {
@@ -148,4 +107,3 @@
         }
     }
 </script>
-<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
