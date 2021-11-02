@@ -8,7 +8,7 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
-        publicUrl: "https://printo.ae/storage/",
+        publicUrl: "http://127.0.0.1:8000/storage/",
         productGallery: [],
         isSidebar: false,
         sidebarType: null,

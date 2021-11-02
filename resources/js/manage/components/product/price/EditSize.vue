@@ -1,6 +1,11 @@
 <template>
     <div>
-        <sizes-by-category method="update" :menu="menu" :selectedSize="selectedSize" :selectedsizes="selectedsizes" @update="onSelectSize"></sizes-by-category>
+        <sizes-by-category
+            method="update"
+            :menu="menu"
+            :selectedSize="selectedSize"
+            :selectedsizes="selectedsizes"
+            @update="onSelectSize"></sizes-by-category>
         <div class="-mt-3">
             <label class="w-full block">
                 <span class="text-sm font-medium mb-1">Price</span>
