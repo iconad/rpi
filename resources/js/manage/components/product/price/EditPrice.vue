@@ -43,8 +43,8 @@
                                 <span>{{size.size.unit}}</span>
                             </td>
                             <td class="p-2 border font-medium text-center">{{size.price}}</td>
-                            <td class="p-2 py-3 border font-medium text-center flex items-center space-x-3">
-                                <span v-if="package && package.product.selectedFinishings.length != 0" @click="selectSize(size, size.id)" :class="isSizeEdit && size.id == package_price_size_id ? `bg-gray-600 text-gray-100` : `text-gray-700 bg-gray-100` " class="inline-block hover:bg-gray-600 hover:text-gray-100 tracking-wide rounded-full border font-medium py-1 px-2 cursor-pointer text-xs">Select </span>
+                            <td v-if="package" class="p-2 py-3 border font-medium text-center flex items-center space-x-3">
+                                <span v-if="package.product.selectedFinishings.length != 0" @click="selectSize(size, size.id)" :class="isSizeEdit && size.id == package_price_size_id ? `bg-gray-600 text-gray-100` : `text-gray-700 bg-gray-100` " class="inline-block hover:bg-gray-600 hover:text-gray-100 tracking-wide rounded-full border font-medium py-1 px-2 cursor-pointer text-xs">Select </span>
 
                                 <delete-record
                                     @updated="updateTable(i)"
