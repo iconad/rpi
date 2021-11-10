@@ -43,8 +43,8 @@
                                 <span>{{size.size.unit}}</span>
                             </td>
                             <td class="p-2 border font-medium text-center">{{size.price}}</td>
-                            <td class="p-2 py-3 border font-medium text-center flex items-center space-x-3">
-                                <span @click="selectSize(size, size.id)" :class="isSizeEdit && size.id == package_price_size_id ? `bg-gray-600 text-gray-100` : `text-gray-700 bg-gray-100` " class="inline-block hover:bg-gray-600 hover:text-gray-100 tracking-wide rounded-full border font-medium py-1 px-2 cursor-pointer text-xs">Select</span>
+                            <td v-if="package" class="p-2 py-3 border font-medium text-center flex items-center space-x-3">
+                                <span v-if="package.product.selectedFinishings.length != 0" @click="selectSize(size, size.id)" :class="isSizeEdit && size.id == package_price_size_id ? `bg-gray-600 text-gray-100` : `text-gray-700 bg-gray-100` " class="inline-block hover:bg-gray-600 hover:text-gray-100 tracking-wide rounded-full border font-medium py-1 px-2 cursor-pointer text-xs">Select </span>
 
                                 <delete-record
                                     @updated="updateTable(i)"
@@ -90,7 +90,12 @@
                 <template v-if="addSize">
 
                     <template v-if="!$apollo.queries.package.loading">
-                        <sizes-by-category method="post" :selectedsizes="sizes" :menu="package.product.category.menu" @update="onSelectSize"></sizes-by-category>
+                        <sizes-by-category
+                            method="post"
+                            :selectedsizes="sizes"
+                            :menu="package.product.category.menu"
+                            @update="onSelectSize">
+                        </sizes-by-category>
                     </template>
 
                     <div class="-mt-3">
@@ -105,7 +110,9 @@
                         </label>
                     </div>
 
-                    <sizes-finishings :finishings="package.product.selectedFinishings"></sizes-finishings>
+                    <template v-if="package && package.product.selectedFinishings.length != 0" >
+                        <sizes-finishings :finishings="package.product.selectedFinishings"></sizes-finishings>
+                    </template>
 
                     <div class="mt-5 hidden">
                         <label for="block">
@@ -204,7 +211,6 @@
                     return this.$store.state.editingTable
                 },
                 set: function (value) {
-                    // console.log(value)
                 }
             },
         },
@@ -235,9 +241,11 @@
                 this.$apollo.queries.prices.refetch()
             },
             onSelectSize (data) {
+                // console.log(data)
                 this.newPrice.size = data
             },
             onUpdateSize (data) {
+                // console.log(data)
                 this.newPrice.size = data
             },
             onUpdatePrice (data) {
@@ -248,7 +256,6 @@
                 this.newPrice.price = data.price
             },
             submitForm () {
-
                 axios.put(`/manage/products/${this.pid}/packages/${this.pkgid}/prices/${this.editingTable.data.id}`, {
                     quantity: this.editingTable.data.quantity,
                     size: this.newPrice.size,
@@ -260,6 +267,7 @@
                 })
                 .then(response => {
                     this.$emit('updated')
+                    this.$store.commit('isSizeEdit', false)
                     this.$apollo.queries.prices.refetch()
                     this.$swal({
                         toast: true,

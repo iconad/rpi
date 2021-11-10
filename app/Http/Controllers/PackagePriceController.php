@@ -165,12 +165,14 @@ class PackagePriceController extends Controller
 
         }else{
 
+            // return $request->size;
             $packagepricesize = PackagePriceSize::where('id', $request->selectedsize_id)->first();
 
             $packagepricesize->price = $request->price;
-            $packagepricesize->days = $request->days;
             $packagepricesize->size_id = $request->size;
             $packagepricesize->package_price_id = $request->packageprice;
+
+            $packagepricesize->save();
 
             if($request->finishings AND count($request->finishings) != 0) {
                 foreach ($request->finishings as $value) {

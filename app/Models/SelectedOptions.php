@@ -23,6 +23,11 @@ class SelectedOptions extends Model
 
     public $fillable = ['title', 'slug', 'price', 'option_id', 'finishing_id', 'selected_finishing_id', 'days'];
 
+    public function selectedFinishing () {
+        // return $this->belongsTo(SelectedFinishing::class, 'selected_options', 'selected_finishing_id');
+        return $this->belongsTo(SelectedFinishing::class);
+    }
+
     public function option () {
         return $this->belongsTo(FinishingOption::class);
     }

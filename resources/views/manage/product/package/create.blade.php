@@ -14,23 +14,17 @@
             @csrf
 
             <div class="form-element">
-                <label>
-                    <span class="text-gray-800 block">Select Paper</span>
-                    <select class="form-input text-lg capitalize" name="paper">
-                        @foreach ($papers as $paper)
-                        <option class="capitalize" value="{{$paper->id}}"> {{$paper->title}} ({{$paper->side}}) </option>
-                        @endforeach
-                    </select>
-                </label>
-            </div>
-            <!-- form-ele -->
 
-            {{-- <div class="form-element">
-                <label>
-                    <span class="text-gray-800 block">Quantity</span>
-                    <input type="number" class="form-input" name="quantity" value="{{ old('quantity') }}">
-                </label>
-            </div> --}}
+                <span class="text-gray-800 block">Select Paper</span>
+
+                {{-- <datalist-dropdown :data="{{json_encode($papers)}}"></datalist-dropdown> --}}
+
+                @livewire('datalist-dropdown', [
+                    'collection' => $papers,
+                    'paperId' => null
+                ])
+
+            </div>
             <!-- form-ele -->
 
             <div class="form-element mt-8 mb-0">

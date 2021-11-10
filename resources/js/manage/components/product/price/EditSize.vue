@@ -1,6 +1,11 @@
 <template>
     <div>
-        <sizes-by-category method="update" :menu="menu" :selectedSize="selectedSize" :selectedsizes="selectedsizes" @update="onSelectSize"></sizes-by-category>
+        <sizes-by-category
+            method="update"
+            :menu="menu"
+            :selectedSize="selectedSize"
+            :selectedsizes="selectedsizes"
+            @update="onSelectSize"></sizes-by-category>
         <div class="-mt-3">
             <label class="w-full block">
                 <span class="text-sm font-medium mb-1">Price</span>
@@ -36,11 +41,12 @@
             </tr>
         </table>
 
-        <div class="mt-5">
+        <div class="mt-5" v-if="!$apollo.queries.options.loading">
             <label class="font-medium mb-1">
-                <span class="text-sm font-medium mb-1">Add Finishing</span>
+                <span v-if="checkOptions" class="text-sm font-medium mb-1">Add Finishing </span>
+                <span v-else class="text-sm font-medium mb-1">No finishing found! </span>
             </label>
-            <ul class="mt-3 text-lg grid grid-cols-4 gap-3">
+            <ul class="mt-3 text-lg grid grid-cols-4 gap-3" v-if="finishings.length != 0">
                 <template v-for="item in finishings">
                 <li v-if="item.options.length != 0" :key="item.id" :value="item.id">
 
@@ -89,7 +95,7 @@
 
             </div>
 
-            <div class="w-32 mt-2">
+            <div class="w-32 mt-2" v-if="selectedOption != null">
                 <span
                 @click="addFinishing"
                 :disabled="!selectedOption.price || !selectedOption.days"
@@ -100,6 +106,8 @@
                     </svg>
                 </span>
             </div>
+
+
         </div>
 
 
@@ -139,6 +147,16 @@
             }
         },
         computed: {
+            checkOptions () {
+                let options;
+                if (this.finishings.length != 0 ) {
+                    options = this.finishings.map(f => {
+                        return  f.options.length != 0 ? true : false
+                    })
+                }
+                return options.includes(true);
+            },
+
             newFinishings () {
                 return this.$store.state.newFinishings
             },

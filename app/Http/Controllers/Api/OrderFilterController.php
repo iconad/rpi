@@ -31,15 +31,17 @@ class OrderFilterController extends Controller
                                     'papers.id as paper_id',
                                     'packages.id as pkg_id',
                                     'package_prices.id as package_prices_id',
-                                    'package_prices.quantity',
+                                    'package_prices.quantity as ppquantity',
                                     'package_price_sizes.price',
                                     'sizes.id as size_id',
                                     'sizes.region',
                                 )
                                 ->where('papers.id', $paperId)
                                 ->where('sizes.id', $sizeId)
-                                ->pluck('package_prices.quantity');
+                                // ->get();
+                                ->pluck('ppquantity');
 
+        // return $request;
 
         // =========  Geting Price on Quanity and Size  =========
         $item = Paper::join('packages', 'papers.id', 'packages.paper_id')
