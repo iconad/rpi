@@ -7,7 +7,7 @@
         </div>
         <div class="bg-gray-100 rounded-t-lg overflow-hidden">
         <a :href="`/products/shirts/${product.category.slug}`">
-            <thumb-image v-if="firstMedia.length != 0" classess="w-full h-64 object-contain" :image="firstMedia[0].file_name" :id="firstMedia[0].id"></thumb-image>
+            <thumb-image v-if="firstMedia.length != 0" classess="w-full h-96 object-contain" :image="firstMedia[0].file_name" :id="firstMedia[0].id"></thumb-image>
         </a>
         </div>
         <div class="p-3">
