@@ -2,14 +2,13 @@
     <div>
         <button @click="showModal" class="action-button-warning">Edit</button>
 
-
-
         <modal :name="`modal-${data.id}`" height="auto" class="bg-black bg-opacity-25">
             <div class="p-6 relative">
                 <div class="text-xl mb-3 capitalize font-semibold">Edit Material </div>
                 <!-- <hr class="my-2"> -->
                 <ValidationObserver v-slot="{ invalid,passes }">
                     <form @submit.prevent="submitForm">
+
                         <div class="w-full block relative form-element">
                             <label class="inline-block mb-1 text-base text-gray-600">Title</label>
                             <ValidationProvider name="name" rules="required">
@@ -81,6 +80,8 @@
                     title: this.data.title,
                     excerpt: this.data.excerpt,
                     body: this.data.body,
+                    min: this.data.min,
+                    max: this.data.max,
                 }
             }
         },

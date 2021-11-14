@@ -27,6 +27,14 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
         </div>
         <!-- form-ele -->
 
+        <div class="form-element">
+            <label>
+                <span class="text-gray-800 block">Excerpt</span>
+                <input type="text" class="form-input" name="excerpt" value="{{ old('excerpt') }}">
+            </label>
+        </div>
+        <!-- form-ele -->
+
         @php
             $priceTypes = ['fixed price', 'custom size', 'packages'];
         @endphp
