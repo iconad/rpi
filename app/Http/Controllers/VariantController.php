@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Color;
+use App\Models\Material;
 use App\Models\Variant;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -28,7 +29,8 @@ class VariantController extends Controller
     public function create(Product $product)
     {
         $colors = Color::all();
-        return view('manage.product.variant.create', compact('product', 'colors'));
+        $materials = Material::where('status', 1)->get();
+        return view('manage.product.variant.create', compact('product', 'colors', 'materials'));
     }
 
     /**
@@ -42,7 +44,6 @@ class VariantController extends Controller
         $this->validate(request(), [
             'title' => 'required',
             'price' => 'required',
-            'stock' => 'required',
         ]);
 
 
@@ -52,6 +53,7 @@ class VariantController extends Controller
             'stock' => $request->stock,
             'price' => $request->price,
             'color_id' => $request->color,
+            'material_id' => $request->material,
             'product_id' => $product->id,
             'user_id' => auth()->id(),
         ]);
@@ -71,7 +73,8 @@ class VariantController extends Controller
     public function show(Product $product, Variant $variant)
     {
         $colors = Color::all();
-        return view('manage.product.variant.show', compact('product','variant', 'colors'));
+        $materials = Material::where('status', 1)->get();
+        return view('manage.product.variant.show', compact('product','variant', 'colors', 'materials'));
     }
 
     /**
@@ -99,6 +102,7 @@ class VariantController extends Controller
         $variant->stock = $request->stock;
         $variant->price = $request->price;
         $variant->color_id = $request->color;
+        $variant->material_id = $request->material;
         if ($variant->save()) {
             $request->session()->flash('green', 'Variant was successful updated!');
             return redirect("/manage/products/".$product->id."/variants/".$variant->id);

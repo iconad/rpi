@@ -108,6 +108,11 @@ Vue.component(
 );
 
 Vue.component(
+    "order-filter-wallpaper",
+    require("./components/order/OrderFilterWallpaper.vue").default
+);
+
+Vue.component(
     "order-filter-shirt",
     require("./components/order/OrderFilterShirt.vue").default
 );

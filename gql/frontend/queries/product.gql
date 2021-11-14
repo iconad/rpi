@@ -9,6 +9,8 @@ query getEvent($id: ID!) {
     delivery_time
     quantity
     type
+    pricing_type
+    rule_of_120
     status
     created_at
     media{

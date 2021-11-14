@@ -30,6 +30,8 @@ Route::get('/products/{product}', 'pagesController@showProduct');
 Route::get('/products/shirt/{product}', 'pagesController@shirtProduct');
 Route::get('/products/personalized-gifts', 'pagesController@personalizedGiftsByCategory')->name('personalized-gifts');
 Route::get('/products/personalized-gifts/{subcategory}', 'pagesController@personalizedGiftsByCategory')->name('personalized-gifts.index');
+Route::get('/products/wallpapers', 'pagesController@wallpapesByCategory')->name('wallpapers');
+Route::get('/products/wallpapers/{subcategory}', 'pagesController@wallpapesByCategory')->name('wallpapers.index');
 Route::get('/products/shirts/{category}', 'pagesController@shirtsByCategory')->name('personalized-gifts.index');
 Route::get('/products/shirts/{category}/{subcategory}', 'pagesController@shirtsBySubCategory')->name('personalized-gifts-subcategory.index');
 
@@ -99,6 +101,7 @@ Route::group(['prefix' => 'manage'], function() {
         Route::resource('/menu', 'MenuController');
         Route::resource('/labels', 'LabelController');
         Route::resource('/colors', 'ColorController');
+        Route::resource('/materials', 'MaterialController');
 
         Route::get('/select-product-type', 'ProductController@selectProductType')->name('select_product_type');
         Route::get('/products/{product}/finishings', 'ProductController@productFinishings')->name('product.finishings');
@@ -107,6 +110,7 @@ Route::group(['prefix' => 'manage'], function() {
         Route::put('/products/{product}/change-status', 'ProductController@changeStatus');
         Route::delete('/products/{product}/gallery-image/{image}', 'ProductController@deleteGalleryImage');
         Route::resource('/products', 'ProductController');
+        Route::get('/create/wallpaper-product', 'ProductController@createWallpaperProduct')->name('products.wallpaper.create');
         Route::get('/create/gift-product', 'ProductController@createGiftProduct')->name('products.gift.create');
         Route::get('/create/packing', 'ProductController@createPacking')->name('products.packing.create');
         Route::get('/create/shirt', 'ProductController@createShirtProduct')->name('products.shirt.create');

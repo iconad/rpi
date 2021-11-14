@@ -3,9 +3,10 @@
         <button @click="showModal" class="action-button-warning">Edit</button>
 
 
+
         <modal :name="`modal-${data.id}`" height="auto" class="bg-black bg-opacity-25">
             <div class="p-6 relative">
-                <div class="text-xl mb-3 capitalize font-semibold">Edit Color </div>
+                <div class="text-xl mb-3 capitalize font-semibold">Edit Material </div>
                 <!-- <hr class="my-2"> -->
                 <ValidationObserver v-slot="{ invalid,passes }">
                     <form @submit.prevent="submitForm">
@@ -13,16 +14,34 @@
                             <label class="inline-block mb-1 text-base text-gray-600">Title</label>
                             <ValidationProvider name="name" rules="required">
                                 <div slot-scope="{ errors }">
-                                    <input type="text" v-model="name" class="form-input text-base font-normal">
+                                    <input type="text" v-model="newMaterial.title" class="form-input text-base font-normal">
                                     <p class="text-theme-red-light mt-1 px-1 text-sm font-medium absolute top-100 left-0 w-full">{{ errors[0] }}</p>
                                 </div>
                             </ValidationProvider>
                         </div>
-                        <div class="w-full block relative form-element mt-8">
-                            <div class="w-64 bg-gray-100 grid grid-cols-4 gap-1">
-                                <photoshop-picker v-model="selectedColor" />
+
+                        <div class="w-full block relative form-element">
+                            <label class="inline-block mb-1 text-base text-gray-600">Min - Max Order (cm)</label>
+                            <div class="flex space-x-4">
+                                <div class="w-full">
+                                    <input type="text" v-model="newMaterial.min" placeholder="Minimum Order (cm)" class="form-input text-base font-normal">
+                                </div>
+                                <div class="w-full">
+                                    <input type="text" v-model="newMaterial.max" placeholder="Maximum Order (cm)" class="form-input text-base font-normal">
+                                </div>
                             </div>
                         </div>
+
+                        <div class="w-full block relative form-element">
+                            <label class="inline-block mb-1 text-base text-gray-600">Excerpt</label>
+                            <textarea rows="3" v-model="newMaterial.excerpt" class="form-input text-base font-normal"></textarea>
+                        </div>
+
+                        <div class="w-full block relative form-element">
+                            <label class="inline-block mb-1 text-base text-gray-600">Detail</label>
+                            <textarea rows="6" v-model="newMaterial.body" class="form-input text-base font-normal"></textarea>
+                        </div>
+
                         <div class="form-element">
                             <button
                             type="submit"
@@ -42,8 +61,6 @@
     import { extend,ValidationProvider,ValidationObserver } from 'vee-validate';
     import { required } from 'vee-validate/dist/rules';
 
-    import { Photoshop } from 'vue-color'
-
     extend('required', {
         ...required,
         message: 'This field is required'
@@ -54,46 +71,38 @@
         components: {
             ValidationProvider,
             ValidationObserver,
-            'photoshop-picker': Photoshop
         },
         data() {
             return {
-                name: this.data.title,
+                excerpt: this.data.excerpt,
+                body: this.data.body,
                 error: false,
-                newColor: this.data.hex
+                newMaterial: {
+                    title: this.data.title,
+                    excerpt: this.data.excerpt,
+                    body: this.data.body,
+                }
             }
         },
-        watch: {
-            name: function () {
-                if(this.name != null) {
-                    this.name.length === 0 ? this.error = true : this.error = false
-                }
-            },
-        },
         computed: {
-            selectedColor: {
+            selectedMaterial: {
                 get() {
-                    return this.data.hex;
+                    return this.data;
                 },
                 set(newValue) {
-                    this.newColor = newValue.hex;
-                }
-            },
-            color: {
-                get() {
-                    return this.data.hex;
-                },
-                set(newValue) {
-                    this.selectedColor = newValue;
+                    this.newMaterial = newValue;
                 }
             },
         },
         methods: {
             submitForm () {
 
-                axios.put(`/manage/colors/${this.data.id}`, {
-                    title: this.name,
-                    color: this.newColor,
+                axios.put(`/manage/materials/${this.data.id}`, {
+                    title: this.newMaterial.title,
+                    min: this.newMaterial.min,
+                    max: this.newMaterial.max,
+                    excerpt: this.newMaterial.excerpt,
+                    body: this.newMaterial.body,
                 })
                 .then(response => {
                     this.$emit('updated')
@@ -102,7 +111,7 @@
                         position: 'center',
                         showConfirmButton: false,
                         timer: 3000,
-                        title: 'Color',
+                        title: 'Excerpt',
                         text: 'Successfully updated!',
                     });
                 })

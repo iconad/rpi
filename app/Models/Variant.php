@@ -16,6 +16,7 @@ class Variant extends Model
         'price',
         'product_id',
         'color_id',
+        'material_id',
         'status',
         'featured',
         'order',
@@ -27,6 +28,10 @@ class Variant extends Model
 
     public function colors () {
         return $this->belongsToMany(Color::class);
+    }
+
+    public function material () {
+        return $this->belongsTo(Material::class);
     }
 
     public function color () {

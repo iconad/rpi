@@ -1,0 +1,10 @@
+query {
+  materials(orderBy: [{ field: "id", order: DESC }]) {
+    id
+    title
+    min
+    max
+    excerpt
+    body
+  }
+}

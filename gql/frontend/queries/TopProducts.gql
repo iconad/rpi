@@ -25,6 +25,8 @@ query ($menu: Int!) {
         title_two
         body_title
         body_subtitle
+        pricing_type
+        rule_of_120
         status
         delivery_time
         media{

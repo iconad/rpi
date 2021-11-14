@@ -24,9 +24,9 @@
                 </splide>
             </div>
       </div>
-      <div v-else class="h-64 flex items-center justify-center">
+      <div v-else class="h-full">
           <!-- <span>Image not found</span> -->
-        <thumb-image v-if="isProduct" classess="w-3/4 object-contain mx-auto" :image="product.media[0].file_name" :id="product.media[0].id"></thumb-image>
+        <thumb-image v-if="isProduct" classess="w-full object-contain mx-auto" :image="product.media[0].file_name" :id="product.media[0].id"></thumb-image>
 
       </div>
   </div>
@@ -66,7 +66,9 @@
       }
     },
     mounted() {
-        this.$refs.primary.sync( this.$refs.secondary.splide );
+        if(this.images.length != 0) {
+            this.$refs.primary.sync( this.$refs.secondary.splide );
+        }
     },
     computed: {
         isProduct () {

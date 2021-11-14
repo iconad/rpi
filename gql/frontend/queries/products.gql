@@ -8,6 +8,8 @@ query {
     body_subtitle
     delivery_time
     quantity
+    pricing_type
+    rule_of_120
     status
     created_at
     category {

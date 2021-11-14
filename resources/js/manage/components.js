@@ -21,6 +21,11 @@ Vue.component(
 );
 
 Vue.component(
+    "manage-materials",
+    require("./components/material/ManageMaterials.vue").default
+);
+
+Vue.component(
     "manage-menu",
     require("./components/menu/ManageMenu.vue").default
 );

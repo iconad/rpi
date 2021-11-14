@@ -79,6 +79,7 @@ type Query {
 
     labels(orderBy: [OrderByClause!] @orderBy): [Label!]!  @all
     colors(orderBy: [OrderByClause!] @orderBy): [Color!]!  @all
+    materials(orderBy: [OrderByClause!] @orderBy): [Material!]!  @all
 
     variants(orderBy: [OrderByClause!] @orderBy): [Variant!]!  @all
 
@@ -405,6 +406,18 @@ type Color {
     updated_at: DateTime!
 }
 
+type Material {
+    id: ID!
+    title: String!
+    min: String
+    max: String
+    excerpt: String
+    body: String
+    status: Int!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
 type Label {
     id: ID!
     title: String!
@@ -429,7 +442,7 @@ type Variant {
     id: ID!
     title: String
     short_title: String
-    stock: Int!
+    stock: Int
     price: Int!
     status: Int!
     color: Color @hasOne
@@ -449,6 +462,8 @@ type Product {
     cloth_type: String
     brand: String
 
+    pricing_type: String
+    rule_of_120: String
     title_two: String
     slug: String!
     body_title: String

@@ -53,6 +53,17 @@ class ProductController extends Controller
         return view('manage.product.gift.create', compact('categories', 'finishings'));
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function createWallpaperProduct()
+    {
+        $categories = Category::where('menu_id', 13)->get();
+        return view('manage.product.wallpaper.create', compact('categories'));
+    }
+
     public function createPacking()
     {
         $categories = Category::where('menu_id', 11)->get();
@@ -117,6 +128,8 @@ class ProductController extends Controller
             'printing' => $request->printing,
             'quantity' => $quantity,
             'custom_link' => $request->custom_link,
+            'pricing_type' => $request->pricing_type,
+            'rule_of_120' => $request->rule_of_120,
 
             'brand' => $request->brand,
             'color_id' => $request->color,
@@ -174,7 +187,7 @@ class ProductController extends Controller
         $max_quantity = $quantity[1];
 
         if ($product->category->menu->id == 13) {
-            return view('manage.product.gift.show', compact(
+            return view('manage.product.wallpaper.show', compact(
                 'product',
                 'min_quantity',
                 'notSelectedFinishings',
@@ -292,6 +305,8 @@ class ProductController extends Controller
             $product->neck = $request->neck;
             $product->unique_code = $request->unique_code;
             $product->material = $request->material;
+            $product->rule_of_120 = $request->rule_of_120;
+            $product->pricing_type = $request->pricing_type;
 
             $product->printing_text = $request->printing_text;
             $product->printing = $request->printing;

@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\Color;
 use App\Models\Estimate;
+use App\Models\Material;
 use App\Models\Menu;
 use App\Models\Package;
 use App\Models\PackagePrice;
@@ -32,7 +33,7 @@ class pagesController extends Controller
 
     public function checkOrderType (Request $request, $type, $slug) {
 
-        $types = ['shirt', 'paper', 'gift'];
+        $types = ['shirt', 'paper', 'gift', 'wallpaper'];
 
         if (!in_array($type, $types)) {
             return redirect('/');
@@ -61,6 +62,13 @@ class pagesController extends Controller
                     return redirect('/');
                 }else{
                     return $this->giftProductOrder($request, $slug, $product);
+                }
+            }elseif($type == 'wallpaper') {
+                $product = Product::where('slug', $slug)->with('variants.material')->first();
+                if (!$product) {
+                    return redirect('/');
+                }else{
+                    return $this->wallpaperProductOrder($request, $slug, $product);
                 }
             }
         }
@@ -169,6 +177,23 @@ class pagesController extends Controller
         }
 
         return view('order-filter-gift', compact('orderType', 'product', "variants", 'category', "menu"));
+    }
+
+    public function wallpaperProductOrder(Request $request, $slug, $product)
+    {
+
+        $variants = $product->variants;
+        $menu = $product->category->menu;
+        $category = $product->category;
+
+
+        if ($request->has('type')) {
+            $orderType = $request->type;
+        }else{
+            $orderType = "gift";
+        }
+
+        return view('order-filter-wallpaper', compact('orderType', 'product', "variants", 'category', "menu"));
     }
 
 
@@ -321,6 +346,64 @@ class pagesController extends Controller
         $selectedColors = (array) $selectedColors;
 
         return view('product.gift.index', compact('subcategory', "products", "colors", "slug", "selectedColors"));
+
+
+    }
+
+    public function wallpapesByCategory (Request $request, $slug) {
+
+        $subcategory = SubCategory::where('slug', $slug)->first();
+        $colors = Color::all();
+        $materials = Material::where('status', 1)->get();
+
+        if($request->has('colors')){
+            $selectedColors = $request['colors'];
+        }else{
+            $selectedColors = $colors->pluck('id');
+        }
+
+        if($request->has('materials')){
+            $selectedMaterials = $request['materials'];
+        }else{
+            $selectedMaterials = $materials->pluck('id');
+        }
+
+
+        $subcategory = SubCategory::where('slug', $slug)->first();
+
+        $term = $request->search;
+
+        $sorted = collect(
+            Product::where('sub_category_id', $subcategory->id)
+            ->with('variants')
+            ->whereHas('variants.material', function($q2) use ($selectedMaterials, $request) {
+                $q2->whereIn('material_id', $selectedMaterials);
+            })
+            ->when($request->get('search'), function ($query, $term) {
+                $query->where('title', 'LIKE', "%{$term}%");
+            })
+            ->where('status', 1)
+            ->get()
+        );
+
+        if($request->sort === 'low-to-high'){
+            $products = $sorted->sortBy(function($product) {
+                return $product->minPrice();
+            })
+            ->values();
+        }elseif($request->sort === 'low-to-high'){
+            $products = $sorted->sortByDesc(function($product) {
+                return $product->maxPrice();
+            })
+            ->values();
+        }else{
+            $products = $sorted->sortByDesc('created_at')
+            ->values();
+        }
+
+        $selectedColors = (array) $selectedColors;
+
+        return view('product.wallpaper.index', compact('subcategory', "products", "colors", "materials", "slug", "selectedColors", "selectedMaterials"));
 
 
     }

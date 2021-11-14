@@ -32,6 +32,7 @@
             </div>
             <!-- form-ele -->
 
+            @if ($product->category->menu->id != 13)
             <div class="form-element">
                 <label>
                     <span class="text-gray-800 block">Stock</span>
@@ -39,6 +40,7 @@
                 </label>
             </div>
             <!-- form-ele -->
+            @endif
 
             <div class="form-element">
                 <label>
@@ -52,7 +54,7 @@
                 'colors' => $colors,
                 'color' => $variant->color,
             ]) --}}
-            @if ($product->category->menu->id != 14)
+            @if ($product->category->menu->id != 13)
             <div class="form-element">
                 <label>
                     <span class="text-gray-800 block">Color </span>
@@ -63,6 +65,25 @@
                         <option selected value="{{$color->id}}"> {{$color->title}}</option>
                         @else
                         <option value="{{$color->id}}"> {{$color->title}}</option>
+                        @endif
+                        @endforeach
+                    </select>
+                </label>
+            </div>
+            <!-- form-ele -->
+            @endif
+
+            @if ($product->category->menu->id == 13)
+            <div class="form-element">
+                <label>
+                    <span class="text-gray-800 block">Materials </span>
+                    <select name="material" class="form-input">
+                        <option value="0">Select Material</option>
+                        @foreach ($materials as $material)
+                        @if ($variant->material AND $material->id === $variant->material->id)
+                        <option selected value="{{$material->id}}"> {{$material->title}}</option>
+                        @else
+                        <option value="{{$material->id}}"> {{$material->title}}</option>
                         @endif
                         @endforeach
                     </select>

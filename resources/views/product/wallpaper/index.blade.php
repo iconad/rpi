@@ -7,14 +7,16 @@
 @section('content')
 
     <div class="breadcumbs-wrapper">
-        {{ Breadcrumbs::render('personalized-gifts.index', $subcategory->slug) }}
+        {{ Breadcrumbs::render('wallpapers.index', $subcategory->slug) }}
     </div>
 
-    @livewire('personalized-gifts-products', [
+    @livewire('wallpaper-products', [
         'subcategory' => $subcategory,
         'products' => $products,
         'selectedColors' => $selectedColors,
-        'colors' => $colors
+        'selectedMaterials' => $selectedMaterials,
+        'colors' => $colors,
+        'materials' => $materials
     ])
 
 @endsection

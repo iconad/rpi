@@ -65,7 +65,19 @@
     }
 }
 
+.rule-of-120-animated {
+    animation: ruleOf120 3s linear forwards;
+}
 
+
+@keyframes ruleOf120 {
+    from {
+        @apply bg-red-200;
+    }
+    to {
+        @apply bg-transparent;
+    }
+}
 
 
 

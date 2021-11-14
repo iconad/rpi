@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Color;
+use App\Models\Material;
 use Illuminate\Http\Request;
 
-class ColorController extends Controller
+class MaterialController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ColorController extends Controller
      */
     public function index()
     {
-        return view('manage.color/index');
+        return view('manage.material.index');
     }
 
     /**
@@ -37,29 +37,29 @@ class ColorController extends Controller
     {
         $this->validate(request(), [
             'title' => 'required',
-            'color' => 'required'
         ]);
 
-        $done = Color::create([
+        $done = Material::create([
             'title' => $request->title,
-            'hex' => $request->color['hex'],
-            'hex8' => $request->color['hex8'],
-            'rgba' => json_encode($request->color['rgba']),
+            'body' => $request->body,
+            'min' => $request->min,
+            'max' => $request->max,
+            'excerpt' => $request->excerpt,
         ]);
 
 
         if($done) {
-            return response()->json(['message' => 'Color successfully added!']);
+            return response()->json(['message' => 'Material successfully added!']);
         }
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Color  $color
+     * @param  \App\Models\Material  $material
      * @return \Illuminate\Http\Response
      */
-    public function show(Color $color)
+    public function show(Material $material)
     {
         //
     }
@@ -67,10 +67,10 @@ class ColorController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Color  $color
+     * @param  \App\Models\Material  $material
      * @return \Illuminate\Http\Response
      */
-    public function edit(Color $color)
+    public function edit(Material $material)
     {
         //
     }
@@ -79,33 +79,36 @@ class ColorController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Color  $color
+     * @param  \App\Models\Material  $material
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Color $color)
+    public function update(Request $request, Material $material)
     {
         $this->validate(request(), [
             'title' => 'required'
         ]);
 
-        $color->title = $request->title;
-        $color->hex = $request->color;
+        $material->title = $request->title;
+        $material->min = $request->min;
+        $material->max = $request->max;
+        $material->excerpt = $request->excerpt;
+        $material->body = $request->body;
 
-        if($color->save()) {
-            return response()->json(['message' => 'Color successfully updated!']);
+        if($material->save()) {
+            return response()->json(['message' => 'Material successfully updated!']);
         }
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Color  $color
+     * @param  \App\Models\Material  $material
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Color $color)
+    public function destroy(Material $material)
     {
-        if($color->delete()){
-            return response()->json(['color successfully deleted!']);
+        if($material->delete()){
+            return response()->json(['Material successfully deleted!']);
         }else {
             return response()->json(['something worng, please try again']);
         }

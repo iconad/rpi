@@ -44,6 +44,8 @@ query  {
         body_title
         body_subtitle
         type
+        pricing_type
+        rule_of_120
         label {
           id
           title

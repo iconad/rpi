@@ -9,6 +9,8 @@ query {
     delivery_time
     quantity
     status
+    pricing_type
+    rule_of_120
     created_at
     category {
         id

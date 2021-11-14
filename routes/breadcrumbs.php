@@ -242,3 +242,14 @@ Breadcrumbs::for('personalized-gifts.index', function ($trail, $subcategory) {
     $trail->parent('personalized-gifts');
     $trail->push($subcategory, route('personalized-gifts.index', $subcategory));
 });
+
+// Dasboard > Products
+Breadcrumbs::for('wallpapers', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Wallpapers', route('wallpapers'));
+});
+// Dasboard > Products
+Breadcrumbs::for('wallpapers.index', function ($trail, $subcategory) {
+    $trail->parent('wallpapers');
+    $trail->push($subcategory, route('wallpapers.index', $subcategory));
+});

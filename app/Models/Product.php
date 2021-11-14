@@ -29,6 +29,8 @@ class Product extends Model implements HasMedia
         'brand',
         'color_id',
         'cloth_type',
+        'pricing_type',
+        'rule_of_120',
         'type',
         'material',
         'gender',
