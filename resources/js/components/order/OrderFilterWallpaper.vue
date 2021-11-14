@@ -1,9 +1,9 @@
 <template>
     <div>
-        <pre> {{pricingtype}} </pre>
+        <!-- <pre> {{pricingtype}} </pre>
         <pre> sizeMaxError = {{sizeMaxError}} </pre>
         <pre> sizeMinError = {{sizeMinError}} </pre>
-        <pre> minMaxError = {{minMaxError}} </pre>
+        <pre> minMaxError = {{minMaxError}} </pre> -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-10">
             <ValidationObserver v-slot="{ invalid,passes }">
             <form @submit.prevent="passes(submitForm)">
