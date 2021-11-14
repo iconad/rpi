@@ -56,7 +56,7 @@
                 @foreach ($category->subcategories as $category)
 
                     <div class="border rounded overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg"
-                    onclick="location.href='/products/personalized-gifts/{{$category->slug}}'">
+                    onclick="location.href='/products/wallpappers/{{$category->slug}}'">
                     @if (count($category->getMedia('thumbnail')) != 0)
                     <thumb-image-blade
                         image="{{$category->getMedia('thumbnail')[0]->file_name}}"
@@ -70,8 +70,8 @@
                     @endif
 
                     <div class="flex items-center justify-between">
-                        <a href="/products/personalized-gifts/{{$category->slug}}" class="p-3 font-medium text-left text-primary capitalize"> {{$category->title}} </a>
-                        <a href="/products/personalized-gifts/{{$category->slug}}" class="p-3 text-left text-primary text-gray-500"> ({{count($category->products)}}) </a>
+                        <a href="/products/wallpappers/{{$category->slug}}" class="p-3 font-medium text-left text-primary capitalize"> {{$category->title}} </a>
+                        <a href="/products/wallpappers/{{$category->slug}}" class="p-3 text-left text-primary text-gray-500"> ({{count($category->products)}}) </a>
                     </div>
                 </div>
                 {{-- product end --}}
@@ -99,10 +99,10 @@
         </svg>
 
       </span>
-      Premium print? 
+      Premium print?
 
     </h2>
-  
+
 
             <div class="grid grid-cols-3 gap-12">
                 <div class="text-center">
