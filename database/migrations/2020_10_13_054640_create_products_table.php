@@ -26,6 +26,8 @@ class CreateProductsTable extends Migration
             $table->string('printing_text')->nullable();
             $table->string('pricing_type')->nullable();
             $table->string('rule_of_120')->nullable();
+            $table->string('width')->nullable();
+            $table->string('height')->nullable();
 
             $table->integer('color_id')->nullable();
             $table->string('gender')->nullable();

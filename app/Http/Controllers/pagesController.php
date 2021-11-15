@@ -368,6 +368,7 @@ class pagesController extends Controller
             $selectedMaterials = $materials->pluck('id');
         }
 
+        // return $slug;
 
         $subcategory = SubCategory::where('slug', $slug)->first();
 

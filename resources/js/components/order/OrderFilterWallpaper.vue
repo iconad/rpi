@@ -17,7 +17,7 @@
                             <span class="text-lg font-medium text-gray-900 inline-block ml-4">Mateial</span>
                         </div>
                         <div class="w-full">
-                            <ValidationProvider name="paper.value.color" rules="required">
+                            <ValidationProvider name="paper.value.material" rules="required">
                                 <div slot-scope="{ errors }">
                                     <multiselect class="customulti" @input="onGiftMaterialChange" v-model="wallpaper.material" :options="variants">
                                         <template slot="singleLabel" slot-scope="props">
@@ -50,7 +50,7 @@
                             <span class="text-lg font-medium text-gray-900 inline-block ml-4">Mateial</span>
                         </div>
                         <div class="w-full">
-                            <ValidationProvider name="paper.value.color" rules="required">
+                            <ValidationProvider name="paper.value.material" rules="required">
                                 <div slot-scope="{ errors }">
                                     <multiselect class="customulti" @input="onGiftMaterialChange" v-model="wallpaper.material" :options="variants">
                                         <template slot="singleLabel" slot-scope="props">
@@ -320,6 +320,8 @@
             'pricingtype',
             'slug',
             'pid',
+            'width',
+            'height',
             'ptitle',
             ],
         components: {
@@ -337,7 +339,7 @@
                     installation: 'yes',
                     state: null,
                     customsize: {
-                        widht: null,
+                        width: null,
                         height: null
                     },
                 },
@@ -419,7 +421,7 @@
                         let vat = (5 / 100) * quantity;
                         const installation1 = this.price.installation = this.wallpaper.state.price
 
-                        this.price.total = quantity + vat + installation1
+                        this.price.total = quantity + vat + (this.wallpaper.installation == 'yes' ? installation1 : 0)
                         this.price.vat = vat
                         break;
 
@@ -432,7 +434,7 @@
                             let vat = (5 / 100) * quantity;
                             const installation2 = this.price.installation = this.wallpaper.state.price
 
-                            this.price.total = quantity + vat + installation2
+                            this.price.total = quantity + vat + (this.wallpaper.installation == 'yes' ? installation2 : 0)
                             this.price.vat = vat
 
                         }else{
@@ -448,7 +450,7 @@
                         let vata = (5 / 100) * quantityi;
                         const installation3 = this.price.installation = this.wallpaper.state.price
 
-                        this.price.total = quantityi + vata + installation3
+                        this.price.total = quantityi + vata + (this.wallpaper.installation == 'yes' ? installation3 : 0)
                         this.price.vat = vata
 
                         break;
@@ -497,18 +499,21 @@
             },
             submitForm: function () {
                 let title = this.product.title + " " + this.variant.title;
-                let color = "Color: " + this.wallpaper.color.color.title+ ", HEX " + this.wallpaper.color.color.hex;
 
                 axios.post(`/profile/orders`, {
                     title: title,
                     product_id: this.product.id,
-                    gift_color: color,
-                    gift_quantity: this.wallpaper.quantity,
+                    installation: this.wallpaper.installation,
+                    installation_state: this.wallpaper.state.name,
+                    installation_price: this.price.installation,
+                    wallpaper_quantity: this.wallpaper.quantity,
+                    width: this.width ? this.width : this.wallpaper.customsize.width,
+                    height: this.width ? this.height : this.wallpaper.customsize.height,
                     price_product: this.price.product,
                     price_vat: this.price.vat,
                     price_total: this.price.total,
                     is_design: this.wallpaper.buyType,
-                    turnaround: this.variant.delivery_time,
+                    turnaround: this.product.delivery_time,
                     status: "cart",
                     product_type: "wallpaper",
                 })
@@ -525,7 +530,7 @@
                             text: 'Added to cart!',
                         });
                         if (this.user) {
-                            window.location.href = `/profile/orders/${response.data.orderid}/upload-your-design`
+                            window.location.href = `/profile/orders/${response.data.orderid}/wallpaper-checkout`
                         }else{
                             window.location.href = `/login`
                         }

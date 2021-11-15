@@ -5,7 +5,7 @@
 
         <x-profile-header />
         <div class="text-center text-3xl text-sec font-semibold mb-3">IMPORTANT NOTICE!</div>
-                <p class="text-base text-800 mt-5">Please pay the below amount and send us the proof of payment with your order ID on our email <a href="mailto:finance@rpi.ae" class="font-semibold hover:underline">finance@rpi.ae</a> or Whatsapp us on <span class="font-semibold">+971 56 287 6500</span>, and will start working on you order ASAP.</p>
+                <p class="text-base text-800 my-5">Please pay the below amount and send us the proof of payment with your order ID on our email <a href="mailto:finance@rpi.ae" class="font-semibold hover:underline">finance@rpi.ae</a> or Whatsapp us on <span class="font-semibold">+971 56 287 6500</span>, and will start working on you order ASAP.</p>
                 <div class="border border-b-0 border-gray-200 w-full text-center px-4 py-2 capitalize font-semibold text-gray-700">
                     {{$order->product->title}}
                     <span class="text-gray-500">/ ORD-{{$order->id}}</span>
@@ -47,11 +47,11 @@
                         <td class="border p-2">804020101</td>
                     </tr>
                 </table>
-        
-         
+
+
         <div class="content mt-12">
             <div class="flex justify-center">
-                
+
             </div>
             <div class="table table-fixed w-full bg-gray-100 border border-gray-200 p-3">
 
@@ -157,6 +157,50 @@
                 @endif
                 {{-- Gift Product End --}}
 
+                {{-- Wallpaper Product --}}
+                @if ($order->product_type == 'wallpaper')
+                <template>
+
+                    <div class="flex items-center border-b border-gray-300 p-2">
+                        <div class="w-64 font-semibold"> Width </div>
+                        <div> {{$order->width}} (CM) </div>
+                    </div>
+
+                    <div class="flex items-center border-b border-gray-300 p-2">
+                        <div class="w-64 font-semibold"> Height </div>
+                        <div> {{$order->height}} (CM) </div>
+                    </div>
+
+                    <div class="flex items-center border-b border-gray-300 p-2">
+                        <div class="w-64 font-semibold"> Installation </div>
+                        <div> {{$order->installation}} </div>
+                    </div>
+
+                    @if ($order->installation == 'yes')
+                    <div class="flex items-center border-b border-gray-300 p-2">
+                        <div class="w-64 font-semibold"> Installation </div>
+                        <div> {{$order->installation_state}} </div>
+                    </div>
+                    @endif
+
+                    <div class="flex items-center border-b border-gray-300 p-2">
+                        <div class="w-64 font-semibold"> Quantity </div>
+                        <div> {{$order->wallpaper_quantity}} </div>
+                    </div>
+
+                    <div class="flex items-center border-b border-gray-300 p-2">
+                        <div class="w-64 font-semibold"> Material </div>
+                        @foreach ($order->product->variants as $item)
+                        <div>
+                            {{$item->material->title}}
+                        </div>
+                        @endforeach
+                    </div>
+
+                </template>
+                @endif
+                {{-- Wallpaper Product End --}}
+
                 @if ($order->turnaround)
                 <div class="flex items-center border-b border-gray-300 p-2">
                     <div class="w-64 font-semibold"> Turnaround  </div>
@@ -179,6 +223,13 @@
                         <div class="flex items-center space-x-2 mb-1">
                             <div class="font-medium w-24">Extra</div>
                             <div>{{$order->price_extra}} AED</div>
+                        </div>
+                        @endif
+
+                        @if ($order->installation == 'yes')
+                        <div class="flex items-center space-x-2 mb-1">
+                            <div class="font-medium w-24">Installation</div>
+                            <div>{{$order->installation_price}} AED</div>
                         </div>
                         @endif
 

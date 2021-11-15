@@ -118,6 +118,50 @@
             @endif
             {{-- Gift Product End --}}
 
+            {{-- Wallpaper Product --}}
+            @if ($order->product_type == 'wallpaper')
+            <template>
+
+                <div class="flex items-center border-b border-gray-300 p-2">
+                    <div class="w-64 font-semibold"> Width </div>
+                    <div> {{$order->width}} (CM) </div>
+                </div>
+
+                <div class="flex items-center border-b border-gray-300 p-2">
+                    <div class="w-64 font-semibold"> Height </div>
+                    <div> {{$order->height}} (CM) </div>
+                </div>
+
+                <div class="flex items-center border-b border-gray-300 p-2">
+                    <div class="w-64 font-semibold"> Installation </div>
+                    <div> {{$order->installation}} </div>
+                </div>
+
+                @if ($order->installation == 'yes')
+                <div class="flex items-center border-b border-gray-300 p-2">
+                    <div class="w-64 font-semibold"> Installation </div>
+                    <div> {{$order->installation_state}} </div>
+                </div>
+                @endif
+
+                <div class="flex items-center border-b border-gray-300 p-2">
+                    <div class="w-64 font-semibold"> Quantity </div>
+                    <div> {{$order->wallpaper_quantity}} </div>
+                </div>
+
+                <div class="flex items-center border-b border-gray-300 p-2">
+                    <div class="w-64 font-semibold"> Material </div>
+                    @foreach ($order->product->variants as $item)
+                    <div>
+                        {{$item->material->title}}
+                    </div>
+                    @endforeach
+                </div>
+
+            </template>
+            @endif
+            {{-- Wallpaper Product End --}}
+
             @if ($order->turnaround)
             <div class="flex items-center border-b border-gray-300 p-2">
                 <div class="w-64 font-semibold"> Turnaround  </div>
@@ -141,6 +185,13 @@
                         <div class="font-medium w-24">Extra</div>
                         <div>{{$order->price_extra}} AED</div>
                     </div>
+                    @endif
+
+                    @if ($order->installation == 'yes')
+                        <div class="flex items-center space-x-2 mb-1">
+                            <div class="font-medium w-24">Installation</div>
+                            <div>{{$order->installation_price}} AED</div>
+                        </div>
                     @endif
 
                     @if ($order->price_printing)

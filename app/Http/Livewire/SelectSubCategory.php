@@ -9,15 +9,21 @@ class SelectSubCategory extends Component
 {
 
     public $categories = [];
+    public $priceTypes = ['fixed price', 'custom size', 'packages'];
+    public $priceType = 'fixed price';
     public $product = null;
+    public $width = null;
+    public $height = null;
     public $subCategories = null;
     public $nosubcategory = true;
+    public $isUpdate = null;
     public $selectedCategory = '';
     public $selectedSubCategory = '';
 
-    public function mount($categories, $product) {
+    public function mount($categories, $product, $isUpdate) {
         $this->categories = $categories;
         $this->product = $product;
+        $this->isUpdate = $isUpdate;
 
         if($product != null){
 
@@ -36,6 +42,12 @@ class SelectSubCategory extends Component
             if ($categories->count() != 0) {
                 $this->selectedCategory = $categories[0]->id;
             }
+        }
+
+        if($isUpdate) {
+            $this->width = $this->product->width;
+            $this->height = $this->product->height;
+            $this->priceType = $this->product->pricing_type;
         }
 
         $this->getSubCategories();

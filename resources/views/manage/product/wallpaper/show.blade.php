@@ -11,9 +11,9 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
 {{ Breadcrumbs::render('manage.product', $product) }}
 
 <div class="dashboard mb-50rem">
+
     <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200 flex items-center">
         <span>{{$product->title}}</span>
-
         @if ($product->category->subcategories->count() != 0)
          <a href="/products/wallpapers/{{$product->category->subcategories[0]->slug}}" class="ml-3 inline-block text-xs border-b border-gray-400 text-green-500" target="_blank">View Product</a>
          @endif
@@ -56,29 +56,6 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
             </div>
             <!-- form-ele -->
 
-            @php
-                $priceTypes = ['fixed price', 'custom size', 'packages'];
-            @endphp
-            <div class="form-element mt-10">
-                <label>
-                    <span class="text-gray-800 block">Pricing Type</span>
-                    <div class="relative">
-                        <select class="block appearance-none capitalize w-full bg-white border border-gray-200 text-gray-700 py-2 px-3 pr-8 rounded leading-tight focus:outline-none" name="pricing_type" value="{{ old('delivery_time') }}">
-                            @foreach ($priceTypes as $item)
-                            @if ($product->pricing_type == $item)
-                            <option selected value="{{$item}}">{{$item}}</option>
-                            @else
-                            <option value="{{$item}}">{{$item}}</option>
-                            @endif
-                            @endforeach
-                          </select>
-                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                        </div>
-                      </div>
-                </label>
-            </div>
-            <!-- form-ele -->
 
             <div class="form-element mt-10">
                 <label>
@@ -108,7 +85,8 @@ $days = Array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13
             <!-- form-ele -->
             @livewire('select-sub-category', [
                 'categories' => $categories,
-                'product' => $product
+                'product' => $product,
+                'isUpdate' => true,
             ])
             <!-- form-ele -->
 

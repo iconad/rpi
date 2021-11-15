@@ -4,7 +4,6 @@
 
     <section class="mt-16" id="pageCover">
        <div>
-
             <h1 class="text-2xl font-semibold text-gray-800">{{$menu->title}}</h1>
            {{-- <img src="https://assets.printarabia.ae/product-preset-category-banners/jPqlM7VKQDXQb3G/category-banner-3b9ce22c9f79212c1470540f7fba505d.webp" alt="cover image"> --}}
        </div>
@@ -54,13 +53,12 @@
             {{-- product end --}}
             @else
                 @foreach ($category->subcategories as $category)
-
                     <div class="border rounded overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg"
                     onclick="location.href='/products/wallpapers/{{$category->slug}}'">
-                    @if (count($category->getMedia('thumbnail')) != 0)
+                    @if (count($category->getMedia('images')) != 0)
                     <thumb-image-blade
-                        image="{{$category->getMedia('thumbnail')[0]->file_name}}"
-                        id="{{$category->getMedia('thumbnail')[0]->id}}"
+                        image="{{$category->getMedia('images')[0]->file_name}}"
+                        id="{{$category->getMedia('images')[0]->id}}"
                         classess="w-full h-64 object-cover">
                     </thumb-image-blade>
                     @else

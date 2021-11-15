@@ -93,6 +93,11 @@ Vue.component(
 );
 
 Vue.component(
+    "wallpaper-order-checkout",
+    require("./components/product/WallpaperOrderCheckout.vue").default
+);
+
+Vue.component(
     "cloak-loader",
     require("./components/cloakLoader.vue").default
 );

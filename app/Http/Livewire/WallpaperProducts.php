@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Category;
 use App\Models\Color;
 use App\Models\SubCategory;
 use Livewire\Component;
@@ -16,6 +17,7 @@ class WallpaperProducts extends Component
     public $materials = null;
     public $selectedMaterials = null;
     public $isSidebar = false;
+    public $categories = false;
 
 
     public function mount($subcategory, $products, $colors, $selectedColors, $selectedMaterials, $materials) {
@@ -25,6 +27,8 @@ class WallpaperProducts extends Component
         $this->selectedColors = $selectedColors;
         $this->materials = $materials;
         $this->selectedMaterials = $selectedMaterials;
+        $this->getSubCategories();
+
     }
 
     public function getProductsByMaterial ($material, $key) {
@@ -39,6 +43,15 @@ class WallpaperProducts extends Component
             $this->getProducts();
         }
 
+    }
+
+    public function getSubCategories () {
+        $this->categories = Category::whereHas('subcategories')->with('subcategories', function ($query) {
+            return $query->where('status', '=', 1);
+        })
+        ->where('slug', 'wallpapers')
+        ->where('status', 1)
+        ->first();
     }
 
     public function getProducts () {

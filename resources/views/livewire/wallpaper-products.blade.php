@@ -29,7 +29,7 @@
                                 <li>
                                     <label class="w-full flex items-center space-x-2">
                                         <span>
-                                            {{-- {{$selectedColors}} --}}
+
                                             <input type="checkbox"
                                                 onChange="this.form.submit()"
                                                 name="materials[]"
@@ -40,6 +40,34 @@
 
                                         <span class="block -mt-1 select-none"> {{$material->title}}</span>
 
+                                    </label>
+                                </li>
+                            @endforeach
+                        </ul>
+
+                    </form>
+                </div>
+                {{-- one filter end --}}
+
+
+                <div class="p-3 product-filter bg-gray-100">
+                    <div class="flex items-center justify-between">
+                        <div class="font-semibold">Categories</div>
+                        <div class="font-semibold cursor-pointer">━</div>
+                    </div>
+
+                    <form action="/products/wallpapers/{{$subcategory->slug}}" method="get">
+                        @if(isset($_GET['sort']))
+                        <input type="hidden" name="sort" value="{{ $_GET['sort'] }}">
+                        @endif
+                        @if(isset($_GET['search']))
+                        <input type="hidden" name="search" value="{{ $_GET['search'] }}">
+                        @endif
+                        <ul class="mt-3 flex flex-col space-y-2">
+                            @foreach ($categories->subcategories as $key => $category)
+                                <li>
+                                    <label class="w-full flex items-center space-x-2">
+                                        <a class="{{$subcategory->id == $category->id ? 'font-bold' : ''}}" href="/products/wallpapers/{{$category->slug}}" class="hover:underline"> {{$category->title}} </a>
                                     </label>
                                 </li>
                             @endforeach

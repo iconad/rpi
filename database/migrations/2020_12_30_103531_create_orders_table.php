@@ -31,8 +31,14 @@ class CreateOrdersTable extends Migration
             $table->integer('price_extra')->nullable();
             $table->integer('price_printing')->nullable();
             $table->integer('price_vat');
+            $table->integer('installation_price');
+            $table->string('installation');
+            $table->string('installation_state');
+            $table->string('installation_price');
             $table->string('is_design');
             $table->string('price_total');
+            $table->string('width');
+            $table->string('height');
             $table->string('product_type');
             $table->integer('product_id');
             $table->integer('user_id');

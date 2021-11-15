@@ -6,7 +6,6 @@
     <x-breadcrumbs />
 </section> --}}
 {{-- breadcrumbs --}}
-
 <section class="order-filter-section my-12">
     <h1 class="text-xl lg:text-3xl font-semibold text-gray-900">{{$product->title}}</h1>
     <order-filter

@@ -9,6 +9,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Redirect;
 
 class OrderController extends Controller
 {
@@ -68,8 +69,11 @@ class OrderController extends Controller
             'paper' => $request->paper,
             'paper_quantity' => $request->paper_quantity,
             'gift_quantity' => $request->gift_quantity,
+            'wallpaper_quantity' => $request->wallpaper_quantity,
             'paper_finishings' => $request->paper_finishings,
             'shirt_color' => $request->shirt_color,
+            'width' => $request->width,
+            'height' => $request->height,
             'gift_color' => $request->gift_color,
             'shirt_sizes' => $request->shirt_sizes,
             'shirt_printings' => $request->shirt_printings,
@@ -77,6 +81,9 @@ class OrderController extends Controller
             'price_product' => $request->price_product,
             'price_extra' => $request->price_extra,
             'price_printing' => $request->price_printing,
+            'installation' => $request->installation,
+            'installation_price' => $request->installation_price,
+            'installation_state' => $request->installation_state,
             'price_vat' => $request->price_vat,
             'price_total' => $request->price_total,
             'product_type' => $request->product_type,
@@ -455,6 +462,17 @@ class OrderController extends Controller
             return response()->json(['Successfully deleted!']);
         }else {
             return response()->json(['something worng, please try again']);
+        }
+    }
+
+
+    public function WallpaperOrderCheckout (Order $order) {
+        if($order->user->id == auth()->id()) {
+
+            return view('wallpaper-order-checkout', compact('order'));
+
+        }else{
+            return Redirect::back()->withErrors(['message', 'user not authorized to perform this action']);
         }
     }
 

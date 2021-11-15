@@ -31,6 +31,8 @@ class Product extends Model implements HasMedia
         'cloth_type',
         'pricing_type',
         'rule_of_120',
+        'width',
+        'height',
         'type',
         'material',
         'gender',
@@ -119,6 +121,7 @@ class Product extends Model implements HasMedia
     public function minPrice () {
         return $this->hasMany(Variant::class)->min("price");
     }
+
     public function maxPrice () {
         return $this->hasMany(Variant::class)->max("price");
     }

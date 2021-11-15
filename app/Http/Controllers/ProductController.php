@@ -130,6 +130,8 @@ class ProductController extends Controller
             'custom_link' => $request->custom_link,
             'pricing_type' => $request->pricing_type,
             'rule_of_120' => $request->rule_of_120,
+            'width' => $request->width,
+            'height' => $request->height,
 
             'brand' => $request->brand,
             'color_id' => $request->color,
@@ -307,6 +309,8 @@ class ProductController extends Controller
             $product->material = $request->material;
             $product->rule_of_120 = $request->rule_of_120;
             $product->pricing_type = $request->pricing_type;
+            $product->width = $request->width;
+            $product->height = $request->height;
 
             $product->printing_text = $request->printing_text;
             $product->printing = $request->printing;

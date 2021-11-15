@@ -61,6 +61,7 @@ Route::group(['prefix' => 'profile'], function() {
         Route::post('/orders/{order}/store-file', 'FileController@storeFile');
         Route::post('/orders/{order}/add-cloud-file', 'FileController@addCloudFile');
         Route::get('/orders/{order}/upload-your-design', 'FileController@uploadYourDesign');
+        Route::get('/orders/{order}/wallpaper-checkout', 'OrderController@WallpaperOrderCheckout');
         Route::post('/orders/{order}/upload-your-design', 'FileController@store');
         Route::delete('/orders/{order}/files/{file}', 'FileController@destroy');
         Route::put('/orders/{order}/update-order', 'OrderController@updateOrder');
