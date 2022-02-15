@@ -16,8 +16,12 @@
         </div>
     </div>
     <wallpaper-order-checkout :order="{{ json_encode($order) }}"></wallpaper-order-checkout>
-</section>
 
+
+
+
+
+</section>
 
 
 @endsection

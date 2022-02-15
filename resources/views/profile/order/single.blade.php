@@ -4,8 +4,8 @@
     <section class="page-wrapper">
 
         <x-profile-header />
-        <div class="text-center text-3xl text-sec font-semibold mb-3">IMPORTANT NOTICE!</div>
-                <p class="text-base text-800 my-5">Please pay the below amount and send us the proof of payment with your order ID on our email <a href="mailto:finance@rpi.ae" class="font-semibold hover:underline">finance@rpi.ae</a> or Whatsapp us on <span class="font-semibold">+971 56 287 6500</span>, and will start working on you order ASAP.</p>
+                <div class="hidden text-center text-3xl text-sec font-semibold mb-3">IMPORTANT NOTICE!</div>
+                <p class="text-base text-800 my-5 hidden">Please pay the below amount and send us the proof of payment with your order ID on our email <a href="mailto:finance@rpi.ae" class="font-semibold hover:underline">finance@rpi.ae</a> or Whatsapp us on <span class="font-semibold">+971 56 287 6500</span>, and will start working on you order ASAP.</p>
                 <div class="border border-b-0 border-gray-200 w-full text-center px-4 py-2 capitalize font-semibold text-gray-700">
                     {{$order->product->title}}
                     <span class="text-gray-500">/ ORD-{{$order->id}}</span>
@@ -59,6 +59,13 @@
                     <div class="w-64 font-semibold"> Order ID </div>
                     <div> ORD-{{$order->id}}</div>
                 </div>
+
+                @if ($order->transaction_id)
+                    <div class="flex items-center border-b border-gray-300 p-2">
+                        <div class="w-64 font-semibold"> Transaction ID </div>
+                        <div> {{$order->transaction_id}}</div>
+                    </div>
+                @endif
 
                 <div class="flex items-center border-b border-gray-300 p-2">
                     <div class="w-64 font-semibold"> Date </div>
@@ -290,8 +297,15 @@
                                 <span class="capitalize text-base leading-5 font-semibold rounded-full bg-orange-100 text-orange-600"> {{$order->status}} </span>
                             @elseif($order->status === 'confirmed')
                                 <span class="capitalize text-base leading-5 font-semibold rounded-full bg-gray-100 text-gray-600"> {{$order->status}} </span>
+                            @elseif($order->status === 'paid-pending')
+                                <div class="flex items-center space-x-5">
+                                    <span class="capitalize text-base leading-5 font-semibold rounded-full bg-blue-100 text-blue-600"> {{$order->status}} </span>
+                                </div>
+
                             @elseif($order->status === 'delivered')
-                                <span class="capitalize text-base leading-5 font-semibold rounded-full bg-green-100 text-green-600"> {{$order->status}} </span>
+                                <span class="capitalize text-base leading-5 font-semibold rounded-full bg-green-100 text-green-600">
+                                    {{$order->status}}
+                                 </span>
                             @elseif($order->status === 'on-hold')
                                 <span class="capitalize text-base leading-5 font-semibold rounded-full bg-orange-100 text-orange-600"> {{$order->status}} </span>
                             @elseif($order->status === 'cancelled')

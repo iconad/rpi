@@ -59,7 +59,7 @@
                             </tr>
                         </thead>
                         <tbody v-if="pps.length != 0" class="bg-white divide-y divide-gray-200">
-                            <tr v-for="pp in pps" :key="pp.id">
+                            <tr v-for="(pp, index) in pps" :key="index">
                                 <td class="px-6 py-4 whitespace-no-wrap">
                                     <div class="text-base leading-5 font-medium text-gray-800">
                                        {{pp.created_at | moment("Do MMMM, YYYY")}}
@@ -72,7 +72,8 @@
                                 </td>
                                 <td class="px-6 py-4 whitespace-no-wrap">
                                     <div class="text-base uppercase leading-5 font-medium text-gray-800">
-                                        ORD-{{pp.order.id}}
+                                        <span v-if="pp.order">ORD-{{pp.order.id}}</span>
+                                        <span v-else class="font-medium text-xs text-red-500">Order not found!</span>
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-no-wrap">
@@ -81,19 +82,22 @@
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-no-wrap">
-                                    <div v-if="pp.order.product" class="text-base leading-5 font-medium text-gray-800">
+                                    <div v-if="pp.order && pp.order.product" class="text-base leading-5 font-medium text-gray-800">
                                         <a v-if="pp.status == 'cart'" :href="`/profile/orders/${pp.id}/upload-your-design`" class="theme-link">{{pp.order.product.title}}</a>
                                         <a v-else :href="`/manage/pending-proofs/${pp.id}`" class="theme-link">{{pp.order.product.title}}</a>
                                     </div>
+                                    <div class="font-medium text-xs text-red-500" v-else>Product not found!</div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-no-wrap">
-                                    <div class="text-base leading-5 font-medium text-gray-800">
+                                    <div v-if="pp.order" class="text-base leading-5 font-medium text-gray-800">
                                         {{pp.order.price_total}} AED
                                     </div>
+                                    <div v-else class="font-medium text-xs text-red-500">Order not found!</div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-no-wrap">
-                                    <span v-if="pp.status == 'pending' " class="capitalize text-base leading-5 font-semibold rounded-full bg-blue-100 text-blue-600"> Pending</span>
-                                    <span v-else-if="pp.status == 'paid' " class="capitalize text-base leading-5 font-semibold rounded-full bg-orange-100 text-orange-500"> Paid</span>
+                                    <span v-if="pp.status == 'pending' " class="capitalize text-base leading-5 font-semibold rounded-full bg-orange-100 text-orange-600"> Pending</span>
+                                    <span v-else-if="pp.status == 'paid' " class="capitalize text-base leading-5 font-semibold rounded-full bg-green-100 text-green-500"> Paid</span>
+                                    <span v-else-if="pp.status == 'approved' " class="capitalize text-base leading-5 font-semibold rounded-full bg-blue-100 text-blue-500"> Approved</span>
                                     <span v-else-if="pp.status == 'declined' " class="capitalize text-base leading-5 font-semibold rounded-full bg-red-100 text-red-600"> Declined</span>
                                 </td>
                                  <td class="px-6 py-4 whitespace-no-wrap">
@@ -123,7 +127,7 @@
         props: ['user_id'],
         data() {
             return {
-                allstatus: ['all', 'pending', 'paid', 'declined'],
+                allstatus: ['all', 'pending', 'approved', 'paid', 'declined'],
                 status: 'all',
                 term: null,
             }

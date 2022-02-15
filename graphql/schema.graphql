@@ -283,6 +283,8 @@ type Order {
     user_id: Int
     user: User @hasOne
     status: String
+    transaction_id: String
+    payment_method_id: String
     gift_quantity: Int
     gift_color: String
     is_design: String

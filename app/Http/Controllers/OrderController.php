@@ -62,6 +62,9 @@ class OrderController extends Controller
             'price_total' => 'required',
         ]);
 
+
+        // return $request;
+
         $order = Order::create([
             'title' => $request->title,
             'paper_size' => $request->paper_size,
@@ -94,6 +97,7 @@ class OrderController extends Controller
         ]);
 
         if($order) {
+
             return response()->json(
                 [
                     'status' => true,
@@ -143,8 +147,32 @@ class OrderController extends Controller
             'status' => 'required',
         ]);
 
-        $order->message = $request->message;
-        $order->status = $request->status;
+
+        $user = auth()->user();
+
+        $user->createOrGetStripeCustomer();
+
+        $payment = $user->charge(
+            $request->customer['amount'],
+            $request->customer['payment_method_id']
+        );
+
+        $payment = $payment->asStripePaymentIntent();
+
+        if($payment->status == 'succeeded') {
+            $order->status = 'paid-pending';
+            $order->message = $request->message;
+            $order->transaction_id = $payment->charges->data[0]->id;
+            $order->payment_method_id = $request->customer['payment_method_id'];
+
+            $order->proof->status = 'paid';
+            $order->proof->save();
+
+        }else{
+            $order->status = $request->status;
+            $order->message = $request->message;
+        }
+
         $done = $order->save();
 
         if($done) {
@@ -159,8 +187,6 @@ class OrderController extends Controller
         $this->validate(request(), [
             'status' => 'required',
         ]);
-
-
 
         $order->status = $request->status;
 
@@ -254,6 +280,20 @@ class OrderController extends Controller
                 return redirect("/manage/orders/$order->id");
             }
 
+        }elseif($request->status == 'paid-pending') {
+
+            $msg = $this->orderPaidPending($user, $order, $order->status, $request->message);
+            if ($msg) {
+                $order->save();
+                $request->session()->flash('green', 'Order has been successfully paid');
+                return redirect("/manage/orders/$order->id");
+            }else{
+                $request->session()->flash('red', 'Something went wront! pelase try again');
+                return redirect("/manage/orders/$order->id");
+            }
+
+        }else{
+            return "go back.";
         }
 
     }
@@ -436,6 +476,30 @@ class OrderController extends Controller
         $pp = PendingProof::where('order_id', $order->id)->first();
         $pp->status = 'paid';
         $pp->save();
+
+        $data = array(
+            'name' => $user->name,
+            'sub' => $sub,
+            'subject' => $subject,
+            'message' => $message
+        );
+
+        Mail::to($user->email)->send(new UpdateorderMail($data));
+
+        return true;
+
+    }
+
+    public function orderPaidPending ($user, $order, $status, $message) {
+
+        $subject = "Your order <b>$order->id</b> has been paid!";
+        $sub = "Your order has been paid!";
+
+        $message = $subject. " " . $message . " " . "if you have any question please contact us on +971 6 534 1113";
+
+        // $pp = PendingProof::where('order_id', $order->id)->first();
+        // $pp->status = 'paid-pending';
+        // $pp->save();
 
         $data = array(
             'name' => $user->name,

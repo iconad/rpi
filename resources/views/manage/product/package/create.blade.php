@@ -3,7 +3,7 @@
 @section('content')
 
 {{ Breadcrumbs::render('product.packages.create', $product) }}
-
+/Applications/Ampps/www/laravel/rpi/resources/views/manage/product/package/create.blade.php
     <!-- Old Name "Packages" -->
     <!-- change to "Paper" -->
 
@@ -14,16 +14,14 @@
             @csrf
 
             <div class="form-element">
-
-                <span class="text-gray-800 block">Select Paper</span>
-
-                {{-- <datalist-dropdown :data="{{json_encode($papers)}}"></datalist-dropdown> --}}
-
-                @livewire('datalist-dropdown', [
-                    'collection' => $papers,
-                    'paperId' => null
-                ])
-
+                <label>
+                    <span class="text-gray-800 block">Select Paper</span>
+                    <select class="form-input text-lg capitalize" name="paper">
+                        @foreach ($papers as $paper)
+                        <option class="capitalize" value="{{$paper->id}}"> {{$paper->title}} ({{$paper->side}}) </option>
+                        @endforeach
+                    </select>
+                </label>
             </div>
             <!-- form-ele -->
 

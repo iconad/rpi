@@ -1,5 +1,7 @@
 <template>
     <div>
+        <!-- <pre> {{wallpaper.material}} </pre>
+        <pre> {{wallpaper.customsize}} </pre> -->
         <!-- <pre> {{pricingtype}} </pre>
         <pre> sizeMaxError = {{sizeMaxError}} </pre>
         <pre> sizeMinError = {{sizeMinError}} </pre>
@@ -185,7 +187,7 @@
                             <table class="table-fixed w-full text-left rounded-lg overflow-scroll">
                                 <tbody>
                                     <tr>
-                                        <th class="border border-gray-200 px-3 text-sm py-2">Product Price</th>
+                                        <th class="border border-gray-200 px-3 text-sm py-2">Price Per Square Meter</th>
                                         <td class="border border-gray-200 px-3 text-sm py-2">{{price.product}}</td>
                                     </tr>
                                     <tr v-if="wallpaper.installation == 'yes'">
@@ -347,12 +349,12 @@
                     {
                         id: 1,
                         name: 'Dubai, Sharjah, Ajman',
-                        price: 250
+                        price: 0
                     },
                     {
                         id: 2,
                         name: 'Other States',
-                        price: 350
+                        price: 150
                     },
                 ],
                 price: {
@@ -426,7 +428,10 @@
                         break;
 
                     case 'custom size':
+
                         if((!this.sizeMinError && !this.sizeMinError) && (width && height)) {
+
+                            this.price.product = this.variant.price
 
                             let price = (width * height) * this.variant.price;
 
@@ -436,6 +441,11 @@
 
                             this.price.total = quantity + vat + (this.wallpaper.installation == 'yes' ? installation2 : 0)
                             this.price.vat = vat
+
+                            console.log(width + '*' + height)
+                            console.log(price)
+                            console.log(this.wallpaper.quantity)
+                            console.log(quantity)
 
                         }else{
                             this.price.total = 0

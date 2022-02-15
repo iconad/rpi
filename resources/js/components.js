@@ -189,3 +189,9 @@ Vue.component(
     "estimate-form",
     require("./components/form/Estimate.vue").default
 );
+
+Vue.component(
+    "payment-form",
+    require("./components/payment/PaymentOne.vue").default
+);
+

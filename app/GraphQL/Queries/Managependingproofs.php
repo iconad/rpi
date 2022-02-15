@@ -18,14 +18,14 @@ class Managependingproofs
 
             $pps = PendingProof::when($args['term'], function ($query, $term) {
                 $query->where('id', $term);
-            })->get();
+            })->orderBy('created_at', 'DESC')->get();
 
         }else{
 
             $pps = PendingProof::where('status', '=', $args['status'])
             ->when($args['term'], function ($query, $term) {
                 $query->where('id', $term);
-            })->get();
+            })->orderBy('created_at', 'DESC')->get();
 
         }
         return $pps;

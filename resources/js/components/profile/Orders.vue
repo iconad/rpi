@@ -57,7 +57,7 @@
                             </tr>
                         </thead>
 
-                        
+
                         <tbody v-if="orders.length != 0" class="bg-white divide-y divide-gray-200">
                             <tr v-for="order in orders" :key="order.id">
                                 <td class="px-6 py-4 whitespace-no-wrap">
@@ -89,6 +89,7 @@
                                     <span v-if="order.status == 'cart' " class="capitalize text-base leading-5 font-semibold rounded-full bg-blue-100 text-blue-600"> Cart</span>
                                     <span v-else-if="order.status == 'pending' " class="capitalize text-base leading-5 font-semibold rounded-full bg-orange-100 text-orange-500"> Pending</span>
                                     <span v-else-if="order.status == 'confirmed' " class="capitalize text-base leading-5 font-semibold rounded-full bg-red-100 text-red-600"> Confirmed</span>
+                                    <span v-else-if="order.status == 'paid-pending' " class="capitalize text-base leading-5 font-semibold rounded-full bg-green-50 text-green-400"> Paid-Pending</span>
                                     <span v-else-if="order.status == 'onhold' " class="capitalize text-base leading-5 font-semibold rounded-full bg-orange-100 text-orange-600"> On Hold</span>
                                     <span v-else-if="order.status == 'delivered' " class="capitalize text-base leading-5 font-semibold rounded-full bg-green-100 text-green-600"> delivered</span>
                                     <span v-else-if="order.status == 'rejected' " class="capitalize text-base leading-5 font-semibold rounded-full bg-red-100 text-red-600"> rejected</span>
@@ -107,7 +108,7 @@
                         </tbody>
 
                         </table>
-                
+
                     </div>
                 </div>
             </div>
@@ -124,7 +125,7 @@
         props: ['user_id'],
         data() {
             return {
-                allstatus: ['all', 'cart', 'pending', 'confirmed', 'delivered', 'on-hold', 'rejected'],
+                allstatus: ['all', 'cart', 'pending', 'confirmed', 'paid-pending', 'delivered', 'on-hold', 'rejected'],
                 status: 'all',
                 term: null,
                 searchBy: 'id'

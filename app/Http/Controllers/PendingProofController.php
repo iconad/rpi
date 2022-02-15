@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\PendingProofUpdate;
+use App\Mail\UpdateorderMail;
+use App\Models\Order;
 use App\Models\PendingProof;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PendingProofController extends Controller
 {
@@ -68,9 +72,40 @@ class PendingProofController extends Controller
      * @param  \App\Models\PendingProof  $pendingProof
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PendingProof $pendingProof)
+    public function update(Request $request, $pendingProof)
     {
-        //
+        $pp = PendingProof::findOrFail($pendingProof);
+        $order = Order::findOrFail($pp->order_id);
+        $method = null;
+        $modified = null;
+        $total = null;
+
+        if($request->price != $order->price_total){
+
+            if ($request->price < $order->price_total) {
+                $modified = $order->price_total - $request->price;
+                $method = '-';
+            }else{
+                $method = '+';
+                $modified =  $request->price - $order->price_total;
+            }
+
+            $order->price_old = $order->price_total;
+
+        }
+
+        $order->price_total = $request->price;
+        $order->price_modified = $modified;
+        $order->price_modification_reason = $request->message;
+        $pp->status = 'approved';
+
+        $order->save();
+        $pp->save();
+
+        $this->sendEmail($request->message, $pp);
+
+        return redirect('/manage/pending-proofs/'.$pp->id);
+
     }
 
     /**
@@ -82,5 +117,27 @@ class PendingProofController extends Controller
     public function destroy(PendingProof $pendingProof)
     {
         //
+    }
+
+
+    public function sendEmail ($message, $pp) {
+
+        $subject = "Your pending proof <b>$pp->id</b> has been updated!";
+        $sub = "Your pending proof has been updated!";
+
+        $message = $subject. " " . $message . "if you have any question please contact us on +971 6 534 1113";
+
+        $user = auth()->user();
+
+        $data = array(
+            'name' => $user->name,
+            'sub' => $sub,
+            'subject' => $subject,
+            'link' => url("/profile/pending-proofs/$pp->id"),
+            'message' => $message
+        );
+
+        Mail::to($user->email)->send(new PendingProofUpdate($data));
+
     }
 }

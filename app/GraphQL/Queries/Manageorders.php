@@ -20,7 +20,7 @@ class Manageorders
 
                 $orders = Order::when($args['term'], function ($query, $term) {
                     $query->where('id', $term);
-                })->get();
+                })->orderBy('created_at', 'DESC')->get();
 
             }else{
 
@@ -29,7 +29,7 @@ class Manageorders
                     $query->whereHas('product', function($q2) use ($term) {
                         $q2->where('title', 'LIKE', "%{$term}%");
                     });
-                })->get();
+                })->orderBy('created_at', 'DESC')->get();
             }
 
 
@@ -40,7 +40,7 @@ class Manageorders
                 $orders = Order::where('status', '=', $args['status'])
                 ->when($args['term'], function ($query, $term) {
                     $query->where('id', $term);
-                })->get();
+                })->orderBy('created_at', 'DESC')->get();
 
             }else{
 
@@ -50,7 +50,7 @@ class Manageorders
                     $query->whereHas('product', function($q2) use ($term) {
                         $q2->where('title', 'LIKE', "%{$term}%");
                     });
-                })->get();
+                })->orderBy('created_at', 'DESC')->get();
             }
 
         }

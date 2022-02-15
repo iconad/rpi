@@ -48,8 +48,11 @@ class ManagePages extends Controller
 
     public function order ($oid) {
         $order = Order::where('id', $oid)->first();
-        // return $order;
-        return view('manage.order.show', compact('order'));
+        if ($order) {
+            return view('manage.order.show', compact('order'));
+        }else{
+            return view('manage.order.index');
+        }
     }
 
     public function pendingProofs () {

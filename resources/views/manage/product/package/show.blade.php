@@ -14,19 +14,22 @@
         <form action="/manage/products/{{$product->id}}/packages/{{$package->id}}" method="post" class="">
             @csrf
             {{method_field('PUT')}}
+
             <div class="form-element">
                 <label>
                     <span class="text-gray-800 block">Select Paper</span>
-
-                    @livewire('datalist-dropdown', [
-                        'collection' => $papers,
-                        'paperId' => $package->paper_id
-                    ])
-
+                    <select class="form-input text-lg capitalize" name="paper">
+                        @foreach ($papers as $paper)
+                            @if ($paper->id === $package->paper_id)
+                                <option selected class="capitalize" value="{{$paper->id}}"> {{$paper->title}} ({{$paper->side}}) </option>
+                            @else
+                                <option class="capitalize" value="{{$paper->id}}"> {{$paper->title}} ({{$paper->side}}) </option>
+                            @endif
+                        @endforeach
+                    </select>
                 </label>
-
-
             </div>
+            <!-- form-ele -->
 
             <div class="form-element">
                 <change-status :status="{{$package->status}}" id="{{$package->id}}" model="packages"></change-status>

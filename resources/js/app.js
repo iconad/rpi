@@ -3,6 +3,7 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+require('./pay');
 require('./bootstrap');
 window._ = require('lodash');
 window.Vue = require("vue");

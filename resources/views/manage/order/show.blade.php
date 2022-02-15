@@ -10,7 +10,11 @@
     <div class="content mt-12 mb-32">
         <div class="flex justify-center">
             <div class="border border-b-0 border-gray-200 w-full text-center px-4 py-2 capitalize font-semibold text-gray-700">
+                @if ($order->product)
                 {{$order->product->title}}
+                @else
+                <span class="text-red-500">product not found</span>
+                @endif
                 <span class="text-gray-500">/ ORD-{{$order->id}}</span>
             </div>
         </div>
@@ -274,6 +278,8 @@
                             <span class="capitalize text-base leading-5 font-semibold rounded-full bg-gray-100 text-gray-600"> {{$order->status}} </span>
                         @elseif($order->status === 'delivered')
                             <span class="capitalize text-base leading-5 font-semibold rounded-full bg-green-100 text-green-600"> {{$order->status}} </span>
+                        @elseif ($order->status === 'paid-pending')
+                            <span class="capitalize text-base leading-5 font-semibold rounded-full bg-green-50 text-green-400"> {{$order->status}} </span>
                         @elseif($order->status === 'on-hold')
                             <span class="capitalize text-base leading-5 font-semibold rounded-full bg-orange-100 text-orange-600"> {{$order->status}} </span>
                         @elseif($order->status === 'cancelled')
@@ -357,7 +363,7 @@
 
         @if ($order->status !== 'delivered')
         <div class="mt-5 table table-fixed w-full bg-gray-100 border border-gray-200 p-3">
-            <div class="text-gray-900 font-semibold text-lg">Action</div>
+            <div class="text-gray-900 font-semibold text-lg">Action </div>
 
             <div class="mt-3">
                 <form action="/profile/orders/{{$order->id}}/update-order" method="POST">
@@ -367,7 +373,15 @@
                     <div>
                         <select name="status" class="capitalize px-3 py-1 rounded bg-transparent focus:outline-none active:outline-none border border-gray-300">
                             @php
-                                $status = ['cart', 'pending', 'confirmed', 'on-hold', 'cancelled'];
+                                if($order->status == 'paid-pending'){
+                                    $status = ['confirmed', 'on-hold', 'cancelled'];
+                                }elseif($order->status == 'confirmed'){
+                                    $status = ['on-hold', 'cancelled'];
+                                }elseif($order->status == 'on-hold'){
+                                    $status = ['confirmed','cancelled'];
+                                }else{
+                                    $status = ['cart', 'pending', 'confirmed', 'on-hold', 'cancelled'];
+                                }
                             @endphp
                             @foreach ($status as $item)
                                 @if ($item == $order->status)

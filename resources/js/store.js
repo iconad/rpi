@@ -117,6 +117,7 @@ export const store = new Vuex.Store({
 
         if(state.selectedShirtPrinting.length != 0) {
             state.selectedShirtPrinting.map(s => {
+
                 if(s.options['front side']) {
                     state.printingPrice.front -= s.options['front side'].price
                     state.printingDays.front -= s.options['front side'].days
@@ -129,6 +130,7 @@ export const store = new Vuex.Store({
                     state.printingPrice.sleeves -= _.sum(s.sleaves.map(s => s.price))
                     state.printingDays.sleeves -= _.sum(s.sleaves.map(s => s.days))
                 }
+
             })
         }else{
             state.printingPrice.front = 0
@@ -145,12 +147,6 @@ export const store = new Vuex.Store({
 
       },
 
-    //   mutateSelectedShirtColor (state, payload) {
-    //     state.selectedShirt.color = (payload);
-    //   },
-    //   mutateProductGallery (state, payload) {
-    //     state.productGallery = payload;
-    //   }
     },
 
     actions: {

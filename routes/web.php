@@ -142,6 +142,7 @@ Route::group(['prefix' => 'manage'], function() {
         Route::delete('/package-price-sizes-price/{finishingid}', 'PackagePriceSizesPriceController@destroy');
         Route::get('/orders', 'ManagePages@orders')->name('orders.index');
         Route::get('/orders/{order}', 'ManagePages@order')->name('orders.show');
+        Route::put('/pending-proofs/{pp}', 'PendingProofController@update');
         Route::get('/pending-proofs', 'ManagePages@pendingProofs')->name('pending-proofs.index');
         Route::get('/pending-proofs/{pp}', 'ManagePages@pendingProof')->name('pending-proofs.show');
         Route::get('/estimates', 'EstimateController@index')->name('manage.estimates.index');

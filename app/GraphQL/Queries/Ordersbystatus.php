@@ -22,7 +22,7 @@ class Ordersbystatus
                 $orders = Order::where('user_id', $args['user_id'])
                 ->when($args['term'], function ($query, $term) {
                     $query->where('id', $term);
-                })->get();
+                })->orderBy('created_at', 'DESC')->get();
 
             }else{
 
@@ -32,7 +32,7 @@ class Ordersbystatus
                     $query->whereHas('product', function($q2) use ($term) {
                         $q2->where('title', 'LIKE', "%{$term}%");
                     });
-                })->get();
+                })->orderBy('created_at', 'DESC')->get();
             }
 
 
@@ -44,7 +44,7 @@ class Ordersbystatus
                 ->where('user_id', $args['user_id'])
                 ->when($args['term'], function ($query, $term) {
                     $query->where('id', $term);
-                })->get();
+                })->orderBy('created_at', 'DESC')->get();
 
             }else{
 
@@ -55,7 +55,7 @@ class Ordersbystatus
                     $query->whereHas('product', function($q2) use ($term) {
                         $q2->where('title', 'LIKE', "%{$term}%");
                     });
-                })->get();
+                })->orderBy('created_at', 'DESC')->get();
             }
 
 

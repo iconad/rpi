@@ -17,10 +17,11 @@
                 </thead>
                 <tbody>
                     @foreach ($pps as $pp)
+                    @if ($pp->order)
                     <tr>
                         <td class="border border-gray-300 p-3 font-semibold text-gray-700"> {{$pp->order->id}} </td>
                         <td class="border border-gray-300 p-3 text-gray-800 capitalize">
-                            @if ($pp->order->product)
+                            @if ($pp->order && $pp->order->product)
                             <span>
                                 {{$pp->order->product->title}}
                             </span>
@@ -37,6 +38,10 @@
                             <span class="capitalize text-base leading-5 font-semibold rounded-full bg-red-100 text-red-600">
                                 {{$pp->status}}
                             </span>
+                            @elseif($pp->status === 'approved')
+                            <span class="capitalize text-base leading-5 font-semibold rounded-full bg-blue-100 text-blue-600">
+                                {{$pp->status}}
+                            </span>
                             @else
                             <span class="capitalize text-base leading-5 font-semibold rounded-full bg-green-100 text-green-600">
                                 {{$pp->status}}
@@ -48,6 +53,7 @@
                             <a href="/profile/pending-proofs/{{$pp->id}}" class="font-medium hover:text-sec-900"> View </a>
                         </td>
                     </tr>
+                    @endif
                     @endforeach
                 </tbody>
             </table>

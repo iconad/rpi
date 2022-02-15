@@ -27,6 +27,8 @@ query getEvent($status: String!, $term: String, $search_by: String) {
     gift_color
     is_design
     message
+    transaction_id
+    payment_method_id
     created_at
     user {
       id
