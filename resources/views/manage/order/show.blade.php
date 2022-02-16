@@ -272,8 +272,8 @@
                     <div>
                         @if ($order->status === 'cart')
                         <span class="capitalize text-base leading-5 font-semibold rounded-full bg-blue-100 text-blue-600"> {{$order->status}} </span>
-                        @elseif($order->status === 'pending')
-                            <span class="capitalize text-base leading-5 font-semibold rounded-full bg-orange-100 text-orange-600"> {{$order->status}} </span>
+                        @elseif($order->status === 'pending' || $order->status === 'pending-proof')
+                            <span class="capitalize text-base leading-5 font-semibold rounded-full bg-orange-100 text-orange-600"> Waiting for approval </span>
                         @elseif($order->status === 'confirmed')
                             <span class="capitalize text-base leading-5 font-semibold rounded-full bg-gray-100 text-gray-600"> {{$order->status}} </span>
                         @elseif($order->status === 'delivered')
@@ -361,7 +361,7 @@
         </div>
         @endif
 
-        @if ($order->status !== 'delivered')
+        @if ($order->status != 'pending-proof' && $order->status != 'pending' && $order->status !== 'delivered')
         <div class="mt-5 table table-fixed w-full bg-gray-100 border border-gray-200 p-3">
             <div class="text-gray-900 font-semibold text-lg">Action </div>
 
@@ -374,11 +374,11 @@
                         <select name="status" class="capitalize px-3 py-1 rounded bg-transparent focus:outline-none active:outline-none border border-gray-300">
                             @php
                                 if($order->status == 'paid-pending'){
-                                    $status = ['confirmed', 'on-hold', 'cancelled'];
+                                    $status = ['confirmed', 'delivered', 'on-hold', 'cancelled'];
                                 }elseif($order->status == 'confirmed'){
-                                    $status = ['on-hold', 'cancelled'];
+                                    $status = ['delivered', 'on-hold', 'cancelled'];
                                 }elseif($order->status == 'on-hold'){
-                                    $status = ['confirmed','cancelled'];
+                                    $status = ['delivered', 'confirmed','cancelled'];
                                 }else{
                                     $status = ['cart', 'pending', 'confirmed', 'on-hold', 'cancelled'];
                                 }

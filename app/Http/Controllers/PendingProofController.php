@@ -40,7 +40,34 @@ class PendingProofController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate(request(), [
+            'order_id' => 'required',
+            'status' => 'required'
+        ]);
+
+        return $request->status;
+
+        $pp = PendingProof::create([
+            'order_id' => $request->order_id,
+            'status' => $request->status,
+            'user_id' => auth()->id(),
+            'detail' => $request->message
+        ]);
+
+
+        if($pp) {
+
+            $order = Order::findOrFail($request->order_id);
+            $order->status = 'pending-proof';
+            $order->save();
+            return response()->json(
+                [
+                    'message' => 'Pending proof successfully created!',
+                    'pp_id' => $pp->id,
+                ]
+            );
+        }
+
     }
 
     /**

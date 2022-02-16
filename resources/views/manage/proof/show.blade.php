@@ -33,7 +33,11 @@
 
             <div class="flex items-center border-b border-gray-300 p-2">
                 <div class="w-64 font-semibold"> Due Ammount </div>
+                @if ($pp->order)
                 <div class="font-semibold"> {{$pp->order->price_total}} AED </div>
+                @else
+                <div class="font-semibold text-red-500"> order not found </div>
+                @endif
             </div>
 
             <div class="flex items-center border-b border-gray-300 p-2">
@@ -48,7 +52,7 @@
                 </div>
             </div>
 
-            <div class="flex items-center p-2 {{$pp->order->status == 'confirmed' ? '' : 'pb-0' }}">
+            <div class="flex items-center p-2 {{$pp->order && $pp->order->status == 'confirmed' ? '' : 'pb-0' }}">
                 <div class="w-64 font-semibold"> Status </div>
                 <div>
 
@@ -73,7 +77,7 @@
             </div>
         </div>
 
-        @if ($pp->status != 'approved' && $pp->status != 'paid')
+        @if ($pp->order && $pp->status != 'approved' && $pp->status != 'paid')
         <div class="mt-5 border border-gray-200 w-full p-4">
 
             <div class="font-semibold capitalize mb-5">Update Quote</div>
@@ -94,12 +98,14 @@
                     </label>
                 </div>
 
+                @if ($pp->order)
                 <div class="form-element">
                     <label>
                         <span class="font-medium">Price <small class="text-gray-700">(You can update price, ask for new price)</small> </span>
                         <input type="text" name="price" class="form-input" value="{{ $pp->order->price_total }}">
                     </label>
                 </div>
+                @endif
 
                 <div class="form-element">
                     <span class="font-medium">Message</span>

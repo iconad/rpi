@@ -39,7 +39,18 @@
 
                 <div class="flex items-center border-b border-gray-300 p-2">
                     <div class="w-64 font-semibold"> Modified Price </div>
-                    <div> {{$pendingProof->order->price_modified}} AED </div>
+                    <div>
+
+                        @php
+                            if($pendingProof->order->price_total < $pendingProof->order->price_old) {
+                                $sign_message = 'Price reduced';
+                            }else{
+                                $sign_message = 'Price increased';
+                            }
+                        @endphp
+                        {{$sign_message}}
+                        <span class="font-semibold">{{$pendingProof->order->price_modified}} AED</span>
+                    </div>
                 </div>
 
                 <div class="flex items-center border-b border-gray-300 p-2">

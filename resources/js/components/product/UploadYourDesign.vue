@@ -128,8 +128,8 @@
                 <div class="text-3xl text-sec font-semibold mb-3">IMPORTANT NOTICE!</div>
                 <p class="text-lg text-800 mt-5">After we have checked your data carefully, we will display a digital screen proof in your account that you must approve and pay.</p>
                 <p class="text-base text-800 text-theme-red mb-5 mt-2 font-medium">
-                    <span class="block">Till you have approved and paid,</span>
-                    <span class="block"> your order will be on hold.</span>
+                    <span class="block">We will review your order,</span>
+                    <span class="block"> Your order will be on hold.</span>
                 </p>
                 <div class="flex items-center justify-center">
                     <p-check class="p-svg p-bigger" color="success" v-model="check">
@@ -141,7 +141,7 @@
                     <span class="text-base font-medium text-gray-900">Yes, I understand.</span>
                 </div>
                 <span v-if="!check" class="bg-gray-500 cursor-not-allowed px-5 py-2 select-none text-white font-medium border border-gray-500 mt-5 inline-block ">Proceed</span>
-                <span v-else @click="placeOrder" class="theme-button cursor-pointer mt-5 inline-block ">Proceed</span>
+                <span v-else @click="submitPendingProof" class="theme-button cursor-pointer mt-5 inline-block ">Proceed</span>
             </div>
         </modal>
 
@@ -230,10 +230,11 @@
                     })
                 }
             },
-            placeOrder () {
-                axios.put(`/profile/orders/${this.order.id}`, {
+            submitPendingProof () {
+                axios.post(`/profile/pending-proofs`, {
                     message: this.message,
                     status: 'pending',
+                    order_id: this.order.id,
                 })
                 .then(response => {
                     this.$swal({
@@ -244,8 +245,9 @@
                         title: 'Done',
                         text: 'Your order has beed placed successfully!',
                     });
-                    // window.location.href = `/`
-                    window.location.href = `/profile/orders/${this.order.id}`
+                     if(response.status == 200) {
+                        // window.location.href = `/profile/pending-proofs/${response.data.pp_id}`
+                    }
                 })
 
             },

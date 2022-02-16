@@ -147,7 +147,6 @@ class OrderController extends Controller
             'status' => 'required',
         ]);
 
-
         $user = auth()->user();
 
         $user->createOrGetStripeCustomer();
@@ -165,9 +164,12 @@ class OrderController extends Controller
             $order->transaction_id = $payment->charges->data[0]->id;
             $order->payment_method_id = $request->customer['payment_method_id'];
 
-            $proof = PendingProof::findOrFail();
-            $proof->status = 'paid';
-            $proof->save();
+            if($order->proof){
+                $proof = PendingProof::findOrFail($order->proof->id);
+                $proof->status = 'paid';
+                $proof->save();
+            }
+
         }else{
             $order->status = $request->status;
             $order->message = $request->message;

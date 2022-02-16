@@ -89,7 +89,7 @@
                                 </td>
                                 <td class="px-6 py-4 whitespace-no-wrap">
                                     <span v-if="order.status == 'cart' " class="capitalize text-base leading-5 font-semibold rounded-full bg-blue-100 text-blue-600"> Cart</span>
-                                    <span v-else-if="order.status == 'pending' " class="capitalize text-base leading-5 font-semibold rounded-full bg-orange-100 text-orange-500"> Pending</span>
+                                    <span v-else-if="order.status == 'pending' || order.status == 'pending-proof' " class="capitalize text-base leading-5 font-semibold rounded-full bg-orange-100 text-orange-500"> Waiting for approval</span>
                                     <span v-else-if="order.status == 'confirmed' " class="capitalize text-base leading-5 font-semibold rounded-full bg-gray-100 text-gray-700"> Confirmed</span>
                                     <span v-else-if="order.status == 'onhold' " class="capitalize text-base leading-5 font-semibold rounded-full bg-orange-100 text-orange-600"> On Hold</span>
                                     <span v-else-if="order.status == 'delivered' " class="capitalize text-base leading-5 font-semibold rounded-full bg-green-100 text-green-600"> delivered</span>
