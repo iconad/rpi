@@ -246,7 +246,7 @@
                         text: 'Your order has beed placed successfully!',
                     });
                      if(response.status == 200) {
-                        // window.location.href = `/profile/pending-proofs/${response.data.pp_id}`
+                        window.location.href = `/profile/pending-proofs/${response.data.pp_id}`
                     }
                 })
 

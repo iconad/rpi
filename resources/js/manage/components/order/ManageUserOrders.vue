@@ -77,9 +77,12 @@
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-no-wrap">
-                                    <div class="text-base leading-5 font-medium text-gray-800">
+                                    <div class="text-base leading-5 font-medium text-gray-800" v-if="order.product">
                                         <a v-if="order.status == 'cart'" :href="`/profile/orders/${order.id}/upload-your-design`" class="theme-link">{{order.product.title}}</a>
                                         <a v-else :href="`/manage/orders/${order.id}`" class="theme-link">{{order.product.title}}</a>
+                                    </div>
+                                    <div v-else class="text-xs text-red-500 font-semibold">
+                                        Product not found
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-no-wrap">
