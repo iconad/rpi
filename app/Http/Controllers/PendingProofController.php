@@ -18,7 +18,7 @@ class PendingProofController extends Controller
      */
     public function index()
     {
-        $pps = PendingProof::where('user_id', auth()->id())->get();
+        $pps = PendingProof::where('user_id', auth()->id())->orderBy('created_at', 'DESC')->get();
         return view('profile.proof.index', compact('pps'));
     }
 
@@ -44,8 +44,6 @@ class PendingProofController extends Controller
             'order_id' => 'required',
             'status' => 'required'
         ]);
-
-        return $request->status;
 
         $pp = PendingProof::create([
             'order_id' => $request->order_id,
