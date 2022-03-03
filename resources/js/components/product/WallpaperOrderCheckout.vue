@@ -140,7 +140,7 @@
                 window.location.href = `/profile/orders/${this.order.id}`
             }
 
-            this.stripe = await loadStripe(process.env.MIX_STRIPE_KEY);
+            this.stripe = await loadStripe('pk_live_51JD6dYAVnz1rgqBdzRLfG1fR6Q10Tk2qlb5E6mUFDbMYF6VS8kpd9TLmfXOXqxXi48XtwsI0GbfBmFZCPJElw9F000T0eljZMe');
             const elements = this.stripe.elements();
             this.cardElement = elements.create('card', {
                 hidePostalCode: true,
