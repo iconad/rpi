@@ -194,7 +194,7 @@
                         title: 'Done',
                         text: 'Your order has beed placed successfully!',
                     });
-                    // window.location.href = `/profile/orders/${this.order.id}`
+                    window.location.href = `/profile/orders/${this.order.id}`
                 })
 
             },
