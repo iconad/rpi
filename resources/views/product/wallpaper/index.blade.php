@@ -10,6 +10,8 @@
         {{ Breadcrumbs::render('wallpapers.index', $subcategory->slug) }}
     </div>
 
+
+
     @livewire('wallpaper-products', [
         'subcategory' => $subcategory,
         'products' => $products,

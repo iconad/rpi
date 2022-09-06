@@ -497,9 +497,9 @@ $twitter: #1da1f2;
           padding-bottom: 2px;
         }
       }
-    
-            
-// whats app floating 
+
+
+// whats app floating
 
       .float{
         position:fixed;
@@ -515,10 +515,22 @@ $twitter: #1da1f2;
         box-shadow: 2px 2px 3px #999;
       z-index:100;
     }
-    
+
     .my-float{
         margin-top:16px;
     }
 
 
     // social media links
+
+
+// Get a free quote
+.get-a-free-quote {
+    animation: swing 1s cubic-bezier(0.420, 0.000, 0.580, 1.000) alternate infinite;
+}
+
+@keyframes swing {
+    to {
+        transform: rotateY(3deg) skewY(3deg);
+    }
+}
