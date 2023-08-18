@@ -12,7 +12,7 @@ class Menu extends Model
 
     public $fillable = ['title', 'slug', 'link', 'user_id', 'excerpt', 'status', 'order'];
 
-    public function sluggable()
+    public function sluggable(): array 
     {
         return [
             'slug' => [

@@ -12,7 +12,7 @@ class SelectedFinishing extends Model
     public $fillable = ['product_id', 'finishing_id'];
 
 
-    public function sluggable()
+    public function sluggable(): array 
     {
         return [
             'slug' => [

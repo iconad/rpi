@@ -23,7 +23,7 @@ class Category extends Model implements HasMedia
      * @return array
      */
 
-    public function sluggable()
+    public function sluggable(): array 
     {
         return [
             'slug' => [

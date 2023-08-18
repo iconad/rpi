@@ -17,7 +17,7 @@ class SubCategory extends Model  implements HasMedia
 
     public $fillable = ['title', 'subtitle', 'slug', 'category_id', 'user_id', 'excerpt', 'body', 'menu_id', 'featured', 'status'];
 
-    public function sluggable()
+    public function sluggable(): array 
     {
         return [
             'slug' => [

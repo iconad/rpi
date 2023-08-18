@@ -12,7 +12,7 @@ class Printing extends Model
 
     public $fillable = ['title', 'slug', 'user_id', 'body', 'order', 'status', 'delivery_time'];
 
-    public function sluggable()
+    public function sluggable(): array 
     {
         return [
             'slug' => [

@@ -65,7 +65,7 @@
                     Why us?
                     </h1>
                     <p class="mt-5 leading-7 text-gray-600">
-                   PRINTO is one of the most trusted and reputed name in the Printing Industry in the UAE.
+                   PRINTO.ae is one of the most trusted and reputed name in the Printing Industry in the UAE.
 
     We provide state of the art service for printing of Stationery, Books, Magazines, Catalogues, Directories etc.
  <br />

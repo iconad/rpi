@@ -27,7 +27,7 @@ class Template extends Model implements HasMedia
         'created_at'
     ];
 
-    public function sluggable()
+    public function sluggable(): array 
     {
         return [
             'slug' => [

@@ -17,7 +17,7 @@ class FinishingOption extends Model implements HasMedia
     use HasFactory, InteractsWithMedia, Sluggable;
 
 
-    public function sluggable()
+    public function sluggable(): array 
     {
         return [
             'slug' => [

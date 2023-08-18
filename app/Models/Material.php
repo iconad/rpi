@@ -12,7 +12,7 @@ class Material extends Model
 
     public $fillable = ['title', 'slug', 'detail', 'min', 'max', 'excerpt', 'status', 'order'];
 
-    public function sluggable()
+    public function sluggable(): array 
     {
         return [
             'slug' => [

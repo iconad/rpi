@@ -49,7 +49,7 @@ class Product extends Model implements HasMedia
         'sub_category_id',
     ];
 
-    public function sluggable()
+    public function sluggable(): array 
     {
         return [
             'slug' => [

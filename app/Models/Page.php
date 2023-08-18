@@ -10,7 +10,7 @@ class Page extends Model
 {
     use HasFactory, sluggable;
 
-    public function sluggable()
+    public function sluggable(): array 
     {
         return [
             'slug' => [

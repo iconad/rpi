@@ -17,7 +17,7 @@ class File extends Model implements HasMedia
     public $fillable = ['title', 'slug', 'order_id', 'type', 'order', 'status', 'cloud'];
 
 
-    public function sluggable()
+    public function sluggable(): array 
     {
         return [
             'slug' => [

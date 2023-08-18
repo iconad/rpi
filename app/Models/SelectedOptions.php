@@ -12,7 +12,7 @@ class SelectedOptions extends Model
     use HasFactory, Sluggable;
 
 
-    public function sluggable()
+    public function sluggable(): array 
     {
         return [
             'slug' => [

@@ -1,5 +1,6 @@
 {
     "workbench.colorCustomizations": {
         "list.inactiveSelectionBackground": "#003049"
-    }
+    },
+    "nuxt.isNuxtApp": false
 }

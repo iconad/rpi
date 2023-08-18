@@ -14,7 +14,7 @@ class Finishing extends Model
     public $fillable = ['title', 'slug', 'user_id', 'body', 'order', 'status', 'video_link', 'delivery_time'];
 
 
-    public function sluggable()
+    public function sluggable(): array 
     {
         return [
             'slug' => [
