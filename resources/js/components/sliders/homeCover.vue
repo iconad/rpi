@@ -7,6 +7,8 @@
                     <home-cover-slide :slide="slide"></home-cover-slide>
                 </div>
             </swiper-slide>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
 
         </swiper>
     </div>
@@ -28,6 +30,8 @@
                 sliderType: "home-page",
                 swiperOptions: {
                     autoplay: true,
+                    navigation: true,
+                    pagination: true,
                     effect: 'fade',
                     pagination: {
                         el: '.swiper-pagination',

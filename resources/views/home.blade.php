@@ -65,12 +65,13 @@
                     Why us?
                     </h1>
                     <p class="mt-5 leading-7 text-gray-600">
-                   PRINTO.ae is one of the most trusted and reputed name in the Printing Industry in the UAE.
+                   PRINTO is one of the most trusted and reputed name in the Printing Industry in the UAE.
 
-    We provide state of the art service for printing of Stationery, Books, Magazines, Catalogues, Directories etc.
- <br />
- With a team of dedicated and experienced printing experts,
- Printo is always committed to provide top quality service  <br /> for all your printing need.
+                    We provide state of the art service for printing of Stationery, Books, Magazines, Catalogues, Directories etc.
+                    <br />
+                    With a team of dedicated and experienced printing experts,
+                    Printo is always committed to provide top quality service  <br /> for all your printing need.
+
                     </p>
                     </p>
                     <div class="grid gap-6 mt-8 sm:grid-cols-2">
@@ -177,13 +178,13 @@
 
 
 
-    <div class="why-we-are-defferent mt-8">
+    {{-- <div class="why-we-are-defferent mt-8">
         <div class="p-5">
 
             <customer-review/>
 
         </div>
-    </div>
+    </div> --}}
 
 
     <div class="our-strength mt-24 ">

@@ -21,11 +21,13 @@
             <div class="border rounded overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg"
                 onclick="location.href='/category/{{$category->slug}}/subcategories/{{$subcategory->slug}}/products'">
                 @if (count($subcategory->getMedia('images')) != 0)
+                <a href="/category/{{$category->slug}}/subcategories/{{$subcategory->slug}}/products">
                 <thumb-image-blade
                     image="{{$subcategory->getMedia('images')[0]->file_name}}"
                     id="{{$subcategory->getMedia('images')[0]->id}}"
                     classess="w-full h-48 object-cover">
                 </thumb-image-blade>
+                </a>
                 @else
                 <div class="bg-gray-200 font-semibold text-gray-400 capitalize h-48 flex items-center justify-center">
                     no image

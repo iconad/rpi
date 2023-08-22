@@ -11,7 +11,7 @@
 
 <script>
     export default {
-        props: ['image', 'id', 'classess'],
+        props: ['image', 'id', 'classess', 'link'],
         computed: {
             // mediumImage() {
             //     return this.image.replace(/(\.[\w\d_-]+)$/i, "-thumb$1");

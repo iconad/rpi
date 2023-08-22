@@ -24,11 +24,13 @@
             <div class="border rounded overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg"
                 onclick="location.href='/category/{{$category->slug}}/subcategories/{{$subcategory->slug}}/products'">
                 @if (count($subcategory->getMedia('images')) != 0)
-                <thumb-image-blade
-                    image="{{$subcategory->getMedia('images')[0]->file_name}}"
-                    id="{{$subcategory->getMedia('images')[0]->id}}"
-                    classess="w-full h-64 object-cover">
-                </thumb-image-blade>
+                <a href="/category/{{$category->slug}}/subcategories/{{$subcategory->slug}}/products">
+                    <thumb-image-blade
+                        image="{{$subcategory->getMedia('images')[0]->file_name}}"
+                        id="{{$subcategory->getMedia('images')[0]->id}}"
+                        classess="w-full h-64 object-cover">
+                    </thumb-image-blade>
+                </a>
                 @else
                 <div class="bg-gray-200 font-semibold text-gray-400 capitalize h-64 flex items-center justify-center">
                     no image
@@ -36,8 +38,8 @@
                 @endif
 
                 <div class="flex items-center justify-between">
-<a href="/category/{{$category->slug}}/subcategories/{{$subcategory->slug}}/products" class="p-3 font-medium text-left text-primary capitalize"> {{$category->title}} </a>
-<a href="/category/{{$category->slug}}/subcategories/{{$subcategory->slug}}/products" class="p-3 text-left text-primary text-gray-500"> ({{count($subcategory->products)}}) </a>
+                    <a href="/category/{{$category->slug}}/subcategories/{{$subcategory->slug}}/products" class="p-3 font-medium text-left text-primary capitalize"> {{$category->title}} </a>
+                    <a href="/category/{{$category->slug}}/subcategories/{{$subcategory->slug}}/products" class="p-3 text-left text-primary text-gray-500"> ({{count($subcategory->products)}}) </a>
                 </div>
             </div>
 

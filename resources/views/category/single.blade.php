@@ -34,11 +34,13 @@
             <div class="border rounded overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg"
                 onclick="location.href='{{$url}}'">
                 @if (count($category->getMedia('thumbnail')) != 0)
-                <thumb-image-blade
-                    image="{{$category->getMedia('thumbnail')[0]->file_name}}"
-                    id="{{$category->getMedia('thumbnail')[0]->id}}"
-                    classess="w-full h-64 object-cover">
-                </thumb-image-blade>
+                <a href="{{$url}}">
+                    <thumb-image-blade
+                        image="{{$category->getMedia('thumbnail')[0]->file_name}}"
+                        id="{{$category->getMedia('thumbnail')[0]->id}}"
+                        classess="w-full h-64 object-cover">
+                    </thumb-image-blade>
+                </a>
                 @else
                 <div class="bg-gray-200 font-semibold text-gray-400 capitalize h-64 flex items-center justify-center">
                     no image
@@ -56,11 +58,13 @@
                     <div class="border rounded overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg"
                     onclick="location.href='/products/wallpapers/{{$category->slug}}'">
                     @if (count($category->getMedia('images')) != 0)
-                    <thumb-image-blade
-                        image="{{$category->getMedia('images')[0]->file_name}}"
-                        id="{{$category->getMedia('images')[0]->id}}"
-                        classess="w-full h-64 object-cover">
-                    </thumb-image-blade>
+                        <a href="/products/wallpapers/{{$category->slug}}">
+                        <thumb-image-blade
+                            image="{{$category->getMedia('images')[0]->file_name}}"
+                            id="{{$category->getMedia('images')[0]->id}}"
+                            classess="w-full h-64 object-cover">
+                        </thumb-image-blade>
+                    </a>
                     @else
                     <div class="bg-gray-200 font-semibold text-gray-400 capitalize h-64 flex items-center justify-center">
                         no image
