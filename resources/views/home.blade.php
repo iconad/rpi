@@ -187,7 +187,7 @@
     </div> --}}
 
 
-    <div class="our-strength mt-24 ">
+    {{-- <div class="our-strength mt-24 ">
     <div class="px-4 py-3 bg-cyan-500 text-lg text-white font-semibold capitalize text-sec font-semibold text-xl mb-3">Our Process </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-1 gap-10">
@@ -198,7 +198,7 @@
 
 
         </div>
-    </div>
+    </div> --}}
     {{-- our strength --}}
 </section>
 
