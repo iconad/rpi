@@ -7,289 +7,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css">
     <title>Printo Home Page</title>
     <style>
-    #app {
-        display: none;
-    }
-
-    .text-1-4rem {
-        font-size: 1.4rem;
-    }
-
-    .iti {
-        width: 100%;
-    }
-
-    .swiper-slide-printo {
-        flex: 0 0 auto;
-        width: 300px;
-        padding: 20px;
-        margin-right: 20px;
-        border: 1px solid black;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-
-    .text-left {
-        text-align: left !important;
-    }
-
-    .rating {
-        font-size: 24px;
-        margin-bottom: 10px;
-        color: black;
-    }
-
-    body {
-        font-family: 'Manrope', sans-serif;
-        overflow-x: hidden;
-    }
-
-    p.box-name {
-        font-size: 1.3rem;
-    }
-
-    .toggle-icon {
-        width: 24px;
-        height: 24px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.3s ease-in-out;
-        border: 1px solid black;
-        border-radius: 50%;
-    }
-
-    .toggle-icon::before,
-    .toggle-icon::after {
-        content: "";
-        position: absolute;
-        width: 12px;
-        height: 2px;
-        background-color: transparent !important;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .toggle-icon::before {
-        transform: rotate(90deg);
-    }
-
-    .toggle-icon.opened::before {
-        transform: rotate(0deg);
-    }
-
-    .toggle-icon.opened::before {
-        transform: rotate(0deg);
-        background-color: #000;
-        /* Keep the same color for the minus icon */
-    }
-
-    .toggle-icon.opened::after {
-        display: none;
-    }
-
-    /* Change pagination dot color */
-
-    .swiper-pagination-bullet {
-        background-color: black;
-        /* Change to black */
-    }
-
-    /* Change pagination dot active color */
-
-    .swiper-pagination-bullet-active {
-        background-color: black;
-        /* Change to black */
-    }
-
-    /* Change navigation arrow color */
-
-    .swiper-button-next,
-    .swiper-button-prev {
-        color: black;
-        /* Change to black */
-    }
-
-    /* Style for the pagination dots */
-
-    .swiper-pagination {
-        position: absolute;
-        bottom: 20px;
-        /* Adjust this value as needed */
-        padding-top: 20px;
-        /* Add padding to the top to create space */
-    }
-
-    /* Container for the swiper */
-
-    .swiper-container-parent {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-
-    /* Style for the swiper container */
-
-    .swiper-container {
-        width: 100%;
-        max-width: 1920px;
-        /* Optional: set a maximum width for the slider */
-    }
-
-    /* Style for the pagination dots */
-
-    .swiper-pagination {
-        position: relative;
-        bottom: 20px;
-    }
-
-    .swiper-container {
-        width: 100%;
-        height: 100%;
-    }
-
-    .swiper-slide {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .slide-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .slide-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        padding: 1rem;
-        text-align: center;
-    }
-
-    p.box-name {
-        padding-top: 1rem;
-    }
-
-    .printoborder {
-        width: 20rem;
-    }
-
-    /* Desktop Styles */
-
-    @media screen and (min-width: 768px) {
-        .categoryboxes {
-            padding-right: 7.5rem;
+        #app {
+            display: none;
         }
 
-        .bestseller {
-            padding-right: 4.5rem;
+        .text-1-4rem {
+            font-size: 1.4rem;
         }
 
-        .premiumdesign {
-            padding-right: 4rem;
+        .iti {
+            width: 100%;
         }
 
-        .toppicks {
-            padding-right: 4.5rem;
+        .swiper-slide-printo {
+            flex: 0 0 auto;
+            width: 300px;
+            padding: 20px;
+            margin-right: 20px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
         }
 
-        .faqitems {
-            margin-left: -20px;
+        .text-left {
+            text-align: left !important;
         }
 
-        section.faq.flex.flex-col.md\:flex-row.p-4.md\:p-8 {
-            padding-left: 9rem;
+        .rating {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: black;
         }
 
-        .newitems {
-            margin-right: 3rem;
-            margin-left: 1rem;
+        body {
+            font-family: 'Manrope', sans-serif;
+            overflow-x: hidden;
         }
 
-        .support {
-            margin-left: -0.7rem;
+        p.box-name {
+            font-size: 1.3rem;
         }
 
-        .contactus {
-            margin-left: -3rem;
+        .toggle-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+            border: 1px solid black;
+            border-radius: 50%;
         }
 
-        .logo {
-            width: 11rem;
+        .toggle-icon::before,
+        .toggle-icon::after {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 2px;
+            background-color: transparent !important;
+            transition: all 0.3s ease-in-out;
         }
-    }
 
-    @media screen and (max-width: 767px) {
+        .toggle-icon::before {
+            transform: rotate(90deg);
+        }
+
+        .toggle-icon.opened::before {
+            transform: rotate(0deg);
+        }
+
+        .toggle-icon.opened::before {
+            transform: rotate(0deg);
+            background-color: #000;
+            /* Keep the same color for the minus icon */
+        }
+
+        .toggle-icon.opened::after {
+            display: none;
+        }
+
+        /* Change pagination dot color */
+
+        .swiper-pagination-bullet {
+            background-color: black;
+            /* Change to black */
+        }
+
+        /* Change pagination dot active color */
+
+        .swiper-pagination-bullet-active {
+            background-color: black;
+            /* Change to black */
+        }
+
+        /* Change navigation arrow color */
 
         .swiper-button-next,
         .swiper-button-prev {
-            font-size: 1rem;
+            color: black;
+            /* Change to black */
         }
 
-        .faqbutton {
-            text-align: left;
+        /* Style for the pagination dots */
+
+        .swiper-pagination {
+            position: absolute;
+            bottom: 20px;
+            /* Adjust this value as needed */
+            padding-top: 20px;
+            /* Add padding to the top to create space */
         }
 
-        .mobilereviews {
-            margin-left: -3rem;
+        /* Container for the swiper */
+
+        .swiper-container-parent {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
         }
 
-        .whatsappbanner .text-7xl {
-            font-size: 3.5rem;
-            /* Adjust the font size as needed */
-            line-height: 1.2;
-            /* Adjust the line height as needed */
-            padding-top: 10rem;
-            /* Adjust the padding as needed */
+        /* Style for the swiper container */
+
+        .swiper-container {
+            width: 100%;
+            max-width: 1920px;
+            /* Optional: set a maximum width for the slider */
         }
 
-        .whatsappbanner .py-20 {
-            padding-top: 10rem;
-            /* Adjust the padding as needed */
+        /* Style for the pagination dots */
+
+        .swiper-pagination {
+            position: relative;
+            bottom: 20px;
         }
 
-        .whatsappbanner .px-24 {
-            padding: 1rem 2rem;
-            /* Adjust the padding as needed */
+        .swiper-container {
+            width: 100%;
+            height: 100%;
         }
 
-        .whatsappbanner .rounded-full {
-            border-radius: 50px;
-            /* Adjust the border radius as needed */
+        .swiper-slide {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
         }
 
-        .whatsappbanner .ml-2 {
-            margin-left: 1rem;
-            /* Adjust the margin as needed */
+        .slide-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-    }
 
-
-    @media (max-width: 1440px) {
-        /* Target 13-inch MacBook */
-
-        .text-macbook {
-            font-size: 2rem;
+        .slide-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 1rem;
+            text-align: center;
         }
-    }
+
+        p.box-name {
+            padding-top: 1rem;
+        }
+
+        .printoborder {
+            width: 20rem;
+        }
+
+        /* Desktop Styles */
+
+        @media screen and (min-width: 768px) {
+            .categoryboxes {
+                padding-right: 7.5rem;
+            }
+
+            .bestseller {
+                padding-right: 4.5rem;
+            }
+
+            .premiumdesign {
+                padding-right: 4rem;
+            }
+
+            .toppicks {
+                padding-right: 4.5rem;
+            }
+
+            .faqitems {
+                margin-left: -20px;
+            }
+
+            section.faq.flex.flex-col.md\:flex-row.p-4.md\:p-8 {
+                padding-left: 9rem;
+            }
+
+            .newitems {
+                margin-right: 3rem;
+                margin-left: 1rem;
+            }
+
+            .support {
+                margin-left: -0.7rem;
+            }
+
+            .contactus {
+                margin-left: -3rem;
+            }
+
+            .logo {
+                width: 11rem;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                font-size: 1rem;
+            }
+
+            .faqbutton {
+                text-align: left;
+            }
+
+            .mobilereviews {
+                margin-left: -3rem;
+            }
+
+            .whatsappbanner .text-7xl {
+                font-size: 3.5rem;
+                /* Adjust the font size as needed */
+                line-height: 1.2;
+                /* Adjust the line height as needed */
+                padding-top: 10rem;
+                /* Adjust the padding as needed */
+            }
+
+            .whatsappbanner .py-20 {
+                padding-top: 10rem;
+                /* Adjust the padding as needed */
+            }
+
+            .whatsappbanner .px-24 {
+                padding: 1rem 2rem;
+                /* Adjust the padding as needed */
+            }
+
+            .whatsappbanner .rounded-full {
+                border-radius: 50px;
+                /* Adjust the border radius as needed */
+            }
+
+            .whatsappbanner .ml-2 {
+                margin-left: 1rem;
+                /* Adjust the margin as needed */
+            }
+        }
+
+
+        @media (max-width: 1440px) {
+            /* Target 13-inch MacBook */
+
+            .text-macbook {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 
@@ -316,8 +321,7 @@
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="text-gray-700 hover:text-red-300 focus:outline-none">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0,0,256,256">
-                            <path
-                                d="M256 166.32v-76.64q0-6.17-4.38-10.54t-10.54-4.38h-236.16q-6.16 0-10.54 4.38t-4.38 10.54v76.64q0 6.16 4.38 10.54t10.54 4.38h236.16q6.16 0 10.54-4.38t4.38-10.54z" />
+                            <path d="M256 166.32v-76.64q0-6.17-4.38-10.54t-10.54-4.38h-236.16q-6.16 0-10.54 4.38t-4.38 10.54v76.64q0 6.16 4.38 10.54t10.54 4.38h236.16q6.16 0 10.54-4.38t4.38-10.54z" />
                         </svg>
                     </button>
                 </div>
@@ -345,16 +349,14 @@
                             <g transform="translate(64,64) scale(0.5,0.5)">
                                 <g fill="#000000" fill-rule="nonzero">
                                     <g transform="scale(5.12,5.12)">
-                                        <path
-                                            d="M21,3c-9.37891,0 -17,7.62109 -17,17c0,9.37891 7.62109,17 17,17c3.71094,0 7.14063,-1.19531 9.9375,-3.21875l13.15625,13.125l2.8125,-2.8125l-13,-13.03125c2.55469,-2.97656 4.09375,-6.83984 4.09375,-11.0625c0,-9.37891 -7.62109,-17 -17,-17zM21,5c8.29688,0 15,6.70313 15,15c0,8.29688 -6.70312,15 -15,15c-8.29687,0 -15,-6.70312 -15,-15c0,-8.29687 6.70313,-15 15,-15z">
+                                        <path d="M21,3c-9.37891,0 -17,7.62109 -17,17c0,9.37891 7.62109,17 17,17c3.71094,0 7.14063,-1.19531 9.9375,-3.21875l13.15625,13.125l2.8125,-2.8125l-13,-13.03125c2.55469,-2.97656 4.09375,-6.83984 4.09375,-11.0625c0,-9.37891 -7.62109,-17 -17,-17zM21,5c8.29688,0 15,6.70313 15,15c0,8.29688 -6.70312,15 -15,15c-8.29687,0 -15,-6.70312 -15,-15c0,-8.29687 6.70313,-15 15,-15z">
                                         </path>
                                     </g>
                                 </g>
                             </g>
                         </svg>
                     </div>
-                    <input type="text" placeholder=" "
-                        class="border-2 border-gray-700 rounded-l-full rounded-r-full px-4 py-2 pl-12 pr-10">
+                    <input type="text" placeholder=" " class="border-2 border-gray-700 rounded-l-full rounded-r-full px-4 py-2 pl-12 pr-10">
                     <span class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-700 mr-4">
                         Search
                     </span>
@@ -368,8 +370,7 @@
             <div class="swiper-container swiper-container-printo h-96 ">
                 <div class="swiper-wrapper ">
                     <div class="swiper-slide relative ">
-                        <img src="{{ asset('images/home/slider/slide1.jpg') }}" alt="WEAR YOUR IMMAGINATION "
-                            class="slide-image ">
+                        <img src="{{ asset('images/home/slider/slide1.jpg') }}" alt="WEAR YOUR IMMAGINATION " class="slide-image ">
 
                     </div>
                     <div class="swiper-slide relative ">
@@ -511,7 +512,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
                         </svg>
                     </div>
-                      
+
                 </div>
 
                 <!-- Box 9 -->
@@ -535,14 +536,12 @@
                             <h2 class="text-macbook text-2rem md:text-5xl mb-4 md:pr-26 md:pl-4 md:pt-24">Premium
                                 Design. Premium Quality.</h2>
 
-                            <p class="mb-4 md:pl-4 md:pt-4 md:pb-8 md:pr-26 md:mb-4 overflow-hidden md:h-[9rem]"
-                                style="line-height: 1.5rem;">With a keen focus on excellence, we transform your ideas
+                            <p class="mb-4 md:pl-4 md:pt-4 md:pb-8 md:pr-26 md:mb-4 overflow-hidden md:h-[9rem]" style="line-height: 1.5rem;">With a keen focus on excellence, we transform your ideas
                                 into stunning visuals that captivate and resonate. Elevate your brand with Printo, where
                                 premium design meets unmatched quality, leaving a lasting impression that speaks
                                 volumes.
                             </p>
-                            <button
-                                class="bg-black text-white text-base md:text-lg py-2 md:py-4 px-4 md:px-14 rounded-full self-start md:ml-4  md:mt-0">About
+                            <button class="bg-black text-white text-base md:text-lg py-2 md:py-4 px-4 md:px-14 rounded-full self-start md:ml-4  md:mt-0">About
                                 Us</button>
                         </div>
                     </div>
@@ -601,40 +600,35 @@
                 </h2>
                 <!-- FAQ Items -->
                 <div class="mb-4 md:mb-6 faqitems">
-                    <button
-                        class="faqbutton flex items-center justify-between w-full text-lg focus:outline-none border-b border-black pb-2 md:pb-6 px-2 md:px-6">
+                    <button class="faqbutton flex items-center justify-between w-full text-lg focus:outline-none border-b border-black pb-2 md:pb-6 px-2 md:px-6">
                         <span class="pr-2 md:pr-6">What kind of Printers/Printing types does Printo have?</span>
                         <span class="toggle-icon">+</span>
                     </button>
                     <p class="text-gray-600 hidden">Answer to question 1.</p>
                 </div>
                 <div class="mb-4 md:mb-6 faqitems">
-                    <button
-                        class="faqbutton flex items-center justify-between w-full text-lg focus:outline-none border-b border-black pb-2 md:pb-6 px-2 md:px-6">
+                    <button class="faqbutton flex items-center justify-between w-full text-lg focus:outline-none border-b border-black pb-2 md:pb-6 px-2 md:px-6">
                         <span class="pr-2 md:pr-6">Do I need to pay separate delivery charges for each product?</span>
                         <span class="toggle-icon">+</span>
                     </button>
                     <p class="text-gray-600 hidden">Answer to question 2.</p>
                 </div>
                 <div class="mb-4 md:mb-6 faqitems">
-                    <button
-                        class="faqbutton flex items-center justify-between w-full text-lg focus:outline-none border-b border-black pb-2 md:pb-6 px-2 md:px-6">
+                    <button class="faqbutton flex items-center justify-between w-full text-lg focus:outline-none border-b border-black pb-2 md:pb-6 px-2 md:px-6">
                         <span class="pr-2 md:pr-6">Do you supply overseas?</span>
                         <span class="toggle-icon">+</span>
                     </button>
                     <p class="text-gray-600 hidden">Answer to question 3.</p>
                 </div>
                 <div class="mb-4 md:mb-6 faqitems">
-                    <button
-                        class="faqbutton flex items-center justify-between w-full text-lg focus:outline-none border-b border-black pb-2 md:pb-6 px-2 md:px-6">
+                    <button class="faqbutton flex items-center justify-between w-full text-lg focus:outline-none border-b border-black pb-2 md:pb-6 px-2 md:px-6">
                         <span class="pr-2 md:pr-6">Printo’s service time or how quick is our delivery?</span>
                         <span class="toggle-icon">+</span>
                     </button>
                     <p class="text-gray-600 hidden">Answer to question 4.</p>
                 </div>
                 <div class="mb-4 md:mb-6 faqitems">
-                    <button
-                        class="faqbutton flex items-center justify-between w-full text-lg focus:outline-none border-b border-black pb-2 md:pb-6 px-2 md:px-6">
+                    <button class="faqbutton flex items-center justify-between w-full text-lg focus:outline-none border-b border-black pb-2 md:pb-6 px-2 md:px-6">
                         <span class="pr-2 md:pr-6">How can I place an order?</span>
                         <span class="toggle-icon">+</span>
                     </button>
@@ -762,8 +756,7 @@
 
     <section class="whatsappbanner relative py-8 md:py-16">
         <div class="h-auto text-white relative">
-            <img src="{{ asset('images/home/whatsapp.jpg') }}" alt="whatsapp"
-                class="w-full max-w-sm mb-8 md:max-w-none md:mb-0">
+            <img src="{{ asset('images/home/whatsapp.jpg') }}" alt="whatsapp" class="w-full max-w-sm mb-8 md:max-w-none md:mb-0">
             <div class="absolute inset-0 flex flex-col items-center justify-center">
                 <div class="text-center">
                     <p class="text-xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3 md:mb-4">
@@ -771,8 +764,7 @@
                         <span class="whitespace-nowrap">Brand's Unique Story Together.</span>
                     </p>
                     <div class="py-4 md:py-8 lg:py-12 mx-auto" style="width: fit-content;">
-                        <a href="#"
-                            class="inline-block bg-white text-black px-6 md:px-8 lg:px-10 py-2 md:py-3 rounded-full flex items-center text-xs md:text-sm">
+                        <a href="#" class="inline-block bg-white text-black px-6 md:px-8 lg:px-10 py-2 md:py-3 rounded-full flex items-center text-xs md:text-sm">
                             Get in Touch
                             <span class="ml-2 text-black">
                                 <i class="fab fa-whatsapp"></i>
@@ -804,8 +796,7 @@
                 <input type="text" class="w-full px-4 py-2 mb-4 border bg-gray-200" placeholder="Full Name">
 
                 <label class="block mb-2 pt-6 text-lg">PHONE NUMBER</label>
-                <input id="phoneInput" type="tel" class="w-full px-10 py-2 mb-4 border rounded-lg pl-10 bg-gray-200"
-                    style="width: 100% !important;" placeholder="Your Phone Number">
+                <input id="phoneInput" type="tel" class="w-full px-10 py-2 mb-4 border rounded-lg pl-10 bg-gray-200" style="width: 100% !important;" placeholder="Your Phone Number">
 
                 <label class="block mb-2 pt-6 text-lg">EMAIL ADDRESS</label>
                 <input type="email" class="w-full px-4 py-2 mb-4 border bg-gray-200" placeholder="Email">
@@ -914,77 +905,77 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js "></script>
     <script>
-    var swiper = new Swiper('.swiper-container-printo', {
-        slidesPerView: 1,
-        loop: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        autoplay: {
-            delay: 5000, // Delay between slides in milliseconds
-            disableOnInteraction: false, // Autoplay continues even when user interacts with the slider
-        },
-    });
+        var swiper = new Swiper('.swiper-container-printo', {
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            autoplay: {
+                delay: 5000, // Delay between slides in milliseconds
+                disableOnInteraction: false, // Autoplay continues even when user interacts with the slider
+            },
+        });
     </script>
     <script>
-    const mobileMenuButton = document.getElementById("mobile-menu-button ");
-    const mobileMenu = document.getElementById("mobile-menu ");
+        const mobileMenuButton = document.getElementById("mobile-menu-button ");
+        const mobileMenu = document.getElementById("mobile-menu ");
 
-    mobileMenuButton.addEventListener("click ", () => {
-        mobileMenu.classList.toggle("hidden ");
-    });
+        mobileMenuButton.addEventListener("click ", () => {
+            mobileMenu.classList.toggle("hidden ");
+        });
     </script>
     <script>
-    const toggleButtons = document.querySelectorAll('.toggle-icon');
+        const toggleButtons = document.querySelectorAll('.toggle-icon');
 
-    toggleButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const answer = button.parentElement.nextElementSibling;
-            if (answer.classList.contains('hidden')) {
-                answer.classList.remove('hidden');
-                button.textContent = '-';
-                button.classList.add('bg-gray-600');
-            } else {
-                answer.classList.add('hidden');
-                button.textContent = '+';
-                button.classList.remove('bg-gray-600');
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.parentElement.nextElementSibling;
+                if (answer.classList.contains('hidden')) {
+                    answer.classList.remove('hidden');
+                    button.textContent = '-';
+                    button.classList.add('bg-gray-600');
+                } else {
+                    answer.classList.add('hidden');
+                    button.textContent = '+';
+                    button.classList.remove('bg-gray-600');
+                }
+            });
+        });
+    </script>
+    <script>
+        var swiper = new Swiper('.custom-swiper-container', {
+            slidesPerView: 1, // Show 3 slides on desktop
+            spaceBetween: 16,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 3.6, // Show 1 slide at a time on mobile
+                }
             }
         });
-    });
-    </script>
-    <script>
-    var swiper = new Swiper('.custom-swiper-container', {
-        slidesPerView: 1, // Show 3 slides on desktop
-        spaceBetween: 16,
-        loop: true,
-        autoplay: {
-            delay: 3000,
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 3.6, // Show 1 slide at a time on mobile
-            }
-        }
-    });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
     <script>
-    const phoneInput = document.querySelector("#phoneInput");
+        const phoneInput = document.querySelector("#phoneInput");
 
-    const iti = window.intlTelInput(phoneInput, {
-        initialCountry: "ae", // Set default country
-        separateDialCode: true,
-        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.js",
-    });
+        const iti = window.intlTelInput(phoneInput, {
+            initialCountry: "ae", // Set default country
+            separateDialCode: true,
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.js",
+        });
 
-    phoneInput.addEventListener("blur", () => {
-        const phoneNumber = iti.getNumber();
-        phoneInput.value = phoneNumber;
-    });
+        phoneInput.addEventListener("blur", () => {
+            const phoneNumber = iti.getNumber();
+            phoneInput.value = phoneNumber;
+        });
     </script>
 </body>
 
