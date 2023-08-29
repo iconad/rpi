@@ -16,6 +16,21 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css">
     <title>Printo Home Page</title>
     <style>
+    .whatsapp-text whatsapptext {}
+
+    .logo-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        /* Set the desired height for logos */
+    }
+
+    .logo-img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
     #app {
         display: none;
     }
@@ -296,8 +311,23 @@
 
         .text-macbook {
             font-size: 2rem;
-            line-height: 1.3rem;
+            line-height: 2.3rem;
         }
+
+        .whatsapptexticon {
+            width: 25px;
+            height: 25px;
+
+        }
+
+        .whatsapptext {
+            font-size: 0.5rem;
+        }
+
+        p.box-name {
+            font-size: 1rem;
+        }
+
     }
 
     .box-price {
@@ -454,39 +484,68 @@
             </div>
         </section>
 
-        <section class="paddingsection px-10 ">
-            <section class="companylogo px-14 md:px-15 pb-12">
-                <div class="grid grid-cols-2 md:grid-cols-6 gap-14 py-5">
+        <section class="paddingsection px-10">
+            <section class="swiper-container companylogo-carousel">
+                <div class="swiper-wrapper flex items-center">
                     <!-- Logo 1 -->
-                    <div class="flex items-center justify-center ">
-                        <img src="{{ asset('images/home/1.png') }}" alt="Logo 1 " class="max-w-full h-auto ">
+                    <div class="swiper-slide">
+                        <div class="flex items-center justify-center">
+                            <img src="{{ asset('images/home/1.png') }}" alt="Logo 1" class="logo-image">
+                        </div>
                     </div>
 
                     <!-- Logo 2 -->
-                    <div class="flex items-center justify-center ">
-                        <img src="{{ asset('images/home/2.png') }}" alt="Logo 2 " class="max-w-full h-auto ">
+                    <div class="swiper-slide">
+                        <div class="flex items-center justify-center">
+                            <img src="{{ asset('images/home/2.png') }}" alt="Logo 2" class="logo-image">
+                        </div>
                     </div>
 
                     <!-- Logo 3 -->
-                    <div class="flex items-center justify-center ">
-                        <img src="{{ asset('images/home/3.png') }}" alt="Logo 3 " class="max-w-full h-auto ">
+                    <div class="swiper-slide">
+                        <div class="flex items-center justify-center">
+                            <img src="{{ asset('images/home/3.png') }}" alt="Logo 3" class="logo-image">
+                        </div>
                     </div>
 
                     <!-- Logo 4 -->
-                    <div class="flex items-center justify-center ">
-                        <img src="{{ asset('images/home/4.png') }}" alt="Logo 4 " class="max-w-full h-auto ">
+                    <div class="swiper-slide">
+                        <div class="flex items-center justify-center">
+                            <img src="{{ asset('images/home/4.png') }}" alt="Logo 4" class="logo-image">
+                        </div>
                     </div>
 
                     <!-- Logo 5 -->
-                    <div class="flex items-center justify-center ">
-                        <img src="{{ asset('images/home/5.png') }}" alt="Logo 5 " class="max-w-full h-auto ">
+                    <div class="swiper-slide">
+                        <div class="flex items-center justify-center">
+                            <img src="{{ asset('images/home/5.png') }}" alt="Logo 5" class="logo-image">
+                        </div>
                     </div>
 
                     <!-- Logo 6 -->
-                    <div class="flex items-center justify-center ">
-                        <img src="{{ asset('images/home/6.png') }}" alt="Logo 6 " class="max-w-full h-auto ">
+                    <div class="swiper-slide">
+                        <div class="flex items-center justify-center">
+                            <img src="{{ asset('images/home/6.png') }}" alt="Logo 6" class="logo-image">
+                        </div>
                     </div>
+                    <div class="swiper-slide">
+                        <div class="flex items-center justify-center">
+                            <img src="{{ asset('images/home/7.png') }}" alt="Logo 6" class="logo-image">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flex items-center justify-center">
+                            <img src="{{ asset('images/home/8.png') }}" alt="Logo 6" class="logo-image">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flex items-center justify-center">
+                            <img src="{{ asset('images/home/9.png') }}" alt="Logo 6" class="logo-image">
+                        </div>
+                    </div>
+
                 </div>
+                <div class="swiper-pagination"></div>
             </section>
         </section>
 
@@ -518,12 +577,12 @@
                 <div class="relative box">
                     <img src="{{ asset('images/home/product1.jpg') }}" alt="Product 1" class="box-image">
                     <div class="flex items-center justify-between mb-2 pt-6">
-                        <p class="box-name">Business cards
+                        <p class="box-name">Business Cards
                         </p>
                         <div class="whatsapp-button">
                             <a href="whatsapp-link-1" class="whatsapp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                                    viewBox="0,0,256,256">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
+                                    width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
                                         stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
                                         stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
@@ -536,7 +595,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 39.00</p>
@@ -547,11 +606,11 @@
                 <div class="relative box">
                     <img src="{{ asset('images/home/product2.jpg') }}" alt="Product 2" class="box-image">
                     <div class="flex items-center justify-between mb-2 pt-6">
-                        <p class="box-name">Large stickers</p>
+                        <p class="box-name">Large Stickers</p>
                         <div class="whatsapp-button">
                             <a href="whatsapp-link-1" class="whatsapp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                                    viewBox="0,0,256,256">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
+                                    width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
                                         stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
                                         stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
@@ -564,7 +623,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 39.00</p>
@@ -579,8 +638,8 @@
                         </p>
                         <div class="whatsapp-button">
                             <a href="whatsapp-link-1" class="whatsapp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                                    viewBox="0,0,256,256">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
+                                    width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
                                         stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
                                         stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
@@ -593,7 +652,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 39.00</p>
@@ -604,11 +663,11 @@
                 <div class="relative box">
                     <img src="{{ asset('images/home/product4.jpg') }}" alt="Product 4" class="box-image">
                     <div class="flex items-center justify-between mb-2 pt-6">
-                        <p class="box-name">Promotional boxes</p>
+                        <p class="box-name">Promotional Boxes</p>
                         <div class="whatsapp-button">
                             <a href="whatsapp-link-1" class="whatsapp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                                    viewBox="0,0,256,256">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
+                                    width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
                                         stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
                                         stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
@@ -621,7 +680,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 39.00</p>
@@ -635,8 +694,8 @@
                         <p class="box-name">Stationary</p>
                         <div class="whatsapp-button">
                             <a href="whatsapp-link-1" class="whatsapp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                                    viewBox="0,0,256,256">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
+                                    width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
                                         stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
                                         stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
@@ -649,7 +708,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 39.00</p>
@@ -665,8 +724,8 @@
                         <p class="box-name">Home Decor</p>
                         <div class="whatsapp-button">
                             <a href="whatsapp-link-1" class="whatsapp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                                    viewBox="0,0,256,256">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
+                                    width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
                                         stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
                                         stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
@@ -679,7 +738,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 39.00</p>
@@ -690,11 +749,11 @@
                 <div class="relative box">
                     <img src="{{ asset('images/home/product7.jpg') }}" alt="Product 7" class="box-image">
                     <div class="flex items-center justify-between mb-2 pt-6">
-                        <p class="box-name">Bedroom wallpapers</p>
+                        <p class="box-name macbookwhatsappside">Bedroom Wallpapers</p>
                         <div class="whatsapp-button">
                             <a href="whatsapp-link-1" class="whatsapp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                                    viewBox="0,0,256,256">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
+                                    width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
                                         stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
                                         stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
@@ -707,7 +766,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 39.00</p>
@@ -718,11 +777,11 @@
                 <div class="relative box">
                     <img src="{{ asset('images/home/product8.jpg') }}" alt="Product 8" class="box-image">
                     <div class="flex items-center justify-between mb-2 pt-6">
-                        <p class="box-name">Roll up Banners</p>
+                        <p class="box-name">Roll Up Banners</p>
                         <div class="whatsapp-button">
                             <a href="whatsapp-link-1" class="whatsapp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                                    viewBox="0,0,256,256">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
+                                    width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
                                         stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
                                         stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
@@ -735,7 +794,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 39.00</p>
@@ -746,11 +805,11 @@
                 <div class="relative box">
                     <img src="{{ asset('images/home/product9.jpg') }}" alt="Product 9" class="box-image">
                     <div class="flex items-center justify-between mb-2 pt-6">
-                        <p class="box-name">Foamboard panels</p>
+                        <p class="box-name">Foamboard Panels</p>
                         <div class="whatsapp-button">
                             <a href="whatsapp-link-1" class="whatsapp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                                    viewBox="0,0,256,256">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
+                                    width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
                                         stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
                                         stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
@@ -763,7 +822,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 39.00</p>
@@ -784,7 +843,7 @@
                 <section class="w-full md:w-2/5 bg-gray-200 p-6 pr-4 md:pr-24 mt-6 md:mt-0 md:ml-4 md:ml-8">
                     <div class="flex flex-col h-full">
                         <div>
-                            <h2 class="text-macbook text-2rem md:text-5xl mb-4 md:pr-26 md:pl-4 md:pt-24">Premium
+                            <h2 class="text-macbook text-2rem md:text-4xl mb-4 md:pr-26 md:pl-4 md:pt-24">Premium
                                 Design.<br class="hidden md:inline">Premium Quality.</h2>
 
 
@@ -814,8 +873,8 @@
                         <p class="box-name">Cups & Mugs</p>
                         <div class="whatsapp-button">
                             <a href="whatsapp-link-1" class="whatsapp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                                    viewBox="0,0,256,256">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
+                                    width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
                                         stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
                                         stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
@@ -828,7 +887,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 39.00</p>
@@ -842,8 +901,8 @@
                         <p class="box-name">Door Hangers</p>
                         <div class="whatsapp-button">
                             <a href="whatsapp-link-1" class="whatsapp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                                    viewBox="0,0,256,256">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
+                                    width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
                                         stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
                                         stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
@@ -856,7 +915,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 39.00</p>
@@ -870,8 +929,8 @@
                         <p class="box-name">Business Cards</p>
                         <div class="whatsapp-button">
                             <a href="whatsapp-link-1" class="whatsapp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                                    viewBox="0,0,256,256">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
+                                    width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
                                         stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
                                         stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
@@ -884,7 +943,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 39.00</p>
@@ -898,8 +957,8 @@
                         <p class="box-name">Cake Boxes</p>
                         <div class="whatsapp-button">
                             <a href="whatsapp-link-1" class="whatsapp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                                    viewBox="0,0,256,256">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
+                                    width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
                                         stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
                                         stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
@@ -912,7 +971,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 39.00</p>
@@ -926,8 +985,8 @@
                         <p class="box-name">Drawing Room Wallpapers</p>
                         <div class="whatsapp-button">
                             <a href="whatsapp-link-1" class="whatsapp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                                    viewBox="0,0,256,256">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
+                                    width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
                                         stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
                                         stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
@@ -940,7 +999,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 39.00</p>
@@ -954,8 +1013,8 @@
                         <p class="box-name">Canvas Prints</p>
                         <div class="whatsapp-button">
                             <a href="whatsapp-link-1" class="whatsapp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                                    viewBox="0,0,256,256">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
+                                    width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
                                         stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
                                         stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
@@ -968,7 +1027,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 39.00</p>
@@ -996,7 +1055,8 @@
                 <div class="mb-4 md:mb-6 faqitems">
                     <button
                         class="faqbutton flex items-center justify-between w-full text-lg focus:outline-none border-b border-black pb-2 md:pb-6 px-2 md:px-6">
-                        <span class="pr-2 md:pr-6">What kind of Printers/Printing types does Printo have?</span>
+                        <span class="pr-2 md:pr-6">What are the types of printers and printing services offered by
+                            Printo?</span>
                         <span class="toggle-icon">+</span>
                     </button>
                     <p class="text-gray-600 answerfaq hidden">Printo stands as a preeminent printing press in the UAE,
@@ -1006,7 +1066,8 @@
                 <div class="mb-4 md:mb-6 faqitems">
                     <button
                         class="faqbutton flex items-center justify-between w-full text-lg focus:outline-none border-b border-black pb-2 md:pb-6 px-2 md:px-6">
-                        <span class="pr-2 md:pr-6">Do I need to pay separate delivery charges for each product?</span>
+                        <span class="pr-2 md:pr-6">Are separate delivery charges applicable to individual
+                            products?</span>
                         <span class="toggle-icon">+</span>
                     </button>
                     <p class="text-gray-600 answerfaq hidden">No, our streamlined shopping experience entails a singular
@@ -1017,7 +1078,7 @@
                 <div class="mb-4 md:mb-6 faqitems">
                     <button
                         class="faqbutton flex items-center justify-between w-full text-lg focus:outline-none border-b border-black pb-2 md:pb-6 px-2 md:px-6">
-                        <span class="pr-2 md:pr-6">Do you supply overseas?</span>
+                        <span class="pr-2 md:pr-6">Does Printo provide international shipping?</span>
                         <span class="toggle-icon">+</span>
                     </button>
                     <p class="text-gray-600 answerfaq hidden">Certainly, Printo takes pride in its global reach! We
@@ -1027,7 +1088,7 @@
                 <div class="mb-4 md:mb-6 faqitems">
                     <button
                         class="faqbutton flex items-center justify-between w-full text-lg focus:outline-none border-b border-black pb-2 md:pb-6 px-2 md:px-6">
-                        <span class="pr-2 md:pr-6">Printo’s service time or how quick is our delivery?</span>
+                        <span class="pr-2 md:pr-6">What is the turnaround time for Printo's services?</span>
                         <span class="toggle-icon">+</span>
                     </button>
                     <p class="text-gray-600 answerfaq hidden">The duration of service varies as each project possesses
@@ -1040,7 +1101,7 @@
                 <div class="mb-4 md:mb-6 faqitems">
                     <button
                         class="faqbutton flex items-center justify-between w-full text-lg focus:outline-none border-b border-black pb-2 md:pb-6 px-2 md:px-6">
-                        <span class="pr-2 md:pr-6">How can I place an order?</span>
+                        <span class="pr-2 md:pr-6">How can I place an order with Printo?</span>
                         <span class="toggle-icon">+</span>
                     </button>
                     <p class="text-gray-600 answerfaq hidden">Initiating an order is a seamless process. Begin by
@@ -1181,6 +1242,15 @@
                         Let's Start Building Your<br>
                         <span class="whitespace-nowrap">Brand's Unique Story Together.</span>
                     </p>
+                    <div class="py-4 md:py-8 lg:py-12 mx-auto" style="width: fit-content;">
+                        <a href="#"
+                            class="inline-block bg-white text-black px-6 md:px-8 lg:px-10 py-2 md:py-3 rounded-full flex items-center text-xs md:text-sm">
+                            Get in Touch
+                            <span class="ml-2 text-black">
+                                <i class="fab fa-whatsapp"></i>
+                            </span>
+                        </a>
+                    </div>
 
                 </div>
             </div>
@@ -1192,7 +1262,7 @@
 
     <section class="flex flex-col md:flex-row p-16">
         <!-- Left Side Content -->
-        <div class="md:w-1/2 px-8 pt-24">
+        <div class="md:w-1/2 px-6 pt-24">
             <h2 class="text-6xl mb-4">Let's Talk Branding</h2>
             <p class="text-black text-1-4rem">
                 From strategy to execution, we're here to help you
@@ -1227,13 +1297,13 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             <div class="p-2 flex flex-col items-center">
                 <img src="{{ asset('images/home/newitem1.jpg') }}" alt="Image 1" class="w-full object-cover mb-2">
-                <p class="text-center text-lg font-semibold text-black">Tshirts</p>
+                <p class="text-center text-lg font-semibold text-black pt-6">Tshirts</p>
                 <p class="box-price text-lg text-dark-gray">AED 39.00</p>
                 <p class="box-info text-light-gray mb-2">On size | No minimums</p>
                 <div class="whatsapp-button">
                     <a href="whatsapp-link-1" class="whatsapp-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                            viewBox="0,0,256,256">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon" width="30"
+                            height="30" viewBox="0,0,256,256">
                             <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1" stroke-linecap="butt"
                                 stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
                                 font-family="none" font-weight="none" font-size="none" text-anchor="none"
@@ -1246,18 +1316,18 @@
                             </g>
                         </svg>
                     </a>
-                    <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                    <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                 </div>
             </div>
             <div class="p-2 flex flex-col items-center">
                 <img src="{{ asset('images/home/newitem2.jpg') }}" alt="Image 2" class="w-full object-cover mb-2">
-                <p class="text-center text-lg font-semibold text-black">Cups & Mugs</p>
+                <p class="text-center text-lg font-semibold text-black pt-6">Cups & Mugs</p>
                 <p class="box-price text-lg text-dark-gray">AED 39.00</p>
                 <p class="box-info text-light-gray mb-2">On size | No minimums</p>
                 <div class="whatsapp-button">
                     <a href="whatsapp-link-1" class="whatsapp-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                            viewBox="0,0,256,256">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon" width="30"
+                            height="30" viewBox="0,0,256,256">
                             <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1" stroke-linecap="butt"
                                 stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
                                 font-family="none" font-weight="none" font-size="none" text-anchor="none"
@@ -1270,18 +1340,18 @@
                             </g>
                         </svg>
                     </a>
-                    <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                    <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                 </div>
             </div>
             <div class="p-2 flex flex-col items-center">
                 <img src="{{ asset('images/home/newitem3.jpg') }}" alt="Image 3" class="w-full object-cover mb-2">
-                <p class="text-center text-lg font-semibold text-black">Mousepads</p>
+                <p class="text-center text-lg font-semibold text-black pt-6">Mousepads</p>
                 <p class="box-price text-lg text-dark-gray">AED 39.00</p>
                 <p class="box-info text-light-gray mb-2">On size | No minimums</p>
                 <div class="whatsapp-button">
                     <a href="whatsapp-link-1" class="whatsapp-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                            viewBox="0,0,256,256">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon" width="30"
+                            height="30" viewBox="0,0,256,256">
                             <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1" stroke-linecap="butt"
                                 stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
                                 font-family="none" font-weight="none" font-size="none" text-anchor="none"
@@ -1294,18 +1364,18 @@
                             </g>
                         </svg>
                     </a>
-                    <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                    <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                 </div>
             </div>
             <div class="p-2 flex flex-col items-center">
                 <img src="{{ asset('images/home/newitem4.jpg') }}" alt="Image 4" class="w-full object-cover mb-2">
-                <p class="text-center text-lg font-semibold text-black">Powerbanks</p>
+                <p class="text-center text-lg font-semibold text-black pt-6">Powerbanks</p>
                 <p class="box-price text-lg text-dark-gray">AED 39.00</p>
                 <p class="box-info text-light-gray mb-2">On size | No minimums</p>
                 <div class="whatsapp-button">
                     <a href="whatsapp-link-1" class="whatsapp-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
-                            viewBox="0,0,256,256">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon" width="30"
+                            height="30" viewBox="0,0,256,256">
                             <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1" stroke-linecap="butt"
                                 stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
                                 font-family="none" font-weight="none" font-size="none" text-anchor="none"
@@ -1318,7 +1388,7 @@
                             </g>
                         </svg>
                     </a>
-                    <a href="whatsapp-link-1" class="whatsapp-text">WhatsApp Us</a>
+                    <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                 </div>
             </div>
             <!-- Add more grid items as needed -->
@@ -1469,6 +1539,21 @@
     phoneInput.addEventListener("blur", () => {
         const phoneNumber = iti.getNumber();
         phoneInput.value = phoneNumber;
+    });
+    </script>
+    <script>
+    var companyLogoSwiper = new Swiper('.companylogo-carousel', {
+        slidesPerView: 5,
+        spaceBetween: 14,
+        loop: true,
+        autoplay: {
+            delay: 3000, // Delay between slides in milliseconds
+            disableOnInteraction: false, // Continue autoplay after user interaction
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
     });
     </script>
 </body>
