@@ -15,6 +15,18 @@ use Laravel\Socialite\Facades\Socialite;
 |
 */
 
+Route::get('/home-demo', function () {
+    return view('home-backup');
+})->name('home.demo');
+
+// ... other routes ...
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
 // Route::get('/', [pagesController, 'home'])->name('homepage');
 Route::get('/', 'pagesController@home')->name('home');
 
@@ -54,7 +66,7 @@ Route::get('/page/artworking-service', 'pagesController@artnetwork');
 Route::get('/page/one-to-one-design', 'pagesController@onetoone');
 Route::get('/page/pro-design', 'pagesController@prodesign');
 
-Route::group(['prefix' => 'profile'], function() {
+Route::group(['prefix' => 'profile'], function () {
     Route::group(['middleware' => ['auth']], function () {
         Route::get('/', 'ProfileController@index');
         Route::post('/update', 'ProfileController@updateProfile');
@@ -84,9 +96,9 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::group(['prefix' => 'manage'], function() {
+Route::group(['prefix' => 'manage'], function () {
 
-    Route::group(['middleware' => ['auth','permission:browse admin']], function () {
+    Route::group(['middleware' => ['auth', 'permission:browse admin']], function () {
 
         Route::get('/dashboard', 'ManagePages@dashboard')->name('manage.dashboard');
         Route::put('/categories/{category}/change-status', 'CategoryController@changeStatus');
@@ -160,10 +172,8 @@ Route::group(['prefix' => 'manage'], function() {
         Route::delete('/template-files/{file}', 'TemplateFileController@destroy');
         Route::resource('/template-categories/{category}/templates', 'TemplateController');
     });
-
 });
 
 
 Route::get('/auth/google/redirect', [App\Http\Controllers\Auth\LoginController::class, 'redirectToGoogle'])->name('login.google');
 Route::get('/auth/google/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleGoogleCallback']);
-
