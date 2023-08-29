@@ -1191,7 +1191,7 @@
         <!-- Left Side Content -->
         <div class="md:w-1/2 px-6 pt-24">
             <h2 class="text-6xl mb-4">Let's Talk Branding</h2>
-            <p class="text-black text-1-4rem ml-4">
+            <p class="text-black text-1-4rem ml-2">
                 From strategy to execution, we're here to help you
                 <br class="hidden md:inline"> achieve your branding goals.
             </p>
