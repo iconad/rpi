@@ -14,6 +14,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css">
     <title>Printo Home Page</title>
     <style>
+        #mobileMenu {
+            /* ... other styles ... */
+            background-color: white;
+            /* Add this line to set the background color */
+            transition: transform 0.3s ease-in-out;
+            /* Add the transition property */
+        }
+
+        /* The .translate-x-full class will control the sliding animation */
+        .translate-x-full {
+            transform: translateX(100%);
+            /* Slide out by moving to the right */
+        }
+
         .text-1.3rem {
             .font-size: 1.3rem;
         }
@@ -1549,6 +1563,26 @@
                 el: '.swiper-pagination',
                 clickable: true,
             },
+        });
+    </script>
+    <script>
+        const searchButton = document.getElementById('searchButton');
+        const searchBar = document.getElementById('searchBar');
+        const menuButton = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenuButton = document.getElementById('closeMenuButton');
+
+        searchButton.addEventListener('click', () => {
+            searchBar.classList.toggle('hidden');
+        });
+
+        // Toggle menu visibility using existing classes
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+        });
+
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
         });
     </script>
 </body>
