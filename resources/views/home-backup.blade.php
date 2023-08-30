@@ -28,8 +28,8 @@
             /* Slide out by moving to the right */
         }
 
-        .text-1.3rem {
-            .font-size: 1.3rem;
+        .text-1-3rem {
+            font-size: 1.3rem;
         }
 
         .logo-slide {
@@ -413,7 +413,7 @@
     </style>
 </head>
 
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden bg-white">
     <div class="container mx-auto max-w-full">
         <header class="bg-white shadow-lg hidden md:block">
             <!-- Top Bar -->
@@ -534,7 +534,7 @@
         <!-- Mobile-only section -->
         <section class="sm:hidden text-center py-10">
             <h2 class="mobile-title font-semibold text-4xl leading-tight mb-4">WEAR YOUR<br>IMAGINATION</h2>
-            <p class="mobile-paragraph text-sm text-gray-600">
+            <p class="mobile-paragraph text-xs text-gray-600">
                 Custom creations on t-shirts, polos, and hoodies.<br>
                 Express your unique style through personalized apparel<br>
                 that reflects your creativity.
@@ -1259,7 +1259,7 @@
                         <span class="whitespace-nowrap">Brand's Unique Story Together.</span>
                     </p>
                     <div class="py-4 md:py-8 lg:py-12 mx-auto" style="width: fit-content;">
-                        <a href="#" class="inline-block bg-white text-black md:px-10 lg:px-24 py-2 md:py-3 rounded-full flex items-center text-1.3rem letstalk">
+                        <a href="#" class="inline-block bg-white text-black md:px-10 lg:px-24 py-2 md:py-3 rounded-full flex items-center text-1-3rem letstalk">
                             Get in Touch
                             <span class="ml-2 text-black">
                                 <i class="fab fa-whatsapp"></i>
