@@ -17,15 +17,13 @@
         #mobileMenu {
             /* ... other styles ... */
             background-color: white;
-
+            height: 100vh;
             transition: transform 0.3s ease-in-out;
 
         }
 
-        /* The .translate-x-full class will control the sliding animation */
         .translate-x-full {
             transform: translateX(100%);
-            /* Slide out by moving to the right */
         }
 
         .text-1-3rem {
