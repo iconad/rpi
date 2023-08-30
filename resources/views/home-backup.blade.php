@@ -511,7 +511,7 @@
         </div>
 
         <!-- Mobile menu (hidden by default) -->
-        <div id="mobileMenu" class="sm:hidden fixed inset-y-0 right-0 w-1/2 p-4 transform translate-x-full">
+        <div id="mobileMenu" class="sm:hidden fixed inset-y-0 right-0 w-1/2 h-screen p-4 transform translate-x-full">
             <ul class="space-y-4">
                 <li><a href="#" class="text-gray-800 hover:text-gray-600">Printing</a></li>
                 <li><a href="#" class="text-gray-800 hover:text-gray-600">Packaging</a></li>
