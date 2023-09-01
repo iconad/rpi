@@ -295,6 +295,10 @@
     }
 
     @media screen and (max-width: 767px) {
+        .reviewsh {
+            font-size: 0.8rem !important;
+        }
+
         .logoheader {
             width: 5rem;
             height: auto;
