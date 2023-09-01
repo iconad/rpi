@@ -761,7 +761,7 @@
             </div>
         </section>
 
-        <section class="p-5 md:px-12 bestseller">
+        <section class="md:p-5 p-7 md:px-12 bestseller">
             <h2 class="text-lg md:text-4xl mb-4 py-10 md:py-16">Best Sellers</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-16">
                 <!-- Box 1 -->
@@ -1063,7 +1063,7 @@
         </section>
 
 
-        <section class="toppicks p-5 md:px-12">
+        <section class="toppicks md:p-5 p-7 md:px-12">
             <h2 class="text-lg md:text-4xl mb-6 py-10 md:py-16">Top Picks</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-14">
                 <!-- Product 1 -->
