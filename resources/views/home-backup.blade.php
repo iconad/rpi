@@ -526,7 +526,7 @@
 
     .topbar {
         padding-left: 4.8rem;
-        padding-right: 4.4rem;
+        padding-right: 4.9rem;
     }
     </style>
 </head>
@@ -547,7 +547,7 @@
                         <li class="mr-12 text-sm">
                             <a href="#">Estimate</a>
                         </li>
-                        <li class="mr-14 text-sm">
+                        <li class="mr-12 text-sm">
                             <a href="#">Blog</a>
                         </li>
                         <li class="text-sm">
@@ -1631,7 +1631,7 @@
 
 
 
-            <footer class="p-3 md:p-5 text-gray-700 pt-24">
+            <footer class="p-3 md:p-5 text-gray-700 pt-24 md:pt-28">
                 <div class="grid grid-cols-1 sm:grid-cols-4 gap-2 md:gap-8 mb-8">
                     <!-- Grid 1: Logo and Social Icons -->
                     <div class="flex flex-col ml-4 md:ml-16">
