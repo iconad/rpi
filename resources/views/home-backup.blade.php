@@ -576,7 +576,7 @@
                     </button>
                 </div>
 
-                <ul id="mobile-menu" class="hidden md:flex space-x-6 flex-nowrap pl-4 pr-4">
+                <ul id="mobile-menu" class="hidden md:flex space-x-6 flex-nowrap pl-4 pr-2">
                     <li><a href="#" class="hover:text-red-300 text-xs md:text-sm lg:text-base truncate">Printing</a>
                     </li>
                     <li><a href="#" class="hover:text-red-300 text-xs md:text-sm lg:text-base truncate">Packaging</a>
