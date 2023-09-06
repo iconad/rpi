@@ -777,7 +777,7 @@
                         <p class="box-name">Business Cards
                         </p>
                         <div class="whatsapp-button">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -792,7 +792,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 115.00 / 250 Copies</p>
@@ -806,7 +806,7 @@
                     <div class="flex items-center justify-between mb-2 md:pt-6 pt-0.5">
                         <p class="box-name">Large Stickers</p>
                         <div class="whatsapp-button">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -821,7 +821,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 180.00 / Copy</p>
@@ -836,7 +836,7 @@
                         <p class="box-name">Posters
                         </p>
                         <div class="whatsapp-button">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -851,7 +851,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 176.00 / Copy</p>
@@ -865,7 +865,7 @@
                     <div class="flex items-center justify-between mb-2 md:pt-6 pt-0.5">
                         <p class="box-name">Boxes</p>
                         <div class="whatsapp-button">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -880,7 +880,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">Contact for Details</p>
@@ -894,7 +894,7 @@
                     <div class="flex items-center justify-between mb-2 md:pt-6 pt-0.5">
                         <p class="box-name">Stationary</p>
                         <div class="whatsapp-button">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -909,7 +909,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 875.00 / 50 Notebooks</p>
@@ -925,7 +925,7 @@
                     <div class="flex items-center justify-between mb-2 md:pt-6 pt-0.5">
                         <p class="box-name">Calendars</p>
                         <div class="whatsapp-button">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -940,7 +940,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 630.00 / 50 Copies</p>
@@ -954,7 +954,7 @@
                     <div class="flex items-center justify-between mb-2 md:pt-6 pt-0.5">
                         <p class="box-name macbookwhatsappside">Wallpapers</p>
                         <div class="whatsapp-button">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -969,7 +969,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 25.20 / Roll</p>
@@ -983,7 +983,7 @@
                     <div class="flex items-center justify-between mb-2 md:pt-6 pt-0.5">
                         <p class="box-name">Roll Up Banners</p>
                         <div class="whatsapp-button">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -998,7 +998,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 130.00 / Copy</p>
@@ -1012,7 +1012,7 @@
                     <div class="flex items-center justify-between mb-2 md:pt-6 pt-0.5">
                         <p class="box-name">Foamboard Panels</p>
                         <div class="whatsapp-button">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -1027,7 +1027,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 350.00 / Copy</p>
@@ -1077,7 +1077,7 @@
                     <div class="flex items-center justify-between mb-2 w-full">
                         <p class="box-name">Cups & Mugs</p>
                         <div class="whatsapp-button">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -1092,7 +1092,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">Contact for Details</p>
@@ -1105,7 +1105,7 @@
                     <div class="flex items-center justify-between mb-2 w-full">
                         <p class="box-name">Door Hangers</p>
                         <div class="whatsapp-button">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -1120,7 +1120,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 375.00 / 500 Copies</p>
@@ -1133,7 +1133,7 @@
                     <div class="flex items-center justify-between mb-2 w-full">
                         <p class="box-name">Business Cards</p>
                         <div class="whatsapp-button">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -1148,7 +1148,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 115.00 / 250 Copies</p>
@@ -1161,7 +1161,7 @@
                     <div class="flex items-center justify-between mb-2 w-full">
                         <p class="box-name">Cake Boxes</p>
                         <div class="whatsapp-button">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -1176,7 +1176,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">Contact for Details</p>
@@ -1189,7 +1189,7 @@
                     <div class="flex items-center justify-between mb-2 w-full">
                         <p class="box-name">Wallpapers</p>
                         <div class="whatsapp-button">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -1204,7 +1204,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 25.20 / Roll</p>
@@ -1217,7 +1217,7 @@
                     <div class="flex items-center justify-between mb-2 w-full">
                         <p class="box-name">Canvas Prints</p>
                         <div class="whatsapp-button">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -1232,7 +1232,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <p class="box-price text-dark-gray">AED 186.00 / Copy</p>
@@ -1535,7 +1535,7 @@
                         <p class="newitemsbox-price text-xs md:text-lg text-dark-gray">Contact for Details</p>
 
                         <div class="whatsapp-button newitemswhatsapp ">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -1550,7 +1550,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <div class="p-2 flex flex-col md:items-center">
@@ -1561,7 +1561,7 @@
                         <p class="newitemsbox-price text-xs md:text-lg text-dark-gray">Contact for Details</p>
 
                         <div class="whatsapp-button newitemswhatsapp">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -1576,7 +1576,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <div class="p-2 flex flex-col md:items-center">
@@ -1586,7 +1586,7 @@
                         <p class="newitemsbox-price text-xs md:text-lg text-dark-gray">Contact for Details</p>
 
                         <div class="whatsapp-button newitemswhatsapp">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -1601,7 +1601,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <div class="p-2 flex flex-col md:items-center">
@@ -1612,7 +1612,7 @@
                         <p class="newitemsbox-price text-xs md:text-lg text-dark-gray">Contact for Details</p>
 
                         <div class="whatsapp-button newitemswhatsapp">
-                            <a href="whatsapp-link-1" class="whatsapp-icon">
+                            <a href="#" class="whatsapp-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="whatsapptexticon"
                                     width="30" height="30" viewBox="0,0,256,256">
                                     <g fill="#ffffff" fill-rule="evenodd" stroke="none" stroke-width="1"
@@ -1627,7 +1627,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="whatsapp-link-1" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+                            <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                         </div>
                     </div>
                     <!-- Add more grid items as needed -->
