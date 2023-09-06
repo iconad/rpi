@@ -1679,7 +1679,7 @@
 
                     <!-- Grid 4: Contact -->
                     <div class="contactus ml-4 md:ml-0">
-                        <h3 class="text-xl mb-6 border-b-2 printoborder">Get in touch</h3>
+                        <h3 class="text-xl mb-6 border-b-2 printoborder">Get in Touch</h3>
                         <ul>
                             <li class="mb-4"><a href="#" class="text-black mb-6 hover:text-red-600">Estimate</a>
                             </li>
