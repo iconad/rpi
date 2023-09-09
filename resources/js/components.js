@@ -4,6 +4,10 @@ Vue.component(
     require("./components/navbar/MainNavbar.vue").default
 );
 Vue.component(
+    "navbar",
+    require("./components/navbar/Navbar.vue").default
+);
+Vue.component(
     "home-cover-ad",
     require("./components/templates/home/CoverAd.vue").default
 );
