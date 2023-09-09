@@ -536,7 +536,9 @@
 
 <body class="overflow-x-hidden bg-white">
     <div class="container mx-auto max-w-full">
+        
         <header class="bg-white shadow-lg hidden md:block">
+
             <!-- Top Bar -->
             <div class="topbar bg-black py-2 text-white text-center flex justify-between items-center text-lg">
                 <div class="flex items-center">
@@ -609,6 +611,7 @@
                     </span>
                 </div>
             </nav>
+
         </header>
 
 
@@ -1826,10 +1829,8 @@
                 }
             }
         });
-    </script>
 
-
-    <script>
+        
         const searchButton = document.getElementById('searchButton');
         const searchBar = document.getElementById('searchBar');
         const menuButton = document.getElementById('menuButton');

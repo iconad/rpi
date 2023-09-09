@@ -9,6 +9,7 @@
                 </a>
             </div>
             <!-- logo -->
+
             <div v-if="$apollo.queries.menus.loading" class="w-full flex items-center justify-center">
                 Loading Menu ....
             </div>

@@ -1,5 +1,5 @@
 <template>
-    <div class="h-22rem overflow-hidden">
+    <div class="overflow-hidden">
         <swiper class="swiper" :options="swiperOptions">
 
             <swiper-slide v-for="(slide, i) in slider" :key="i">
@@ -7,12 +7,14 @@
                     <home-cover-slide :slide="slide"></home-cover-slide>
                 </div>
             </swiper-slide>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+            <div class="swiper-pagination"  slot="pagination"></div>
 
         </swiper>
     </div>
 </template>
+
 
 <script>
 
