@@ -582,24 +582,28 @@
                             </button>
                         </div>
 
-                        <nav class="mb-5">
-                            <x-navbar />
-                        </nav>
 
-                        <!-- <ul id="mobile-menu" class="hidden md:flex space-x-6 flex-nowrap pl-4 pr-2">
-                    <li><a href="#" class="hover:text-red-300 text-xs md:text-sm lg:text-base truncate">Printing</a>
-                    </li>
-                    <li><a href="#" class="hover:text-red-300 text-xs md:text-sm lg:text-base truncate">Packaging</a>
-                    </li>
-                    <li><a href="#" class="hover:text-red-300 text-xs md:text-sm lg:text-base truncate">Banners &
-                            Displays</a></li>
-                    <li><a href="#" class="hover:text-red-300 text-xs md:text-sm lg:text-base truncate">Merch</a>
-                    </li>
-                    <li><a href="#" class="hover:text-red-300 text-xs md:text-sm lg:text-base truncate">Corporate</a>
-                    </li>
-                    <li><a href="#" class="hover:text-red-300 text-xs md:text-sm lg:text-base truncate">Wallpapers</a>
-                    </li>
-                </ul> -->
+
+                        <ul id="mobile-menu" class="hidden md:flex space-x-6 flex-nowrap pl-4 pr-2">
+                            <li><a href="#"
+                                    class="hover:text-red-300 text-xs md:text-sm lg:text-base truncate">Printing</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-red-300 text-xs md:text-sm lg:text-base truncate">Packaging</a>
+                            </li>
+                            <li><a href="#" class="hover:text-red-300 text-xs md:text-sm lg:text-base truncate">Banners
+                                    &
+                                    Displays</a></li>
+                            <li><a href="#"
+                                    class="hover:text-red-300 text-xs md:text-sm lg:text-base truncate">Merch</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-red-300 text-xs md:text-sm lg:text-base truncate">Corporate</a>
+                            </li>
+                            <li><a href="#"
+                                    class="hover:text-red-300 text-xs md:text-sm lg:text-base truncate">Wallpapers</a>
+                            </li>
+                        </ul>
                         <div class="hidden md:flex relative items-center">
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0,0,256,256">

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\ProductHome; // Import your model
 class HomeController extends Controller
 {
     /**
@@ -23,10 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        $products = Producthome::all(); // Retrieve products from the database
+        return view('home', compact('products')); // Pass products to the view
     }
-
-
 }
-
-
