@@ -91,6 +91,7 @@
             <a href="#"> <img src="{{ asset('images/home/packaging.jpg') }}" alt="Image 2 " class="w-full h-auto "> </a>
         </div>
 
+<<<<<<< HEAD
         <!-- Grid Box 3 -->
         <div class="flex-shrink-0 w-full md:w-1/3 px-3 md:px-0 no-padding-mobile  ">
             <a href="#"> <img src="{{ asset('images/home/merch.jpg') }}" alt="Image 3 " class="w-full h-auto ">
@@ -120,6 +121,40 @@
                         </svg>
                     </a>
                     <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
+=======
+        .topbar {
+            padding-left: 4.8rem;
+            padding-right: 4.9rem;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden bg-white">
+    <div class="container mx-auto max-w-full">
+        
+        <header class="bg-white shadow-lg hidden md:block">
+
+            <!-- Top Bar -->
+            <div class="topbar bg-black py-2 text-white text-center flex justify-between items-center text-lg">
+                <div class="flex items-center">
+                    <i class="fas fa-envelope text-white mr-2"></i>
+                    <p class="text-sm"><a href="mailto:info@printo.ae">info@printo.ae</a></p>
+                    <i class="fas fa-headphones text-white mx-4 mr-2"></i>
+                    <p class="text-sm"><a href="tel:+971 6 534 1113"> +971 6 534 1113</a></p>
+                </div>
+                <div class="flex items-center">
+                    <ul class="flex list-none p-0">
+                        <li class="mr-12 text-sm">
+                            <a href="#">Estimate</a>
+                        </li>
+                        <li class="mr-12 text-sm">
+                            <a href="#">Blog</a>
+                        </li>
+                        <li class="text-sm">
+                            <a href="#">About Us</a>
+                        </li>
+                    </ul>
+>>>>>>> 2cce83bc74f14f5d03919a0dd39b795e04db3d6c
                 </div>
             </div>
             <p class="box-price text-dark-gray">AED 115.00 / 250 Copies</p>
@@ -191,8 +226,14 @@
                     </a>
                     <a href="#" class="whatsapp-text whatsapptext">WhatsApp Us</a>
                 </div>
+<<<<<<< HEAD
             </div>
             <p class="box-price text-dark-gray">Contact for Details</p>
+=======
+            </nav>
+
+        </header>
+>>>>>>> 2cce83bc74f14f5d03919a0dd39b795e04db3d6c
 
         </div>
 
@@ -1156,6 +1197,7 @@
             },
         });
 
+<<<<<<< HEAD
         // Manually clone the slides for desktop version
         var desktopSlides = document.querySelectorAll('.companylogo-carousel .swiper-slide');
         var desktopSlideCount = desktopSlides.length;
@@ -1191,6 +1233,28 @@
         mobileMenu.classList.add('translate-x-full');
     });
 </script>
+=======
+        
+        const searchButton = document.getElementById('searchButton');
+        const searchBar = document.getElementById('searchBar');
+        const menuButton = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenuButton = document.getElementById('closeMenuButton');
+
+        searchButton.addEventListener('click', () => {
+            searchBar.classList.toggle('hidden');
+        });
+
+        // Toggle menu visibility using existing classes
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+        });
+
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+    </script>
+>>>>>>> 2cce83bc74f14f5d03919a0dd39b795e04db3d6c
 </body>
 
 </html>

@@ -1,10 +1,10 @@
 <template>
     <div>
         <a :href="slide.link" v-if="slide.product == null">
-            <thumb-image classess="w-full h-22rem object-cover" :image="slide.media[0].file_name" :id="slide.media[0].id"></thumb-image>
+            <thumb-image classess="w-full" :image="slide.media[0].file_name" :id="slide.media[0].id"></thumb-image>
         </a>
         <a :href="`/products/${slide.product.slug}`" v-else>
-            <thumb-image classess="w-full h-22rem object-cover" :image="firstMedia[0].file_name" :id="firstMedia[0].id"></thumb-image>
+            <thumb-image classess="w-full" :image="firstMedia[0].file_name" :id="firstMedia[0].id"></thumb-image>
         </a>
     </div>
 </template>
