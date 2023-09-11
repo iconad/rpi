@@ -10,7 +10,7 @@
     <style>
         span.whitespace-nowrap.commingsoondesc {
             font-size: 1.3rem;
-            color: grey;
+            color: lightgrey !important;
         }
 
         p.text-xs.pt-6.md\:pt-0.md\:text-4xl.lg\:text-8xl.font-bold.leading-tight.mb-3.md\:mb-4.commingsoontitle {
