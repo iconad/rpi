@@ -559,7 +559,7 @@
                                     <a href="https://printo.ae/estimate">Estimate</a>
                                 </li>
                                 <li class="mr-12 text-sm">
-                                    <a href="https://printo.ae/commingsoon">Blog</a>
+                                    <a href="https://printo.ae/comingsoon">Blog</a>
                                 </li>
                                 <li class="text-sm">
                                     <a href="https://printo.ae/pages/about-us">About Us</a>
@@ -596,9 +596,9 @@
                                     class="text-gray-800 hover:text-gray-600">Packaging</a></li>
                             <li><a href="https://printo.ae/categories/banners-displays"
                                     class="text-gray-800 hover:text-gray-600">Banners & Displays</a></li>
-                            <li><a href="https://printo.ae/commingsoon"
+                            <li><a href="https://printo.ae/comingsoon"
                                     class="text-gray-800 hover:text-gray-600">Merch</a></li>
-                            <li><a href="https://printo.ae/commingsoon"
+                            <li><a href="https://printo.ae/comingsoon"
                                     class="text-gray-800 hover:text-gray-600">Corporate</a></li>
                             <li><a href="https://printo.ae/categories/wallpapers"
                                     class="text-gray-800 hover:text-gray-600">Wallpapers</a></li>
@@ -671,15 +671,15 @@
                                 class="text-gray-800 hover:text-gray-600">Packaging</a></li>
                         <li><a href="https://printo.ae/categories/banners-displays"
                                 class="text-gray-800 hover:text-gray-600">Banners & Displays</a></li>
-                        <li><a href="https://printo.ae/commingsoon" class="text-gray-800 hover:text-gray-600">Merch</a>
+                        <li><a href="https://printo.ae/comingsoon" class="text-gray-800 hover:text-gray-600">Merch</a>
                         </li>
-                        <li><a href="https://printo.ae/commingsoon"
+                        <li><a href="https://printo.ae/comingsoon"
                                 class="text-gray-800 hover:text-gray-600">Corporate</a></li>
                         <li><a href="https://printo.ae/categories/wallpapers"
                                 class="text-gray-800 hover:text-gray-600">Wallpapers</a></li>
                         <li><a href="https://printo.ae/estimate" class="text-gray-800 hover:text-gray-600">Estimate</a>
                         </li>
-                        <li><a href="https://printo.ae/commingsoon" class="text-gray-800 hover:text-gray-600">Blog</a>
+                        <li><a href="https://printo.ae/comingsoon" class="text-gray-800 hover:text-gray-600">Blog</a>
                         </li>
                         <li><a href="https://printo.ae/pages/about-us" class="text-gray-800 hover:text-gray-600">About
                                 Us</a></li>

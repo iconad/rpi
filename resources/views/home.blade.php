@@ -93,7 +93,7 @@
 
         <!-- Grid Box 3 -->
         <div class="flex-shrink-0 w-full md:w-1/3 px-3 md:px-0 no-padding-mobile  ">
-            <a href="https://printo.ae/commingsoon"> <img src="{{ asset('images/home/merch.jpg') }}" alt="Image 3 "
+            <a href="https://printo.ae/comingsoon"> <img src="{{ asset('images/home/merch.jpg') }}" alt="Image 3 "
                     class="w-full h-auto ">
             </a>
         </div>
@@ -442,10 +442,10 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-14">
         <!-- Product 1 -->
         <div class="flex flex-col items-start">
-            <a href="https://printo.ae/commingsoon"> <img src="{{ asset('images/home/pick1.jpg') }}" alt="Product 1"
+            <a href="https://printo.ae/comingsoon"> <img src="{{ asset('images/home/pick1.jpg') }}" alt="Product 1"
                     class="w-full h-auto mb-2 md:mb-4"></a>
             <div class="flex items-center justify-between mb-2 w-full">
-                <a href="https://printo.ae/commingsoon">
+                <a href="https://printo.ae/comingsoon">
                     <p class="box-name">Cups & Mugs</p>
                 </a>
                 <div class="whatsapp-button">
@@ -737,21 +737,21 @@
 
 <section class="flex flex-col md:flex-row p-7 md:p-12">
     <div class="w-full md:w-1/2 h-screen/2 flex flex-col items-start justify-start relative md:pr-4">
-        <a href="https://printo.ae/commingsoon"><img src="{{ asset('images/home/hot1.jpg') }}" alt="Image 1"
+        <a href="https://printo.ae/comingsoon"><img src="{{ asset('images/home/hot1.jpg') }}" alt="Image 1"
                 class="w-full object-cover"></a>
     </div>
     <div class="w-full md:w-1/2 h-screen/2 py-6 md:py-0 flex flex-col md:pl-12">
         <!-- Desktop version layout -->
-        <a href="https://printo.ae/commingsoon"><img src="{{ asset('images/home/hot2.jpg') }}" alt="Image 2"
+        <a href="https://printo.ae/comingsoon"><img src="{{ asset('images/home/hot2.jpg') }}" alt="Image 2"
                 class="w-full object-cover md:mb-2 md:pb-4 hidden md:block"></a>
-        <a href="https://printo.ae/commingsoon"><img src="{{ asset('images/home/hot3.jpg') }}" alt="Image 3"
+        <a href="https://printo.ae/comingsoon"><img src="{{ asset('images/home/hot3.jpg') }}" alt="Image 3"
                 class="w-full object-cover md:pt-5 md:pt-4 hidden md:block"></a>
 
         <!-- Mobile version layout -->
         <div class="md:hidden w-full flex">
-            <a href="https://printo.ae/commingsoon"><img src="{{ asset('images/home/hot2.jpg') }}" alt="Image 2"
+            <a href="https://printo.ae/comingsoon"><img src="{{ asset('images/home/hot2.jpg') }}" alt="Image 2"
                     class="w-1/2 pr-3 object-cover" style=" height: 150px;"></a>
-            <a href="https://printo.ae/commingsoon"><img src="{{ asset('images/home/hot3.jpg') }}" alt="Image 3"
+            <a href="https://printo.ae/comingsoon"><img src="{{ asset('images/home/hot3.jpg') }}" alt="Image 3"
                     class="w-1/2 pl-3 object-cover" style=" height: 150px;"></a>
         </div>
     </div>
@@ -921,9 +921,9 @@
         <h2 class="text-lg md:text-4xl px-2 mb-6 text-left py-6">New Items</h2>
         <div class="grid grid-cols-1 grid-cols-2 md:grid-cols-4 gap-0 md:gap-6">
             <div class="p-2 flex flex-col md:items-center">
-                <a href="https://printo.ae/commingsoon"><img src="{{ asset('images/home/newitem1.jpg') }}" alt="Image 1"
+                <a href="https://printo.ae/comingsoon"><img src="{{ asset('images/home/newitem1.jpg') }}" alt="Image 1"
                         class="w-full object-cover mb-2"></a>
-                <a href="https://printo.ae/commingsoon">
+                <a href="https://printo.ae/comingsoon">
                     <p class="md:text-center text-xs md:text-lg text-black pt-2 md:pt-6">Tshirts</p>
                     <p class="newitemsbox-price text-xs md:text-lg text-dark-gray">Contact for Details</p>
 
@@ -948,9 +948,9 @@
                     </div>
             </div>
             <div class="p-2 flex flex-col md:items-center">
-                <a href="https://printo.ae/commingsoon"> <img src="{{ asset('images/home/newitem2.jpg') }}"
-                        alt="Image 2" class="w-full object-cover mb-2"></a>
-                <a href="https://printo.ae/commingsoon">
+                <a href="https://printo.ae/comingsoon"> <img src="{{ asset('images/home/newitem2.jpg') }}" alt="Image 2"
+                        class="w-full object-cover mb-2"></a>
+                <a href="https://printo.ae/comingsoon">
                     <p class="md:text-center text-xs md:text-lg text-black pt-2 md:pt-6">Cups & Mugs
                     </p>
                 </a>
@@ -977,9 +977,9 @@
                 </div>
             </div>
             <div class="p-2 flex flex-col md:items-center">
-                <a href="https://printo.ae/commingsoon"> <img src="{{ asset('images/home/newitem3.jpg') }}"
-                        alt="Image 3" class="w-full object-cover mb-2"></a>
-                <a href="https://printo.ae/commingsoon">
+                <a href="https://printo.ae/comingsoon"> <img src="{{ asset('images/home/newitem3.jpg') }}" alt="Image 3"
+                        class="w-full object-cover mb-2"></a>
+                <a href="https://printo.ae/comingsoon">
                     <p class="md:text-center text-xs md:text-lg text-black pt-2 md:pt-6">Mousepads</p>
                 </a>
                 <p class="newitemsbox-price text-xs md:text-lg text-dark-gray">Contact for Details</p>
@@ -1005,9 +1005,9 @@
                 </div>
             </div>
             <div class="p-2 flex flex-col md:items-center">
-                <a href="https://printo.ae/commingsoon"> <img src="{{ asset('images/home/newitem4.jpg') }}"
-                        alt="Image 4" class="w-full object-cover mb-2"></a>
-                <a href="https://printo.ae/commingsoon">
+                <a href="https://printo.ae/comingsoon"> <img src="{{ asset('images/home/newitem4.jpg') }}" alt="Image 4"
+                        class="w-full object-cover mb-2"></a>
+                <a href="https://printo.ae/comingsoon">
                     <p class="md:text-center text-xs md:text-lg text-black pt-2 md:pt-6">Powerbanks
                     </p>
                 </a>
