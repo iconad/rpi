@@ -9,32 +9,32 @@ function updateSlides() {
         slides = [{
             image: 'images/home/slider/slidem1.jpg',
             alt: 'Mobile Slide 1',
-            link: '#'
+            link: 'https://printo.ae/categories/print-products'
         },
         {
             image: 'images/home/slider/slidem2.jpg',
             alt: 'Mobile Slide 1',
-            link: '#'
+            link: 'https://printo.ae/categories/print-products'
         },
         {
             image: 'images/home/slider/slidem3.jpg',
             alt: 'Mobile Slide 1',
-            link: '#'
+            link: 'https://printo.ae/categories/print-products'
         },
         {
             image: 'images/home/slider/slidem4.jpg',
             alt: 'Mobile Slide 1',
-            link: '#'
+            link: 'https://printo.ae/categories/print-products'
         },
         {
             image: 'images/home/slider/slidem5.jpg',
             alt: 'Mobile Slide 1',
-            link: '#'
+            link: 'https://printo.ae/categories/print-products'
         },
         {
             image: 'images/home/slider/slidem6.jpg',
             alt: 'Mobile Slide 1',
-            link: '#'
+            link: 'https://printo.ae/categories/print-products'
         },
             // Add more mobile slides as needed
         ];
@@ -43,32 +43,32 @@ function updateSlides() {
         slides = [{
             image: 'images/home/slider/slide1.jpg',
             alt: 'Desktop Slide 1',
-            link: '#'
+            link: 'https://printo.ae/categories/print-products'
         },
         {
             image: 'images/home/slider/slide2.jpg',
             alt: 'Desktop Slide 2',
-            link: '#'
+            link: 'https://printo.ae/categories/print-products'
         },
         {
             image: 'images/home/slider/slide2.jpg',
             alt: 'Desktop Slide 3',
-            link: '#'
+            link: 'https://printo.ae/categories/print-products'
         },
         {
             image: 'images/home/slider/slide2.jpg',
             alt: 'Desktop Slide 4',
-            link: '#'
+            link: 'https://printo.ae/categories/print-products'
         },
         {
             image: 'images/home/slider/slide2.jpg',
             alt: 'Desktop Slide 5',
-            link: '#'
+            link: 'https://printo.ae/categories/print-products'
         },
         {
             image: 'images/home/slider/slide2.jpg',
             alt: 'Desktop Slide 6',
-            link: '#'
+            link: 'https://printo.ae/categories/print-products'
         },
             // Add more desktop slides as needed
         ];
