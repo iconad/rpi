@@ -31,9 +31,9 @@ Route::get('/home-demo', function () {
     return view('home-backup');
 })->name('home.demo');
 
-Route::get('/commingsoon', function () {
+Route::get('/comingsoon', function () {
     return view('commingsoon');
-})->name('commingsoon');
+})->name('comingsoon');
 
 // ... other routes ...
 

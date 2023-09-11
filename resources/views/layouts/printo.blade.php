@@ -8,25 +8,31 @@
     <!-- Include your stylesheets and other meta tags here -->
     @yield('headlinks')
     <style>
-    span.whitespace-nowrap.commingsoondesc {
-        font-size: 1.3rem;
-        color: grey;
-    }
-
-
-    @media (max-width: 768px) {
-
         span.whitespace-nowrap.commingsoondesc {
-            font-size: 0.4rem;
+            font-size: 1.3rem;
             color: grey;
         }
 
         p.text-xs.pt-6.md\:pt-0.md\:text-4xl.lg\:text-8xl.font-bold.leading-tight.mb-3.md\:mb-4.commingsoontitle {
-            font-size: 1.75rem;
+            line-height: 3.6rem;
         }
 
-        /* Add more styles as needed */
-    }
+
+
+        @media (max-width: 768px) {
+
+            span.whitespace-nowrap.commingsoondesc {
+                font-size: 0.4rem;
+                color: grey;
+            }
+
+            p.text-xs.pt-6.md\:pt-0.md\:text-4xl.lg\:text-8xl.font-bold.leading-tight.mb-3.md\:mb-4.commingsoontitle {
+                font-size: 1.75rem;
+                line-height: 1rem;
+            }
+
+            /* Add more styles as needed */
+        }
     </style>
 
 </head>
