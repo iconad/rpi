@@ -44,11 +44,6 @@ Vue.component(
 
 
 Vue.component(
-    "top-seller",
-    require("./components/TopSeller.vue").default
-);
-
-Vue.component(
     "top-products",
     require("./components/templates/slider/TopProducts.vue").default
 );

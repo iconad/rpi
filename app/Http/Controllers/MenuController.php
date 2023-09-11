@@ -46,7 +46,7 @@ class MenuController extends Controller
         ]);
 
 
-        if($done) {
+        if ($done) {
             return response()->json(['message' => 'Menu successfully added!']);
         }
     }
@@ -59,7 +59,6 @@ class MenuController extends Controller
      */
     public function show(Menu $menu)
     {
-
     }
 
     /**
@@ -88,7 +87,7 @@ class MenuController extends Controller
         $menu->title = $request->title;
         $menu->link = $request->link;
         $done = $menu->save();
-        if($done) {
+        if ($done) {
             return response()->json(['message' => 'Menu successfully updated!']);
         }
     }
@@ -101,25 +100,25 @@ class MenuController extends Controller
      */
     public function destroy(Menu $menu)
     {
-        if($menu->delete()){
+        if ($menu->delete()) {
             return response()->json(['Menu successfully deleted!']);
-        }else {
+        } else {
             return response()->json(['something worng, please try again']);
         }
     }
 
     public function changeStatus(Menu $menu)
     {
-        if($menu->status === 0) {
+        if ($menu->status === 0) {
             $status = 1;
-        }else{
+        } else {
             $status = 0;
         }
 
         $menu->status = $status;
         $done = $menu->save();
-        if($done) {
-        return response()->json(['Status successfully updated!']);
+        if ($done) {
+            return response()->json(['Status successfully updated!']);
         }
     }
 
@@ -127,10 +126,8 @@ class MenuController extends Controller
     {
         $menu->label_id = $request->label;
         $done = $menu->save();
-        if($done) {
-        return response()->json(['Menu successfully updated!']);
+        if ($done) {
+            return response()->json(['Menu successfully updated!']);
         }
     }
-
-
 }

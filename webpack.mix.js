@@ -12,7 +12,7 @@ const mix = require("laravel-mix");
  */
 
 mix.js("resources/js/app.js", "public/js")
-    .js('resources/js/manage/app.js', 'public/js/manage');
+   .js('resources/js/manage/app.js', 'public/js/manage');
 
 const tailwindcss = require("tailwindcss");
 

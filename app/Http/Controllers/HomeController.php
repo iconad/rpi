@@ -3,28 +3,33 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ProductHome; // Import your model
+use App\Models\Product;
+
+
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
+    private function getProducts()
+    {
+        return Product::all();
+    }
+
+
     public function index()
     {
+        try {
+            // Example query using Eloquent to fetch products
+            $products = Product::all();
 
-        $products = Producthome::all(); // Retrieve products from the database
-        return view('home', compact('products')); // Pass products to the view
+            // Pass the products to the home view
+            return view('home', ['products' => $products]);
+        } catch (\Exception $e) {
+            // Handle any exceptions or errors here
+            return view('home', ['products' => null])->with('error', 'Error fetching products: ' . $e->getMessage());
+        }
     }
 }

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,17 @@ use Laravel\Socialite\Facades\Socialite;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// routes/web.php
+
+
+
+use Illuminate\Support\Facades\DB;
+
+Route::get('/test-database', function () {
+    $result = DB::table('menus')->select('*')->first();
+    dd($result);
+});
+
 
 Route::get('/home-demo', function () {
     return view('home-backup');
@@ -82,6 +94,7 @@ Route::group(['prefix' => 'profile'], function () {
         Route::resource('/address-books', 'AddressBookController');
         Route::get('/designs', 'ProfileController@designs');
         Route::resource('/pending-proofs', 'PendingProofController');
+        Route::resource('/menu', 'MenuController');
     });
 });
 
@@ -177,3 +190,6 @@ Route::group(['prefix' => 'manage'], function () {
 
 Route::get('/auth/google/redirect', [App\Http\Controllers\Auth\LoginController::class, 'redirectToGoogle'])->name('login.google');
 Route::get('/auth/google/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleGoogleCallback']);
+Route::get('/menu', 'MenuController@index'); // Replace 'MenuController@index' with your actual controller and method.
+Route::get('/test-database-connection', 'homeController@testDatabaseConnection');
+Route::get('/home', [HomeController::class, 'index']);
