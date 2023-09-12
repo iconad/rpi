@@ -280,6 +280,12 @@
         .newitems {
             margin-right: 3rem;
             margin-left: 1rem;
+            padding: 3rem;
+        }
+
+        .formsection {
+
+            padding: 3rem;
         }
 
         .support {
@@ -297,6 +303,12 @@
     }
 
     @media screen and (max-width: 767px) {
+        p.newitemsbox-price.text-xs.md\:text-lg.text-dark-gray {
+            color: grey;
+            font-size: 0.6rem;
+            margin-bottom: 10px;
+        }
+
         .reviewsh {
             font-size: 0.8rem !important;
         }
@@ -573,7 +585,7 @@
                     <nav class="bg-white text-black py-4 px-14 md:px-15 flex justify-between items-center">
                         <div class="flex items-center md:ml-4">
                             <!-- Add your logo here -->
-                            <a href="#"><img src="{{ asset('images/home/logo.png') }}" alt="Printo"
+                            <a href="https://printo.ae/"><img src="{{ asset('images/home/logo.png') }}" alt="Printo"
                                     class="h-16 w-30"></a>
                         </div>
 

@@ -31,6 +31,18 @@ Route::get('/home-demo', function () {
     return view('home-backup');
 })->name('home.demo');
 
+Route::get('/category-printing', function () {
+    return view('category-printing');
+})->name('category-printing');
+
+Route::get('/category-packages', function () {
+    return view('category-packages');
+})->name('category-packages');
+
+Route::get('/category-banners', function () {
+    return view('banners');
+})->name('banners');
+
 Route::get('/comingsoon', function () {
     return view('commingsoon');
 })->name('comingsoon');
