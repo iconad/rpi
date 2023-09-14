@@ -56,7 +56,7 @@
                 <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
                     Remember your password?
                     <a class="text-#fff-600 decoration-2 hover:underline font-medium reset-text"
-                        href="https://printo/login">
+                        href="https://printo.ae/login">
                         Login here
                     </a>
                 </p>
