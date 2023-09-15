@@ -10,7 +10,7 @@
     </div>
 
     <!-- Images -->
-    <div class="mt-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         <!-- Image 1 -->
         <div class="bg-white p-0 md:p-4">
             <a href=""><img src="{{ asset('images/wallpapers/1.jpg') }}" alt="Image 1" class="w-full h-auto"></a>
