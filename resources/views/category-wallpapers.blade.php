@@ -5,7 +5,7 @@
 <section class="toppicks md:p-5 p-4 md:px-14">
     <!-- Text -->
     <div class="bg-white p-0 md:p-4 mt-4">
-        <h1 class="text-4xl md:text-5xl mb-3 md:mb-6">Wallpapers.</h1>
+        <h1 class="text-4xl md:text-5xl mb-1 md:mb-6">Wallpapers.</h1>
         <p class="text-4xl md:text-5xl mb-6">Walls that Speak Your Style.</p>
     </div>
 
