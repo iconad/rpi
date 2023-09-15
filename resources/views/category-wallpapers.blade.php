@@ -79,7 +79,7 @@
         <div class="bg-white p-0 md:p-4">
             <a href=""><img src="{{ asset('images/wallpapers/8.jpg') }}" alt="Image 1" class="w-full h-auto"></a>
             <a href="">
-                <h2 class="md:text-lg text-xs mt-3 md:mt-6">education</h2>
+                <h2 class="md:text-lg text-xs mt-3 md:mt-6">Education</h2>
             </a>
         </div>
 
@@ -95,7 +95,7 @@
         <div class="bg-white p-0 md:p-4">
             <a href=""><img src="{{ asset('images/wallpapers/10.jpg') }}" alt="Image 2" class="w-full h-auto"></a>
             <a href="">
-                <h2 class="md:text-lg text-xs mt-3 md:mt-6">canvas Frames
+                <h2 class="md:text-lg text-xs mt-3 md:mt-6">Canvas Frames
                 </h2>
             </a>
         </div>
