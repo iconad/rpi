@@ -16,7 +16,7 @@
         <div class="bg-white p-0 md:p-4">
             <a href=""><img src="{{ asset('images/printing/1.jpg') }}" alt="Image 1" class="w-full h-auto"></a>
             <a href="">
-                <h2 class="md:text-lg text-lg mb-4 md:mb-0 mt-3 md:mt-6">Business cards</h2>
+                <h2 class="md:text-lg text-lg mb-4 md:mb-0 mt-3 md:mt-6">Business Cards</h2>
             </a>
         </div>
 
@@ -67,7 +67,7 @@
         <div class="bg-white p-0 md:p-4">
             <a href=""><img src="{{ asset('images/printing/9.jpg') }}" alt="Image 2" class="w-full h-auto"></a>
             <a href="">
-                <h2 class="md:text-lg text-lg mb-4 md:mb-0 mt-3 md:mt-6"> Dining essentials</h2>
+                <h2 class="md:text-lg text-lg mb-4 md:mb-0 mt-3 md:mt-6"> Dining Essentials</h2>
             </a>
         </div>
         <div class="bg-white p-0 md:p-4">
