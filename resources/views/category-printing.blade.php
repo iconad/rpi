@@ -16,7 +16,7 @@
         <div class="bg-white p-0 md:p-4">
             <a href=""><img src="{{ asset('images/printing/1.jpg') }}" alt="Image 1" class="w-full h-auto"></a>
             <a href="">
-                <h2 class="md:text-lg text-lg mb-4 md:mb-0  mt-3 md:mt-6">Business cards</h2>
+                <h2 class="md:text-lg text-lg mb-4 md:mb-0 mt-3 md:mt-6">Business cards</h2>
             </a>
         </div>
 
@@ -24,56 +24,56 @@
         <div class="bg-white p-0 md:p-4">
             <a href=""><img src="{{ asset('images/printing/2.jpg') }}" alt="Image 2" class="w-full h-auto"></a>
             <a href="">
-                <h2 class="md:text-lg text-lg mb-4 md:mb-0  mt-3 md:mt-6">Envelopes</h2>
+                <h2 class="md:text-lg text-lg mb-4 md:mb-0 mt-3 md:mt-6">Envelopes</h2>
             </a>
         </div>
 
         <div class="bg-white p-0 md:p-4">
             <a href=""><img src="{{ asset('images/printing/3.jpg') }}" alt="Image 2" class="w-full h-auto"></a>
             <a href="">
-                <h2 class="md:text-lg text-lg mb-4 md:mb-0  mt-3 md:mt-6"> Stationery</h2>
+                <h2 class="md:text-lg text-lg mb-4 md:mb-0 mt-3 md:mt-6"> Stationery</h2>
             </a>
         </div>
         <div class="bg-white p-0 md:p-4">
             <a href=""><img src="{{ asset('images/printing/4.jpg') }}" alt="Image 2" class="w-full h-auto"></a>
             <a href="">
-                <h2 class="md:text-lg text-lg mb-4 md:mb-0  mt-3 md:mt-6">Notebooks & Notepads</h2>
+                <h2 class="md:text-lg text-lg mb-4 md:mb-0 mt-3 md:mt-6">Notebooks & Notepads</h2>
             </a>
         </div>
         <div class="bg-white p-0 md:p-4">
             <a href=""><img src="{{ asset('images/printing/5.jpg') }}" alt="Image 2" class="w-full h-auto"></a>
             <a href="">
-                <h2 class="md:text-lg text-lg mb-4 md:mb-0  mt-3 md:mt-6">Paper Marketing</h2>
+                <h2 class="md:text-lg text-lg mb-4 md:mb-0 mt-3 md:mt-6">Paper Marketing</h2>
             </a>
         </div>
         <div class="bg-white p-0 md:p-4">
             <a href=""><img src="{{ asset('images/printing/6.jpg') }}" alt="Image 2" class="w-full h-auto"></a>
             <a href="">
-                <h2 class="md:text-lg text-lg mb-4 md:mb-0  mt-3 md:mt-6">Calendars</h2>
+                <h2 class="md:text-lg text-lg mb-4 md:mb-0 mt-3 md:mt-6">Calendars</h2>
             </a>
         </div>
         <div class="bg-white p-0 md:p-4">
             <a href=""><img src="{{ asset('images/printing/7.jpg') }}" alt="Image 2" class="w-full h-auto"></a>
             <a href="">
-                <h2 class="md:text-lg text-lg mb-4 md:mb-0  mt-3 md:mt-6">Postcards & Greeting Cards</h2>
+                <h2 class="md:text-lg text-lg mb-4 md:mb-0 mt-3 md:mt-6">Postcards & Greeting Cards</h2>
             </a>
         </div>
         <div class="bg-white p-0 md:p-4">
             <a href=""><img src="{{ asset('images/printing/8.jpg') }}" alt="Image 2" class="w-full h-auto"></a>
             <a href="">
-                <h2 class="md:text-lg text-lg mb-4 md:mb-0  mt-3 md:mt-6">Company Profiles</h2>
+                <h2 class="md:text-lg text-lg mb-4 md:mb-0 mt-3 md:mt-6">Company Profiles</h2>
             </a>
         </div>
         <div class="bg-white p-0 md:p-4">
             <a href=""><img src="{{ asset('images/printing/9.jpg') }}" alt="Image 2" class="w-full h-auto"></a>
             <a href="">
-                <h2 class="md:text-lg text-lg mb-4 md:mb-0  mt-3 md:mt-6"> Dining essentials</h2>
+                <h2 class="md:text-lg text-lg mb-4 md:mb-0 mt-3 md:mt-6"> Dining essentials</h2>
             </a>
         </div>
         <div class="bg-white p-0 md:p-4">
             <a href=""><img src="{{ asset('images/printing/10.jpg') }}" alt="Image 2" class="w-full h-auto"></a>
             <a href="">
-                <h2 class="md:text-lg text-lg mb-4 md:mb-0  mt-3 md:mt-6">Fans</h2>
+                <h2 class="md:text-lg text-lg mb-4 md:mb-0 mt-3 md:mt-6">Fans</h2>
             </a>
         </div>
 
