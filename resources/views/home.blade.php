@@ -775,17 +775,18 @@
         <!-- Right Side Form -->
         <div class="md:w-1/2 px-1 md:px-8">
             <form class="p-0 md:p-6 rounded-lg py-6">
+
                 <label class="block mb-2 pt-6 text-1xl md:text-lg">NAME</label>
-                <input type="text" class="w-full px-4 py-2 mb-4 border bg-gray-200" placeholder="Full Name">
+                <input type="text" name="name" class="w-full px-4 py-2 mb-4 border bg-gray-200" placeholder="Full Name">
 
                 <label class="block mb-2 pt-6 text-1xl md:text-lg">PHONE NUMBER</label>
-                <input id="phoneInput" type="tel" class="w-full px-10 py-2 mb-4 border pl-10 bg-gray-200" style="width: 100% !important;" placeholder="Your Phone Number">
+                <input id="phoneInput" name="phone" type="tel" class="w-full px-10 py-2 mb-4 border pl-10 bg-gray-200" style="width: 100% !important;" placeholder="Your Phone Number">
 
                 <label class="block mb-2 pt-6 text-1xl md:text-lg">EMAIL ADDRESS</label>
-                <input type="email" class="w-full px-4 py-2 mb-4 border bg-gray-200" placeholder="Email">
+                <input type="email" name="email" class="w-full px-4 py-2 mb-4 border bg-gray-200" placeholder="Email">
 
                 <label class="block mb-2 pt-6 text-1xl md:text-lg">MESSAGE</label>
-                <textarea class="w-full px-4 py-2 mb-4 border bg-gray-200" rows="4" placeholder="Message"></textarea>
+                <textarea class="w-full px-4 py-2 mb-4 border bg-gray-200" name="message" rows="4" placeholder="Message"></textarea>
 
                 <button class="bg-black text-white px-4 py-2 rounded-full">Send Message</button>
             </form>

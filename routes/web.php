@@ -43,6 +43,11 @@ Route::get('/category-banners', function () {
     return view('banners');
 })->name('banners');
 
+Route::get('/category-wallpapers', function () {
+    return view('category-wallpapers');
+})->name('category');
+
+
 Route::get('/comingsoon', function () {
     return view('commingsoon');
 })->name('comingsoon');
@@ -202,7 +207,6 @@ Route::group(['prefix' => 'manage'], function () {
         Route::resource('/template-categories/{category}/templates', 'TemplateController');
     });
 });
-
 
 Route::get('/auth/google/redirect', [App\Http\Controllers\Auth\LoginController::class, 'redirectToGoogle'])->name('login.google');
 Route::get('/auth/google/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleGoogleCallback']);
