@@ -47,6 +47,10 @@ Route::get('/category-wallpapers', function () {
     return view('category-wallpapers');
 })->name('category');
 
+Route::get('/estimate-demo', function () {
+    return view('estimate-demo');
+})->name('estimate');
+
 
 Route::get('/comingsoon', function () {
     return view('commingsoon');
@@ -210,6 +214,6 @@ Route::group(['prefix' => 'manage'], function () {
 
 Route::get('/auth/google/redirect', [App\Http\Controllers\Auth\LoginController::class, 'redirectToGoogle'])->name('login.google');
 Route::get('/auth/google/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleGoogleCallback']);
-Route::get('/menu', 'MenuController@index'); // Replace 'MenuController@index' with your actual controller and method.
 Route::get('/test-database-connection', 'homeController@testDatabaseConnection');
 Route::get('/home', [HomeController::class, 'index']);
+Route::get('/menunew', 'MenuController@show');

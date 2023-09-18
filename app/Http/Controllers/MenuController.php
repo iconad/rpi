@@ -57,9 +57,6 @@ class MenuController extends Controller
      * @param  \App\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function show(Menu $menu)
-    {
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -129,5 +126,13 @@ class MenuController extends Controller
         if ($done) {
             return response()->json(['Menu successfully updated!']);
         }
+    }
+    public function show()
+    {
+        // Fetch menu items from the database
+        $menuItems = Menu::all();
+
+        // Return the menu view with the menu items
+        return view('menu', compact('menuItems'));
     }
 }
