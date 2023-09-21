@@ -4,13 +4,16 @@
         <div class="flex flex-col ml-4 md:ml-16">
             <img src="{{ asset('images/home/logo.png') }}" alt="Printo" class="h-16 logo mb-4">
             <div class="flex gap-2">
-                <a href="#" class="text-black rounded-full bg-gray-200 p-2">
+                <a href="https://www.linkedin.com/company/printoae/" target="_blank"
+                    class="text-black rounded-full bg-gray-200 p-2">
                     <i class="fab fa-linkedin text-xl"></i>
                 </a>
-                <a href="#" class="text-black rounded-full bg-gray-200 p-2">
+                <a href="https://www.instagram.com/printoae/" target="_blank"
+                    class="text-black rounded-full bg-gray-200 p-2">
                     <i class="fab fa-instagram text-xl"></i>
                 </a>
-                <a href="#" class="text-black rounded-full bg-gray-200 p-2">
+                <a href="https://web.facebook.com/printouae" target="_blank"
+                    class="text-black rounded-full bg-gray-200 p-2">
                     <i class="fab fa-facebook text-xl "></i>
                 </a>
             </div>
@@ -20,12 +23,16 @@
         <div class="pt-8 md:pt-0 pb-4 ml-4 md:ml-8">
             <h3 class="text-xl mb-6 border-b-2 printoborder">Services</h3>
             <ul>
-                <li class="mb-4"><a href="https://printo.ae/categories/print-products" class="text-black mb-6 hover:text-red-600">Printing</a>
+                <li class="mb-4"><a href="https://printo.ae/categories/print-products"
+                        class="text-black mb-6 hover:text-red-600">Printing</a>
                 </li>
-                <li class="mb-4"><a href="https://printo.ae/categories/packaging" class="text-black mb-6 hover:text-red-600">Packaging</a></li>
-                <li class="mb-4"><a href="https://printo.ae/categories/banners-displays" class="text-black mb-6 hover:text-red-600">Banners &
+                <li class="mb-4"><a href="https://printo.ae/categories/packaging"
+                        class="text-black mb-6 hover:text-red-600">Packaging</a></li>
+                <li class="mb-4"><a href="https://printo.ae/categories/banners-displays"
+                        class="text-black mb-6 hover:text-red-600">Banners &
                         Displays</a></li>
-                <li class="mb-4"><a href="https://printo.ae/categories/wallpapers" class="text-black mb-6 hover:text-red-600">Wallpapers</a></li>
+                <li class="mb-4"><a href="https://printo.ae/categories/wallpapers"
+                        class="text-black mb-6 hover:text-red-600">Wallpapers</a></li>
             </ul>
         </div>
 
@@ -33,12 +40,14 @@
         <div class="pb-4 support ml-4 md:ml-0">
             <h3 class="text-xl mb-6 border-b-2 printoborder">Support</h3>
             <ul>
-                <li class="mb-4"><a href="https://printo.ae/pages/contact" class="text-black mb-6 hover:text-red-600">Contact
+                <li class="mb-4"><a href="https://printo.ae/pages/contact"
+                        class="text-black mb-6 hover:text-red-600">Contact
                         Us</a></li>
                 <li class="mb-4"><a href="#" class="text-black mb-6 hover:text-red-600">Privacy
                         Policy</a>
                 </li>
-                <li class="mb-4"><a href="https://printo.ae/pages/terms-and-condition" class="text-black mb-6 hover:text-red-600">Conditions</a></li>
+                <li class="mb-4"><a href="https://printo.ae/pages/terms-and-condition"
+                        class="text-black mb-6 hover:text-red-600">Conditions</a></li>
             </ul>
         </div>
 
@@ -46,7 +55,8 @@
         <div class="contactus ml-4 md:ml-0">
             <h3 class="text-xl mb-6 border-b-2 printoborder">Get in Touch</h3>
             <ul>
-                <li class="mb-4"><a href="https://printo.ae/estimate" class="text-black mb-6 hover:text-red-600">Estimate</a>
+                <li class="mb-4"><a href="https://printo.ae/estimate"
+                        class="text-black mb-6 hover:text-red-600">Estimate</a>
                 </li>
                 <li class="mb-4"><a href="#" class="text-black mb-6 hover:text-red-600">Email</a>
                 </li>
@@ -87,265 +97,265 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <script>
-    var slides = [];
-    var swiper;
+var slides = [];
+var swiper;
 
-    function updateSlides() {
-        if (window.innerWidth <= 768) {
-            // Mobile slides
-            slides = [{
-                    image: 'images/home/slider/slidem1.jpg',
-                    alt: 'Mobile Slide 1',
-                    link: 'https://printo.ae/categories/print-products'
-                },
-                {
-                    image: 'images/home/slider/slidem2.jpg',
-                    alt: 'Mobile Slide 1',
-                    link: 'https://printo.ae/categories/print-products'
-                },
-                {
-                    image: 'images/home/slider/slidem3.jpg',
-                    alt: 'Mobile Slide 1',
-                    link: '#'
-                },
-                {
-                    image: 'images/home/slider/slidem4.jpg',
-                    alt: 'Mobile Slide 1',
-                    link: '#'
-                },
-                {
-                    image: 'images/home/slider/slidem5.jpg',
-                    alt: 'Mobile Slide 1',
-                    link: '#'
-                },
-                {
-                    image: 'images/home/slider/slidem6.jpg',
-                    alt: 'Mobile Slide 1',
-                    link: '#'
-                },
-                // Add more mobile slides as needed
-            ];
-        } else {
-            // Desktop slides
-            slides = [{
-                    image: 'images/home/slider/slide1.jpg',
-                    alt: 'Desktop Slide 1',
-                    link: 'https://printo.ae/categories/print-products'
-                },
-                {
-                    image: 'images/home/slider/slide2.jpg',
-                    alt: 'Desktop Slide 2',
-                    link: 'https://printo.ae/categories/print-products'
-                },
-                {
-                    image: 'images/home/slider/slide3.jpg',
-                    alt: 'Desktop Slide 3',
-                    link: '#'
-                },
-                {
-                    image: 'images/home/slider/slide4.jpg',
-                    alt: 'Desktop Slide 4',
-                    link: '#'
-                },
-                {
-                    image: 'images/home/slider/slide5.jpg',
-                    alt: 'Desktop Slide 5',
-                    link: '#'
-                },
-                {
-                    image: 'images/home/slider/slide6.jpg',
-                    alt: 'Desktop Slide 6',
-                    link: '#'
-                },
-                // Add more desktop slides as needed
-            ];
-        }
+function updateSlides() {
+    if (window.innerWidth <= 768) {
+        // Mobile slides
+        slides = [{
+                image: 'images/home/slider/slidem1.jpg',
+                alt: 'Mobile Slide 1',
+                link: 'https://printo.ae/categories/print-products'
+            },
+            {
+                image: 'images/home/slider/slidem2.jpg',
+                alt: 'Mobile Slide 1',
+                link: 'https://printo.ae/categories/print-products'
+            },
+            {
+                image: 'images/home/slider/slidem3.jpg',
+                alt: 'Mobile Slide 1',
+                link: '#'
+            },
+            {
+                image: 'images/home/slider/slidem4.jpg',
+                alt: 'Mobile Slide 1',
+                link: '#'
+            },
+            {
+                image: 'images/home/slider/slidem5.jpg',
+                alt: 'Mobile Slide 1',
+                link: '#'
+            },
+            {
+                image: 'images/home/slider/slidem6.jpg',
+                alt: 'Mobile Slide 1',
+                link: '#'
+            },
+            // Add more mobile slides as needed
+        ];
+    } else {
+        // Desktop slides
+        slides = [{
+                image: 'images/home/slider/slide1.jpg',
+                alt: 'Desktop Slide 1',
+                link: 'https://printo.ae/categories/print-products'
+            },
+            {
+                image: 'images/home/slider/slide2.jpg',
+                alt: 'Desktop Slide 2',
+                link: 'https://printo.ae/categories/print-products'
+            },
+            {
+                image: 'images/home/slider/slide3.jpg',
+                alt: 'Desktop Slide 3',
+                link: '#'
+            },
+            {
+                image: 'images/home/slider/slide4.jpg',
+                alt: 'Desktop Slide 4',
+                link: '#'
+            },
+            {
+                image: 'images/home/slider/slide5.jpg',
+                alt: 'Desktop Slide 5',
+                link: '#'
+            },
+            {
+                image: 'images/home/slider/slide6.jpg',
+                alt: 'Desktop Slide 6',
+                link: '#'
+            },
+            // Add more desktop slides as needed
+        ];
+    }
 
-        var swiperWrapper = document.querySelector('.swiper-wrapper');
-        swiperWrapper.innerHTML = ''; // Clear existing slides
+    var swiperWrapper = document.querySelector('.swiper-wrapper');
+    swiperWrapper.innerHTML = ''; // Clear existing slides
 
-        slides.forEach(function(slide) {
-            var slideHtml = `
+    slides.forEach(function(slide) {
+        var slideHtml = `
                     <div class="swiper-slide relative">
                         <a href="${slide.link}">
                             <img src="${slide.image}" alt="${slide.alt}" class="slide-image">
                         </a>
                     </div>
                 `;
-            swiperWrapper.innerHTML += slideHtml;
-        });
+        swiperWrapper.innerHTML += slideHtml;
+    });
 
-        if (swiper) {
-            swiper.destroy(); // Destroy existing Swiper instance
-        }
-
-        swiper = new Swiper('.swiper-container-responsive', {
-            slidesPerView: 1,
-            loop: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-        });
+    if (swiper) {
+        swiper.destroy(); // Destroy existing Swiper instance
     }
 
-    // Initial update and event listener
-    updateSlides();
-    window.addEventListener('resize', updateSlides);
+    swiper = new Swiper('.swiper-container-responsive', {
+        slidesPerView: 1,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+    });
+}
+
+// Initial update and event listener
+updateSlides();
+window.addEventListener('resize', updateSlides);
 </script>
 
 
 
 
 <script>
-    const toggleButtons = document.querySelectorAll('.toggle-icon');
-    const questionLinks = document.querySelectorAll('.faqbutton a'); // Select all the question links
+const toggleButtons = document.querySelectorAll('.toggle-icon');
+const questionLinks = document.querySelectorAll('.faqbutton a'); // Select all the question links
 
-    toggleButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const answer = button.parentElement.nextElementSibling;
-            toggleAnswer(answer, button);
-        });
+toggleButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const answer = button.parentElement.nextElementSibling;
+        toggleAnswer(answer, button);
     });
+});
 
-    questionLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent the default link behavior
-            const answer = link.parentElement.nextElementSibling;
-            const toggleButton = link.parentElement.querySelector('.toggle-icon');
-            toggleAnswer(answer, toggleButton);
-        });
+questionLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the default link behavior
+        const answer = link.parentElement.nextElementSibling;
+        const toggleButton = link.parentElement.querySelector('.toggle-icon');
+        toggleAnswer(answer, toggleButton);
     });
+});
 
-    function toggleAnswer(answer, button) {
-        if (answer.classList.contains('hidden')) {
-            answer.classList.remove('hidden');
-            button.textContent = '-';
-            button.classList.add('bg-gray-600');
-        } else {
-            answer.classList.add('hidden');
-            button.textContent = '+';
-            button.classList.remove('bg-gray-600');
-        }
+function toggleAnswer(answer, button) {
+    if (answer.classList.contains('hidden')) {
+        answer.classList.remove('hidden');
+        button.textContent = '-';
+        button.classList.add('bg-gray-600');
+    } else {
+        answer.classList.add('hidden');
+        button.textContent = '+';
+        button.classList.remove('bg-gray-600');
     }
+}
 </script>
 
 <script>
-    // Function to initialize Swiper on desktop
-    function initDesktopSwiper() {
-        new Swiper('.custom-swiper-container', {
-            slidesPerView: 3.6, // Show 3 slides on desktop
-            spaceBetween: 16,
-            loop: true,
-            autoplay: {
-                delay: 3000,
-            },
-        });
+// Function to initialize Swiper on desktop
+function initDesktopSwiper() {
+    new Swiper('.custom-swiper-container', {
+        slidesPerView: 3.6, // Show 3 slides on desktop
+        spaceBetween: 16,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+        },
+    });
+}
+
+// Function to initialize Swiper on mobile
+function initMobileSwiper() {
+    new Swiper('.custom-swiper-container', {
+        slidesPerView: 1.6, // Show 1 slide at a time on mobile
+        spaceBetween: 16,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+        },
+    });
+}
+
+// Check the screen width and initialize the appropriate Swiper instance
+function initSwiperBasedOnScreenWidth() {
+    if (window.innerWidth < 640) {
+        // Mobile screen
+        initMobileSwiper();
+    } else {
+        // Desktop screen
+        initDesktopSwiper();
     }
+}
 
-    // Function to initialize Swiper on mobile
-    function initMobileSwiper() {
-        new Swiper('.custom-swiper-container', {
-            slidesPerView: 1.6, // Show 1 slide at a time on mobile
-            spaceBetween: 16,
-            loop: true,
-            autoplay: {
-                delay: 3000,
-            },
-        });
-    }
+// Initial initialization based on screen width
+initSwiperBasedOnScreenWidth();
 
-    // Check the screen width and initialize the appropriate Swiper instance
-    function initSwiperBasedOnScreenWidth() {
-        if (window.innerWidth < 640) {
-            // Mobile screen
-            initMobileSwiper();
-        } else {
-            // Desktop screen
-            initDesktopSwiper();
-        }
-    }
-
-    // Initial initialization based on screen width
-    initSwiperBasedOnScreenWidth();
-
-    // Update Swiper when the window is resized
-    window.addEventListener('resize', initSwiperBasedOnScreenWidth);
+// Update Swiper when the window is resized
+window.addEventListener('resize', initSwiperBasedOnScreenWidth);
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
 <script>
-    const phoneInput = document.querySelector("#phoneInput");
+const phoneInput = document.querySelector("#phoneInput");
 
-    const iti = window.intlTelInput(phoneInput, {
-        initialCountry: "ae", // Set default country
-        separateDialCode: true,
-        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.js",
-    });
+const iti = window.intlTelInput(phoneInput, {
+    initialCountry: "ae", // Set default country
+    separateDialCode: true,
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.js",
+});
 
-    phoneInput.addEventListener("blur", () => {
-        const phoneNumber = iti.getNumber();
-        phoneInput.value = phoneNumber;
-    });
+phoneInput.addEventListener("blur", () => {
+    const phoneNumber = iti.getNumber();
+    phoneInput.value = phoneNumber;
+});
 </script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var companyLogoSwiper = new Swiper('.companylogo-carousel', {
-            slidesPerView: 3,
-            spaceBetween: 14,
-            loop: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
+document.addEventListener('DOMContentLoaded', function() {
+    var companyLogoSwiper = new Swiper('.companylogo-carousel', {
+        slidesPerView: 3,
+        spaceBetween: 14,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 6,
+                spaceBetween: 14,
             },
-            breakpoints: {
-                640: {
-                    slidesPerView: 6,
-                    spaceBetween: 14,
-                },
-            },
-        });
+        },
+    });
 
-        // Manually clone the slides for desktop version
-        var desktopSlides = document.querySelectorAll('.companylogo-carousel .swiper-slide');
-        var desktopSlideCount = desktopSlides.length;
+    // Manually clone the slides for desktop version
+    var desktopSlides = document.querySelectorAll('.companylogo-carousel .swiper-slide');
+    var desktopSlideCount = desktopSlides.length;
 
-        if (window.innerWidth > 640) {
-            for (var i = 0; i < desktopSlideCount; i++) {
-                var cloneSlide = desktopSlides[i].cloneNode(true);
-                cloneSlide.classList.add('swiper-slide-duplicate');
-                companyLogoSwiper.wrapperEl.appendChild(cloneSlide);
-            }
+    if (window.innerWidth > 640) {
+        for (var i = 0; i < desktopSlideCount; i++) {
+            var cloneSlide = desktopSlides[i].cloneNode(true);
+            cloneSlide.classList.add('swiper-slide-duplicate');
+            companyLogoSwiper.wrapperEl.appendChild(cloneSlide);
         }
-    });
+    }
+});
 </script>
 
 
 <script>
-    const searchButton = document.getElementById('searchButton');
-    const searchBar = document.getElementById('searchBar');
-    const menuButton = document.getElementById('menuButton');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeMenuButton = document.getElementById('closeMenuButton');
+const searchButton = document.getElementById('searchButton');
+const searchBar = document.getElementById('searchBar');
+const menuButton = document.getElementById('menuButton');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMenuButton = document.getElementById('closeMenuButton');
 
-    searchButton.addEventListener('click', () => {
-        searchBar.classList.toggle('hidden');
-    });
+searchButton.addEventListener('click', () => {
+    searchBar.classList.toggle('hidden');
+});
 
-    // Toggle menu visibility using existing classes
-    menuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('translate-x-full');
-    });
+// Toggle menu visibility using existing classes
+menuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('translate-x-full');
+});
 
-    closeMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.add('translate-x-full');
-    });
+closeMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.add('translate-x-full');
+});
 </script>

@@ -17,7 +17,7 @@
     <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
 
         @if (count($categories) == 0)
-        <div class="h-64 flex items-center justify-center">
+        <div class="h-auto flex items-center justify-center">
             <span class="text-2xl md:text-4xl uppercase font-thin text-gray-400">0 Products found!</span>
         </div>
         @else
@@ -39,7 +39,7 @@
         <div class="bg-white p-0 md:p-4">
             <a href="{{$url}}">
                 <thumb-image-blade image="{{$category->getMedia('thumbnail')[0]->file_name}}"
-                    id="{{$category->getMedia('thumbnail')[0]->id}}" classess="w-full h-64 object-cover">
+                    id="{{$category->getMedia('thumbnail')[0]->id}}" classess="w-full h-auto object-cover">
                 </thumb-image-blade>
                 <!-- 
                 <img src="{{ asset('images/printing/2.jpg') }}" alt="Image 2" class="w-full h-auto"> -->
@@ -57,11 +57,11 @@
             @if (count($category->getMedia('images')) != 0)
             <a href="/products/wallpapers/{{$category->slug}}">
                 <thumb-image-blade image="{{$category->getMedia('images')[0]->file_name}}"
-                    id="{{$category->getMedia('images')[0]->id}}" classess="w-full h-64 object-cover">
+                    id="{{$category->getMedia('images')[0]->id}}" classess="w-full h-auto object-cover">
                 </thumb-image-blade>
             </a>
             @else
-            <div class="bg-gray-200 font-semibold text-gray-400 capitalize h-64 flex items-center justify-center">
+            <div class="bg-gray-200 font-semibold text-gray-400 capitalize h-auto flex items-center justify-center">
                 no image
             </div>
             @endif
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <section class="products-wrapper mt-5">
     @if (count($categories) == 0)
-    <div class="h-64 flex items-center justify-center">
+    <div class="h-auto flex items-center justify-center">
         <span class="text-2xl md:text-4xl uppercase font-thin text-gray-400">0 Products found!</span>
     </div>
     @else
@@ -168,11 +168,11 @@ document.addEventListener('DOMContentLoaded', function() {
             @if (count($category->getMedia('thumbnail')) != 0)
             <a href="{{$url}}">
                 <thumb-image-blade image="{{$category->getMedia('thumbnail')[0]->file_name}}"
-                    id="{{$category->getMedia('thumbnail')[0]->id}}" classess="w-full h-64 object-cover">
+                    id="{{$category->getMedia('thumbnail')[0]->id}}" classess="w-full h-auto object-cover">
                 </thumb-image-blade>
             </a>
             @else
-            <div class="bg-gray-200 font-semibold text-gray-400 capitalize h-64 flex items-center justify-center">
+            <div class="bg-gray-200 font-semibold text-gray-400 capitalize h-auto flex items-center justify-center">
                 no image
             </div>
             @endif
@@ -191,11 +191,11 @@ document.addEventListener('DOMContentLoaded', function() {
             @if (count($category->getMedia('images')) != 0)
             <a href="/products/wallpapers/{{$category->slug}}">
                 <thumb-image-blade image="{{$category->getMedia('images')[0]->file_name}}"
-                    id="{{$category->getMedia('images')[0]->id}}" classess="w-full h-64 object-cover">
+                    id="{{$category->getMedia('images')[0]->id}}" classess="w-full h-auto object-cover">
                 </thumb-image-blade>
             </a>
             @else
-            <div class="bg-gray-200 font-semibold text-gray-400 capitalize h-64 flex items-center justify-center">
+            <div class="bg-gray-200 font-semibold text-gray-400 capitalize h-auto flex items-center justify-center">
                 no image
             </div>
             @endif
