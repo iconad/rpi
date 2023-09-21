@@ -340,22 +340,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <script>
-const searchButton = document.getElementById('searchButton');
-const searchBar = document.getElementById('searchBar');
-const menuButton = document.getElementById('menuButton');
-const mobileMenu = document.getElementById('mobileMenu');
-const closeMenuButton = document.getElementById('closeMenuButton');
+// Define a function to encapsulate your code
+function customScript() {
+    const searchButton = document.getElementById('searchButton');
+    const searchBar = document.getElementById('searchBar');
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenuButton = document.getElementById('closeMenuButton');
 
-searchButton.addEventListener('click', () => {
-    searchBar.classList.toggle('hidden');
-});
+    searchButton.addEventListener('click', () => {
+        searchBar.classList.toggle('hidden');
+    });
 
-// Toggle menu visibility using existing classes
-menuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('translate-x-full');
-});
+    // Toggle menu visibility using existing classes
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('translate-x-full');
+    });
 
-closeMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.add('translate-x-full');
-});
+    closeMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.add('translate-x-full');
+    });
+}
+
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', customScript);
 </script>
+
+<script src="{{ asset('js/app.js') }}" defer></script>

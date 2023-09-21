@@ -50,7 +50,6 @@
     @include('partials.footer')
     <!-- Include your footer here -->
 
-    <script src="{{ asset('js/app.js') }}" defer></script>
     <script>
         // Get the current URL
         const currentURL = window.location.href;
