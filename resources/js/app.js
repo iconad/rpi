@@ -46,13 +46,8 @@ const apolloProvider = new VueApollo({
 require('./components')
 
 Vue.use(Vuex)
-Vue.use(VueAwesomeSwiper);
-Vue.use(Viewer);
-Vue.use(VTooltip)
-Vue.use(VModal)
-Vue.use(VueApollo)
+
 Vue.use(VLazyImagePlugin)
-Vue.use(VueSweetalert2);
 Vue.use(require('vue-moment'));
 
 
