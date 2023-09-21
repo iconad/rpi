@@ -51,7 +51,7 @@ Route::get('/estimate-demo', function () {
     return view('estimate-demo');
 })->name('estimate');
 
-Route::get('/about', function () {
+Route::get('/about-us', function () {
     return view('about');
 })->name('about');
 
