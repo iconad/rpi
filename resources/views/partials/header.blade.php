@@ -646,7 +646,8 @@
                 <!-- Header for mobile -->
                 <header class="sm:hidden flex items-center justify-between p-4 bg-white">
                     <div class="flex items-center">
-                        <img src="{{ asset('images/home/logo.png') }}" alt="Printo" class="w-16 logoheader h-8 mr-4">
+                        <a href="https://printo.ae/"> <img src="{{ asset('images/home/logo.png') }}" alt="Printo"
+                                class="w-16 logoheader h-8 mr-4"></a>
                         <div class="hidden sm:block">
                             <input type="text" placeholder="Search" class="bg-gray-200 px-2 py-1 rounded-md">
                         </div>
