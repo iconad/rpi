@@ -694,7 +694,7 @@
                         </li>
                         <li><a href="https://printo.ae/comingsoon" class="text-gray-800 hover:text-gray-600">Blog</a>
                         </li>
-                        <li><a href="https://printo.ae/pages/about-us" class="text-gray-800 hover:text-gray-600">About
+                        <li><a href="https://printo.ae/about-us" class="text-gray-800 hover:text-gray-600">About
                                 Us</a></li>
                     </ul>
                     <button id="closeMenuButton" class="text-gray-600 hover:text-gray-800 absolute top-4 right-4">
