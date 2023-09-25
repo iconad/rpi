@@ -97,6 +97,8 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <script>
+
+document.addEventListener('DOMContentLoaded', function() {
 (function() {
     var myUniqueSlider = {};
 
@@ -217,6 +219,7 @@
     myUniqueSlider.updateUniqueSlides();
     window.addEventListener('resize', myUniqueSlider.updateUniqueSlides);
 })();
+});
 </script>
 
 
@@ -258,6 +261,7 @@ function toggleAnswer(answer, button) {
 </script>
 
 <script>
+    document.addEventListener('DOMContentLoaded', function() {
 // Function to initialize Swiper on desktop
 function initDesktopSwiper() {
     new Swiper('.custom-swiper-container', {
@@ -298,6 +302,8 @@ initSwiperBasedOnScreenWidth();
 
 // Update Swiper when the window is resized
 window.addEventListener('resize', initSwiperBasedOnScreenWidth);
+
+});
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
 <script>
