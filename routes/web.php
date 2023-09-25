@@ -55,6 +55,10 @@ Route::get('/about-us', function () {
     return view('about');
 })->name('about');
 
+Route::get('/home-dynamic', function () {
+    return view('home-dynamic');
+})->name('home dynamic');
+
 
 Route::get('/comingsoon', function () {
     return view('commingsoon');

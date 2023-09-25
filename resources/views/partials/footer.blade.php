@@ -97,120 +97,129 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <script>
-var slides = [];
-var swiper;
+(function() {
+    var myUniqueSlider = {};
 
-function updateSlides() {
-    if (window.innerWidth <= 768) {
-        // Mobile slides
-        slides = [{
-                image: 'images/home/slider/slidem1.jpg',
-                alt: 'Mobile Slide 1',
-                link: 'https://printo.ae/categories/print-products'
-            },
-            {
-                image: 'images/home/slider/slidem2.jpg',
-                alt: 'Mobile Slide 1',
-                link: 'https://printo.ae/categories/print-products'
-            },
-            {
-                image: 'images/home/slider/slidem3.jpg',
-                alt: 'Mobile Slide 1',
-                link: '#'
-            },
-            {
-                image: 'images/home/slider/slidem4.jpg',
-                alt: 'Mobile Slide 1',
-                link: '#'
-            },
-            {
-                image: 'images/home/slider/slidem5.jpg',
-                alt: 'Mobile Slide 1',
-                link: '#'
-            },
-            {
-                image: 'images/home/slider/slidem6.jpg',
-                alt: 'Mobile Slide 1',
-                link: '#'
-            },
-            // Add more mobile slides as needed
-        ];
-    } else {
-        // Desktop slides
-        slides = [{
-                image: 'images/home/slider/slide1.jpg',
-                alt: 'Desktop Slide 1',
-                link: 'https://printo.ae/categories/print-products'
-            },
-            {
-                image: 'images/home/slider/slide2.jpg',
-                alt: 'Desktop Slide 2',
-                link: 'https://printo.ae/categories/print-products'
-            },
-            {
-                image: 'images/home/slider/slide3.jpg',
-                alt: 'Desktop Slide 3',
-                link: '#'
-            },
-            {
-                image: 'images/home/slider/slide4.jpg',
-                alt: 'Desktop Slide 4',
-                link: '#'
-            },
-            {
-                image: 'images/home/slider/slide5.jpg',
-                alt: 'Desktop Slide 5',
-                link: '#'
-            },
-            {
-                image: 'images/home/slider/slide6.jpg',
-                alt: 'Desktop Slide 6',
-                link: '#'
-            },
-            // Add more desktop slides as needed
-        ];
-    }
+    myUniqueSlider.uniqueSlides = [];
 
-    var swiperWrapper = document.querySelector('.swiper-wrapper');
-    swiperWrapper.innerHTML = ''; // Clear existing slides
+    myUniqueSlider.updateUniqueSlides = function() {
+        if (window.innerWidth <= 768) {
+            // Mobile slides
+            if (myUniqueSlider.uniqueSlides.length === 0 || myUniqueSlider.slidesType !== 'mobile') {
+                myUniqueSlider.slidesType = 'mobile';
+                myUniqueSlider.uniqueSlides = [{
+                        image: 'images/home/slider/slidem1.jpg',
+                        alt: 'Mobile Slide 1',
+                        link: 'https://printo.ae/categories/print-products'
+                    },
+                    {
+                        image: 'images/home/slider/slidem2.jpg',
+                        alt: 'Mobile Slide 2',
+                        link: 'https://printo.ae/categories/print-products'
+                    },
+                    {
+                        image: 'images/home/slider/slidem3.jpg',
+                        alt: 'Mobile Slide 3',
+                        link: '#'
+                    },
+                    {
+                        image: 'images/home/slider/slidem4.jpg',
+                        alt: 'Mobile Slide 4',
+                        link: '#'
+                    },
+                    {
+                        image: 'images/home/slider/slidem5.jpg',
+                        alt: 'Mobile Slide 5',
+                        link: '#'
+                    },
+                    {
+                        image: 'images/home/slider/slidem6.jpg',
+                        alt: 'Mobile Slide 6',
+                        link: '#'
+                    }
+                ];
+            }
+        } else {
+            // Desktop slides
+            if (myUniqueSlider.uniqueSlides.length === 0 || myUniqueSlider.slidesType !== 'desktop') {
+                myUniqueSlider.slidesType = 'desktop';
+                myUniqueSlider.uniqueSlides = [{
+                        image: 'images/home/slider/slide1.jpg',
+                        alt: 'Desktop Slide 1',
+                        link: 'https://printo.ae/categories/print-products'
+                    },
+                    {
+                        image: 'images/home/slider/slide2.jpg',
+                        alt: 'Desktop Slide 2',
+                        link: 'https://printo.ae/categories/print-products'
+                    },
+                    {
+                        image: 'images/home/slider/slide3.jpg',
+                        alt: 'Desktop Slide 3',
+                        link: '#'
+                    },
+                    {
+                        image: 'images/home/slider/slide4.jpg',
+                        alt: 'Desktop Slide 4',
+                        link: '#'
+                    },
+                    {
+                        image: 'images/home/slider/slide5.jpg',
+                        alt: 'Desktop Slide 5',
+                        link: '#'
+                    },
+                    {
+                        image: 'images/home/slider/slide6.jpg',
+                        alt: 'Desktop Slide 6',
+                        link: '#'
+                    }
+                ];
+            }
+        }
 
-    slides.forEach(function(slide) {
-        var slideHtml = `
-                    <div class="swiper-slide relative">
-                        <a href="${slide.link}">
-                            <img src="${slide.image}" alt="${slide.alt}" class="slide-image">
-                        </a>
-                    </div>
-                `;
-        swiperWrapper.innerHTML += slideHtml;
-    });
+        var swiperWrapper = document.querySelector('.swiper-wrapper');
+        swiperWrapper.innerHTML = ''; // Clear existing slides
 
-    if (swiper) {
-        swiper.destroy(); // Destroy existing Swiper instance
-    }
+        myUniqueSlider.uniqueSlides.forEach(function(slide) {
+            var slideHtml = `
+            <div class="swiper-slide relative">
+                <a href="${slide.link}">
+                    <img src="${slide.image}" alt="${slide.alt}" class="slide-image">
+                </a>
+            </div>
+        `;
+            swiperWrapper.innerHTML += slideHtml;
+        });
 
-    swiper = new Swiper('.swiper-container-responsive', {
-        slidesPerView: 1,
-        loop: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-    });
-}
+        if (myUniqueSlider.swiper) {
+            myUniqueSlider.swiper.destroy(); // Destroy existing Swiper instance
+        }
 
-// Initial update and event listener
-updateSlides();
-window.addEventListener('resize', updateSlides);
+        myUniqueSlider.swiper = new Swiper('.swiper-container-responsive', {
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+        });
+    };
+
+    // Initial update and event listener
+    myUniqueSlider.updateUniqueSlides();
+    window.addEventListener('resize', myUniqueSlider.updateUniqueSlides);
+})();
 </script>
+
+
 
 
 
