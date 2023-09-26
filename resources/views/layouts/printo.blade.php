@@ -32,6 +32,12 @@
                 line-height: 1rem;
             }
 
+            .about-font {
+                font-size: 0.5rem !important;
+                line-height: 1.4rem !important;
+                
+
+        }
             /* Add more styles as needed */
         }
     </style>
