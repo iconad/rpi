@@ -1,4 +1,4 @@
-<footer class="p-0 md:p-3 md:p-2 text-gray-700 pt-24 md:pt-28">
+<footer class="p-0 md:p-3 md:p-2 text-gray-700 pt-6 md:pt-24 md:pt-28">
     <div class="grid grid-cols-1 sm:grid-cols-4 gap-2 md:gap-8 mb-8">
         <!-- Grid 1: Logo and Social Icons -->
         <div class="flex flex-col ml-4 md:ml-16">

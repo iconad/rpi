@@ -4,8 +4,8 @@
 <section class="toppicks md:p-5 p-4 md:px-14">
     <!-- Text -->
     <div class="bg-white p-0 md:p-4 mt-4">
-        <h1 class="text-4xl md:text-5xl mb-1">About Us.</h1>
-        <p class="text-4xl md:text-5xl mb-6">Crafting Excellence. Printing Dreams.</p>
+        <h1 class="text-3xl md:text-5xl mb-1">About Us.</h1>
+        <p class="text-3xl md:text-5xl mb-6">Crafting Excellence. Printing Dreams.</p>
     </div>
     <!-- First Section: Text on Left, Image on Right -->
     <div class="flex  flex-row md:flex-row items-center justify-between mb-8">
@@ -74,7 +74,7 @@
                 dreams manifest into tangible realities. Let us be the architects of your visions, meticulously etching
                 each detail with finesse.
             </p>
-            <p class="text-xs md:text-lg h-full pb-2 md:pb-6 about-font">
+            <p class="text-xs md:text-lg h-full md:pb-6 about-font">
                 Embark on a journey of unbridled creativity and sophistication. With Printo as your beacon, you're not
                 just choosing a printing partner, you're embracing a legacy of excellence that transcends the ordinary.
             </p>

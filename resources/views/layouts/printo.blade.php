@@ -33,8 +33,8 @@
             }
 
             .about-font {
-                font-size: 0.5rem !important;
-                line-height: 1.4rem !important;
+                font-size: 0.7rem !important;
+                line-height: 0.9rem !important;
                 
 
         }
