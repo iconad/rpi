@@ -71,13 +71,14 @@ p.mobile-font-three {
 .reach {
     border-radius: 0rem !important;
 }
-.Projects {
-    height: 200px !important;
-}
+
 .clients {
     height: 200px !important;
 }
 .happyclients {
+    height: 200px !important;
+}
+.Projects {
     height: 200px !important;
 }
             /* Add more styles as needed */
