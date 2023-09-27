@@ -66,7 +66,7 @@ p.mobile-font-three {
     font-size: 0.5rem;
 }
 .project-padding {
-    margin-bottom: 2.5rem !important;
+    margin-bottom: 2.2rem !important;
 }
 .reach {
     border-radius: 0rem !important;
