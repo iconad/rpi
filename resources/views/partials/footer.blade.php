@@ -40,7 +40,7 @@
         <div class="pb-4 support ml-4 md:ml-0">
             <h3 class="text-xl mb-6 border-b-2 printoborder">Support</h3>
             <ul>
-                <li class="mb-4"><a href="https://printo.ae/pages/contact"
+                <li class="mb-4"><a href="https://printo.ae/contact-us"
                         class="text-black mb-6 hover:text-red-600">Contact
                         Us</a></li>
                 <li class="mb-4"><a href="#" class="text-black mb-6 hover:text-red-600">Privacy
