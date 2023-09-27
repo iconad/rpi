@@ -60,12 +60,13 @@ h3.mobile-font-one.font-semibold.mb-2 {
 }
 h2.mobile-font-two {
     font-size: 0.5rem !important;
+    height: 25px;
 }
 p.mobile-font-three {
     font-size: 0.5rem;
 }
 .project-padding {
-    margin-bottom: 2.5rem !important;
+    margin-bottom: 3.3rem !important;
 }
 .reach {
     border-radius: 0rem !important;
