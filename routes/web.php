@@ -59,6 +59,9 @@ Route::get('/home-dynamic', function () {
     return view('home-dynamic');
 })->name('home dynamic');
 
+Route::get('/contact-us', function () {
+    return view('contact-us');
+})->name('contact-us');
 
 Route::get('/comingsoon', function () {
     return view('commingsoon');

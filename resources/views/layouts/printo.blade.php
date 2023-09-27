@@ -38,8 +38,109 @@
                 
 
         }
+        .phone-block {
+            padding: 0.2rem !important;
+        }
+        .contact-phone {
+            margin-top: 0.4rem !important;
+            font-size: 0.6rem !important;
+            width: 15rem !important;
+        }
+        .contact-p {
+    margin-top: 0.2rem !important;
+    color: grey !important;
+    font-size: 0.4rem !important;
+}
+.title-font {
+    font-size: 0.5rem !important;
+
+}
+h3.mobile-font-one.font-semibold.mb-2 {
+    font-size: 1rem;
+}
+h2.mobile-font-two {
+    font-size: 0.5rem !important;
+}
+p.mobile-font-three {
+    font-size: 0.5rem;
+}
+.project-padding {
+    margin-bottom: 3.3rem !important;
+}
+.reach {
+    border-radius: 0rem !important;
+}
             /* Add more styles as needed */
         }
+        .clients {
+            background-color: #F2F9FA;
+            height: fit-content;
+            padding: 1rem;
+        }
+        .Projects {
+            background-color: #FDFAFB;
+            height: fit-content;
+            padding: 1rem;
+        }
+        .happyclients {
+            background-color: #FDFDFA;
+            height: fit-content;
+            padding: 1rem;
+        }
+        .contact-form {
+            background-color: #F1F6F5;
+            padding: 1rem;
+        }
+        .reach {
+            background-color: #F1F6F5;
+            height: fit-content;
+        }
+        .clientsblock {
+            padding-top: 15rem;
+            padding-right: 8rem;
+        }
+        .project-padding {
+            margin-bottom: 3.5rem;
+        }
+        .form-blocks {
+            margin-top: -7rem;
+        }
+        .contact-phone {
+            width: 60rem;
+        }
+        .phone-block {
+            padding: 2rem;
+        }
+        .phone-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .icon-title {
+        display: flex;
+        align-items: center;
+    }
+
+    .icon {
+        margin-right: 0.5rem;
+    }
+
+    .contact-p {
+    margin-top: 1rem;
+    color: grey;
+}
+.how-contact {
+    margin-top: 2rem;
+    color: grey;
+    font-size: 1.3rem;
+}
+.reach {
+    border-radius: 5rem;
+}
+
+        
     </style>
 
 </head>
