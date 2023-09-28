@@ -63,6 +63,10 @@ Route::get('/contact-us', function () {
     return view('contact-us');
 })->name('contact-us');
 
+Route::get('/conditions', function () {
+    return view('conditions');
+})->name('conditions');
+
 Route::get('/comingsoon', function () {
     return view('commingsoon');
 })->name('comingsoon');

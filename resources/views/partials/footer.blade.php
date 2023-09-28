@@ -46,7 +46,7 @@
                 <li class="mb-4"><a href="#" class="text-black mb-6 hover:text-red-600">Privacy
                         Policy</a>
                 </li>
-                <li class="mb-4"><a href="https://printo.ae/pages/terms-and-condition"
+                <li class="mb-4"><a href="https://printo.ae/conditions"
                         class="text-black mb-6 hover:text-red-600">Conditions</a></li>
             </ul>
         </div>
@@ -381,4 +381,5 @@ function customScript() {
 document.addEventListener('DOMContentLoaded', customScript);
 </script>
 
-<script src="{{ asset('js/app.js') }}" defer></script>
+<!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
+<!-- Use as a jQuery plugin -->

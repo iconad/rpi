@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css">
     <title>Printo Home Page</title>
     <style>
     div#app {
@@ -542,6 +541,12 @@
         padding-left: 4.8rem;
         padding-right: 4.9rem;
     }
+    .flex-height {
+    height: 350px;
+}
+.right-bg {
+    background-color: #F1F6F5;
+}
     </style>
     @yield('headlinks')
 </head>
