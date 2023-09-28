@@ -381,5 +381,4 @@ function customScript() {
 document.addEventListener('DOMContentLoaded', customScript);
 </script>
 
-<!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
-<!-- Use as a jQuery plugin -->
+<script src="{{ asset('js/app.js') }}" defer></script>
