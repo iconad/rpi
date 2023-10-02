@@ -43,7 +43,7 @@
                 <li class="mb-4"><a href="https://printo.ae/contact-us"
                         class="text-black mb-6 hover:text-red-600">Contact
                         Us</a></li>
-                <li class="mb-4"><a href="#" class="text-black mb-6 hover:text-red-600">Privacy
+                <li class="mb-4"><a href="https://printo.ae/privacy" class="text-black mb-6 hover:text-red-600">Privacy
                         Policy</a>
                 </li>
                 <li class="mb-4"><a href="https://printo.ae/conditions"
