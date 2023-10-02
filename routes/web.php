@@ -67,6 +67,15 @@ Route::get('/conditions', function () {
     return view('conditions');
 })->name('conditions');
 
+Route::get('/privacy', function () {
+    return view('privacy');
+})->name('privacy');
+
+Route::get('/product-details', function () {
+    return view('product-details');
+})->name('product-details');
+
+
 Route::get('/comingsoon', function () {
     return view('commingsoon');
 })->name('comingsoon');

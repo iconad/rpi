@@ -307,6 +307,9 @@ window.addEventListener('resize', initSwiperBasedOnScreenWidth);
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Your code here
+
 const phoneInput = document.querySelector("#phoneInput");
 
 const iti = window.intlTelInput(phoneInput, {
@@ -318,6 +321,7 @@ const iti = window.intlTelInput(phoneInput, {
 phoneInput.addEventListener("blur", () => {
     const phoneNumber = iti.getNumber();
     phoneInput.value = phoneNumber;
+});
 });
 </script>
 
@@ -380,5 +384,6 @@ function customScript() {
 // Ensure the script runs after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', customScript);
 </script>
+
 
 <script src="{{ asset('js/app.js') }}" defer></script>
