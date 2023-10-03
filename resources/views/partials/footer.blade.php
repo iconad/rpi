@@ -228,6 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <script>
+    document.addEventListener('DOMContentLoaded', function() {
 const toggleButtons = document.querySelectorAll('.toggle-icon');
 const questionLinks = document.querySelectorAll('.faqbutton a'); // Select all the question links
 
@@ -258,6 +259,7 @@ function toggleAnswer(answer, button) {
         button.classList.remove('bg-gray-600');
     }
 }
+});
 </script>
 
 <script>

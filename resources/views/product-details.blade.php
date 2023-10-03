@@ -6,7 +6,7 @@
     <h1 class="text-3xl md:text-5xl mb-1">Standard Business <br class="md:hidden block" />Cards </h1>
     </div>
 
-    <div class="min-h-screen flex flex-col justify-center items-center">
+    <div class="flex flex-col justify-center items-center">
     <div class="flex flex-row p-20">
         <img src="{{ asset('images/product-details/product1.png') }}" alt="Image 1" class="w-1/2 h-auto pr-10">
         <img src="{{ asset('images/product-details/product2.png') }}" alt="Image 2" class="w-1/2 h-auto pl-10">
@@ -64,6 +64,7 @@
                 <th class="border p-2">table two</th>
                 <th class="border p-2">table two</th>
                 <th class="border p-2">table two</th>
+                <th class="border p-2">table two</th>
             </tr>
         </thead>
         <!-- Table body (content will change based on select) -->
@@ -71,6 +72,7 @@
         <tr>
                 <td class="border p-2">Data 1</td>
                 <td class="border p-2">Data 2</td>
+                <td class="border p-2">Data 3</td>
                 <td class="border p-2">Data 3</td>
             </tr>
         </tbody>
