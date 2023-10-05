@@ -12,6 +12,7 @@
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css">
     <title>Printo Home Page</title>
     <style>
+        
     div#app {
         overflow-x: hidden;
     }
@@ -23,7 +24,7 @@
 
     #mobileMenu {
         /* ... other styles ... */
-        background-color: white;
+        background-color: black;
         z-index: 999;
         height: 100vh !important;
         transition: transform 0.3s ease-in-out;
@@ -371,7 +372,7 @@
         .whatsapp-button {
             display: inline-flex;
             align-items: center;
-            background-color: #3AAA34;
+            /* background-color: #3AAA34; */
             color: white;
             margin-bottom: -30px;
             padding: 5px 0px;
@@ -380,14 +381,14 @@
             font-size: 1rem;
             border-radius: 999px;
             text-decoration: none;
-            padding-left: 1rem !important;
-            padding-right: 1rem !important;
+            /* padding-left: 1rem !important;
+            padding-right: 1rem !important; */
         }
 
         .newitemswhatsapp {
             display: inline-flex;
             align-items: center;
-            background-color: #3AAA34;
+            /* background-color: #3AAA34; */
             color: white;
             margin-bottom: -30px;
             padding: 5px 0px;
@@ -441,7 +442,7 @@
         }
 
         .whatsappbanner .rounded-full {
-            border-radius: 50px;
+            border-radius: 50%;
             /* Adjust the border radius as needed */
         }
 
@@ -505,7 +506,7 @@
     .whatsapp-button {
         display: inline-flex;
         align-items: center;
-        background-color: #3AAA34;
+        /* background-color: #3AAA34; */
         color: white;
         margin-bottom: -30px;
         padding: 6px 12px;
@@ -514,18 +515,21 @@
         font-size: 1rem;
         border-radius: 999px;
         text-decoration: none;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        /* padding-left: 2rem;
+        padding-right: 2rem; */
     }
 
-    .whatsapp-icon {
+    /* .whatsapp-icon {
         margin-right: 8px;
-    }
+    } */
 
     .whatsapp-button {
         display: flex;
         align-items: center;
     }
+    /* Add this CSS to your stylesheet */
+
+
 
     .faqbutton {
         width: 90%;
@@ -684,25 +688,25 @@
                     class="sm:hidden fixed inset-y-0 right-0 w-1/2 h-screen p-4 transform translate-x-full">
                     <ul class="space-y-4">
                         <li><a href="https://printo.ae/categories/print-products"
-                                class="text-gray-800 hover:text-gray-600">Printing</a></li>
+                                class="text-white">Printing</a></li>
                         <li><a href="https://printo.ae/categories/packaging"
-                                class="text-gray-800 hover:text-gray-600">Packaging</a></li>
+                                class="text-white">Packaging</a></li>
                         <li><a href="https://printo.ae/categories/banners-displays"
-                                class="text-gray-800 hover:text-gray-600">Banners & Displays</a></li>
-                        <li><a href="https://printo.ae/comingsoon" class="text-gray-800 hover:text-gray-600">Merch</a>
+                                class="text-white">Banners & Displays</a></li>
+                        <li><a href="https://printo.ae/comingsoon" class="text-white">Merch</a>
                         </li>
                         <li><a href="https://printo.ae/comingsoon"
-                                class="text-gray-800 hover:text-gray-600">Corporate</a></li>
+                                class="text-white">Corporate</a></li>
                         <li><a href="https://printo.ae/categories/wallpapers"
-                                class="text-gray-800 hover:text-gray-600">Wallpapers</a></li>
-                        <li><a href="https://printo.ae/estimate" class="text-gray-800 hover:text-gray-600">Estimate</a>
+                                class="text-white">Wallpapers</a></li>
+                        <li><a href="https://printo.ae/estimate" class="text-white">Estimate</a>
                         </li>
-                        <li><a href="https://printo.ae/comingsoon" class="text-gray-800 hover:text-gray-600">Blog</a>
+                        <li><a href="https://printo.ae/comingsoon" class="text-white">Blog</a>
                         </li>
-                        <li><a href="https://printo.ae/about-us" class="text-gray-800 hover:text-gray-600">About
+                        <li><a href="https://printo.ae/about-us" class="text-white">About
                                 Us</a></li>
                     </ul>
-                    <button id="closeMenuButton" class="text-gray-600 hover:text-gray-800 absolute top-4 right-4">
+                    <button id="closeMenuButton" class="text-white absolute top-4 right-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
