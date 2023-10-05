@@ -320,7 +320,7 @@
 
         .box-price {
             color: #444;
-            margin-top: -15px !important;
+            margin-top: -30px !important;
         }
 
         .newitemsbox-price {
@@ -495,7 +495,7 @@
 
     .box-price {
         color: #444;
-        margin-top: 8px;
+        margin-top: -8px;
     }
 
     .box-info {
@@ -611,8 +611,19 @@
 
                         <ul id="mobile-menu" class="hidden md:flex space-x-6 flex-nowrap pl-4 pr-2">
 
-                            <li><a href="https://printo.ae/categories/print-products"
-                                    class="text-gray-800 hover:text-gray-600">Printing</a></li>
+                        <ul>
+  <li class="relative group">
+    <a href="https://printo.ae/categories/print-products" class="text-gray-800 hover:text-gray-600">
+      Printing
+    </a>
+    <ul class="absolute hidden group-hover:block bg-black border border-gray-200 mt-2 py-2 rounded-lg">
+      <li><a href="#">Dropdown Item 1</a></li>
+      <li><a href="#">Dropdown Item 2</a></li>
+      <li><a href="#">Dropdown Item 3</a></li>
+    </ul>
+  </li>
+</ul>
+
                             <li><a href="https://printo.ae/categories/packaging"
                                     class="text-gray-800 hover:text-gray-600">Packaging</a></li>
                             <li><a href="https://printo.ae/categories/banners-displays"
