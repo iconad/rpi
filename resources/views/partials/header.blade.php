@@ -442,7 +442,7 @@
         }
 
         .whatsappbanner .rounded-full {
-            border-radius: 50%;
+            /* border-radius: 50%; */
             /* Adjust the border radius as needed */
         }
 
