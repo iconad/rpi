@@ -224,9 +224,9 @@
         text-align: center;
     }
 
-    p.box-name {
+    /* p.box-name {
         padding-top: 1rem;
-    }
+    } */
 
     .printoborder {
         width: 20rem;
@@ -235,6 +235,9 @@
     .reviewsh {
         height: 50px;
     }
+    p.box-price.text-dark-gray {
+    color: gray !important;
+}
 
     /* Desktop Styles */
 
@@ -319,14 +322,17 @@
         }
 
         .box-price {
-            color: #444;
-            margin-top: -30px !important;
+            color: gray;
+            /* margin-top: -30px !important; */
         }
 
         .newitemsbox-price {
-            color: #444;
+            color: gray;
             margin-top: 8px !important;
         }
+        p.box-price.text-dark-gray {
+    color: gray !important;
+}
 
         .logo {
             width: 30%;
@@ -367,22 +373,6 @@
         .whatsapptexticon {
             width: 15px !important;
             height: 15px !important;
-        }
-
-        .whatsapp-button {
-            display: inline-flex;
-            align-items: center;
-            /* background-color: #3AAA34; */
-            color: white;
-            margin-bottom: -30px;
-            padding: 5px 0px;
-            border-radius: 4px;
-            margin-top: 30px !important;
-            font-size: 1rem;
-            border-radius: 999px;
-            text-decoration: none;
-            /* padding-left: 1rem !important;
-            padding-right: 1rem !important; */
         }
 
         .newitemswhatsapp {
@@ -441,10 +431,10 @@
             /* Adjust the padding as needed */
         }
 
-        .whatsappbanner .rounded-full {
+        /* .whatsappbanner .rounded-full {
             /* border-radius: 50%; */
             /* Adjust the border radius as needed */
-        }
+         */
 
         .whatsappbanner .ml-2 {
             margin-left: 1rem;
@@ -493,10 +483,7 @@
         }
     }
 
-    .box-price {
-        color: #444;
-        margin-top: -8px;
-    }
+    
 
     .box-info {
         color: #aaa;
@@ -508,8 +495,8 @@
         align-items: center;
         /* background-color: #3AAA34; */
         color: white;
-        margin-bottom: -30px;
-        padding: 6px 12px;
+        /* margin-bottom: -30px; */
+        /* padding: 6px 12px; */
         border-radius: 4px;
         margin-top: 10px;
         font-size: 1rem;
@@ -551,6 +538,21 @@
 .right-bg {
     background-color: #F1F6F5;
 }
+/* Media query for screens narrower than md breakpoint (e.g., mobile) */
+@media (max-width: 767px) {
+   #whatsapp {
+    width :20px;
+    height: 20px;
+   }
+   .box-price {
+            color: gray;
+            font-size: 0.7rem;
+        }
+        .whatsapp-button {
+        margin-top: 5px;
+    }
+}
+
     </style>
     @yield('headlinks')
 </head>

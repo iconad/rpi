@@ -110,7 +110,7 @@
         <div class="relative box">
             <a href="https://printo.ae/category/business-cards/products"><img
                     src="{{ asset('images/home/product1.jpg') }}" alt="Product 1" class="box-image"></a>
-            <div class="flex items-center justify-between mb-2 md:pt-6 pt-0.5">
+            <div class="flex items-center justify-between sm:mb-8 md:mb-0 md:pt-6 pt-0.5">
                 <a href="https://printo.ae/category/business-cards/products">
                     <p class="box-name">Business Cards
 
@@ -133,7 +133,7 @@
         <div class="relative box">
             <a href="https://printo.ae/category/large-stickers/products"><img
                     src="{{ asset('images/home/product2.jpg') }}" alt="Product 2" class="box-image"></a>
-            <div class="flex items-center justify-between mb-2 md:pt-6 pt-0.5">
+            <div class="flex items-center justify-between sm:mb-8 md:mb-0 md:pt-6 pt-0.5">
                 <a href="https://printo.ae/category/large-stickers/products">
                     <p class="box-name">Large Stickers</p>
                 </a>
@@ -154,7 +154,7 @@
         <div class="relative box">
             <a href="https://printo.ae/category/posters/products"><img src="{{ asset('images/home/product3.jpg') }}"
                     alt="Product 3" class="box-image"></a>
-            <div class="flex items-center justify-between mb-2 md:pt-6 pt-0.5">
+            <div class="flex items-center justify-between sm:mb-8 md:mb-0 md:pt-6 pt-0.5">
                 <a href="https://printo.ae/category/posters/products">
                     <p class="box-name">Posters
 
@@ -177,7 +177,7 @@
         <div class="relative box">
             <a href="https://printo.ae/category/product/products"><img src="{{ asset('images/home/product4.jpg') }}"
                     alt="Product 4" class="box-image"></a>
-            <div class="flex items-center justify-between mb-2 md:pt-6 pt-0.5">
+            <div class="flex items-center justify-between sm:mb-8 md:mb-0 md:pt-6 pt-0.5">
                 <a href="https://printo.ae/category/product/products">
                     <p class="box-name">Boxes</p>
                 </a>
@@ -198,7 +198,7 @@
         <div class="relative box">
             <a href="https://printo.ae/category/stationary-1/products"><img
                     src="{{ asset('images/home/product5.jpg') }}" alt="Product 5" class="box-image"></a>
-            <div class="flex items-center justify-between mb-2 md:pt-6 pt-0.5">
+            <div class="flex items-center justify-between sm:mb-8 md:mb-0 md:pt-6 pt-0.5">
                 <a href="https://printo.ae/category/stationary-1/products">
                     <p class="box-name">Stationery</p>
                 </a>
@@ -218,7 +218,7 @@
         <div class="relative box">
             <a href="https://printo.ae/category/home-decor/subcategories/calendar/products"><img
                     src="{{ asset('images/home/product6.jpg') }}" alt="Product 6" class="box-image"></a>
-            <div class="flex items-center justify-between mb-2 md:pt-6 pt-0.5">
+            <div class="flex items-center justify-between sm:mb-8 md:mb-0 md:pt-6 pt-0.5">
                 <a href="https://printo.ae/category/home-decor/subcategories/calendar/products">
                     <p class="box-name">Calendars</p>
                 </a>
@@ -238,7 +238,7 @@
         <div class="relative box">
             <a href="https://printo.ae/products/wallpapers/bedroom-wallpapers"><img
                     src="{{ asset('images/home/product7.jpg') }}" alt="Product 7" class="box-image"></a>
-            <div class="flex items-center justify-between mb-2 md:pt-6 pt-0.5">
+            <div class="flex items-center justify-between sm:mb-8 md:mb-0 md:pt-6 pt-0.5">
                 <a href="https://printo.ae/products/wallpapers/bedroom-wallpapers">
                     <p class="box-name macbookwhatsappside">Wallpapers</p>
                 </a>
@@ -258,7 +258,7 @@
         <div class="relative box">
             <a href="https://printo.ae/category/roll-up-banners/products"><img
                     src="{{ asset('images/home/product8.jpg') }}" alt="Product 8" class="box-image"></a>
-            <div class="flex items-center justify-between mb-2 md:pt-6 pt-0.5">
+            <div class="flex items-center justify-between sm:mb-8 md:mb-0 md:pt-6 pt-0.5">
                 <a href="https://printo.ae/category/roll-up-banners/products">
                     <p class="box-name">Roll Up Banners</p>
                 </a>
@@ -278,7 +278,7 @@
         <div class="relative box">
             <a href="https://printo.ae/category/foamboard-panels/products"><img
                     src="{{ asset('images/home/product9.jpg') }}" alt="Product 9" class="box-image"></a>
-            <div class="flex items-center justify-between mb-2 md:pt-6 pt-0.5">
+            <div class="flex items-center justify-between sm:mb-8 md:mb-0 md:pt-6 pt-0.5">
                 <a href="https://printo.ae/category/foamboard-panels/products">
                     <p class="box-name">Foamboard Panels</p>
                 </a>
@@ -336,7 +336,7 @@
         <div class="flex flex-col items-start">
             <a href="https://printo.ae/comingsoon"> <img src="{{ asset('images/home/pick1.jpg') }}" alt="Product 1"
                     class="w-full h-auto mb-2 md:mb-4"></a>
-            <div class="flex items-center justify-between mb-2 w-full">
+            <div class="flex items-center justify-between sm:mb-8 md:mb-0 w-full">
                 <a href="https://printo.ae/comingsoon">
                     <p class="box-name">Cups & Mugs</p>
                 </a>
@@ -356,7 +356,7 @@
         <div class="flex flex-col items-start">
             <a href="https://printo.ae/category/promotional-products/subcategories/hangers/products"> <img
                     src="{{ asset('images/home/pick2.jpg') }}" alt="Product 2" class="w-full h-auto mb-2 md:mb-4"></a>
-            <div class="flex items-center justify-between mb-2 w-full">
+            <div class="flex items-center justify-between sm:mb-8 md:mb-0 w-full">
                 <a href="https://printo.ae/category/promotional-products/subcategories/hangers/products">
                     <p class="box-name">Door Hangers</p>
                 </a>
@@ -376,7 +376,7 @@
         <div class="flex flex-col items-start">
             <a href="https://printo.ae/category/business-cards/products"><img src="{{ asset('images/home/pick3.jpg') }}"
                     alt="Product 3" class="w-full h-auto mb-2 md:mb-4"></a>
-            <div class="flex items-center justify-between mb-2 w-full">
+            <div class="flex items-center justify-between sm:mb-8 md:mb-0 w-full">
                 <a href="https://printo.ae/category/business-cards/products">
                     <p class="box-name">Business Cards</p>
                 </a>
@@ -395,7 +395,7 @@
         <!-- Product 4 -->
         <div class="flex flex-col items-start">
             <img src="{{ asset('images/home/pick4.jpg') }}" alt="Product 4" class="w-full h-auto mb-2 md:mb-4">
-            <div class="flex items-center justify-between mb-2 w-full">
+            <div class="flex items-center justify-between sm:mb-8 md:mb-0 w-full">
                 <a href="">
                     <p class="box-name">Cake Boxes</p>
                 </a>
@@ -415,7 +415,7 @@
         <div class="flex flex-col items-start">
             <a href="https://printo.ae/products/wallpapers/living-room-wallpapers"> <img
                     src="{{ asset('images/home/pick5.jpg') }}" alt="Product 5" class="w-full h-auto mb-2 md:mb-4"></a>
-            <div class="flex items-center justify-between mb-2 w-full">
+            <div class="flex items-center justify-between sm:mb-8 md:mb-0 w-full">
                 <a href="https://printo.ae/products/wallpapers/living-room-wallpapers">
                     <p class="box-name">Wallpapers</p>
                 </a>
@@ -435,7 +435,7 @@
         <div class="flex flex-col items-start">
             <a href="https://printo.ae/products/wallpapers/canvas-frames"> <img
                     src="{{ asset('images/home/pick6.jpg') }}" alt="Product 6" class="w-full h-auto mb-2 md:mb-4"></a>
-            <div class="flex items-center justify-between mb-2 w-full">
+            <div class="flex items-center justify-between sm:mb-8 md:mb-0 w-full">
                 <a href="https://printo.ae/products/wallpapers/canvas-frames">
                     <p class="box-name">Canvas Prints</p>
                 </a>
@@ -745,13 +745,32 @@
             <div class="p-2 flex flex-col md:items-center">
                 <a href="https://printo.ae/comingsoon"><img src="{{ asset('images/home/newitem1.jpg') }}" alt="Image 1"
                         class="w-full object-cover mb-2"></a>
-                <a href="https://printo.ae/comingsoon">
-                    <p class="md:text-center text-xs md:text-lg text-black pt-2 md:pt-6">Tshirts</p>
-                    <p class="newitemsbox-price text-xs md:text-lg text-dark-gray">Contact for Details</p>
 
-                    <div class="whatsapp-button newitemswhatsapp ">
-                    <a href="https://api.whatsapp.com/send?phone=971562876500&text=Iam%20intreasted%20in%20printo%20Services" class="whatsapp-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 48 48" id="whatsapp"><path fill="#67C15E" fill-rule="evenodd" d="M23.993 0C10.763 0 0 10.765 0 24a23.824 23.824 0 0 0 4.57 14.067l-2.99 8.917 9.224-2.948A23.81 23.81 0 0 0 24.007 48C37.237 48 48 37.234 48 24S37.238 0 24.007 0h-.014zm-6.7 12.19c-.466-1.114-.818-1.156-1.523-1.185a13.55 13.55 0 0 0-.804-.027c-.918 0-1.877.268-2.455.86-.705.72-2.454 2.398-2.454 5.841s2.51 6.773 2.849 7.239c.353.465 4.895 7.632 11.947 10.553 5.515 2.286 7.152 2.074 8.407 1.806 1.834-.395 4.133-1.75 4.711-3.386.579-1.637.579-3.034.41-3.33-.17-.296-.636-.465-1.34-.818-.706-.353-4.134-2.046-4.783-2.272-.634-.24-1.24-.155-1.72.522-.677.946-1.34 1.905-1.876 2.483-.423.452-1.115.509-1.693.268-.776-.324-2.948-1.086-5.628-3.47-2.074-1.849-3.484-4.148-3.893-4.84-.41-.705-.042-1.114.282-1.495.353-.438.691-.748 1.044-1.157.352-.41.55-.621.776-1.1.24-.466.07-.946-.1-1.3-.168-.352-1.579-3.795-2.157-5.191z"></path></svg>
+                        <div class="flex items-center justify-between w-full md:hidden sm:flex">
+                <a href="https://printo.ae/comingsoon">
+                    <p class="text-xs">Tshirts</p>
+                </a>
+                <div>
+                  <a href="https://api.whatsapp.com/send?phone=971562876500&text=Iam%20intreasted%20in%20printo%20Services" class="whatsapp-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 48 48" id="whatsapp"><path fill="#67C15E" fill-rule="evenodd" d="M23.993 0C10.763 0 0 10.765 0 24a23.824 23.824 0 0 0 4.57 14.067l-2.99 8.917 9.224-2.948A23.81 23.81 0 0 0 24.007 48C37.237 48 48 37.234 48 24S37.238 0 24.007 0h-.014zm-6.7 12.19c-.466-1.114-.818-1.156-1.523-1.185a13.55 13.55 0 0 0-.804-.027c-.918 0-1.877.268-2.455.86-.705.72-2.454 2.398-2.454 5.841s2.51 6.773 2.849 7.239c.353.465 4.895 7.632 11.947 10.553 5.515 2.286 7.152 2.074 8.407 1.806 1.834-.395 4.133-1.75 4.711-3.386.579-1.637.579-3.034.41-3.33-.17-.296-.636-.465-1.34-.818-.706-.353-4.134-2.046-4.783-2.272-.634-.24-1.24-.155-1.72.522-.677.946-1.34 1.905-1.876 2.483-.423.452-1.115.509-1.693.268-.776-.324-2.948-1.086-5.628-3.47-2.074-1.849-3.484-4.148-3.893-4.84-.41-.705-.042-1.114.282-1.495.353-.438.691-.748 1.044-1.157.352-.41.55-.621.776-1.1.24-.466.07-.946-.1-1.3-.168-.352-1.579-3.795-2.157-5.191z"></path></svg>
+
+                    </a>
+                   
+                </div>
+            </div>
+            <p class="text-xs text-gray md:hidden sm:flex" style="font-size: .5rem; color: grey; ">Contact for Details</p>
+                        
+
+                <a href="https://printo.ae/comingsoon" class="md:block hidden">
+                    <p class="md:text-center text-xs md:text-lg text-black pt-2 md:pt-6 md:block hidden">Tshirts</p>
+                    
+                    <p class="newitemsbox-price text-xs md:text-lg text-dark-gray md:block hidden">Contact for Details</p>
+
+                </a>
+
+                    <div class="whatsapp-button newitemswhatsapp md:block hidden">
+                    <a href="https://api.whatsapp.com/send?phone=971562876500&text=Iam%20intreasted%20in%20printo%20Services" class="whatsapp-icon md:block hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 48 48" id="whatsapp" class="md:block hidden"><path fill="#67C15E" fill-rule="evenodd" d="M23.993 0C10.763 0 0 10.765 0 24a23.824 23.824 0 0 0 4.57 14.067l-2.99 8.917 9.224-2.948A23.81 23.81 0 0 0 24.007 48C37.237 48 48 37.234 48 24S37.238 0 24.007 0h-.014zm-6.7 12.19c-.466-1.114-.818-1.156-1.523-1.185a13.55 13.55 0 0 0-.804-.027c-.918 0-1.877.268-2.455.86-.705.72-2.454 2.398-2.454 5.841s2.51 6.773 2.849 7.239c.353.465 4.895 7.632 11.947 10.553 5.515 2.286 7.152 2.074 8.407 1.806 1.834-.395 4.133-1.75 4.711-3.386.579-1.637.579-3.034.41-3.33-.17-.296-.636-.465-1.34-.818-.706-.353-4.134-2.046-4.783-2.272-.634-.24-1.24-.155-1.72.522-.677.946-1.34 1.905-1.876 2.483-.423.452-1.115.509-1.693.268-.776-.324-2.948-1.086-5.628-3.47-2.074-1.849-3.484-4.148-3.893-4.84-.41-.705-.042-1.114.282-1.495.353-.438.691-.748 1.044-1.157.352-.41.55-.621.776-1.1.24-.466.07-.946-.1-1.3-.168-.352-1.579-3.795-2.157-5.191z"></path></svg>
 
                     </a>
                         
@@ -760,15 +779,29 @@
             <div class="p-2 flex flex-col md:items-center">
                 <a href="https://printo.ae/comingsoon"> <img src="{{ asset('images/home/newitem2.jpg') }}" alt="Image 2"
                         class="w-full object-cover mb-2"></a>
+                        <div class="flex items-center justify-between w-full md:hidden sm:flex">
                 <a href="https://printo.ae/comingsoon">
+                    <p class="text-xs">Cups & Mugs</p>
+                </a>
+                <div>
+                  <a href="https://api.whatsapp.com/send?phone=971562876500&text=Iam%20intreasted%20in%20printo%20Services" class="whatsapp-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 48 48" id="whatsapp"><path fill="#67C15E" fill-rule="evenodd" d="M23.993 0C10.763 0 0 10.765 0 24a23.824 23.824 0 0 0 4.57 14.067l-2.99 8.917 9.224-2.948A23.81 23.81 0 0 0 24.007 48C37.237 48 48 37.234 48 24S37.238 0 24.007 0h-.014zm-6.7 12.19c-.466-1.114-.818-1.156-1.523-1.185a13.55 13.55 0 0 0-.804-.027c-.918 0-1.877.268-2.455.86-.705.72-2.454 2.398-2.454 5.841s2.51 6.773 2.849 7.239c.353.465 4.895 7.632 11.947 10.553 5.515 2.286 7.152 2.074 8.407 1.806 1.834-.395 4.133-1.75 4.711-3.386.579-1.637.579-3.034.41-3.33-.17-.296-.636-.465-1.34-.818-.706-.353-4.134-2.046-4.783-2.272-.634-.24-1.24-.155-1.72.522-.677.946-1.34 1.905-1.876 2.483-.423.452-1.115.509-1.693.268-.776-.324-2.948-1.086-5.628-3.47-2.074-1.849-3.484-4.148-3.893-4.84-.41-.705-.042-1.114.282-1.495.353-.438.691-.748 1.044-1.157.352-.41.55-.621.776-1.1.24-.466.07-.946-.1-1.3-.168-.352-1.579-3.795-2.157-5.191z"></path></svg>
+
+                    </a>
+                   
+                </div>
+            </div>
+            <p class="text-xs text-gray md:hidden sm:flex" style="font-size: .5rem; color: grey; ">Contact for Details</p>
+                <a href="https://printo.ae/comingsoon" class="md:block hidden">
                     <p class="md:text-center text-xs md:text-lg text-black pt-2 md:pt-6">Cups & Mugs
                     </p>
                 </a>
-                <p class="newitemsbox-price text-xs md:text-lg text-dark-gray">Contact for Details</p>
+                
+                <p class="newitemsbox-price text-xs md:text-lg text-dark-gray md:block hidden">Contact for Details</p>
 
                 <a href="https://api.whatsapp.com/send?phone=971562876500&text=Iam%20intreasted%20in%20printo%20Services"
-                        class="whatsapp-text whatsapptext"> <div class="whatsapp-button newitemswhatsapp">
-                  <a href="https://api.whatsapp.com/send?phone=971562876500&text=Iam%20intreasted%20in%20printo%20Services" class="whatsapp-icon">
+                        class="whatsapp-text whatsapptext md:block hidden"> <div class="whatsapp-button newitemswhatsapp md:block hidden">
+                  <a href="https://api.whatsapp.com/send?phone=971562876500&text=Iam%20intreasted%20in%20printo%20Services" class="whatsapp-icon md:block hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 48 48" id="whatsapp"><path fill="#67C15E" fill-rule="evenodd" d="M23.993 0C10.763 0 0 10.765 0 24a23.824 23.824 0 0 0 4.57 14.067l-2.99 8.917 9.224-2.948A23.81 23.81 0 0 0 24.007 48C37.237 48 48 37.234 48 24S37.238 0 24.007 0h-.014zm-6.7 12.19c-.466-1.114-.818-1.156-1.523-1.185a13.55 13.55 0 0 0-.804-.027c-.918 0-1.877.268-2.455.86-.705.72-2.454 2.398-2.454 5.841s2.51 6.773 2.849 7.239c.353.465 4.895 7.632 11.947 10.553 5.515 2.286 7.152 2.074 8.407 1.806 1.834-.395 4.133-1.75 4.711-3.386.579-1.637.579-3.034.41-3.33-.17-.296-.636-.465-1.34-.818-.706-.353-4.134-2.046-4.783-2.272-.634-.24-1.24-.155-1.72.522-.677.946-1.34 1.905-1.876 2.483-.423.452-1.115.509-1.693.268-.776-.324-2.948-1.086-5.628-3.47-2.074-1.849-3.484-4.148-3.893-4.84-.41-.705-.042-1.114.282-1.495.353-.438.691-.748 1.044-1.157.352-.41.55-.621.776-1.1.24-.466.07-.946-.1-1.3-.168-.352-1.579-3.795-2.157-5.191z"></path></svg>
 
                     </a>
@@ -777,14 +810,28 @@
             <div class="p-2 flex flex-col md:items-center">
                 <a href="https://printo.ae/comingsoon"> <img src="{{ asset('images/home/newitem3.jpg') }}" alt="Image 3"
                         class="w-full object-cover mb-2"></a>
+                        <div class="flex items-center justify-between w-full md:hidden sm:flex">
                 <a href="https://printo.ae/comingsoon">
-                    <p class="md:text-center text-xs md:text-lg text-black pt-2 md:pt-6">Mousepads</p>
+                    <p class="text-xs">Mousepads</p>
                 </a>
-                <p class="newitemsbox-price text-xs md:text-lg text-dark-gray">Contact for Details</p>
+                <div>
+                  <a href="https://api.whatsapp.com/send?phone=971562876500&text=Iam%20intreasted%20in%20printo%20Services" class="whatsapp-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 48 48" id="whatsapp"><path fill="#67C15E" fill-rule="evenodd" d="M23.993 0C10.763 0 0 10.765 0 24a23.824 23.824 0 0 0 4.57 14.067l-2.99 8.917 9.224-2.948A23.81 23.81 0 0 0 24.007 48C37.237 48 48 37.234 48 24S37.238 0 24.007 0h-.014zm-6.7 12.19c-.466-1.114-.818-1.156-1.523-1.185a13.55 13.55 0 0 0-.804-.027c-.918 0-1.877.268-2.455.86-.705.72-2.454 2.398-2.454 5.841s2.51 6.773 2.849 7.239c.353.465 4.895 7.632 11.947 10.553 5.515 2.286 7.152 2.074 8.407 1.806 1.834-.395 4.133-1.75 4.711-3.386.579-1.637.579-3.034.41-3.33-.17-.296-.636-.465-1.34-.818-.706-.353-4.134-2.046-4.783-2.272-.634-.24-1.24-.155-1.72.522-.677.946-1.34 1.905-1.876 2.483-.423.452-1.115.509-1.693.268-.776-.324-2.948-1.086-5.628-3.47-2.074-1.849-3.484-4.148-3.893-4.84-.41-.705-.042-1.114.282-1.495.353-.438.691-.748 1.044-1.157.352-.41.55-.621.776-1.1.24-.466.07-.946-.1-1.3-.168-.352-1.579-3.795-2.157-5.191z"></path></svg>
+
+                    </a>
+                   
+                </div>
+            </div>
+            <p class="text-xs text-gray md:hidden sm:flex" style="font-size: .5rem; color: grey; ">Contact for Details</p>
+            
+                <a href="https://printo.ae/comingsoon" class="md:block hidden">
+                    <p class="md:text-center text-xs md:text-lg text-black pt-2 md:pt-6 md:block hidden">Mousepads</p>
+                </a>
+                <p class="newitemsbox-price text-xs md:text-lg text-dark-gray md:block hidden">Contact for Details</p>
 
                 <a href="https://api.whatsapp.com/send?phone=971562876500&text=Iam%20intreasted%20in%20printo%20Services"
-                        class="whatsapp-text whatsapptext"> <div class="whatsapp-button newitemswhatsapp">
-                  <a href="https://api.whatsapp.com/send?phone=971562876500&text=Iam%20intreasted%20in%20printo%20Services" class="whatsapp-icon">
+                        class="whatsapp-text whatsapptext"> <div class="whatsapp-button newitemswhatsapp md:block hidden">
+                  <a href="https://api.whatsapp.com/send?phone=971562876500&text=Iam%20intreasted%20in%20printo%20Services" class="whatsapp-icon md:block hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 48 48" id="whatsapp"><path fill="#67C15E" fill-rule="evenodd" d="M23.993 0C10.763 0 0 10.765 0 24a23.824 23.824 0 0 0 4.57 14.067l-2.99 8.917 9.224-2.948A23.81 23.81 0 0 0 24.007 48C37.237 48 48 37.234 48 24S37.238 0 24.007 0h-.014zm-6.7 12.19c-.466-1.114-.818-1.156-1.523-1.185a13.55 13.55 0 0 0-.804-.027c-.918 0-1.877.268-2.455.86-.705.72-2.454 2.398-2.454 5.841s2.51 6.773 2.849 7.239c.353.465 4.895 7.632 11.947 10.553 5.515 2.286 7.152 2.074 8.407 1.806 1.834-.395 4.133-1.75 4.711-3.386.579-1.637.579-3.034.41-3.33-.17-.296-.636-.465-1.34-.818-.706-.353-4.134-2.046-4.783-2.272-.634-.24-1.24-.155-1.72.522-.677.946-1.34 1.905-1.876 2.483-.423.452-1.115.509-1.693.268-.776-.324-2.948-1.086-5.628-3.47-2.074-1.849-3.484-4.148-3.893-4.84-.41-.705-.042-1.114.282-1.495.353-.438.691-.748 1.044-1.157.352-.41.55-.621.776-1.1.24-.466.07-.946-.1-1.3-.168-.352-1.579-3.795-2.157-5.191z"></path></svg>
 
                     </a>
@@ -795,15 +842,28 @@
             <div class="p-2 flex flex-col md:items-center">
                 <a href="https://printo.ae/comingsoon"> <img src="{{ asset('images/home/newitem4.jpg') }}" alt="Image 4"
                         class="w-full object-cover mb-2"></a>
+                        <div class="flex items-center justify-between w-full md:hidden sm:flex">
                 <a href="https://printo.ae/comingsoon">
-                    <p class="md:text-center text-xs md:text-lg text-black pt-2 md:pt-6">Powerbanks
+                    <p class="text-xs">Powerbanks</p>
+                </a>
+                <div>
+                  <a href="https://api.whatsapp.com/send?phone=971562876500&text=Iam%20intreasted%20in%20printo%20Services" class="whatsapp-icon ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 48 48" id="whatsapp"><path fill="#67C15E" fill-rule="evenodd" d="M23.993 0C10.763 0 0 10.765 0 24a23.824 23.824 0 0 0 4.57 14.067l-2.99 8.917 9.224-2.948A23.81 23.81 0 0 0 24.007 48C37.237 48 48 37.234 48 24S37.238 0 24.007 0h-.014zm-6.7 12.19c-.466-1.114-.818-1.156-1.523-1.185a13.55 13.55 0 0 0-.804-.027c-.918 0-1.877.268-2.455.86-.705.72-2.454 2.398-2.454 5.841s2.51 6.773 2.849 7.239c.353.465 4.895 7.632 11.947 10.553 5.515 2.286 7.152 2.074 8.407 1.806 1.834-.395 4.133-1.75 4.711-3.386.579-1.637.579-3.034.41-3.33-.17-.296-.636-.465-1.34-.818-.706-.353-4.134-2.046-4.783-2.272-.634-.24-1.24-.155-1.72.522-.677.946-1.34 1.905-1.876 2.483-.423.452-1.115.509-1.693.268-.776-.324-2.948-1.086-5.628-3.47-2.074-1.849-3.484-4.148-3.893-4.84-.41-.705-.042-1.114.282-1.495.353-.438.691-.748 1.044-1.157.352-.41.55-.621.776-1.1.24-.466.07-.946-.1-1.3-.168-.352-1.579-3.795-2.157-5.191z"></path></svg>
+
+                    </a>
+                   
+                </div>
+            </div>
+            <p class="text-xs text-gray md:hidden sm:flex" style="font-size: .5rem; color: grey; ">Contact for Details</p>
+                <a href="https://printo.ae/comingsoon">
+                    <p class="md:text-center text-xs md:text-lg text-black pt-2 md:pt-6 md:block hidden">Powerbanks
                     </p>
                 </a>
-                <p class="newitemsbox-price text-xs md:text-lg text-dark-gray">Contact for Details</p>
+                <p class="newitemsbox-price text-xs md:text-lg text-dark-gray md:block hidden">Contact for Details</p>
 
                 <a href="https://api.whatsapp.com/send?phone=971562876500&text=Iam%20intreasted%20in%20printo%20Services"
-                        class="whatsapp-text whatsapptext"> <div class="whatsapp-button newitemswhatsapp">
-                  <a href="https://api.whatsapp.com/send?phone=971562876500&text=Iam%20intreasted%20in%20printo%20Services" class="whatsapp-icon">
+                        class="whatsapp-text whatsapptext"> <div class="whatsapp-button newitemswhatsapp md:block hidden">
+                  <a href="https://api.whatsapp.com/send?phone=971562876500&text=Iam%20intreasted%20in%20printo%20Services" class="whatsapp-icon md:block hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 48 48" id="whatsapp"><path fill="#67C15E" fill-rule="evenodd" d="M23.993 0C10.763 0 0 10.765 0 24a23.824 23.824 0 0 0 4.57 14.067l-2.99 8.917 9.224-2.948A23.81 23.81 0 0 0 24.007 48C37.237 48 48 37.234 48 24S37.238 0 24.007 0h-.014zm-6.7 12.19c-.466-1.114-.818-1.156-1.523-1.185a13.55 13.55 0 0 0-.804-.027c-.918 0-1.877.268-2.455.86-.705.72-2.454 2.398-2.454 5.841s2.51 6.773 2.849 7.239c.353.465 4.895 7.632 11.947 10.553 5.515 2.286 7.152 2.074 8.407 1.806 1.834-.395 4.133-1.75 4.711-3.386.579-1.637.579-3.034.41-3.33-.17-.296-.636-.465-1.34-.818-.706-.353-4.134-2.046-4.783-2.272-.634-.24-1.24-.155-1.72.522-.677.946-1.34 1.905-1.876 2.483-.423.452-1.115.509-1.693.268-.776-.324-2.948-1.086-5.628-3.47-2.074-1.849-3.484-4.148-3.893-4.84-.41-.705-.042-1.114.282-1.495.353-.438.691-.748 1.044-1.157.352-.41.55-.621.776-1.1.24-.466.07-.946-.1-1.3-.168-.352-1.579-3.795-2.157-5.191z"></path></svg>
 
                     </a>
