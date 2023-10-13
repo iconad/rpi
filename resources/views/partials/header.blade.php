@@ -634,7 +634,7 @@
                                     class="text-gray-800 hover:text-gray-600">Merch</a></li>
                             <li><a href="https://printo.ae/comingsoon"
                                     class="text-gray-800 hover:text-gray-600">Corporate</a></li>
-                            <li><a href="https://printo.ae/categories/wallpapers"
+                            <li><a href="https://printo.ae/comingsoon"
                                     class="text-gray-800 hover:text-gray-600">Wallpapers</a></li>
 
 
@@ -710,7 +710,7 @@
                         </li>
                         <li><a href="https://printo.ae/comingsoon"
                                 class="text-white">Corporate</a></li>
-                        <li><a href="https://printo.ae/categories/wallpapers"
+                        <li><a href="https://printo.ae/comingsoon"
                                 class="text-white">Wallpapers</a></li>
                         <li><a href="https://printo.ae/estimate" class="text-white">Estimate</a>
                         </li>
